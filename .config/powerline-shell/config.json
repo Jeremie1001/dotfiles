@@ -1,0 +1,15 @@
+{
+  "segments": [
+    "virtual_env",
+    "username",
+    "hostname",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "root",
+    "time"
+  ],
+  "theme": "~/.config/powerline-shell/themes/dracula.py"
+}
