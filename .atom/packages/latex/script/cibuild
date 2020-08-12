@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Exit on failure, and treat expansion of unset variables as an error.
+set -eu
+
+# Enable case-insensitive pattern matching.
+shopt -s nocasematch
+
+ensure_xz_installed() {
+  if [[ "${APPVEYOR:-}" == true ]]; then
+    echo "Installing XZ..."
+    local archive_path="/tmp/xz.7z"
+    curl -Lso ${archive_path} "https://tukaani.org/xz/xz-5.2.3-windows.7z"
+
+    local xz_root="${HOME}/xz"
+    7z x -o"${xz_root}" "${archive_path}" > /dev/null
+
+    export PATH="${xz_root}/bin_x86-64:${PATH}"
+  fi
+}
+
+initialize() {
+  local script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P )"
+  local scripts=(
+    install-ghostscript
+    install-knitr
+    install-miktex
+    install-texlive
+  )
+
+  for script in ${scripts[@]}; do
+    source "${script_dir}/${script}"
+  done
+}
+
+install_latex_distribution() {
+  if [[ "${TEX_DIST:=texlive}" == "miktex" ]]; then
+    install_miktex
+  else
+    install_texlive
+  fi
+}
+
+exec_ci() {
+  if [[ "${APPVEYOR:-}" == true ]]; then
+    local script_path="/tmp/build-package.ps1"
+    curl -so ${script_path} "https://raw.githubusercontent.com/atom/ci/master/build-package.ps1"
+    powershell -noninteractive -noprofile -command "${script_path}"
+  else
+    curl -s "https://raw.githubusercontent.com/atom/ci/master/build-package.sh" | sh
+  fi
+}
+
+main() {
+  initialize
+  ensure_xz_installed
+  install_latex_distribution
+  install_knitr
+  install_ghostscript
+  exec_ci
+}
+
+main "$@"

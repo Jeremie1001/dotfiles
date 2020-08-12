@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "build": true,
+    "diagnostics": false,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "inlineSources": false,
+    "listFiles": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "newLine": "lf",
+    "outDir": "dist",
+    "pretty": true,
+    "removeComments": true,
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES2018"
+  }
+}

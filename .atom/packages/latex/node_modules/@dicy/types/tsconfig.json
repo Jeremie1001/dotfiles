@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "alwaysStrict": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "lib": ["ES2016", "ES2017", "ESNext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "outDir": "lib",
+    "pretty": true,
+    "sourceMap": false,
+    "strictNullChecks": true,
+    "target": "ES2015"
+  },
+  "include": [
+    "src",
+    "ext-types"
+  ]
+}

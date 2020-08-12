@@ -1,0 +1,76 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.latex-tree-view {
+    contain: size;
+    overflow: auto;
+    z-index: 2;
+    -webkit-user-select: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    background: @tree-view-background-color;
+}
+
+.logo {
+    fill: mix(@base-background-color, @text-color, 66%);
+    stroke: none;
+    stroke-width: 1;
+}
+
+#na-element {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    bottom: 10%;
+}
+
+.one-line-text {
+    text-align: center;
+    margin-left: @component-padding;
+    margin-right: @component-padding;
+}
+
+#tree-root {
+    margin-left: @component-padding;
+    margin-right: @component-padding;
+    flex-grow: 1;
+
+    .list-item {
+        white-space: normal;
+        line-height: 1em;
+        position: relative;
+        z-index: 1;
+        // padding-top: 0.4em;
+        // padding-bottom: 0.4em;
+    }
+
+    .list-item > div, div[class~=list-item]  {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .selected-new {
+        font-weight: normal;
+        color: @text-color-highlight;
+    }
+
+    .selected-new::after {
+        // width here is undesirable, because 100vw is the width of the entire Atom
+        // window, making the selected bar overflows out of the side pane
+        // not sure how to fix this
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: auto;
+        right: -@component-padding;
+        background-color: @background-color-selected;
+        z-index: -1;
+    }
+
+}

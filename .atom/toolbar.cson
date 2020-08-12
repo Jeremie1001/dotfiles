@@ -1,0 +1,84 @@
+# This file is used by Flex Tool Bar to create buttons on your Tool Bar.
+# For more information how to use this package and create your own buttons,
+#   read the documentation on https://atom.io/packages/flex-tool-bar
+
+#Foundation Icons: https://zurb.com/playground/foundation-icon-fonts-3
+
+[
+  {
+    type: "button"
+    icon: "gear"
+    callback: "settings-view:open"
+    tooltip: "Settings"
+    hover: {color: "#FF79C6"}
+  }
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    icon: "page-add"
+    iconset: "fi"
+    callback: "application:new-file"
+    tooltip: "New File"
+    hover: {color: "#FF79C6"}
+  }
+  {
+    type: "button"
+    icon: "page-edit"
+    iconset: "fi"
+    callback: "application:open-file"
+    tooltip: "Open File"
+    hover: {color: "#FF79C6"}
+  }
+  {
+    type: "button"
+    icon: "save"
+    iconset: "fi"
+    callback: "core:save"
+    tooltip: "Save File"
+    hover: {color: "#FF79C6"}
+  }
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    icon: "terminal"
+    iconset: "fa"
+    #if (${1:/* condition */}) {\n\t${2:platformio-ide-terminal:new}\n} else {\n\t${3:platformio-ide-terminal:close-all}\n}
+    callback: "platformio-ide-terminal:toggle"
+    hover: {color: "#FF79C6"}
+    tooltip: "Terminal"
+  }
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    text: '<b>/</b>...<b>/</b>',
+    html: true,
+    callback: ["custom:top-barrier"]
+    hover: {color: "#FF79C6"}
+    tooltip: "Top Barrier"
+  }
+  {
+    type: "button"
+    text: '<b>//</b>',
+    html: true,
+    callback: ["custom:bottom-barrier"]
+    hover: {color: "#FF79C6"}
+    tooltip: "Top Barrier"
+  }
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    icon: "wrench"
+    iconset: "fi"
+    callback: "flex-tool-bar:edit-config-file"
+    hover: {color: "#FF79C6"}
+    tooltip: "Edit Tool Bar"
+  }
+]

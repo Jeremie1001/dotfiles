@@ -1,0 +1,11 @@
+# When updating this file, etc/e/eterm-colour should be
+# rebuild with "make e/eterm-colour" in the etc directory.
+cub=\E[%p1%dD,
+kcud1=\EOB,
+cud=\E[%p1%dB,#refs104
+#cuf1=\E[C, # HACK: refs#104
+setaf=\E[%p1%{30}%+%dm,
+cuf=\E[%p1%dC,
+#rmcup=\E[?47l,
+# rs2 may need to be added
+smcup=\E[?47h,

@@ -1,0 +1,171 @@
+@import "ui-variables";
+@import (inline) "../iconsets/ionicons/ionicons.css";
+@import (inline) "../iconsets/font-awesome/font-awesome.css";
+@import (inline) "../iconsets/foundation/foundation-icons.css";
+@import (inline) "../iconsets/icomoon/icomoon.css";
+@import (inline) "../iconsets/devicon/devicon.css";
+@import (inline) "../iconsets/mdi/materialdesignicons.css";
+
+.tool-bar {
+  @button-margin-size: 2px;
+  @button-border-size: 1px;
+  background-color: @base-background-color;
+  border: 1px solid @base-border-color;
+  color: @text-color;
+  display: flex;
+  justify-content: flex-start;
+
+  button.tool-bar-btn {
+    background-color: @base-background-color;
+    background-image: inherit;
+    border-color: @base-background-color;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin: @button-margin-size;
+    padding: 0;
+
+    &:before {
+      display: inline;
+    }
+    &:focus,
+    &:hover {
+      border-color: @button-border-color;
+      outline: none;
+    }
+
+    .selected {
+      color: @background-color-selected;
+    }
+  }
+
+  &.tool-bar-horizontal .tool-bar-btn:not(.tool-bar-item-align-end) + .tool-bar-btn {
+    margin-left: 0;
+  }
+  &.tool-bar-vertical .tool-bar-btn:not(.tool-bar-item-align-end) + .tool-bar-btn {
+    margin-top: 0;
+  }
+
+  &.tool-bar-horizontal .tool-bar-spacer {
+    border: 0 none;
+    border-left: @button-border-size solid @button-background-color;
+    border-right: @button-border-size solid @button-border-color;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.7),rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(0,0,0,0));
+    margin: @button-margin-size + 3 0;
+  }
+  &.tool-bar-vertical .tool-bar-spacer {
+    border: 0 none;
+    border-bottom: @button-border-size solid @button-background-color;
+    border-top: @button-border-size solid @button-border-color;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,0.7),rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(0,0,0,0));
+    margin: 0 @button-margin-size + 3;
+  }
+
+  &.tool-bar-horizontal {
+    .tool-bar-btn,
+    .tool-bar-spacer {
+      &.tool-bar-item-align-end {
+        order: 2;
+        &:first-child {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &.tool-bar-vertical {
+    .tool-bar-btn,
+    .tool-bar-spacer {
+      &.tool-bar-item-align-end {
+        order: 2;
+        &:first-child {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  &.tool-bar-12px {
+    .tool-bar-size(12px * 2);
+  }
+  &.tool-bar-14px {
+    .tool-bar-size(14px * 2);
+  }
+  &.tool-bar-16px {
+    .tool-bar-size(16px * 2);
+  }
+  &.tool-bar-18px {
+    .tool-bar-size(18px * 2);
+  }
+  &.tool-bar-21px {
+    .tool-bar-size(21px * 2);
+  }
+  &.tool-bar-24px {
+    .tool-bar-size(24px * 2);
+  }
+  &.tool-bar-28px {
+    .tool-bar-size(28px * 2);
+  }
+  &.tool-bar-32px {
+    .tool-bar-size(32px * 2);
+  }
+
+  .tool-bar-size(@size) {
+    line-height: @size;
+
+    &.tool-bar-horizontal {
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &.tool-bar-vertical {
+      flex-direction: column;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &.gutter-top::before,
+      &.gutter-bottom::after {
+        content: "";
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      &.gutter-top::before {
+        box-shadow: inset 0px 20px 25px -20px rgb(0, 0, 0);
+      }
+      &.gutter-bottom::after {
+        box-shadow: inset 0px -20px 25px -20px rgb(0, 0, 0);
+      }
+    }
+
+    .tool-bar-btn {
+      height: @size + (@button-border-size * 2);
+      min-width: @size + (@button-border-size * 2);
+      &:before {
+        font-size: @size / 2;
+        line-height: @size;
+      }
+
+      &:not(:empty) {
+        font-size: @size / 2;
+        line-height: @size;
+        padding: 0 @size / 4;
+        &:before {
+          padding-right: @size / 4;
+        }
+      }
+    }
+
+    &.tool-bar-horizontal .tool-bar-spacer {
+      height: @size - 4;
+    }
+    &.tool-bar-vertical .tool-bar-spacer {
+      width: @size - 4;
+    }
+  }
+}

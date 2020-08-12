@@ -1,0 +1,20 @@
+{
+    "context-menu": {
+        "atom-text-editor": [{
+                "label": "Toggle LaTeX Tree View",
+                "command": "latex-tree:toggle-tree-view"
+        }]
+    },
+    "menu": [{
+            "label": "Packages",
+            "submenu": [{
+                    "label": "LaTeX Tree",
+                    "submenu": [
+                        {
+                            "label": "Toggle Tree View",
+                            "command": "latex-tree:toggle-tree-view"
+                        }
+                    ]
+            }]
+    }]
+}

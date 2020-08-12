@@ -1,0 +1,42 @@
+scopeName: 'source.cpp.root'
+name: 'ROOT/C++'
+fileTypes: [
+  'C'
+  'cxx'
+  'cpp'
+  'h'
+]
+firstLineMatch: '^\\/\\/\\ *@\\(#\\)root\\w*\\/*\\w*'
+limitLineLength: false
+patterns: [
+  {
+    include: 'source.cpp'
+  }
+]
+injections: {
+  # "L:source.cpp - (meta.preprocessor, comment)": {
+  "L:source.cpp - (meta.preprocessor, comment, string)": {
+    patterns: [
+      {
+        # ROOT objects/instances (TObject)
+        name: 'storage.type.cpp.root'
+        match: '\\bT[A-Z]\\w+\\b'
+      }
+      {
+        # constants (kIsValid)
+        name: 'constant.language.cpp.root'
+        match: '\\bk[A-Z]\\w+\\b'
+      }
+      {
+        # typedefs & structs (Double_t, UInt_t)
+        name: 'storage.type.language.cpp.root'
+        match: '\\bU?(?!U)[A-Z][a-z]+_t\\b'
+      }
+      {
+        # global/static class members (fgVariable)
+        name: 'variable.other.readwrite.member-global.cpp.root'
+        match: '\\bfg[A-Z]\\w+\\b'
+      }
+    ]
+  }
+}

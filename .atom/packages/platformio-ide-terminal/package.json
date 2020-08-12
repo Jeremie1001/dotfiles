@@ -1,0 +1,104 @@
+{
+  "_from": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+  "_id": "platformio-ide-terminal@2.10.0",
+  "_inBundle": false,
+  "_integrity": "sha512-tc3wjBKzAuOp1L+wD62jZscZXckyYRBCFcKxOHh/lQIBAFUdKHpueboov4FZIfglZtZRnOvBj9KRJ8hpCQetDw==",
+  "_location": "/platformio-ide-terminal",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+  "_shasum": "d3bf22b485583fd72900f13f309418fd4ae18ccf",
+  "_spec": "https://www.atom.io/api/packages/platformio-ide-terminal/versions/2.10.0/tarball",
+  "_where": "C:\\Users\\jerem\\AppData\\Local\\Temp\\apm-install-dir-2020620-5824-1qaf4do.hsv9l",
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
+  "author": {
+    "name": "Jeremy Ebneyamin"
+  },
+  "bugs": {
+    "url": "https://github.com/platformio/platformio-atom-ide-terminal/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "contributors": [
+    {
+      "name": "Ivan Kravets",
+      "email": "me@ikravets.com",
+      "url": "http://platformio.org"
+    },
+    {
+      "name": "Dmytro Kyrychuk",
+      "email": "dmytro.kyrychuck@gmail.com",
+      "url": "http://platformio.org"
+    },
+    {
+      "name": "The Community Contributors",
+      "url": "https://github.com/platformio/platformio-atom-ide-terminal/graphs/contributors"
+    }
+  ],
+  "dependencies": {
+    "atom-space-pen-views": "^2.2.0",
+    "node-pty-prebuilt-multiarch": "0.9.0-beta21.legacy",
+    "term.js": "https://github.com/jeremyramin/term.js/tarball/master",
+    "underscore": "^1.8.3"
+  },
+  "deprecated": false,
+  "description": "A terminal package for Atom, complete with themes, API and more for PlatformIO IDE. Fork of terminal-plus.",
+  "engines": {
+    "atom": ">=1.12.2 <2.0.0"
+  },
+  "homepage": "https://atom.io/packages/platformio-ide-terminal",
+  "keywords": [
+    "PlatformIO",
+    "terminal-plus",
+    "terminal",
+    "iterm",
+    "panel",
+    "pty",
+    "tty",
+    "xterm",
+    "iterm",
+    "iterm2",
+    "console",
+    "powershell"
+  ],
+  "license": "MIT",
+  "main": "./lib/platformio-ide-terminal",
+  "name": "platformio-ide-terminal",
+  "providedServices": {
+    "platformioIDETerminal": {
+      "description": "PlatformIO IDE Terminal API",
+      "versions": {
+        "1.1.0": "providePlatformIOIDETerminal"
+      }
+    },
+    "runInTerminal": {
+      "description": "Deprecated API for PlatformIO IDE 1.0",
+      "versions": {
+        "0.14.5": "provideRunInTerminal"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformio/platformio-atom-ide-terminal.git"
+  },
+  "version": "2.10.0"
+}

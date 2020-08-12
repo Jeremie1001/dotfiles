@@ -1,0 +1,350 @@
+{
+  "_from": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+  "_id": "latex@0.50.2",
+  "_inBundle": false,
+  "_integrity": "sha512-/gv4Ah0bQN6MPCXT8gbE6uXdB+PZw9HM+3LD6o42ZFC+8aLSG8CDM9RvlR480Qcx/cVfjil9qHIayiDmlVJrBA==",
+  "_location": "/latex",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+  "_shasum": "f847358aeaff49936f28dd261992dd58f3bb95cb",
+  "_spec": "https://www.atom.io/api/packages/latex/versions/0.50.2/tarball",
+  "_where": "C:\\Users\\jerem\\AppData\\Local\\Temp\\apm-install-dir-202068-9052-xpazom.q8bwd",
+  "activationCommands": {
+    "atom-workspace": [
+      "latex:build",
+      "latex:check-runtime",
+      "latex:clean",
+      "latex:clear-log",
+      "latex:hide-log",
+      "latex:rebuild",
+      "latex:show-log",
+      "latex:sync-log",
+      "latex:sync",
+      "latex:toggle-log"
+    ]
+  },
+  "activationHooks": [
+    "language-latex:grammar-used",
+    "language-tex:grammar-used",
+    "language-latexsimple:grammar-used"
+  ],
+  "author": {
+    "name": "Thomas Johansen",
+    "email": "thomasjo@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/thomasjo/atom-latex/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "texPath": {
+      "title": "TeX Path",
+      "description": "The full path to your TeX distribution's bin directory. Supports `$PATH` substitution.",
+      "type": "string",
+      "default": "",
+      "order": 1
+    },
+    "engine": {
+      "description": "Select standard LaTeX engine",
+      "type": "string",
+      "enum": [
+        "pdflatex",
+        "lualatex",
+        "platex",
+        "uplatex",
+        "xelatex"
+      ],
+      "default": "pdflatex",
+      "order": 2
+    },
+    "customEngine": {
+      "description": "Enter command for custom LaTeX engine. Overrides Engine.",
+      "type": "string",
+      "default": "",
+      "order": 3
+    },
+    "enableShellEscape": {
+      "type": "boolean",
+      "default": false,
+      "order": 4
+    },
+    "enableSynctex": {
+      "title": "Enable SyncTeX",
+      "type": "boolean",
+      "default": true,
+      "order": 5
+    },
+    "useDicy": {
+      "title": "Use DiCy",
+      "description": "Use the experimental javascript based builder [`DiCy`](https://yitzchak.github.io/dicy/) instead of `latexmk`. [`DiCy`](https://yitzchak.github.io/dicy/) is included with this package so no further configuration or installation is required.",
+      "type": "boolean",
+      "default": "false",
+      "order": 6
+    },
+    "enableExtendedBuildMode": {
+      "description": "Enable extended build mode using `latexmk` rules for custom files types. Currently includes support for Asymptote, the `glossaries` package, the `index` package, MetaPost, the `nomencl` package and SageTeX. Please note that these rules are loaded after all other `latexmkrc` files are loaded, and therefore may overwrite custom rules defined by the user.",
+      "type": "boolean",
+      "default": true,
+      "order": 7
+    },
+    "loggingLevel": {
+      "description": "The minimum level of message severity to output in the logger. A logging level of `error` shows only messages indicating catastrophic issues such as undefined symbols, `warning` shows error messages and messages indicating unintended consequences such as bad boxes, and `info` shows all messages including purely informational messages such a font loading.",
+      "type": "string",
+      "enum": [
+        "error",
+        "warning",
+        "info"
+      ],
+      "default": "warning",
+      "order": 8
+    },
+    "cleanPatterns": {
+      "description": "The files and directories to remove during a LaTeX clean. Basic glob patterns are understood and named properties such as {jobname} are replaced with the current build properties. Patterns that start with `/` or `\\` are matched against any file in the same directory as the source file. All other patterns are matched against generated files in the output directory. More information can be found on the Atom LaTeX wiki.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "**/*.aux",
+        "**/*.aux.bak",
+        "**/*.bbl",
+        "**/*.bcf",
+        "**/*.blg",
+        "**/*.dvi",
+        "**/*.fdb_latexmk",
+        "**/*.fls",
+        "**/*.idx",
+        "**/*.idx.bak",
+        "**/*.ilg",
+        "**/*.ind",
+        "**/*.lof",
+        "**/*.log",
+        "**/*.lol",
+        "**/*.lot",
+        "**/*.nav",
+        "**/*.out",
+        "**/*.pdf",
+        "**/*.ps",
+        "**/*.snm",
+        "**/*.synctex.gz",
+        "**/*.toc",
+        "/**/_minted-{jobname}",
+        "/{output_dir}/sage-plots-for-{jobname}.tex",
+        "/missfont.log",
+        "/texput.log",
+        "/texput.aux"
+      ],
+      "order": 9
+    },
+    "outputDirectory": {
+      "description": "All files generated during a build will be redirected here. Leave blank if you want the build output to be stored in the same directory as the TeX document.",
+      "type": "string",
+      "default": "",
+      "order": 10
+    },
+    "outputFormat": {
+      "description": "Output file format. DVI and PS currently only supported for latexmk.",
+      "type": "string",
+      "enum": [
+        "pdf",
+        "dvi",
+        "ps"
+      ],
+      "default": "pdf",
+      "order": 11
+    },
+    "producer": {
+      "title": "PDF Producer",
+      "description": "Program to use when post-processing DVI output in order to produce PDF. This is only used for LaTeX engines not capable of natively producing PDF. Currently only supported for latexmk.",
+      "type": "string",
+      "enum": [
+        "dvipdfmx",
+        "xdvipdfmx",
+        "dvipdf",
+        "ps2pdf"
+      ],
+      "default": "dvipdfmx",
+      "order": 12
+    },
+    "moveResultToSourceDirectory": {
+      "title": "Move Result to Source Directory",
+      "description": "Ensures that the output file produced by a successful build is stored together with the TeX document that produced it.",
+      "type": "boolean",
+      "default": true,
+      "order": 13
+    },
+    "buildOnSave": {
+      "title": "Build on Save",
+      "description": "Automatically run builds when files are saved.",
+      "type": "boolean",
+      "default": false,
+      "order": 14
+    },
+    "openResultAfterBuild": {
+      "title": "Open Result after Successful Build",
+      "type": "boolean",
+      "default": true,
+      "order": 15
+    },
+    "openResultInBackground": {
+      "title": "Open Result in Background",
+      "type": "boolean",
+      "default": true,
+      "order": 16
+    },
+    "opener": {
+      "type": "string",
+      "enum": [
+        "automatic",
+        "atril",
+        "evince",
+        "okular",
+        "pdf-view",
+        "preview",
+        "qpdfview",
+        "shell-open",
+        "skim",
+        "sumatra",
+        "xdg-open",
+        "x-reader",
+        "zathura",
+        "custom"
+      ],
+      "default": "automatic",
+      "order": 17
+    },
+    "pdfViewSplitDirection": {
+      "description": "Pane split direction to use for pdf-view.",
+      "type": "string",
+      "enum": [
+        "left",
+        "right",
+        "up",
+        "down"
+      ],
+      "default": "right",
+      "order": 18
+    },
+    "skimPath": {
+      "description": "Full application path to Skim (macOS).",
+      "type": "string",
+      "default": "/Applications/Skim.app",
+      "order": 19
+    },
+    "sumatraPath": {
+      "title": "SumatraPDF Path",
+      "description": "Full application path to SumatraPDF (Windows).",
+      "type": "string",
+      "default": "C:\\Program Files (x86)\\SumatraPDF\\SumatraPDF.exe",
+      "order": 20
+    },
+    "okularPath": {
+      "description": "Full application path to Okular (*nix).",
+      "type": "string",
+      "default": "/usr/bin/okular",
+      "order": 21
+    },
+    "zathuraPath": {
+      "description": "Full application path to Zathura (*nix).",
+      "type": "string",
+      "default": "/usr/bin/zathura",
+      "order": 22
+    },
+    "qpdfviewPath": {
+      "description": "Full application path to qpdfview (*nix).",
+      "type": "string",
+      "default": "/usr/bin/qpdfview",
+      "order": 23
+    },
+    "viewerPath": {
+      "title": "Custom PDF Viewer Path",
+      "description": "Full application path to your PDF viewer. Overrides Skim and SumatraPDF options.",
+      "type": "string",
+      "default": "",
+      "order": 24
+    }
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "contributors": [
+    {
+      "name": "Tarn Burton",
+      "email": "twburton@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "@dicy/client": "^0.13.0",
+    "dbus-native": "^0.4.0",
+    "etch": "0.12.6",
+    "fs-plus": "^3.0.0",
+    "glob": "^7.1.1",
+    "js-yaml": "^3.11.0",
+    "lodash": "^4.17.4",
+    "minimatch": "^3.0.4",
+    "temp": "^0.8.3",
+    "tree-kill": "^1.1.0",
+    "wrench": "^1.5.9"
+  },
+  "deprecated": false,
+  "description": "Compile LaTeX documents from within Atom",
+  "deserializers": {
+    "latex/log": "deserializeLog"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.0"
+  },
+  "engines": {
+    "atom": ">=1.19.0 <2.0.0"
+  },
+  "homepage": "https://github.com/thomasjo/atom-latex#readme",
+  "keywords": [
+    "tex",
+    "latex",
+    "latexmk",
+    "texlive",
+    "miktex"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "latex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasjo/atom-latex.git"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "atom",
+      "latex",
+      "afterEach",
+      "beforeEach",
+      "describe",
+      "expect",
+      "it",
+      "jasmine",
+      "runs",
+      "spyOn",
+      "waitsFor",
+      "waitsForPromise"
+    ]
+  },
+  "version": "0.50.2"
+}

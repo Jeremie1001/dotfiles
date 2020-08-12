@@ -1,0 +1,118 @@
+@import "ui-variables";
+
+status-bar {
+  .latex-status {
+    .latex-message-count {
+      padding-left: 0.5em;
+    }
+
+    .latex-highlight {
+      color: @text-color-highlight;
+    }
+
+    .latex-info {
+      color: @text-color-info;
+    }
+
+    .latex-warning {
+      color: @text-color-warning;
+    }
+
+    .latex-error {
+      color: @text-color-error;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    .icon {
+      padding-right: 0.125em;
+      display: inline-block;
+    }
+
+    &.is-busy {
+      color: @text-color-highlight;
+
+      a {
+        color: @text-color-highlight;
+      }
+
+      .busy.icon::before {
+        -webkit-animation: spin 2s infinite linear;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.latex-log {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.375em;
+
+  .log-block {
+    padding: 0.375em;
+    flex: 0 1 auto;
+  }
+
+  .log-block.expand {
+    border: 1px solid @base-border-color;
+    overflow-y: scroll;
+    flex: 1 1 auto;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    background-color: @base-background-color;
+    border: 1px solid @base-border-color;
+  }
+
+  td {
+    border: 1px none;
+  }
+
+  td, th {
+    vertical-align: top;
+    padding: .05em .25em .05em .25em;
+  }
+
+  .latex-info .icon {
+    color: @text-color-info;
+  }
+
+  .latex-warning .icon {
+    color: @text-color-warning;
+  }
+
+  .latex-error .icon {
+    color: @text-color-error;
+  }
+
+  .panel-body {
+    margin-top: 5px;
+    overflow-y: scroll;
+  }
+
+  a.latex-file-reference {
+    white-space: nowrap;
+    color: @text-color-subtle;
+  }
+
+  .latex-highlight {
+    color: @text-color-highlight;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

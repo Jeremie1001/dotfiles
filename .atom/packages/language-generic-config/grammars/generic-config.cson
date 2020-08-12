@@ -1,0 +1,35 @@
+'scopeName': 'text.generic-config'
+'name': 'Generic Configuration'
+'fileTypes': [
+  'gitattributes'
+  '.config/git/ignore'
+  '.git/info/exclude'
+  'gitignore'
+  'conf'
+  'ctags'
+  'hgignore'
+  'mailmap'
+  'stylelintignore'
+  'cfg'
+]
+'patterns': [
+  {
+    'include': '#comment'
+  }
+]
+'repository':
+  'comment':
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures': 'punctuation.definition.comment.generic-config'
+        'end': '$\\n?'
+        'name': 'comment.line.number-sign.generic-config'
+      }
+      {
+        'begin': ';'
+        'beginCaptures': 'punctuation.definition.comment.generic-config'
+        'end': '$\\n?'
+        'name': 'comment.line.semi-colon.generic-config'
+      }
+    ]

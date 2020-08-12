@@ -1,0 +1,6 @@
+
+'.platform-darwin atom-workspace':
+    'alt-cmd-m': 'latex-tree:toggle-tree-view'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+    'alt-ctrl-m': 'latex-tree:toggle-tree-view'

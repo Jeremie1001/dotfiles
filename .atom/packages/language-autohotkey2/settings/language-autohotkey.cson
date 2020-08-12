@@ -1,0 +1,3 @@
+'.source.ahk':
+  'editor':
+    'commentStart': '; '

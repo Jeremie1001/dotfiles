@@ -1,0 +1,76 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+  "_id": "language-generic-config@1.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-aBJeWPl/v2oJvroHt0J3kaq35ckb4u2mBH2MTiymw3FpHLa3u7yedeH2lSxfL/fUzzwz/K9kMuBDTTseJkG2Cg==",
+  "_location": "/language-generic-config",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+  "_shasum": "ddea347326c3e90a16b3f1a1281a2ee531a23666",
+  "_spec": "https://www.atom.io/api/packages/language-generic-config/versions/1.4.0/tarball",
+  "_where": "C:\\Users\\jerem\\AppData\\Local\\Temp\\apm-install-dir-2020624-7908-l60577.yia8",
+  "atomTestRunner": "./spec/runner",
+  "author": {
+    "name": "Lee Dohm",
+    "email": "lee@lee-dohm.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lee-dohm/language-generic-config/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "enableAutomatch": {
+      "type": "boolean",
+      "default": true,
+      "description": "Assign grammar to files which contain comment-like sequences, but don't match any specific language.",
+      "order": 1
+    },
+    "automatchPattern": {
+      "type": "string",
+      "default": "^\\s*[;#]\\s",
+      "description": "Regular expression which determines what lines of a generic-config file are comments.",
+      "order": 2
+    },
+    "requireMinimumMatchingLines": {
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "description": "Limit automatching to files containing at least *`n`* lines that match `automatchPattern`.",
+      "order": 3
+    }
+  },
+  "deprecated": false,
+  "description": "Provides basic syntax highlighting for configuration files that are just composed of comments or non-comments",
+  "devDependencies": {
+    "atom-mocha-test-runner": "1.0.1",
+    "chai": "^3.5.0"
+  },
+  "engines": {
+    "atom": ">=0.196.0 <2.0.0"
+  },
+  "homepage": "https://github.com/lee-dohm/language-generic-config#readme",
+  "keywords": [
+    "generic",
+    "configuration",
+    "grammar",
+    "syntax"
+  ],
+  "license": "MIT",
+  "name": "language-generic-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lee-dohm/language-generic-config.git"
+  },
+  "version": "1.4.0"
+}

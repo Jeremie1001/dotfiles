@@ -1,0 +1,7 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+   '.tool-bar': [
+      label: 'Edit Tool Bar'
+      command: 'flex-tool-bar:edit-config-file'
+   ]
+'menu': []

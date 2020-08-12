@@ -1,0 +1,41 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+  "_id": "language-ino@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-XN+Lc83VBTZ0pqolhK5/kmW/r7rdT6eo9iSslVsp+6E6wbt0e8lxXl3KnZczBuk+aX6FZI0xyM0Uhk7HlULo6g==",
+  "_location": "/language-ino",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+  "_shasum": "c2eb784f0b1d5f79906603e5ef8482a2eeff6175",
+  "_spec": "https://www.atom.io/api/packages/language-ino/versions/0.2.0/tarball",
+  "_where": "C:\\Users\\jerem\\AppData\\Local\\Temp\\apm-install-dir-202068-18636-62cgk5.wh1af",
+  "bugs": {
+    "url": "https://github.com/cannikin/language-ino/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Atom language support for Arduino's INO files",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "https://github.com/cannikin/language-ino#readme",
+  "license": "MIT",
+  "name": "language-ino",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cannikin/language-ino.git"
+  },
+  "version": "0.2.0"
+}

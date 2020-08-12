@@ -1,0 +1,252 @@
+body {
+  background-color: inherit;
+  background-image: none;
+}
+
+#sidebarContent {
+  background-color: hsla(0,0%,0%,.7);
+}
+
+.annotationLayer .linkAnnotation > a:hover,
+.annotationLayer .buttonWidgetAnnotation.pushButton > a:hover {
+  background: #00ffff;
+  box-shadow: none;
+}
+
+.annotationLayer .popup {
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.annotationLayer .popup p {
+  font-size: 10px;
+}
+
+.pdfViewer .page {
+  -o-border-image: none;
+  border-image: none;
+  background-color: inherit;
+}
+
+.pdfViewer .page:not([data-loaded]) {
+  box-sizing: border-box;
+  border-width: 1px;
+  border-color: grey;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#sidebarContainer {
+  transition-duration: 0s;
+}
+
+#viewerContainer:not(.pdfPresentationMode) {
+  transition-duration: 0s;
+  box-shadow: none !important;
+}
+
+#toolbarSidebar {
+  background-image: none;
+  box-shadow: none !important;
+}
+
+#toolbarContainer, .findbar, .secondaryToolbar {
+  background-image: none;
+  box-shadow: none !important;
+}
+
+#loadingBar .progress.indeterminate .glimmer {
+  background: grey;
+}
+
+#findInput {
+  width: 200px;
+}
+
+.doorHanger,
+.doorHangerRight {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.splitToolbarButton:hover > .toolbarButton,
+.splitToolbarButton:focus > .toolbarButton,
+.splitToolbarButton.toggled > .toolbarButton,
+.toolbarButton.textButton {
+  background-image: none;
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+.splitToolbarButton > .toolbarButton:hover,
+.splitToolbarButton > .toolbarButton:focus,
+.dropdownToolbarButton:hover,
+.overlayButton:hover,
+.overlayButton:focus,
+.toolbarButton.textButton:hover,
+.toolbarButton.textButton:focus {
+  box-shadow: none;
+}
+
+html[dir='ltr'] .splitToolbarButton > .toolbarButton:first-child,
+html[dir='rtl'] .splitToolbarButton > .toolbarButton:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+html[dir='ltr'] .splitToolbarButton > .toolbarButton:last-child,
+html[dir='rtl'] .splitToolbarButton > .toolbarButton:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.splitToolbarButtonSeparator {
+  box-shadow: 0;
+}
+
+.splitToolbarButton:hover > .splitToolbarButtonSeparator,
+.splitToolbarButton.toggled > .splitToolbarButtonSeparator {
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+.toolbarButton,
+.dropdownToolbarButton,
+.secondaryToolbarButton,
+.overlayButton {
+  border-radius: 0px;
+  transition-duration: 0s;
+}
+
+.toolbarButton:hover,
+.toolbarButton:focus,
+.dropdownToolbarButton,
+.overlayButton,
+.secondaryToolbarButton:hover,
+.secondaryToolbarButton:focus {
+  background-image: none;
+  box-shadow: none;
+}
+
+.toolbarButton:hover:active,
+.overlayButton:hover:active,
+.dropdownToolbarButton:hover:active,
+.secondaryToolbarButton:hover:active {
+  background-image: none;
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+.toolbarButton.toggled,
+.splitToolbarButton.toggled > .toolbarButton.toggled,
+.secondaryToolbarButton.toggled {
+  background-image: none;
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+.toolbarButton.toggled:hover:active,
+.splitToolbarButton.toggled > .toolbarButton.toggled:hover:active,
+.secondaryToolbarButton.toggled:hover:active {
+  background-color: hsla(0,0%,0%,.4);
+  border-color: none;
+  box-shadow: none;
+}
+
+.toolbarButton.pdfSidebarNotification::after {
+  background-color: #55dbdb;
+}
+
+.verticalToolbarSeparator {
+  box-shadow: none;
+}
+
+.horizontalToolbarSeparator {
+  background-color: transparent;
+  height: 0px;
+  border-bottom: 1px solid hsla(0,0%,0%,.5);
+  box-shadow: none;
+}
+
+.toolbarField {
+  border-radius: 0px;
+  background-image: none;
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+.toolbarField:hover {
+  border-radius: 0px;
+}
+
+.toolbarField:focus {
+  border-color: none;
+}
+
+.toolbarLabel {
+  border-radius: 0px;
+}
+
+.thumbnail:not([data-loaded]) {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.thumbnailImage {
+  box-shadow: none;
+}
+
+.thumbnailSelectionRing {
+  border-radius: 0px;
+}
+
+a:focus > .thumbnail > .thumbnailSelectionRing,
+.thumbnail:hover > .thumbnailSelectionRing {
+  background-image: none;
+  box-shadow: none;
+}
+
+.thumbnail.selected > .thumbnailSelectionRing > .thumbnailImage {
+  box-shadow: none;
+}
+
+.thumbnail.selected > .thumbnailSelectionRing {
+  background-image: none;
+  box-shadow: none;
+}
+
+.outlineItemToggler:hover,
+.outlineItemToggler:hover + a,
+.outlineItemToggler:hover ~ .outlineItems,
+.outlineItem > a:hover,
+.attachmentsItem > button:hover {
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.outlineItem.selected {
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+#overlayContainer > .container > .dialog {
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.dialog .separator {
+  box-shadow: none;
+}

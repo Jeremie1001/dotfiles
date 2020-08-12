@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Exit on failure, and treat expansion of unset variables as an error.
+set -eu
+
+# Enable case-insensitive pattern matching.
+shopt -s nocasematch
+
+ensure_r_installed() {
+  if [[ "${APPVEYOR:-}" == true ]]; then
+    # TODO: Remove when 'R.Project' package adds it as a dependency.
+    echo "Installing chocolatey-core.extension..."
+    choco install chocolatey-core.extension
+
+    echo "Installing R..."
+    choco install R.Project --allow-empty-checksums --ia="/DIR=\"${R_HOME}\""
+
+    export PATH="${R_HOME}/bin:${PATH}"
+  elif [[ "${TRAVIS_OS_NAME:-}" == "osx" ]]; then
+    echo "Installing R..."
+    brew update
+    brew install r
+  fi
+}
+
+install_knitr() {
+  ensure_r_installed
+
+  # Check if we need to install Knitr.
+  if ! Rscript -e "library(knitr); library(patchSynctex)" &> /dev/null; then
+    # Make sure the R_LIBS_USER directory exists to make R happy.
+    [[ ! -d "${R_LIBS_USER}" ]] && mkdir -p "${R_LIBS_USER}"
+
+    echo "Installing knitr..."
+    Rscript -e "install.packages(c('knitr', 'patchSynctex'), repos = 'http://cran.r-project.org')"
+  else
+    echo "Using cached installation of knitr"
+  fi
+}

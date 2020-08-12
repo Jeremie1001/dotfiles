@@ -1,0 +1,22 @@
+menu: [
+  {
+    label: 'View'
+    submenu: [
+      { label: 'Toggle Tool Bar', command: 'tool-bar:toggle' }
+    ]
+  }
+],
+'context-menu': {
+  '.tool-bar': [
+    { label: '&Hide Tool Bar', command: 'tool-bar:toggle' }
+    {
+      label: '&Position',
+      submenu: [
+        { label: 'Top', command: 'tool-bar:position-top' }
+        { label: 'Right', command: 'tool-bar:position-right' }
+        { label: 'Bottom', command: 'tool-bar:position-bottom' }
+        { label: 'Left', command: 'tool-bar:position-left' }
+      ]
+    }
+  ]
+}

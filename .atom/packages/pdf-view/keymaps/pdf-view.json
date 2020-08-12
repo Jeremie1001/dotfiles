@@ -1,0 +1,25 @@
+{
+  ".pdf-view": {
+    "ctrl-g": "pdf-view:go-to-page",
+    "cmd-left": "pdf-view:go-to-previous-page",
+    "cmd-right": "pdf-view:go-to-next-page"
+  },
+
+  ".platform-darwin .pdf-view": {
+    "alt-cmd-9": "pdf-view:zoom-fit",
+    "cmd-+": "pdf-view:zoom-in",
+    "cmd-=": "pdf-view:zoom-in",
+    "cmd--": "pdf-view:zoom-out",
+    "cmd-_": "pdf-view:zoom-out",
+    "cmd-0": "pdf-view:reset-zoom"
+  },
+
+  ".platform-win32 .pdf-view, .platform-linux .pdf-view": {
+    "alt-ctrl-9": "pdf-view:zoom-fit",
+    "ctrl-+": "pdf-view:zoom-in",
+    "ctrl-=": "pdf-view:zoom-in",
+    "ctrl--": "pdf-view:zoom-out",
+    "ctrl-_": "pdf-view:zoom-out",
+    "ctrl-0": "pdf-view:reset-zoom"
+  }
+}

@@ -1,0 +1,34 @@
+% !TEX jobnames = foo bar, snafu
+\documentclass{article}
+
+\begin{document}
+
+  \begin{center}
+    % Error: There's no line here to end
+    \hbox{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+    id est laborum} \\
+  \end{center}
+
+  % Error: Argument of \@sect has an extra }.
+  % Error: Paragraph ended before \@sect was complete.
+  \section{Foo\footnote{Bar}}
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+  id est laborum
+
+  \begin{tabular}{ll}
+    % Extra alignment tab has bee changed to \cr
+    Foo & Bar & Snafu \\
+  \end{tabular}
+
+  % Generate errors and warnings in a subfile with spaces
+  \input{"sub/foo bar.tex"}
+
+  % Generate errors and warnings in a subfile located in another directory
+  \input{sub/wibble}
+
+\end{document}
