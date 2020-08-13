@@ -1,7 +1,0 @@
-{
-  "atom-text-editor[data-grammar~=\"latex\"]": {
-    "ctrl-alt-b": "latex:build",
-    "ctrl-alt-s": "latex:sync",
-    "ctrl-alt-c": "latex:clean"
-  }
-}

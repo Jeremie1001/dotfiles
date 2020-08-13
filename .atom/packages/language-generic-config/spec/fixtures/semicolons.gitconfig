@@ -1,9 +1,0 @@
-; Comment
-[Section]
-	name1 = value       ; Another comment
-	name2 = value2      ; What this↑guy said
-
-; Second comment
-[Section-II]
-	foo = bar
-	baz = qux

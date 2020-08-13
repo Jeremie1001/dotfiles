@@ -1,7 +1,0 @@
-ABC
-123
-XYZ
-
-(function(obj){
-	return "Remember this, kids?";
-}(window));

@@ -1,8 +1,0 @@
-[
-  {
-    type: "button"
-    icon: "octoface"
-    callback: "application:about"
-    tooltip: "project1"
-  }
-]
