@@ -1,0 +1,89 @@
+configuration {
+    drun-display-format: "{icon} {name}";
+    display-drun: "Programs";
+	show-icons: true;
+	icon-theme: "Qogir";
+	location: 0;
+	columns: 2;
+	fake-transparency: false;
+	hide-scrollbar: true;
+	bw: 0;
+    fullscreen: true;
+    show-icons: true;
+	terminal: "kitty";
+	sidebar-mode: false;
+}
+
+@import "colors.rasi"
+
+* {
+  text-font:                            "Inter 14";
+
+  inputbar-margin:                      3px 3px;
+  prompt-padding:                       15px 20px;
+  entry-padding:                        15px 15px 15px 0px;
+  list-element-padding:                 10px;
+  list-element-margin:                  @inputbar-margin;
+  list-element-border:                  0px 5px 0px 5px;
+
+  apps-textbox-prompt-colon-padding:    15px -5px 0px 0px;
+}
+
+#window {
+  width: 100%;
+  height: 100%;
+  padding: 120px 100px;
+}
+
+* {
+  background-color: @selection-opaque;
+  text-color: @white;
+  font: @text-font;
+}
+
+inputbar,
+prompt,
+textbox-prompt-colon,
+entry {
+  background-color: @background;
+  border-radius: 10px;
+}
+
+#inputbar {
+  children: [ prompt, textbox-prompt-colon, entry ];
+  margin: @inputbar-margin;
+}
+
+#prompt {
+  padding: @prompt-padding;
+  background-color: @purple;
+  text-color: @background;
+}
+
+#textbox-prompt-colon {
+  expand: false;
+  str: " #  ";
+  text-color: @purple;
+  padding: @apps-textbox-prompt-colon-padding;
+}
+
+#entry {
+  text-color: @purple;
+  padding: @entry-padding;
+}
+
+#element {
+  padding: @list-element-padding;
+  margin: @list-element-margin;
+  border: @list-element-border;
+  background-color: @background;
+  border-color: @background;
+  border-radius: 10px;
+}
+
+#element.selected {
+  background-color: @background-focus;
+  text-color: @purple;
+  border-color: @purple;
+  border-radius: 10px;
+}
