@@ -1,14 +1,17 @@
+--DEPENDENCIES
+	--i3lock-fancy
+
 local awful = require('awful')
 local gears = require('gears')
 local wibox = require('wibox')
-local beautiful = require('beautiful')
 local icons = require('themes.icons')
 local clickable_container = require('widget.clickable-container')
+local colors = require('themes.dracula.colors')
 local apps = require('config.apps')
 local dpi = require('beautiful').xresources.apply_dpi
 
 -- Appearance
-local icon_size = beautiful.exit_screen_icon_size or dpi(140)
+local icon_size = dpi(140)
 local screen_geometry = awful.screen.focused().geometry
 
 local greeter_message = wibox.widget {
@@ -21,29 +24,29 @@ local greeter_message = wibox.widget {
 }
 
 local buildButton = function(icon)
-  local abutton =
-    wibox.widget {
-    wibox.widget {
-      wibox.widget {
-        wibox.widget {
-          image = icon,
-          widget = wibox.widget.imagebox
-        },
-        top = dpi(16),
-        bottom = dpi(16),
-        left = dpi(16),
-        right = dpi(16),
-        widget = wibox.container.margin
-      },
-      shape = gears.shape.circle,
-      forced_width = icon_size,
-      forced_height = icon_size,
-      widget = clickable_container
-    },
-    left = dpi(24),
-    right = dpi(24),
-    widget = wibox.container.margin
-  }
+  local abutton = wibox.widget {
+	     {
+	       {
+	         {
+						 {
+		          image = icon,
+		          widget = wibox.widget.imagebox
+		        },
+		        margins = dpi(16),
+		        widget = wibox.container.margin
+					},
+					shape = gears.shape.circle,
+					bg = 'transparent',
+					widget = wibox.container.background
+	      },
+	      forced_width = icon_size,
+	      forced_height = icon_size,
+	      widget = clickable_container
+	    },
+	    left = dpi(24),
+	    right = dpi(24),
+	    widget = wibox.container.margin
+  	}
 
   return abutton
 end
@@ -121,12 +124,12 @@ exit_screen =
     ontop = true,
     type = 'splash',
     height = screen_geometry.height,
-    width = screen_geometry.width
+    width = screen_geometry.width,
+		bg = colors.alpha(colors.selection, 'E0'),
+		fg = '#FEFEFE'
   }
 )
 
-exit_screen.bg = '#44475AE0'
-exit_screen.fg = '#FEFEFE'
 
 local exit_screen_grabber
 

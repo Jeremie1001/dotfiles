@@ -1,13 +1,9 @@
--------------------------------
---    "Sky" awesome theme    --
---  By Andrei "Garoth" Thorp --
--------------------------------
--- If you want SVGs and extras, get them from garoth.com/awesome/sky-theme
-
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 local themes_path = require("gears.filesystem").get_themes_dir()
+local colors = require('themes.dracula.colors')
+
 
 
 -- BASICS
@@ -68,18 +64,9 @@ theme.awesome_icon           = themes_path .. "dracula/awesome-icon.png"
 -- from default for now...
 theme.menu_submenu_icon     = themes_path .. "dracula/submenu.png"
 
--- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
 
 -- MISC
 theme.wallpaper             = "/home/jeremie1001/.config/awesome/themes/backgrounds/archdracula.png"
-theme.taglist_squares       = "true"
 theme.titlebar_close_button = "true"
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)

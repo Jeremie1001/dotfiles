@@ -1,10 +1,9 @@
 local awful = require('awful')
-local gears = require('gears')
-
-require('awful.autofocus')
 
 local modkey = require('config.keys.mod').modKey
 local altkey = require('config.keys.mod').altKey
+
+require('awful.autofocus')
 
 local clientkeys = awful.util.table.join(
   awful.key(

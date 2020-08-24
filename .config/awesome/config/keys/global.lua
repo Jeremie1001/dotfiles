@@ -1,22 +1,27 @@
 local awful = require('awful')
-local beautiful = require('beautiful')
 local naughty = require('naughty')
-
-require('awful.autofocus')
-
-local hotkeys_popup = require('awful.hotkeys_popup').widget
 
 local modkey = require('config.keys.mod').modKey
 local altkey = require('config.keys.mod').altKey
 
 local apps = require('config.apps')
+local hotkeys_popup = require('awful.hotkeys_popup').widget
+local hotkeys_popup_custom = require('module.hotkeys-popup')
 
+require('awful.autofocus')
 
 local globalKeys = awful.util.table.join(
   awful.key(
     {modkey},
     "h",
     hotkeys_popup.show_help,
+    {description="show help", group="Awesome"}
+  ),
+
+  awful.key(
+    {modkey, 'Shift'},
+    "h",
+    hotkeys_popup_custom.show_help,
     {description="show help", group="Awesome"}
   ),
 
@@ -280,7 +285,7 @@ local globalKeys = awful.util.table.join(
   awful.key(
 		{modkey},
 		"c",
-		function() awful.util.spawn("./.config/dmenu/dmenu-edit-configs.sh") end,
+		function() awful.spawn("./.config/dmenu/dmenu-edit-configs.sh") end,
 		{description = "run dmenu configs prompt", group = "Launcher"}
 	),
 
@@ -297,7 +302,7 @@ local globalKeys = awful.util.table.join(
   awful.key(
 		{modkey, "Shift"},
 		"r",
-		function() awful.util.spawn("rofi -show run -fullscreen True -lines 5 -line-margin 5 -padding 300 -bw 0 2>&1 /tmp/polybarmain.log") end,
+		function() awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme run.rasi') end,
 		{description = "run rofi prompt", group = "Launcher"}
 	),
 
@@ -305,7 +310,7 @@ local globalKeys = awful.util.table.join(
   awful.key(
 		{modkey, "Shift"},
 		"w",
-		function() awful.util.spawn("rofi -show window -fullscreen True -lines 5 -line-margin 5 -padding 300 -bw 0 2>&1 /tmp/polybarmain.log") end,
+		function() awful.spawn.with_shell('rofi -no-lazy-grab -show window -theme window.rasi') end,
 		{description = "run rofi window prompt", group = "Launcher"}
 	),
 
@@ -316,6 +321,25 @@ local globalKeys = awful.util.table.join(
 			_G.exit_screen_show()
 		end,
 		{description = 'toggle exit screen', group = 'Awesome'}
+	),
+
+  awful.key(
+    {modkey},
+    "m",
+		function()
+			bar_toggle()
+      cc_resize()
+		end,
+		{description = 'toggle top bar', group = 'Awesome'}
+	),
+
+  awful.key(
+    {modkey},
+    "k",
+		function()
+			cc_toggle()
+		end,
+		{description = 'toggle control center', group = 'Awesome'}
 	),
 
   awful.key(
