@@ -54,6 +54,7 @@ alias wget='wget -c'
 alias histg='history | grep'
 alias myip='curl ipv4.icanhazip.com'
 alias grep='grep --color=auto'
+alias awesome-logs='vim ~/.local/share/sddm/xorg-session.log'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Set PATH so it includes user's private bin directories
