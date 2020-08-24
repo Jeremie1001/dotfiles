@@ -64,9 +64,6 @@ case "$choice" in
 	quit)
 		echo "Program terminated." && exit 1
 	;;
-	alacritty)
-		choice="alacrittyyml"
-	;;
 	Albania)
 		choice="Albania"
 	;;

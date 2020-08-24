@@ -71,7 +71,7 @@ case "$choice" in
 		choice="$HOME/.config/powerline-shell/config.json"
 	;;
 	rofi)
-		choice="$HOME/.config/rofi/config.rasi"
+		choice="$HOME/.config/rofi/"
 	;;
 	thunderbird)
 		choice="$HOME/.thunderbird/"
