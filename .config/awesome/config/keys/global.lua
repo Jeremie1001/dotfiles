@@ -12,14 +12,14 @@ require('awful.autofocus')
 
 local globalKeys = awful.util.table.join(
   awful.key(
-    {modkey},
+    {modkey, 'Shift'},
     "h",
     hotkeys_popup.show_help,
     {description="show help", group="Awesome"}
   ),
 
   awful.key(
-    {modkey, 'Shift'},
+    {modkey},
     "h",
     hotkeys_popup_custom.show_help,
     {description="show help", group="Awesome"}
@@ -121,14 +121,14 @@ local globalKeys = awful.util.table.join(
 	),
 
 
-  -- Standard program
+  -- Default programs
   awful.key(
   	{modkey},
   	"Return",
   	function ()
   		awful.spawn(apps.default.terminal)
     end,
-		{description = "Open a terminal", group = "Launcher"}
+		{description = "Open Terminal", group = "Default programs"}
 	),
 
   awful.key(
@@ -137,7 +137,7 @@ local globalKeys = awful.util.table.join(
   	function ()
   		awful.spawn(apps.default.editor)
     end,
-		{description = "Open Atom", group = "Launcher"}
+		{description = "Open Atom", group = "Default programs"}
 	),
 
   awful.key(
@@ -146,7 +146,25 @@ local globalKeys = awful.util.table.join(
   	function ()
   		awful.spawn(apps.default.browser)
     end,
-		{description = "Open Firefox", group = "Launcher"}
+		{description = "Open Firefox", group = "Default programs"}
+	),
+
+  awful.key(
+  	{modkey},
+  	"t",
+  	function ()
+  		awful.spawn(apps.default.email)
+    end,
+		{description = "Open Thunderbird", group = "Default programs"}
+	),
+
+  awful.key(
+  	{modkey},
+  	"d",
+  	function ()
+  		awful.spawn(apps.default.chat)
+    end,
+		{description = "Open Discord", group = "Default programs"}
 	),
 
   awful.key(
@@ -155,7 +173,7 @@ local globalKeys = awful.util.table.join(
   	function ()
   		awful.spawn(apps.default.file_manager)
     end,
-		{description = "Open Nemo", group = "Launcher"}
+		{description = "Open Nemo", group = "Default programs"}
 	),
 
   awful.key(
@@ -278,7 +296,7 @@ local globalKeys = awful.util.table.join(
 		{modkey},
 		"r",
 		function() awful.util.spawn("dmenu_run") end,
-		{description = "run dmenu prompt", group = "Launcher"}
+		{description = "run dmenu prompt", group = "Launchers"}
 	),
 
   --Run DMenu Config Prompt
@@ -286,7 +304,7 @@ local globalKeys = awful.util.table.join(
 		{modkey},
 		"c",
 		function() awful.spawn("./.config/dmenu/dmenu-edit-configs.sh") end,
-		{description = "run dmenu configs prompt", group = "Launcher"}
+		{description = "run dmenu configs prompt", group = "Launchers"}
 	),
 
   --Run DMenu VPN Prompt
@@ -294,7 +312,7 @@ local globalKeys = awful.util.table.join(
 		{modkey},
 		"v",
 		function() awful.util.spawn("./.config/polybar/scripts/vpn.sh --location-menu") end,
-		{description = "run dmenu vpn prompt", group = "Launcher"}
+		{description = "run dmenu vpn prompt", group = "Launchers"}
 	),
 
 
@@ -303,7 +321,7 @@ local globalKeys = awful.util.table.join(
 		{modkey, "Shift"},
 		"r",
 		function() awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme run.rasi') end,
-		{description = "run rofi prompt", group = "Launcher"}
+		{description = "run rofi prompt", group = "Launchers"}
 	),
 
   --Run Rofi Prompt
@@ -311,7 +329,7 @@ local globalKeys = awful.util.table.join(
 		{modkey, "Shift"},
 		"w",
 		function() awful.spawn.with_shell('rofi -no-lazy-grab -show window -theme window.rasi') end,
-		{description = "run rofi window prompt", group = "Launcher"}
+		{description = "run rofi window prompt", group = "Launchers"}
 	),
 
   awful.key(

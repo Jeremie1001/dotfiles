@@ -51,7 +51,7 @@ local clientkeys = awful.util.table.join(
 	),
 
   awful.key(
-		{modkey},
+		{modkey, 'Shift'},
 		"t",
     function (c)
       c.ontop = not c.ontop
