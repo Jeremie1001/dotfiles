@@ -17,14 +17,14 @@ local globalKeys = awful.util.table.join(
     hotkeys_popup.show_help,
     {description="show help", group="Awesome"}
   ),
---[[
+
   awful.key(
     {modkey},
     "h",
     hotkeys_popup_custom.show_help,
     {description="show help", group="Awesome"}
   ),
-]]
+
   awful.key(
 		{modkey},
 		"Left",
