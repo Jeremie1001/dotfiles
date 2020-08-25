@@ -15,7 +15,7 @@ local return_button = function(color, space)
 	         {
 						 {
 		          image = icons.bluetooth_off,
-		          widget = wibox.widget.imagebox
+		          widget = wibox.widget.imagebox,
 		        },
 						top = dpi(5),
 						bottom = dpi(5),

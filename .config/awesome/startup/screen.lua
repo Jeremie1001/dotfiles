@@ -22,4 +22,4 @@ awful.screen.connect_for_each_screen(
 )
 
 awful.spawn.with_shell("picom")
-awful.spawn.with_shell("nitrogen --set-zoom-fill /home/jeremie1001/.config/awesome/themes/backgrounds/archdracula.png")
+awful.spawn.with_shell("nitrogen --set-zoom-fill /home/jeremie1001/.config/backgrounds/archdraken.png")

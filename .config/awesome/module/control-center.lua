@@ -90,6 +90,8 @@ local sliders = wibox.widget {
   bg = colors.alpha(colors.selection, 'F2'),
   forced_width = 400,
   forced_height = 190,
+  border_width = dpi(2),
+  border_color = colors.background,
   widget = wibox.container.background,
   layout,
 }
@@ -121,6 +123,8 @@ local buttons = wibox.widget {
   bg = colors.alpha(colors.selection, 'F2'),
   forced_width = 400,
   forced_height = 70,
+  border_width = dpi(2),
+  border_color = colors.background,
   widget = wibox.container.background,
   layout,
 }
@@ -148,6 +152,8 @@ local title = wibox.widget {
   bg = colors.alpha(colors.selection, 'F2'),
   forced_width = 400,
   forced_height = 70,
+  border_width = dpi(2),
+  border_color = colors.background,
   widget = wibox.container.background,
   layout,
 }
