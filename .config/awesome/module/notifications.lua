@@ -10,29 +10,9 @@ local dpi = beautiful.xresources.apply_dpi
 local clickable_container = require('widget.clickable-container')
 local colors = require('themes.dracula.colors')
 
-
--- Defaults
-naughty.config.defaults.ontop = true
-naughty.config.defaults.icon_size = dpi(32)
-naughty.config.defaults.font = 'Sauce Code Pro Regular 8'
-naughty.config.defaults.timeout = 5
-naughty.config.defaults.title = 'System Notification'
-naughty.config.defaults.margin = dpi(16)
-naughty.config.defaults.border_width = 0
-naughty.config.defaults.position = 'top_right'
-naughty.config.defaults.bg = colors.alpha(colors.cyan, 'EE')
-naughty.config.defaults.fg = colors.black
-naughty.config.defaults.shape = gears.shape.rounded_rect
-
-
 -- Apply theme variables
 naughty.config.padding = dpi(8)
 naughty.config.spacing = dpi(8)
-naughty.config.icon_dirs = {
-	'/usr/share/icons/Tela',
-	'/usr/share/icons/Tela-purple-dark',
-	'/usr/share/icons/Papirus/',
-}
 naughty.config.icon_formats = { 'svg', 'png', 'jpg', 'gif' }
 
 ruled.notification.connect_signal(
@@ -43,7 +23,6 @@ ruled.notification.connect_signal(
 		ruled.notification.append_rule {
 			rule = { urgency = 'critical' },
 			properties = {
-				bg = colors.red,
 				implicit_timeout	= 0
 			}
 		}
@@ -51,16 +30,22 @@ ruled.notification.connect_signal(
 		-- Normal notifs
 		ruled.notification.append_rule {
 			rule = { urgency = 'normal' },
+			properties = {
+				implicit_timeout	= 5
+			}
 		}
 
 		-- Low notifs
 		ruled.notification.append_rule {
 			rule = { urgency = 'low' },
+			properties = {
+				implicit_timeout	= 2
+			}
 		}
 	end
-	)
+)
 
-  naughty.connect_signal(
+naughty.connect_signal(
 	'request::display_error',
 	function(message, startup)
 		naughty.notification {
@@ -73,33 +58,138 @@ ruled.notification.connect_signal(
 	end
 )
 
--- XDG icon lookup
-naughty.connect_signal(
-	'request::icon',
-	function(n, context, hints)
-		if context ~= 'app_icon' then return end
+local urgency_color = {
+    ['low'] = colors.green,
+    ['normal'] = colors.selection,
+    ['critical'] = colors.red,
+}
 
-		local path = menubar.utils.lookup_icon(hints.app_icon) or
-		menubar.utils.lookup_icon(hints.app_icon:lower())
-
-		if path then
-			n.icon = path
-		end
-	end
-)
-
---[[
 naughty.connect_signal(
 	'request::display',
 	function(n)
-		-- Destroy popups if dont_disturb mode is on
-		-- Or if the right_panel is visible
-		local focused = awful.screen.focused()
-		if _G.dont_disturb or
-			(focused.right_panel and focused.right_panel.visible) then
-			naughty.destroy_all_notifications(nil, 1)
-		end
+		local custom_notification_icon = wibox.widget {
+        font = "Inter Regular 18",
+        align = "center",
+        valign = "center",
+        widget = wibox.widget.textbox
+    }
+
+		local color = urgency_color[n.urgency]
+		local icon = icons.awesome
+
+		local actions = wibox.widget {
+			notification = n,
+			widget_template = {
+				{
+					{
+						{
+							id = 'text_role',
+							font = beautiful.notification_font,
+							widget = wibox.widget.textbox
+						},
+						left = dpi(6),
+						right = dpi(6),
+						widget = wibox.container.margin
+					},
+					widget = wibox.container.place
+				},
+				bg = color,
+				forced_height = dpi(25),
+				forced_width = dpi(70),
+				widget = wibox.container.background
+			},
+			style = {
+					underline_normal = false,
+					underline_selected = true
+			},
+			widget = naughty.list.actions
+		}
+
+		local notif_icon = wibox.widget {
+	     {
+	       {
+	         {
+	          image = icons.dracula,
+	          widget = wibox.widget.imagebox,
+	        },
+					margins = dpi(5),
+	        widget = wibox.container.margin
+				},
+				shape = gears.shape.rect,
+				bg = colors.purple,
+				widget = wibox.container.background
+      },
+      forced_width = 40,
+      forced_height = 40,
+      widget = clickable_container
+  	}
+
+		naughty.layout.box {
+	    notification = n,
+	    type = "notification",
+	    -- For antialiasing: The real shape is set in widget_template
+			shape = function(cr, width, height)
+				gears.shape.rounded_rect(cr, width, height, dpi(4))
+			end,
+	    position = "top_right",
+	    widget_template = {
+	      {
+	        {
+	          notif_icon,
+	          {
+	            {
+	              {
+	                align = "center",
+	                visible = title_visible,
+	                font = "Inter Regular 8",
+	                markup = "<b>"..n.title.."</b>",
+	                widget = wibox.widget.textbox,
+	                -- widget = naughty.widget.title,
+	              },
+	              {
+	                align = "center",
+	                --wrap = "char",
+	                widget = naughty.widget.message,
+	              },
+	              {
+	                wibox.widget{
+	                    forced_height = dpi(10),
+	                    layout = wibox.layout.fixed.vertical
+	                },
+	                {
+	                  actions,
+										shape = function(cr, width, height)
+											gears.shape.rounded_rect(cr, width, height, dpi(4))
+										end,
+	                  widget = wibox.container.background,
+	                },
+	                  visible = n.actions and #n.actions > 0,
+	                  layout  = wibox.layout.fixed.vertical
+	              },
+	              layout  = wibox.layout.align.vertical,
+	            },
+	            margins = dpi(4),
+	            widget  = wibox.container.margin,
+	          },
+	          layout  = wibox.layout.fixed.horizontal,
+	        },
+	        strategy = "max",
+	        width    = dpi(350),
+	        height   = dpi(180),
+	        widget   = wibox.container.constraint,
+	      },
+	      -- Anti-aliasing container
+				shape = function(cr, width, height)
+					gears.shape.rounded_rect(cr, width, height, dpi(4))
+				end,
+	      bg = color,
+				fg = colors.white,
+				border_width = dpi(1),
+			  border_color = colors.background,
+	      widget = wibox.container.background
+	    }
+		}
+
 
 	end
 )
-]]

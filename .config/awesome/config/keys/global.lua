@@ -17,14 +17,14 @@ local globalKeys = awful.util.table.join(
     hotkeys_popup.show_help,
     {description="show help", group="Awesome"}
   ),
-
+--[[
   awful.key(
     {modkey},
     "h",
     hotkeys_popup_custom.show_help,
     {description="show help", group="Awesome"}
   ),
-
+]]
   awful.key(
 		{modkey},
 		"Left",
@@ -250,10 +250,9 @@ local globalKeys = awful.util.table.join(
 		function ()
 			awful.layout.inc( 1)
       naughty.notify({
-        preset = naughty.config.presets.critical,
+        preset = naughty.config.presets.low,
         title = "Switched Layouts",
         text = awful.layout.getname(awful.layout.get(awful.screen.focused())),
-        timeout = 2
       })
     end,
 		{description = "select next layout", group = "Layout"}
@@ -265,10 +264,9 @@ local globalKeys = awful.util.table.join(
 		function ()
 			awful.layout.inc(-1)
       naughty.notify({
-        preset = naughty.config.presets.critical,
+        preset = naughty.config.presets.low,
         title = "Switched Layouts",
         text = awful.layout.getname(awful.layout.get(awful.screen.focused())),
-        timeout = 2
       })
     end,
 		{description = "select previous layout", group = "Layout"}

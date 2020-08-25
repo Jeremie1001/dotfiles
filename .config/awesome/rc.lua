@@ -15,7 +15,7 @@
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 banners generated using https://fsymbols.com/generators/tarty/
 
-By:
+ArchDracula By:
 	Jeremie Cote
 	@jeremie1001
 	https://github.com/Jeremie1001/dotfiles
