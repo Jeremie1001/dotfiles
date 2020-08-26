@@ -1,15 +1,12 @@
 local beautiful = require('beautiful')
 local gears = require('gears')
 local awful = require('awful')
+local backgrounds = require('themes.backgrounds')
 
+--[[
 local function set_wallpaper(s)
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
+  local wallpaper = backgrounds.archkraken
+  gears.wallpaper.maximized(wallpaper, s, true)
 end
 
 screen.connect_signal("property::geometry", set_wallpaper)
@@ -20,6 +17,7 @@ awful.screen.connect_for_each_screen(
     set_wallpaper(s)
   end
 )
+]]
 
+awful.spawn.with_shell("feh --bg-fill ~/.config/backgrounds/archdraken.png")
 awful.spawn.with_shell("picom")
-awful.spawn.with_shell("nitrogen --set-zoom-fill /home/jeremie1001/.config/backgrounds/archdraken.png")

@@ -25,8 +25,9 @@ Based on terminal color theme Dracula and inpired by https://github.com/manilaro
 Dependencies
 	i3lock-fancy (exit_screen module)
 	blueman (bluetooth buttons)
-	speedtest-cli (wifi bar widget)
 	rofi (launchers)
+  dmenu (hotkeys)
+  pamixer (volume controls)
 	nordvpn-bin (vpn widgets)
 	lm_sensors (temperature dial in control center)
 
@@ -37,62 +38,65 @@ Dependencies
 		nemo
 		kitty
 		atom
+
+Disclaimer, some of the aspects of this rice arent completely functional at this time as this is still a work in progress so please be please be patient
+  This includes the do not disturb function, bluetooth, wifi, battery and volume buttons on the main bar, and various volume functionality syncing
 ]]
 
-
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█▄─▄███▄─██─▄██▀▄─██
 --██─██▀██─██─███─▀─██
---▀▄▄▄▄▄▀▀▄▄▄▄▀▀▄▄▀▄▄▀
+--█▄▄▄▄▄██▄▄▄▄██▄▄█▄▄█
 
 pcall(require, "luarocks.loader")
 
 
 
---███████████████████████████████████████████████████
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█▄─▄███▄─▄█▄─▄─▀█▄─▄▄▀██▀▄─██▄─▄▄▀█▄─▄█▄─▄▄─█─▄▄▄▄█
 --██─██▀██─███─▄─▀██─▄─▄██─▀─███─▄─▄██─███─▄█▀█▄▄▄▄─█
---▀▄▄▄▄▄▀▄▄▄▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀
+--█▄▄▄▄▄█▄▄▄█▄▄▄▄██▄▄█▄▄█▄▄█▄▄█▄▄█▄▄█▄▄▄█▄▄▄▄▄█▄▄▄▄▄█
 
 local awful = require("awful")
-local beautiful = require("beautiful")
 require("awful.autofocus")
 
 
 
---█████████████████████████████████████████
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█▄─█─▄██▀▄─██▄─▄▄▀█▄─▄█─▄▄─█▄─██─▄█─▄▄▄▄█
 --██▄▀▄███─▀─███─▄─▄██─██─██─██─██─██▄▄▄▄─█
---▀▀▀▄▀▀▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▄▀▄▄▄▄▀▀▄▄▄▄▀▀▄▄▄▄▄▀
+--███▄███▄▄█▄▄█▄▄█▄▄█▄▄▄█▄▄▄▄██▄▄▄▄██▄▄▄▄▄█
 
 require('startup')
 require("layout")
 require('config.client')
 
 
---███████████████████████████████
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█─▄─▄─█─█─█▄─▄▄─█▄─▀█▀─▄█▄─▄▄─█
 --███─███─▄─██─▄█▀██─█▄█─███─▄█▀█
---▀▀▄▄▄▀▀▄▀▄▀▄▄▄▄▄▀▄▄▄▀▄▄▄▀▄▄▄▄▄▀
+--██▄▄▄██▄█▄█▄▄▄▄▄█▄▄▄█▄▄▄█▄▄▄▄▄█
 
-beautiful.init("/home/jeremie1001/.config/awesome/themes/dracula/theme.lua")
+require('themes')
 
 
 
---████████████████████████████████████████
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█─█─█─▄▄─█─▄─▄─█▄─█─▄█▄─▄▄─█▄─█─▄█─▄▄▄▄█
 --█─▄─█─██─███─████─▄▀███─▄█▀██▄─▄██▄▄▄▄─█
---▀▄▀▄▀▄▄▄▄▀▀▄▄▄▀▀▄▄▀▄▄▀▄▄▄▄▄▀▀▄▄▄▀▀▄▄▄▄▄▀
+--█▄█▄█▄▄▄▄██▄▄▄██▄▄█▄▄█▄▄▄▄▄██▄▄▄██▄▄▄▄▄█
 
 _G.root.keys(require('config.keys.global'))
 
 
 
---█████████████████████████████████████████████
+--▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 --█▄─▀█▀─▄█─▄▄─█▄─▄▄▀█▄─██─▄█▄─▄███▄─▄▄─█─▄▄▄▄█
 --██─█▄█─██─██─██─██─██─██─███─██▀██─▄█▀█▄▄▄▄─█
---▀▄▄▄▀▄▄▄▀▄▄▄▄▀▄▄▄▄▀▀▀▄▄▄▄▀▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀
+--█▄▄▄█▄▄▄█▄▄▄▄█▄▄▄▄███▄▄▄▄██▄▄▄▄▄█▄▄▄▄▄█▄▄▄▄▄█
 
 require('module.notifications')
 require('module.exit-screen')
 require('module.control-center')
+require('module.double-border')
 awful.screen.connect_for_each_screen(require('module.bar'))

@@ -15,7 +15,8 @@ local return_button = function(color, space)
 	local lenMax = 42
 
 	watch (
-		[[bash -c "xprop -id $(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)' | awk {'print $5'}) | grep '_WM_NAME(UTF8_STRING)' | awk '{for(i=1; i<NF-1; ++i) $i=$(i+2); NF-=2; print $0}' | sed 's/\"//g'"]],
+--		[[bash -c "xprop -id $(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)' | awk {'print $5'}) | grep '_WM_NAME(UTF8_STRING)' | awk '{for(i=1; i<NF-1; ++i) $i=$(i+2); NF-=2; print $0}' | sed 's/\"//g'"]],
+		[[bash -c "xdotool getwindowname $(xdotool getactivewindow)"]],
 		1,
 		function(_, stdout)
 			local name = stdout

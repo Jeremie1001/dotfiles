@@ -37,7 +37,7 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.purple,
+	bg = colors.background,
 	widget = wibox.container.background
 }
 
