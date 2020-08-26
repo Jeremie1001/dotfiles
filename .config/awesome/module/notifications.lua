@@ -50,7 +50,7 @@ naughty.connect_signal(
 	function(message, startup)
 		naughty.notification {
 			urgency = 'critical',
-			title   = 'Lmao, get wrekt'..(startup and ' during startup!' or ''),
+			title   = 'You done gone messed up a-a-ron'..(startup and ' during startup!' or ''),
 			message = message,
 			app_name = 'System Notification',
 			icon = icons.awesome
@@ -58,9 +58,15 @@ naughty.connect_signal(
 	end
 )
 
-local urgency_color = {
+local main_color = {
     ['low'] = colors.green,
     ['normal'] = colors.selection,
+    ['critical'] = '#cc6666',
+}
+
+local edge_color = {
+    ['low'] = colors.purple,
+    ['normal'] = colors.purple,
     ['critical'] = colors.red,
 }
 
@@ -74,7 +80,8 @@ naughty.connect_signal(
         widget = wibox.widget.textbox
     }
 
-		local color = urgency_color[n.urgency]
+		local main_color = main_color[n.urgency]
+		local edge_color = edge_color[n.urgency]
 		local icon = icons.awesome
 
 		local actions = wibox.widget {
@@ -93,7 +100,7 @@ naughty.connect_signal(
 					},
 					widget = wibox.container.place
 				},
-				bg = color,
+				bg = main_color,
 				forced_height = dpi(25),
 				forced_width = dpi(70),
 				widget = wibox.container.background
@@ -116,7 +123,7 @@ naughty.connect_signal(
 	        widget = wibox.container.margin
 				},
 				shape = gears.shape.rect,
-				bg = colors.purple,
+				bg = edge_color,
 				widget = wibox.container.background
       },
       forced_width = 40,
@@ -182,7 +189,7 @@ naughty.connect_signal(
 				shape = function(cr, width, height)
 					gears.shape.rounded_rect(cr, width, height, dpi(4))
 				end,
-	      bg = color,
+	      bg = main_color,
 				fg = colors.white,
 				border_width = dpi(1),
 			  border_color = colors.background,
