@@ -1,3 +1,6 @@
+--DEPENDENCIES
+  --upower
+
 local wibox = require('wibox')
 local gears = require('gears')
 local dpi = require('beautiful').xresources.apply_dpi
@@ -33,6 +36,9 @@ watch (
 	20,
 	function(_, stdout)
 		local percentage = stdout
+    if stdout == "" then
+      percentage = 100
+    end
     slider:set_values({(100-percentage), percentage})
 		collectgarbage('collect')
 	end

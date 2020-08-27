@@ -10,6 +10,7 @@ local dpi = beautiful.xresources.apply_dpi
 local icons = require('widget.control-center.volume-slider.icons')
 local clickable_container = require('widget.clickable-container')
 local colors = require('themes.dracula.colors')
+local watch = require('awful.widget.watch')
 
 local main_color = colors.yellow
 
@@ -136,11 +137,22 @@ local update_slider_mute = function()
 	)
 end
 
-
+watch (
+	[[bash -c "pamixer --get-mute"]],
+	2,
+	function(_, stdout)
+		local status = string.match(stdout, '%a+')
+		if status == 'true' then
+			widget_icon.icon:set_image(icons.mute)
+		elseif status == "false" then
+			widget_icon.icon:set_image(icons.volume)
+		end
+		collectgarbage('collect')
+	end
+)
 
 -- Update on startup
 update_slider()
-update_slider_mute()
 
 local mute_toggle = function()
 	awful.spawn.easy_async_with_shell(

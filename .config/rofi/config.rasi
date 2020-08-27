@@ -1,5 +1,5 @@
 configuration {
-  modi: "window,run,drun,ssh";
+  modi: "window,run,drun,ssh,keys";
   show-icons:         true;
   icon-theme:         "Qogir";
   location: 5;

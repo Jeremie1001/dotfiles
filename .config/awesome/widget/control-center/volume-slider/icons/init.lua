@@ -1,5 +1,5 @@
 -- Icons directory
-local dir = os.getenv('HOME') .. '/.config/awesome/widget/volume-slider/icons/'
+local dir = os.getenv('HOME') .. '/.config/awesome/widget/control-center/volume-slider/icons/'
 
 return {
 	volume 				= dir .. 'volume-high.svg',

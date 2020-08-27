@@ -313,7 +313,6 @@ local globalKeys = awful.util.table.join(
 		{description = "run dmenu vpn prompt", group = "Launchers"}
 	),
 
-
   --Run Rofi Prompt
   awful.key(
 		{modkey, "Shift"},
@@ -321,7 +320,7 @@ local globalKeys = awful.util.table.join(
 		function() awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme run.rasi') end,
 		{description = "run rofi prompt", group = "Launchers"}
 	),
-
+  
   --Run Rofi Prompt
   awful.key(
 		{modkey, "Shift"},
@@ -345,6 +344,7 @@ local globalKeys = awful.util.table.join(
 		function()
 			bar_toggle()
       cc_resize()
+      nc_resize()
 		end,
 		{description = 'toggle top bar', group = 'Awesome'}
 	),
@@ -354,6 +354,15 @@ local globalKeys = awful.util.table.join(
     "k",
 		function()
 			cc_toggle()
+		end,
+		{description = 'toggle control center', group = 'Awesome'}
+	),
+
+  awful.key(
+    {modkey},
+    "i",
+		function()
+			nc_toggle()
 		end,
 		{description = 'toggle control center', group = 'Awesome'}
 	),

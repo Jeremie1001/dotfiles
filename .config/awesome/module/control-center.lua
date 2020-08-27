@@ -2,7 +2,9 @@
 	--pamixer
   --lm_sensors
   --free
+  --upower
 
+local awful = require('awful')
 local gears = require('gears')
 local wibox = require('wibox')
 local beautiful = require('beautiful')
@@ -169,7 +171,7 @@ controlCenter = wibox(
     ontop = true,
     type = 'splash',
     height = screen_geometry.height-dpi(35),
-    width = screen_geometry.width,
+    width = dpi(400),
     bg = 'transparent',
     fg = '#FEFEFE',
   }
@@ -188,6 +190,14 @@ end
 function cc_toggle()
   if controlCenter.visible == false then
     controlCenter.visible = true
+    cc_grabber = awful.keygrabber.run(
+      function(_, key, event)
+        if key == 'Escape' or key == 'q' or key == 'x' then
+          controlCenter.visible = false
+          awful.keygrabber.stop(cc_grabber)
+        end
+      end
+    )
   elseif controlCenter.visible == true then
     controlCenter.visible = false
   end
