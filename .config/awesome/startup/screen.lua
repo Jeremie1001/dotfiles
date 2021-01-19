@@ -19,5 +19,5 @@ awful.screen.connect_for_each_screen(
 )
 ]]
 
-awful.spawn.with_shell("feh --bg-fill ~/.config/backgrounds/archdraken.png")
+awful.spawn.with_shell("feh --bg-fill ~/.config/awesome/themes/backgrounds/ship.png")
 awful.spawn.with_shell("picom")

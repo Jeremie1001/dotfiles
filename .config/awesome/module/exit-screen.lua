@@ -24,7 +24,7 @@ local greeter_message = wibox.widget {
 }
 
 local buildButton = function(icon)
-  local abutton = wibox.widget {
+  local buttonWidget = wibox.widget {
 	     {
 	       {
 	         {
@@ -48,7 +48,7 @@ local buildButton = function(icon)
 	    widget = wibox.container.margin
   	}
 
-  return abutton
+  return buttonWidget
 end
 
 function suspend_command()
@@ -115,97 +115,136 @@ lock:connect_signal(
 --local screen_geometry = awful.screen.focused().geometry
 
 -- Create the widget
-exit_screen =
-  wibox(
-  {
-    x = screen_geometry.x,
-    y = screen_geometry.y,
-    visible = false,
-    ontop = true,
-    type = 'splash',
-    height = screen_geometry.height,
-    width = screen_geometry.width,
-		bg = colors.alpha(colors.selection, 'E0'),
-		fg = '#FEFEFE'
-  }
-)
 
-
-local exit_screen_grabber
-
-function exit_screen_hide()
-  awful.keygrabber.stop(exit_screen_grabber)
-  exit_screen.visible = false
-end
-
-function exit_screen_show()
-  -- naughty.notify({text = "starting the keygrabber"})
-  exit_screen_grabber =
-    awful.keygrabber.run(
-    function(_, key, event)
-      if event == 'release' then
-        return
-      end
-
-      if key == '3' then
-        suspend_command()
-      elseif key == '4' then
-        exit_command()
-      elseif key == '5' then
-        lock_command()
-      elseif key == '1' then
-        poweroff_command()
-      elseif key == '2' then
-        reboot_command()
-      elseif key == 'Escape' or key == 'q' or key == 'x' then
-        -- naughty.notify({text = "Cancel"})
-        exit_screen_hide()
-      -- else awful.keygrabber.stop(exit_screen_grabber)
-      end
-    end
+local exit_screen = function(s)
+  s.exit_screen =
+    wibox(
+    {
+      x = s.geometry.x,
+      y = s.geometry.y,
+      visible = false,
+      screen = s,
+      ontop = true,
+      type = 'splash',
+      height = s.geometry.height,
+      width = s.geometry.width,
+      bg = colors.alpha(colors.selection, 'E0'),
+      fg = '#FEFEFE'
+    }
   )
-  exit_screen.visible = true
-end
 
-exit_screen:buttons(
-  gears.table.join(
-    -- Middle click - Hide exit_screen
-    awful.button(
-      {},
-      2,
-      function()
-        exit_screen_hide()
-      end
-    ),
-    -- Right click - Hide exit_screen
-    awful.button(
-      {},
-      3,
-      function()
-        exit_screen_hide()
+  s.exit_screen_unfocused =
+    wibox(
+    {
+      x = s.geometry.x,
+      y = s.geometry.y,
+      visible = false,
+      screen = s,
+      ontop = true,
+      type = 'splash',
+      height = s.geometry.height,
+      width = s.geometry.width,
+      bg = colors.alpha(colors.selection, 'E0'),
+      fg = '#FEFEFE'
+    }
+  )
+
+
+  local exit_screen_grabber
+
+  function exit_screen_unfocused_hide(qqqq)
+    s.exit_screen_unfocused.visible = false
+  end
+
+  function exit_screen_unfocused_show()
+    s.exit_screen_unfocused.visible = true
+  end
+
+  function exit_screen_hide()
+    awful.keygrabber.stop(exit_screen_grabber)
+    awful.screen.connect_for_each_screen(function(s)
+      s.exit_screen_unfocused.visible = false
+      s.exit_screen.visible = false
+    end)
+  end
+
+  function exit_screen_show()
+    awful.screen.connect_for_each_screen(function(s)
+      s.exit_screen_unfocused.visible = true
+    end)
+    exit_screen_grabber =
+      awful.keygrabber.run(
+      function(_, key, event)
+        if event == 'release' then
+          return
+        end
+
+        if key == '1' then
+          poweroff_command()
+        elseif key == '2' then
+          reboot_command()
+        elseif key == '3' then
+          suspend_command()
+        elseif key == '4' then
+          exit_command()
+        elseif key == '5' then
+          lock_command()
+        elseif key == 'Escape' or key == 'q' or key == 'x' then
+          exit_screen_hide()
+        end
       end
     )
-  )
-)
+    awful.screen.focused().exit_screen.visible = true
+  end
 
--- Item placement
-exit_screen:setup {
-  nil,
-  {
+  s.exit_screen:buttons(
+    gears.table.join(
+      -- Middle click - Hide exit_screen
+      awful.button(
+        {},
+        2,
+        function()
+          exit_screen_hide()
+        end
+      ),
+      -- Right click - Hide exit_screen
+      awful.button(
+        {},
+        3,
+        function()
+          exit_screen_hide()
+        end
+      )
+    )
+  )
+
+  -- Item placement
+  s.exit_screen:setup {
     nil,
-		{
-      poweroff,
-      reboot,
-      suspend,
-      exit,
-      lock,
-      layout = wibox.layout.fixed.horizontal
+    {
+      nil,
+      {
+        poweroff,
+        reboot,
+        suspend,
+        exit,
+        lock,
+        layout = wibox.layout.fixed.horizontal
+      },
+      nil,
+      expand = 'none',
+      layout = wibox.layout.align.vertical
     },
     nil,
     expand = 'none',
-    layout = wibox.layout.align.vertical
-  },
-  nil,
-  expand = 'none',
-  layout = wibox.layout.align.horizontal
-}
+    layout = wibox.layout.align.horizontal
+  }
+
+  s.exit_screen_unfocused:setup {
+    nil,
+    layout = wibox.layout.align.horizontal
+  }
+
+end
+
+return exit_screen

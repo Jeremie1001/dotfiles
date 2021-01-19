@@ -190,14 +190,6 @@ end
 function cc_toggle()
   if controlCenter.visible == false then
     controlCenter.visible = true
-    cc_grabber = awful.keygrabber.run(
-      function(_, key, event)
-        if key == 'Escape' or key == 'q' or key == 'x' then
-          controlCenter.visible = false
-          awful.keygrabber.stop(cc_grabber)
-        end
-      end
-    )
   elseif controlCenter.visible == true then
     controlCenter.visible = false
   end

@@ -34,17 +34,22 @@ local bar = function(s)
 
 	function bar_toggle()
 		if s.panel.visible == false then
+		awful.screen.connect_for_each_screen(function(s)
 			s.panel.visible = true
-			awful.spawn.with_shell('echo true > /home/jeremie1001/.config/awesome/widget/bar-button/bar-status ')
+		end)
+			awful.spawn.with_shell('echo true > /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status ')
 		elseif s.panel.visible == true then
+		awful.screen.connect_for_each_screen(function(s)
 			s.panel.visible = false
-			awful.spawn.with_shell('echo false > /home/jeremie1001/.config/awesome/widget/bar-button/bar-status ')
+		end)
+			awful.spawn.with_shell('echo false > /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status ')
 		end
 	end
 
 	s.end_session = require('widget.bar.end-session')(colors.comment, 7)
 	s.clock = require('widget.bar.clock')(colors.purple, 7)
 	s.bluetooth = require('widget.bar.bluetooth')(colors.pink, 7)
+	s.notificationCenter = require('widget.bar.notifications-bar')(colors.pink, 7)
 	s.network = require('widget.bar.network')(colors.red, 7)
 	s.battery = require('widget.bar.battery')(colors.orange, 7)
 	s.volume = require('widget.bar.volume')(colors.yellow, 7)
@@ -74,7 +79,7 @@ local bar = function(s)
 			s.volume,
 			s.battery,
 			s.network,
-			s.bluetooth,
+			s.notificationCenter,
 			s.clock,
 			s.end_session,
 		}

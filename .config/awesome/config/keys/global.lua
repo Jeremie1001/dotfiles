@@ -333,7 +333,7 @@ local globalKeys = awful.util.table.join(
     {modkey},
     "q",
 		function()
-			_G.exit_screen_show()
+			exit_screen_show()
 		end,
 		{description = 'toggle exit screen', group = 'Awesome'}
 	),
@@ -359,8 +359,8 @@ local globalKeys = awful.util.table.join(
 	),
 
   awful.key(
-    {modkey},
-    "i",
+    {modkey, "Shift"},
+    "k",
 		function()
 			nc_toggle()
 		end,
