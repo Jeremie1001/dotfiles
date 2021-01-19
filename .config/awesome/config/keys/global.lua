@@ -83,6 +83,13 @@ local globalKeys = awful.util.table.join(
 		{description = "swap with previous client by index", group = "Tiling"}
 	),
 
+	awful.key(
+		{modkey, "Shift"},
+		"s",
+		function() awful.spawn.with_shell('flameshot gui') end,
+		{description = "Screenshot selection", group = "Tiling"}
+	),
+
   awful.key(
 		{modkey, "Control"},
 		"j",

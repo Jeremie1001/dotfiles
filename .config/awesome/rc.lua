@@ -96,8 +96,8 @@ _G.root.keys(require('config.keys.global'))
 --█▄▄▄█▄▄▄█▄▄▄▄█▄▄▄▄███▄▄▄▄██▄▄▄▄▄█▄▄▄▄▄█▄▄▄▄▄█
 
 require('module.notifications')
-require('module.control-center')
 require('module.notification-center')
 require('module.double-border')
 awful.screen.connect_for_each_screen(require('module.exit-screen'))
+awful.screen.connect_for_each_screen(require('module.control-center'))
 awful.screen.connect_for_each_screen(require('module.bar'))

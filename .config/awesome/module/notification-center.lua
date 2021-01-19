@@ -89,7 +89,6 @@ local notification_panel = wibox.widget {
   layout,
 }
 
-
 notificationCenter = wibox(
   {
     x = screen_geometry.width-width-dpi(8),

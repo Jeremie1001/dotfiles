@@ -162,47 +162,50 @@ local title = wibox.widget {
   layout,
 }
 
+local controlCenter = function(s)
+  s.controlCenter = wibox(
+    {
+      x = s.geometry.x+dpi(8),
+      y = s.geometry.y+dpi(35),
+      visible = false,
+      ontop = true,
+      type = 'splash',
+      height = s.geometry.height-dpi(35),
+      width = dpi(400),
+      bg = 'transparent',
+      fg = '#FEFEFE',
+    }
+  )
 
-controlCenter = wibox(
-  {
-    x = screen_geometry.x+dpi(8),
-    y = screen_geometry.y+dpi(35),
-    visible = false,
-    ontop = true,
-    type = 'splash',
-    height = screen_geometry.height-dpi(35),
-    width = dpi(400),
-    bg = 'transparent',
-    fg = '#FEFEFE',
+  function cc_resize()
+    cc_height = s.geometry.height
+    if s.controlCenter.height == s.geometry.height-dpi(35) then
+      s.controlCenter:geometry{height = s.geometry.height, y = s.geometry.y+dpi(8)}
+    elseif s.controlCenter.height == s.geometry.height then
+      s.controlCenter:geometry{height = s.geometry.height-dpi(35), y = s.geometry.y+dpi(35)}
+    end
+  end
+
+
+  function cc_toggle()
+    if awful.screen.focused().controlCenter.visible == false then
+      awful.screen.focused().controlCenter.visible = true
+    elseif awful.screen.focused().controlCenter.visible == true then
+      awful.screen.focused().controlCenter.visible = false
+    end
+  end
+
+  s.controlCenter:setup {
+    {
+      spacing = dpi(15),
+      title,
+      buttons,
+      dials,
+      sliders,
+      layout = wibox.layout.fixed.vertical,
+    },
+    layout = wibox.layout.fixed.horizontal,
   }
-)
-
-function cc_resize()
-  cc_height = screen_geometry.height
-  if controlCenter.height == screen_geometry.height-dpi(35) then
-    controlCenter:geometry{height = screen_geometry.height, y = screen_geometry.y+dpi(8)}
-  elseif controlCenter.height == screen_geometry.height then
-    controlCenter:geometry{height = screen_geometry.height-dpi(35), y = screen_geometry.y+dpi(35)}
   end
-end
 
-
-function cc_toggle()
-  if controlCenter.visible == false then
-    controlCenter.visible = true
-  elseif controlCenter.visible == true then
-    controlCenter.visible = false
-  end
-end
-
-controlCenter:setup {
-  {
-    spacing = dpi(15),
-    title,
-    buttons,
-    dials,
-    sliders,
-    layout = wibox.layout.fixed.vertical,
-  },
-  layout = wibox.layout.fixed.horizontal,
-}
+return controlCenter

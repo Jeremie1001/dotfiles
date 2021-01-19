@@ -49,7 +49,7 @@ local bar = function(s)
 	s.end_session = require('widget.bar.end-session')(colors.comment, 7)
 	s.clock = require('widget.bar.clock')(colors.purple, 7)
 	s.bluetooth = require('widget.bar.bluetooth')(colors.pink, 7)
-	s.notificationCenter = require('widget.bar.notifications-bar')(colors.pink, 7)
+	s.notificationCenterBar = require('widget.bar.notifications-bar')(colors.pink, 7)
 	s.network = require('widget.bar.network')(colors.red, 7)
 	s.battery = require('widget.bar.battery')(colors.orange, 7)
 	s.volume = require('widget.bar.volume')(colors.yellow, 7)
@@ -79,7 +79,7 @@ local bar = function(s)
 			s.volume,
 			s.battery,
 			s.network,
-			s.notificationCenter,
+			s.notificationCenterBar,
 			s.clock,
 			s.end_session,
 		}
