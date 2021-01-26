@@ -38,7 +38,7 @@ local title = wibox.widget {
     		{
     			layout = wibox.layout.fixed.horizontal,
     			spacing = dpi(16),
-          require('widget.notification-center.dracula-icon'),
+          require('widget.dracula-icon'),
           require('widget.notification-center.title-text'),
       		require('widget.notification-center.clear-all'),
     		}
@@ -98,7 +98,7 @@ notificationCenter = wibox(
     screen = screen.primary,
     type = 'splash',
     height = screen_geometry.height-dpi(35),
-    width = dpi(410),
+    width = width,
     bg = 'transparent',
     fg = '#FEFEFE',
   }
@@ -113,11 +113,14 @@ function nc_resize()
   end
 end
 
+_G.nc_status = false
 
 function nc_toggle()
   if notificationCenter.visible == false then
+    nc_status = true
     notificationCenter.visible = true
   elseif notificationCenter.visible == true then
+    nc_status = false
     notificationCenter.visible = false
   end
 end

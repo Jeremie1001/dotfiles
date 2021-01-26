@@ -56,6 +56,14 @@ local return_button = function(color, space)
 						widget_button_clock:set_format(time)
 					end
 				end
+			),
+			awful.button(
+				{},
+				3,
+				nil,
+				function()
+					cal_toggle()
+				end
 			)
 		)
 	)

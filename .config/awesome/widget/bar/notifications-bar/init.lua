@@ -74,6 +74,14 @@ local return_button = function(color, space)
 				function()
 					_G.nc_toggle()
 				end
+			),
+			awful.button(
+				{},
+				3,
+				nil,
+				function()
+					_G.resetPanelLayout()
+				end
 			)
 		)
 	)

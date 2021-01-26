@@ -20,4 +20,5 @@ awful.screen.connect_for_each_screen(
 ]]
 
 awful.spawn.with_shell("feh --bg-fill ~/.config/awesome/themes/backgrounds/ship.png")
+awful.spawn.with_shell("/home/jeremie1001/.screenlayout/default_dual.sh")
 awful.spawn.with_shell("picom")

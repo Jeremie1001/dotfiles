@@ -66,7 +66,7 @@ local return_button = function(color, space)
 					1,
 					nil,
 					function()
-						awful.spawn.with_shell('rofi -show window -fullscreen True -lines 5 -line-margin 5 -padding 300 -bw 0 2>&1 /tmp/polybarmain.log')
+						awful.spawn.with_shell('rofi -no-lazy-grab -show window -theme centered.rasi')
 					end
 				)
 			)

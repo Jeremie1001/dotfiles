@@ -21,10 +21,10 @@ panelLayout.spacing = dpi(7)
 panelLayout.forced_width = width
 
 resetPanelLayout = function()
-    panelLayout:reset(panelLayout)
-    panelLayout:insert(1, emptyCenter)
-    notificationsEmpty = true
-    awful.spawn.with_shell('echo true > /home/jeremie1001/.config/awesome/widget/bar/notifications-bar/nc-status')
+  panelLayout:reset(panelLayout)
+  panelLayout:insert(1, emptyCenter)
+  notificationsEmpty = true
+  awful.spawn.with_shell('echo true > /home/jeremie1001/.config/awesome/widget/bar/notifications-bar/nc-status')
 end
 
 removeElement = function(box)
@@ -41,13 +41,11 @@ end
 panelLayout:insert(1, emptyCenter)
 
 naughty.connect_signal("added", function(n)
-
   if #panelLayout.children == 1 and notificationsEmpty then
     panelLayout:reset(panelLayout)
     notificationsEmpty = false
     awful.spawn.with_shell('echo false > /home/jeremie1001/.config/awesome/widget/bar/notifications-bar/nc-status')
   end
-
 
   local box = require("widget.notification-center.elements")
   panelLayout:insert(1, box.create(n.title, n.message))

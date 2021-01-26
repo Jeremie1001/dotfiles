@@ -1,5 +1,6 @@
 * {
   purple: #BD93F9;
+  purple-faded: #BD93F966;
   pink: #FF79C6;
   red: #FF5555;
   orange: #FFB86C;
@@ -10,5 +11,7 @@
   selection: #44475A;
   selection-opaque: #44475AE0;
   comment: #6272A4;
+  foreground: #f8f8f2;
   white: #DDD;
+  transparent: #00000000;
 }

@@ -300,7 +300,7 @@ local globalKeys = awful.util.table.join(
   awful.key(
 		{modkey},
 		"r",
-		function() awful.util.spawn("dmenu_run") end,
+		function() awful.util.spawn("rofi -no-lazy-grab -show drun -theme dmenu.rasi") end,
 		{description = "run dmenu prompt", group = "Launchers"}
 	),
 
@@ -316,15 +316,23 @@ local globalKeys = awful.util.table.join(
   awful.key(
 		{modkey},
 		"v",
-		function() awful.util.spawn("./.config/polybar/scripts/vpn.sh --location-menu") end,
+		function() awful.util.spawn("/home/jeremie1001/.config/dmenu/nord-countries.sh") end,
 		{description = "run dmenu vpn prompt", group = "Launchers"}
+	),
+
+	--Run DMenu Projects Prompt
+  awful.key(
+		{modkey},
+		"p",
+		function() awful.util.spawn("/home/jeremie1001/.config/dmenu/projectFoldersRofi.sh") end,
+		{description = "run dmenu projects prompt", group = "Launchers"}
 	),
 
   --Run Rofi Prompt
   awful.key(
 		{modkey, "Shift"},
 		"r",
-		function() awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme run.rasi') end,
+		function() awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme centered.rasi') end,
 		{description = "run rofi prompt", group = "Launchers"}
 	),
   
@@ -351,7 +359,8 @@ local globalKeys = awful.util.table.join(
 		function()
 			bar_toggle()
       cc_resize()
-      nc_resize()
+			nc_resize()
+			cal_resize()
 		end,
 		{description = 'toggle top bar', group = 'Awesome'}
 	),
@@ -372,6 +381,15 @@ local globalKeys = awful.util.table.join(
 			nc_toggle()
 		end,
 		{description = 'toggle control center', group = 'Awesome'}
+	),
+
+	awful.key(
+    {modkey, "Shift"},
+    "l",
+		function()
+			cal_toggle()
+		end,
+		{description = 'toggle calendar', group = 'Awesome'}
 	),
 
   awful.key(

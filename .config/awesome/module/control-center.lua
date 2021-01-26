@@ -142,7 +142,7 @@ local title = wibox.widget {
     		{
     			layout = wibox.layout.fixed.horizontal,
     			spacing = dpi(16),
-          require('widget.control-center.dracula-icon'),
+          require('widget.dracula-icon'),
           require('widget.control-center.title-text'),
     		}
     	),

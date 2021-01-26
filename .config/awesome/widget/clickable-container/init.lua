@@ -1,6 +1,8 @@
 local wibox = require('wibox')
 local beautiful = require('beautiful')
 
+-- Helper function that creates a clickable container
+
 local create_click_events = function(widget)
 
 	local container = wibox.widget {

@@ -1,12 +1,12 @@
-local awful = require('awful')
 local wibox = require('wibox')
 local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
-local watch = require('awful.widget.watch')
 
+--- Widget for dracula icon used in all title bars
+
+-- Icon widget
 local widget_icon = wibox.widget {
 	layout = wibox.layout.align.vertical,
 	expand = 'none',
@@ -20,6 +20,7 @@ local widget_icon = wibox.widget {
 	nil
 }
 
+-- Icon widget container
 local widget = wibox.widget {
 	 {
 		 {
@@ -34,7 +35,7 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.transparent,
+	bg = 'transparent',
 	widget = wibox.container.background
 }
 

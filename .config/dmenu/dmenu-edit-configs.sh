@@ -86,4 +86,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-atom "$choice"
+codium "$choice"

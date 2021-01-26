@@ -26,21 +26,20 @@ Dependencies
 	i3lock-fancy (exit_screen module)
 	blueman (bluetooth buttons)
 	rofi (launchers)
-  dmenu (hotkeys)
   pamixer (volume controls)
 	nordvpn-bin (vpn widgets)
 	lm_sensors (temperature dial in control center)
 
 	SHORTCUT DEPENDENCIES
 		firefox
-		dmenu
 		rofi
 		nemo
 		kitty
-		atom
+		vscodium
+		discord
 
 Disclaimer, some of the aspects of this rice arent completely functional at this time as this is still a work in progress so please be please be patient
-  This includes the do not disturb function, bluetooth, wifi, battery and volume buttons on the main bar, and various volume functionality syncing
+  This includes the do not disturb function, bluetooth, wifi, battery and volume buttons on the main bar, and various volume functionality syncing, see TODO.txt file for updated status
 ]]
 
 --▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -57,7 +56,6 @@ pcall(require, "luarocks.loader")
 --██─██▀██─███─▄─▀██─▄─▄██─▀─███─▄─▄██─███─▄█▀█▄▄▄▄─█
 --█▄▄▄▄▄█▄▄▄█▄▄▄▄██▄▄█▄▄█▄▄█▄▄█▄▄█▄▄█▄▄▄█▄▄▄▄▄█▄▄▄▄▄█
 
-local awful = require("awful")
 require("awful.autofocus")
 
 
@@ -95,9 +93,4 @@ _G.root.keys(require('config.keys.global'))
 --██─█▄█─██─██─██─██─██─██─███─██▀██─▄█▀█▄▄▄▄─█
 --█▄▄▄█▄▄▄█▄▄▄▄█▄▄▄▄███▄▄▄▄██▄▄▄▄▄█▄▄▄▄▄█▄▄▄▄▄█
 
-require('module.notifications')
-require('module.notification-center')
-require('module.double-border')
-awful.screen.connect_for_each_screen(require('module.exit-screen'))
-awful.screen.connect_for_each_screen(require('module.control-center'))
-awful.screen.connect_for_each_screen(require('module.bar'))
+require('module')

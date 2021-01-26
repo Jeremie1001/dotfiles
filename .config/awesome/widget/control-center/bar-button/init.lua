@@ -39,7 +39,7 @@ local widget = wibox.widget {
 }
 
 watch (
-[[bash -c "cat /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status"]],
+	[[bash -c "cat /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status"]],
 	2,
 	function(_, stdout)
 		local status = string.match(stdout, '%a+')

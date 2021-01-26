@@ -197,6 +197,9 @@ naughty.connect_signal(
 	    }
 		}
 
+		if _G.dnd_status or nc_status then
+			naughty.destroy_all_notifications(nil, 1)
+		end
 
 	end
 )

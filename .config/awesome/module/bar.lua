@@ -46,6 +46,20 @@ local bar = function(s)
 		end
 	end
 
+	local function fullscreen_bar_toggle(c)
+		if c.screen and c.screen.index==1 and c==client.focus then
+			if c.fullscreen then
+				awful.screen.focused().panel.visible = false
+			else
+				awful.screen.focused().panel.visible = true
+			end
+		end
+	end
+
+	for _,signal in pairs({"property::fullscreen", "focus"}) do
+		client.connect_signal(signal, fullscreen_bar_toggle)
+	end
+
 	s.end_session = require('widget.bar.end-session')(colors.comment, 7)
 	s.clock = require('widget.bar.clock')(colors.purple, 7)
 	s.bluetooth = require('widget.bar.bluetooth')(colors.pink, 7)

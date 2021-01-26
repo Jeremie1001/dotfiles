@@ -1,15 +1,17 @@
 configuration {
-    drun-display-format: "{icon} {name}";
-    display-drun: "Programs";
+  drun-display-format: "{name}";
+  display-drun: "Programs";
 	show-icons: true;
 	icon-theme: "Qogir";
 	location: 0;
+	yoffset: 0;
+  xoffset: 0;
 	columns: 2;
 	fake-transparency: false;
 	hide-scrollbar: true;
 	bw: 0;
-    fullscreen: true;
-    show-icons: true;
+  fullscreen: false;
+  show-icons: true;
 	terminal: "kitty";
 	sidebar-mode: false;
 }
@@ -17,27 +19,28 @@ configuration {
 @import "colors.rasi"
 
 * {
-  text-font:                            "Inter 14";
-
+  text-font:                            "Inter 12";
   inputbar-margin:                      3px 3px;
-  prompt-padding:                       15px 20px;
-  entry-padding:                        15px 15px 15px 0px;
+  prompt-padding:                       10px 10px;
+  entry-padding:                        10px 0px 10px 0px;
   list-element-padding:                 10px;
   list-element-margin:                  @inputbar-margin;
-  list-element-border:                  0px 5px 0px 5px;
-
-  apps-textbox-prompt-colon-padding:    15px -5px 0px 0px;
+  list-element-border:                  0px 4px 0px 4px;
+  apps-textbox-prompt-colon-padding:    10px -5px 0px 0px;
 }
 
 #window {
-  width: 100%;
-  height: 100%;
-  padding: 120px 100px;
+  width: 750px;
+  height: 92px;
+  padding: 20px 20px;
+  border: 3px;
+  border-color: @purple;
+  border-radius: 14px;
 }
 
 * {
-  background-color: @selection-opaque;
-  text-color: @white;
+  background-color: @selection;
+  text-color: @purple;
   font: @text-font;
 }
 
@@ -46,11 +49,12 @@ prompt,
 textbox-prompt-colon,
 entry {
   background-color: @background;
+  border: 0px;
   border-radius: 10px;
 }
 
 #inputbar {
-  children: [ prompt, textbox-prompt-colon, entry ];
+  children: [ textbox-prompt-colon, entry ];
   margin: @inputbar-margin;
 }
 
@@ -68,8 +72,10 @@ entry {
 }
 
 #entry {
-  text-color: @purple;
+  text-color: @accent;
   padding: @entry-padding;
+  placeholder: "Title";
+  placeholder-color: @purple-faded;
 }
 
 #element {

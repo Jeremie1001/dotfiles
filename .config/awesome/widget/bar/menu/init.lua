@@ -43,7 +43,7 @@ local return_button = function(color, space)
 					1,
 					nil,
 					function()
-						awful.spawn.with_shell('~/.config/rofi/launchers/launcher.sh')
+						awful.spawn.with_shell('rofi -no-lazy-grab -show drun -theme centered.rasi')
 					end
 				),
 				awful.button(
