@@ -1,0 +1,65 @@
+configuration {
+  drun-display-format: "{name}";
+  display-drun: "Programs";
+	show-icons: false;
+	location: 0;
+	yoffset: 0;
+  xoffset: 0;
+  font: "Inter 10";
+}
+
+@import "colors.rasi"
+* {
+  background-color:           @background;
+}
+
+#window {
+  anchor: north;
+  location: north;
+  width: 100%;
+  padding: 0px;
+  children: [ horibox ];
+}
+#horibox {
+  orientation: horizontal;
+  children: [prompt, textbox-prompt-colon, entry, listview];
+}
+#prompt {
+  background-color: @purple;
+  text-color: @foreground;
+  border-color: @purple;
+  padding: 5px;
+  border: 0px 4px 0px 4px;
+  border-radius: 0px 10px 10px 0px;
+}
+#listview {
+  layout: horizontal;
+}
+#entry {
+  padding: 5px 5px 5px 2px;
+  expand: false;
+  width: 10em;
+  background-color: @background;
+  text-color:       @foreground;
+}
+#element {
+  padding: 5px;
+  border: 0px 4px 0px 4px;
+  background-color: @background;
+  border-color: @background;
+  text-color: @foreground;
+}
+#element.selected {
+  background-color: @background;
+  text-color: @purple;
+  border-color: @purple;
+  padding: 5px;
+  border: 0px 4px 0px 4px;
+  border-radius: 6px;
+}
+#textbox-prompt-colon {
+  expand: false;
+  padding: 5px 0px 5px 5px;
+  str: "#";
+  text-color: @purple;
+}
