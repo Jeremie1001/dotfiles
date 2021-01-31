@@ -50,8 +50,6 @@ local return_button = function(color, space)
 					fg = 'white',
 					widget = wibox.container.background
 	      },
-	      forced_width = icon_size,
-	      forced_height = icon_size,
 	      widget = clickable_container
 	    },
 			top = dpi(5),

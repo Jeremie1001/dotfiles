@@ -12,7 +12,8 @@ Cleanup local vs global functions/variables
   -Emit and detect signals
 Remove watch functions for everything but 6 CC widgets
   -Emit and detect signals
-cpu dial (cc)
+DONE - cpu dial (cc)
+battery notification
 brightness (cc)
 DONE - DND (cc + nc)
   -Destroy on screen if fullscreen

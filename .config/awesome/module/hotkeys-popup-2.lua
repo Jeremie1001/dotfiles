@@ -586,7 +586,7 @@ function widget.new(args)
         end
         local help_wibox = self._cached_wiboxes[s][joined_groups]
         help_wibox:show()
---[[
+
         help_wibox.keygrabber = awful.keygrabber.run(function(_, key, event)
             if event == "release" then return end
             if key then
@@ -599,7 +599,6 @@ function widget.new(args)
                 end
             end
         end)
-        ]]
         
         return help_wibox.keygrabber
     end

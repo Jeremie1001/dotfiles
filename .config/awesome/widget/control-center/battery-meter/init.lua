@@ -3,6 +3,7 @@
 
 local wibox = require('wibox')
 local gears = require('gears')
+local naughty = require('naughty')
 local dpi = require('beautiful').xresources.apply_dpi
 local colors = require('themes.dracula.colors')
 local watch = require('awful.widget.watch')
@@ -33,13 +34,17 @@ local slider = wibox.widget {
 
 watch (
 	[[bash -c "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage' | awk '{print $2}' | sed 's/%//'"]],
-	20,
-	function(_, stdout)
+	5,
+  function(_, stdout)
+    local old_percentage = percentage
 		local percentage = stdout
     if stdout == "" then
       percentage = 100
     end
-    slider:set_values({(100-percentage), percentage})
+    if old_percentage > 20 and percentage <= 20 then
+      naughty.notify({title = "Battery is low", text = "Below 20%", urgency='critical'})
+    end
+    slider:set_values({(100-(percentage)), (percentage)})
 		collectgarbage('collect')
 	end
 )

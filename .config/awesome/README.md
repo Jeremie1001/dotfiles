@@ -36,26 +36,6 @@ This is a more specific repo focused on just the AwesomeWM config portion of my 
 - **GTK Theme**: [Ant Dracula](https://draculatheme.com/gtk)
 - **Wallpaper**: [Arch Kraken](https://i.imgur.com/S0LHsad.png)
 
-### Various dependencies
-
-- i3lock-fancy (exit_screen module)
-- picom (compositor)
-- rofi (launchers)
-- pamixer (volume controls)
-- nordvpn-bin (vpn widgets)
-- lm_sensors (temperature dial in control center)
-- feh (background)
-- light (brightness)
-- flameshot (screenshot)
-
-**Hotkey dependencies**
-
-- firefox
-- rofi
-- nemo
-- kitty
-- VSCodium
-
 **File structure**
 
 - /config

@@ -32,24 +32,13 @@ local idle_i = 0
 local total_i = 0
 
 watch (
-	[[bash -c "cat /proc/stat | grep '^cpu '"]],
-	20,
+	[[ sh -c "vmstat 1 2 | tail -1 | awk '{printf \"%d\", $15}'" ]],
+	5,
 	function(_, stdout)
-    local user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice =
-			stdout:match('(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s(%d+)%s')
+    local cpu_idle = stdout
+    cpu_idle = string.gsub(cpu_idle, '^%s*(.-)%s*$', '%1')
 
-		local total = user + nice + system + idle + iowait + irq + softirq + steal
-
-		local delta_idle = idle - idle_i
-		local delta_total = total - total_i
-    local utilization = delta_total - delta_idle
-
-    local percentage =  utilization/delta_total*100
-
-    slider:set_values({(100-percentage), percentage})
-
-    idle_i = idle
-    total_i = total
+    slider:set_values({tonumber(cpu_idle), 100 - tonumber(cpu_idle)})
 
 		collectgarbage('collect')
 	end

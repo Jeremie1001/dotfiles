@@ -5,6 +5,7 @@ local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
 local colors = require('themes.dracula.colors')
+local addEvent = require('widget.calendar.to-do.add-event')
 
 --- Creates button that goes backwards in calendar by date on left click and by month on right click
 
@@ -65,15 +66,7 @@ widget:buttons(
 			1,
 			nil,
 			function()
-				date_decrease()
-			end
-		),
-		awful.button(
-			{},
-			3,
-			nil,
-			function()
-				month_decrease()
+				awesome.emit_signal("widget::add-to-do-event")
 			end
 		)
 	)
