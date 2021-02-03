@@ -162,6 +162,20 @@ local title = wibox.widget {
   layout,
 }
 
+awesome.connect_signal(
+  "cc:toggle",
+  function()
+    cc_toggle()
+  end
+)
+
+awesome.connect_signal(
+  "cal:resize",
+  function()
+    cc_resize()
+  end
+)
+
 local controlCenter = function(s)
   s.controlCenter = wibox(
     {

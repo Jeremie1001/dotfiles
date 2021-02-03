@@ -358,10 +358,10 @@ local globalKeys = awful.util.table.join(
     {modkey},
     "m",
 		function()
-			bar_toggle()
-      cc_resize()
-			nc_resize()
-			cal_resize()
+			awesome.emit_signal("bar:toggle")
+			awesome.emit_signal("cc:resize")
+			awesome.emit_signal("nc:resize")
+			awesome.emit_signal("cal:resize")
 		end,
 		{description = 'toggle top bar', group = 'Awesome'}
 	),
@@ -370,7 +370,7 @@ local globalKeys = awful.util.table.join(
     {modkey},
     "k",
 		function()
-			cc_toggle()
+			awesome.emit_signal("cc:toggle")
 		end,
 		{description = 'toggle control center', group = 'Awesome'}
 	),
@@ -379,16 +379,16 @@ local globalKeys = awful.util.table.join(
     {modkey, "Shift"},
     "k",
 		function()
-			nc_toggle()
+			awesome.emit_signal("nc:toggle")
 		end,
-		{description = 'toggle control center', group = 'Awesome'}
+		{description = 'toggle notification center', group = 'Awesome'}
 	),
 
 	awful.key(
     {modkey, "Shift"},
     "l",
 		function()
-			cal_toggle()
+			awesome.emit_signal("cal:toggle")
 		end,
 		{description = 'toggle calendar', group = 'Awesome'}
 	),

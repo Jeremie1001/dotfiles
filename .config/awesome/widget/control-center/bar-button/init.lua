@@ -38,17 +38,17 @@ local widget = wibox.widget {
 	widget = wibox.container.background
 }
 
-watch (
-	[[bash -c "cat /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status"]],
-	2,
-	function(_, stdout)
-		local status = string.match(stdout, '%a+')
-		if status == 'true' then
-			widget.bg = colors.comment
-		elseif status == 'false' then
-			widget.bg = colors.background
-		end
-		collectgarbage('collect')
+awesome.connect_signal(
+	"bar:false",
+	function()
+		widget.bg = colors.background
+	end
+)
+
+awesome.connect_signal(
+	"bar:true",
+	function()
+		widget.bg = colors.comment
 	end
 )
 
@@ -59,7 +59,7 @@ widget:buttons(
 			1,
 			nil,
 			function()
-				bar_toggle()
+				awesome.emit_signal("bar:toggle")
 	      cc_resize()
 				widget.bg = colors.alpha(colors.comment, '40')
 			end

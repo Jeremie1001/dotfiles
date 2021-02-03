@@ -43,7 +43,7 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					_G.exit_screen_show()
+					
 				end
 			)
 		)

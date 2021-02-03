@@ -1,7 +1,5 @@
 --DEPENDENCIES
-	--i3lock-fancy
-	--blueman
-	--speedtest-cli
+	--i3lock-fancy-multimonitor
 	--rofi
 	--nordvpn-bin
 
@@ -34,15 +32,19 @@ local bar = function(s)
 
 	function bar_toggle()
 		if s.panel.visible == false then
-		awful.screen.connect_for_each_screen(function(s)
-			s.panel.visible = true
-		end)
-			awful.spawn.with_shell('echo true > /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status ')
+			awful.screen.connect_for_each_screen(
+				function(s)
+					s.panel.visible = true
+				end
+			)
+			awesome.emit_signal("bar:true")
 		elseif s.panel.visible == true then
-		awful.screen.connect_for_each_screen(function(s)
-			s.panel.visible = false
-		end)
-			awful.spawn.with_shell('echo false > /home/jeremie1001/.config/awesome/widget/control-center/bar-button/bar-status ')
+			awful.screen.connect_for_each_screen(
+				function(s)
+					s.panel.visible = false
+				end
+			)
+			awesome.emit_signal("bar:false")
 		end
 	end
 
@@ -101,5 +103,12 @@ local bar = function(s)
 
 	return panel
 end
+
+awesome.connect_signal(
+	"bar:toggle",
+	function()
+		bar_toggle()
+	end
+)
 
 return bar

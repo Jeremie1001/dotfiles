@@ -62,7 +62,7 @@ local return_button = function(color, space)
 				3,
 				nil,
 				function()
-					cal_toggle()
+					awesome.emit_signal("cal:toggle")
 				end
 			)
 		)

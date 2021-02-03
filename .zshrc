@@ -122,6 +122,7 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias wget='wget -c'
 alias histg='history | grep'
 alias grep='grep --color=auto'
+alias root='root -l'
 
 
 for f in ~/.config/bash/*; do source $f; done

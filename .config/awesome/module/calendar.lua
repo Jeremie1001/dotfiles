@@ -189,29 +189,35 @@ calendarPanel = wibox(
 )
 
 -- Function to resize calendar when menu bar is hidden
-function cal_resize()
-  cc_height = screen_geometry.height
-  if calendarPanel.height == screen_geometry.height-dpi(35) then
-    calendarPanel:geometry{height = screen_geometry.height, y = screen_geometry.y+dpi(8)}
-  elseif calendarPanel.height == screen_geometry.height then
-    calendarPanel:geometry{height = screen_geometry.height-dpi(35), y = screen_geometry.y+dpi(35)}
+awesome.connect_signal(
+  "cal:resize",
+  function()
+    cc_height = screen_geometry.height
+    if calendarPanel.height == screen_geometry.height-dpi(35) then
+      calendarPanel:geometry{height = screen_geometry.height, y = screen_geometry.y+dpi(8)}
+    elseif calendarPanel.height == screen_geometry.height then
+      calendarPanel:geometry{height = screen_geometry.height-dpi(35), y = screen_geometry.y+dpi(35)}
+    end
   end
-end
+)
 
 -- Panel visibility status variable (necessary?)
 _G.cal_status = false
 
 -- Toggle panel visibility
-function cal_toggle()
-  if calendarPanel.visible == false then
-    cal_status = true
-    calendarPanel.visible = true
-    reset_date()
-  elseif calendarPanel.visible == true then
-    cal_status = false
-    calendarPanel.visible = false
+awesome.connect_signal(
+  "cal:toggle",
+  function()
+    if calendarPanel.visible == false then
+      cal_status = true
+      calendarPanel.visible = true
+      reset_date()
+    elseif calendarPanel.visible == true then
+      cal_status = false
+      calendarPanel.visible = false
+    end
   end
-end
+)
 
 -- Build panel wibox
 calendarPanel:setup {

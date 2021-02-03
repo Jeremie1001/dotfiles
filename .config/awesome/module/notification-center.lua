@@ -104,26 +104,32 @@ notificationCenter = wibox(
   }
 )
 
-function nc_resize()
-  cc_height = screen_geometry.height
-  if notificationCenter.height == screen_geometry.height-dpi(35) then
-    notificationCenter:geometry{height = screen_geometry.height, y = screen_geometry.y+dpi(8)}
-  elseif notificationCenter.height == screen_geometry.height then
-    notificationCenter:geometry{height = screen_geometry.height-dpi(35), y = screen_geometry.y+dpi(35)}
+awesome.connect_signal(
+  "nc:resize",
+  function()
+    cc_height = screen_geometry.height
+    if notificationCenter.height == screen_geometry.height-dpi(35) then
+      notificationCenter:geometry{height = screen_geometry.height, y = screen_geometry.y+dpi(8)}
+    elseif notificationCenter.height == screen_geometry.height then
+      notificationCenter:geometry{height = screen_geometry.height-dpi(35), y = screen_geometry.y+dpi(35)}
+    end
   end
-end
+)
 
 _G.nc_status = false
 
-function nc_toggle()
-  if notificationCenter.visible == false then
-    nc_status = true
-    notificationCenter.visible = true
-  elseif notificationCenter.visible == true then
-    nc_status = false
-    notificationCenter.visible = false
+awesome.connect_signal(
+  "nc:toggle",
+  function()
+    if notificationCenter.visible == false then
+      nc_status = true
+      notificationCenter.visible = true
+    elseif notificationCenter.visible == true then
+      nc_status = false
+      notificationCenter.visible = false
+    end
   end
-end
+)
 
 notificationCenter:setup {
   spacing = dpi(15),

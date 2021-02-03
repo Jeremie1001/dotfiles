@@ -4,14 +4,14 @@ wifi (bar)
 DONE - notif-center
   -Clear button code cleanup
   -Remove notif from nc when clicked on
-  -Left logo is clickable?
   -Scrolling?
 N/A - Bluetooth (bar)
 DONE - Calendar
-Cleanup local vs global functions/variables
+DONE - Hotkey popup
+DONE - Cleanup local vs global functions/variables
   -Emit and detect signals
-Remove watch functions for everything but 6 CC widgets
-  -Emit and detect signals
+DONE - Remove watch functions for everything but 6 CC widgets + VPN bar/cc + window name
+  DONE - Emit and detect signals
 DONE - cpu dial (cc)
 battery notification
 brightness (cc)
@@ -21,9 +21,7 @@ DONE - DND (cc + nc)
 DONE - Git
 Expanding panel wiboxs
   -So doesnt take whole side if doesnt need to and can click under
-Search
 DONE - Rofi
-Folder names
 Comment everything
 Bar status to global variable (change watch functions to watch variables)
   -If fixed add watch to DnD

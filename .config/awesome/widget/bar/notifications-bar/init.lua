@@ -50,18 +50,18 @@ local return_button = function(color, space)
 	    right = dpi(space),
 	    widget = wibox.container.margin
 		}
-		
-		watch (
-			[[bash -c "cat /home/jeremie1001/.config/awesome/widget/bar/notifications-bar/nc-status"]],
-			2,
-			function(_, stdout)
-				local status = string.match(stdout, '%a+')
-				if status == 'false' then
-					widget_icon.icon:set_image(icons.notificationsFilled)
-				elseif status == 'true' then
-					widget_icon.icon:set_image(icons.noNotificationsFilled)
-				end
-				collectgarbage('collect')
+
+		awesome.connect_signal(
+			"notificationsEmpty:true",
+			function()
+				widget_icon.icon:set_image(icons.noNotificationsFilled)
+			end
+		)
+
+		awesome.connect_signal(
+			"notificationsEmpty:false",
+			function()
+				widget_icon.icon:set_image(icons.notificationsFilled)
 			end
 		)
 
@@ -72,7 +72,7 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					_G.nc_toggle()
+					awesome.emit_signal("nc:toggle")
 				end
 			),
 			awful.button(
