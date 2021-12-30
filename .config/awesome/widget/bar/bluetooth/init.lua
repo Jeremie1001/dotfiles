@@ -1,5 +1,6 @@
 --DEPENDENCIES
 	--Blueman
+	--Bluetoothctl
 
 local awful = require('awful')
 local wibox = require('wibox')
@@ -43,7 +44,8 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					_G.exit_screen_show()
+					awesome.emit_signal("bluetoothCenter:toggle")
+					awesome.emit_signal("bluetooth::devices:refreshPanel")
 				end
 			)
 		)

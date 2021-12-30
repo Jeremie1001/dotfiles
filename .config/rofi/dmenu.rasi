@@ -11,6 +11,7 @@ configuration {
 @import "colors.rasi"
 * {
   background-color:           @background;
+  text-color: @purple;
 }
 
 #window {
@@ -26,7 +27,7 @@ configuration {
 }
 #prompt {
   background-color: @purple;
-  text-color: @foreground;
+  text-color: @background;
   border-color: @purple;
   padding: 5px;
   border: 0px 4px 0px 4px;

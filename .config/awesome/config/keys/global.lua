@@ -7,18 +7,10 @@ local altkey = require('config.keys.mod').altKey
 local apps = require('config.apps')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 local hotkeys_popup_custom = require('module.hotkeys-popup')
-local hotkeys_popup_custom_2 = require('module.hotkeys-popup-2')
 
 require('awful.autofocus')
 
 local globalKeys = awful.util.table.join(
-  awful.key(
-    {modkey, 'Shift'},
-    "h",
-    hotkeys_popup_custom_2.show_help,
-    {description="show help", group="Awesome"}
-  ),
-
   awful.key(
     {modkey},
     "h",

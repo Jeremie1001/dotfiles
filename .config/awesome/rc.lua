@@ -38,6 +38,9 @@ Dependencies
 		vscodium
 		discord
 
+8692 lines of code as of December 29 2021
+	find . -name '*.lua' | xargs wc -l
+
 Disclaimer, some of the aspects of this rice arent completely functional at this time as this is still a work in progress so please be please be patient
   This includes the do not disturb function, bluetooth, wifi, battery and volume buttons on the main bar, and various volume functionality syncing, see TODO.txt file for updated status
 ]]

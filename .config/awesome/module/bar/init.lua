@@ -64,7 +64,7 @@ local bar = function(s)
 
 	s.end_session = require('widget.bar.end-session')(colors.comment, 7)
 	s.clock = require('widget.bar.clock')(colors.purple, 7)
-	s.bluetooth = require('widget.bar.bluetooth')(colors.pink, 7)
+	s.bluetooth = require('widget.bar.bluetooth')(colors.cyan, 7)
 	s.notificationCenterBar = require('widget.bar.notifications-bar')(colors.pink, 7)
 	s.network = require('widget.bar.network')(colors.red, 7)
 	s.battery = require('widget.bar.battery')(colors.orange, 7)
@@ -91,11 +91,12 @@ local bar = function(s)
 		{
 			layout = wibox.layout.fixed.horizontal,
 			spacing = dpi(5),
-			s.vpn,
+			--s.vpn,
 			s.volume,
 			s.battery,
 			s.network,
 			s.notificationCenterBar,
+			s.bluetooth,
 			s.clock,
 			s.end_session,
 		}

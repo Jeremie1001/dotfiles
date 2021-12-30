@@ -40,6 +40,7 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
+					awesome.emit_signal("volumeCenter:toggle")
 				end
 			)
 		)

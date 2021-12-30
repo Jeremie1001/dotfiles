@@ -1,27 +1,98 @@
 TODO
 
-wifi (bar)
 DONE - notif-center
   -Clear button code cleanup
   -Remove notif from nc when clicked on
   -Scrolling?
-N/A - Bluetooth (bar)
+
 DONE - Calendar
+
 DONE - Hotkey popup
+
 DONE - Cleanup local vs global functions/variables
   -Emit and detect signals
+
 DONE - Remove watch functions for everything but 6 CC widgets + VPN bar/cc + window name
   DONE - Emit and detect signals
+
 DONE - cpu dial (cc)
+
 battery notification
+
 brightness (cc)
+
 DONE - DND (cc + nc)
   -Destroy on screen if fullscreen
   -DND timer?
+
 DONE - Git
+
 Expanding panel wiboxs
   -So doesnt take whole side if doesnt need to and can click under
-DONE - Rofi
+
+Rofi
+  -Fix center prompt on laptop
+
 Comment everything
-Bar status to global variable (change watch functions to watch variables)
-  -If fixed add watch to DnD
+
+Bar
+  -Bar status to global variable (change watch functions to watch variables)
+    -If fixed add watch to DnD
+  -Close all other submenus before opening new ones
+    -Otherwise they overlap funny
+  -Calendar
+    -Finish todo list input functionalities
+  -Bluetooth
+    -Device pairing and connecting
+      -bluetoothctl
+    -Searching
+    -Check adapter power status on open
+  -Wifi
+    -Ethernet & Network Detection
+    -Network
+  -Battery
+    -Percentage update on open
+    -Anything else?
+  -Volume
+    -Slider
+    -Output devices
+      -Pulse audio
+  -VPN
+    -Modify to work with PIA
+  -Focus
+    -Fix for laptop
+
+Control center
+  -Top text
+    -Fix weird shell output on laptop
+  -Buttons
+    -DND
+      -Make sure still works okay
+    -VPN
+      -Update for PIA
+    -Volume
+      -Check mute on panel opening
+  -Dials
+    -Fix watch function dials to actually work lol?
+    -Stop watch functions while control center is closed
+  -Slider
+    -Volume
+      -Adjust current output device
+    -Brightness
+      -Make do something
+
+Theme
+  -Change color variables to generic names with dracula subtheme
+  -Central theming GUI
+    -Allows changing of theme colors
+      -Have active colors in seperate simple variable init.lua file
+    -Allow saving of themes
+      -Write available themes to file
+    -Allows changing of wallpapers
+      -Can choose from used wallpapers or load new ones
+        -New files are cp'd to wallpaper directory
+
+Git
+  -Create some sort of one command installable distro with .config files
+    -Based on shell scripting
+  -Figure out which programs are required

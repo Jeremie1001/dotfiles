@@ -1,40 +1,36 @@
 local awful = require('awful')
 local wibox = require('wibox')
 local gears = require('gears')
+local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
+local colors = require('themes.dracula.colors')
+local watch = require('awful.widget.watch')
 
---- Title text for calendar portion of Calendar/To do panel
-
-
--- Left text
-local main_content = wibox.widget {
-	text = "calendar",
+local user_content = wibox.widget {
+	text = "network",
   font = 'Inter Bold 14',
 	widget = wibox.widget.textbox
 }
 
--- Right text
 local host_content = wibox.widget {
 	text = "placeholder",
   font = 'Inter Bold 14',
 	widget = wibox.widget.textbox,
 }
 
--- Left text container widget
-local widget_main = wibox.widget {
+local widget_user = wibox.widget {
 	layout = wibox.layout.align.vertical,
 	expand = 'none',
 	nil,
 	{
-		main_content,
+		user_content,
 		layout = wibox.layout.align.horizontal,
 
 	},
 	nil
 }
 
--- Right text container widget
 local widget_host = wibox.widget {
 	layout = wibox.layout.align.vertical,
 	expand = 'none',
@@ -46,7 +42,6 @@ local widget_host = wibox.widget {
 	nil
 }
 
--- Spacer bar between
 local spacer_bar = wibox.widget {
   {
     orientation = 'vertical',
@@ -59,25 +54,21 @@ local spacer_bar = wibox.widget {
   widget = wibox.container.margin
 }
 
--- Update right text to have lowercase host name
 local update_host = function()
 	awful.spawn.easy_async_with_shell(
-		"uname -n",
+		[[bash -c "uname -n"]],
 		function(stdout)
 			local hostname = stdout
-			--hostname = string.upper(hostname)
-			host_content:set_text(hostname)
+			host_content:set_text("archdracula")
 		end
 	)
 end
 
--- Update on startup
 update_host()
 
--- Combine 2 text widgets and spacer bar into 1
 local widget = wibox.widget {
    {
-    widget_main,
+    widget_user,
     spacer_bar,
 		widget_host,
   	layout = wibox.layout.fixed.horizontal,

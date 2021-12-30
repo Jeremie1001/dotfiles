@@ -31,6 +31,7 @@ local slider = wibox.widget {
   start_angle = 47.5/130*2*math.pi,
   widget = wibox.container.arcchart
 }
+  --date | awk '{print $5}' | sed -n 's/:/ /gp' | awk '{print $3}'"
 
 watch (
 	[[bash -c "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage' | awk '{print $2}' | sed 's/%//'"]],
@@ -38,13 +39,14 @@ watch (
   function(_, stdout)
     local old_percentage = percentage
 		local percentage = stdout
+    slider:set_values({(100-(percentage)), (percentage)})
+    widget_text:set_text("\nPWR\n"..percentage)
     if stdout == "" then
       percentage = 100
     end
     if old_percentage > 20 and percentage <= 20 then
       naughty.notify({title = "Battery is low", text = "Below 20%", urgency='critical'})
     end
-    slider:set_values({(100-(percentage)), (percentage)})
 		collectgarbage('collect')
 	end
 )
