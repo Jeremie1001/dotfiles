@@ -58,8 +58,7 @@ local update_host = function()
 	awful.spawn.easy_async_with_shell(
 	[[bash -c "uname -n"]],
 	function(stdout)
-		local hostname = stdout
-		--hostname = string.upper(hostname)
+		local hostname = stdout:gsub("\n","")
 		host_content:set_text(hostname)
 	end
 )
@@ -69,8 +68,7 @@ local update_user = function(flag)
 	awful.spawn.easy_async_with_shell(
 	[[bash -c "echo $USER"]],
 	function(stdout, flag)
-		local username = stdout
-		--username = string.upper(username)
+		local username = stdout:match("[%w:]+",0)
 		user_content:set_text(username)
 	end
 )

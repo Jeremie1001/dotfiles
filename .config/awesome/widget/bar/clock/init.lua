@@ -62,7 +62,8 @@ local return_button = function(color, space)
 				3,
 				nil,
 				function()
-					awesome.emit_signal("cal:toggle")
+					awesome.emit_signal("bar::centers:toggle:off")
+					awesome.emit_signal("cal::center:toggle")
 				end
 			)
 		)

@@ -38,8 +38,8 @@ local title = wibox.widget {
     		{
     			layout = wibox.layout.fixed.horizontal,
     			spacing = dpi(16),
-                require('widget.dracula-icon'),
-                require('widget.volume-center.title-text'),
+          require('widget.dracula-icon'),
+          require('widget.volume-center.title-text'),
     		}
     	),
     },
@@ -52,6 +52,91 @@ local title = wibox.widget {
   bg = colors.alpha(colors.selection, 'F2'),
   forced_width = width,
   forced_height = 70,
+  ontop = true,
+  border_width = dpi(2),
+  border_color = colors.background,
+  widget = wibox.container.background,
+  layout,
+}
+
+local sliders = wibox.widget {
+  {
+    {
+      spacing = dpi(0),
+    	layout = wibox.layout.flex.horizontal,
+    	format_item(
+    		{
+    			layout = wibox.layout.fixed.vertical,
+    			spacing = dpi(10),
+          require('widget.volume-center.volume-slider'),
+    		}
+    	),
+    },
+    margins = dpi(5),
+    widget = wibox.container.margin
+  },
+  shape = function(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
+  end,
+  bg = colors.alpha(colors.selection, 'F2'),
+  forced_width = 400,
+  forced_height = 75,
+  border_width = dpi(2),
+  border_color = colors.background,
+  widget = wibox.container.background,
+  layout,
+}
+
+local devices_text = wibox.widget {
+  {
+      {
+      spacing = dpi(0),
+    	layout = wibox.layout.flex.vertical,
+    	format_item(
+    		{
+    			layout = wibox.layout.fixed.horizontal,
+    			spacing = dpi(16),
+            require('widget.volume-center.devices-text'),
+    		}
+    	),
+    },
+    margins = dpi(5),
+    widget = wibox.container.margin
+  },
+  shape = function(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
+  end,
+  bg = colors.alpha(colors.selection, 'F2'),
+  forced_width = width,
+  forced_height = 70,
+  ontop = true,
+  border_width = dpi(2),
+  border_color = colors.background,
+  widget = wibox.container.background,
+  layout,
+}
+
+local devices_panel = wibox.widget {
+  {
+      {
+      spacing = dpi(0),
+    	layout = wibox.layout.flex.vertical,
+    	format_item(
+    		{
+    			layout = wibox.layout.fixed.horizontal,
+    			spacing = dpi(16),
+          require('widget.volume-center.devices-panel'),
+    		}
+    	),
+    },
+    margins = dpi(5),
+    widget = wibox.container.margin
+  },
+  shape = function(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
+  end,
+  bg = colors.alpha(colors.selection, 'F2'),
+  forced_width = width,
   ontop = true,
   border_width = dpi(2),
   border_color = colors.background,
@@ -74,23 +159,29 @@ volumeCenter = wibox(
   }
 )
 
-_G.nc_status = false
-
 awesome.connect_signal(
-  "volumeCenter:toggle",
+  "volume::center:toggle",
   function()
     if volumeCenter.visible == false then
-      volume_status = true
       volumeCenter.visible = true
     elseif volumeCenter.visible == true then
-        volume_status = false
       volumeCenter.visible = false
     end
+  end
+)
+
+awesome.connect_signal(
+  "volume::center:toggle:off",
+  function()
+    volumeCenter.visible = false
   end
 )
 
 volumeCenter:setup {
   spacing = dpi(15),
   title,
+  sliders,
+  devices_text,
+  devices_panel,
   layout = wibox.layout.fixed.vertical,
 }

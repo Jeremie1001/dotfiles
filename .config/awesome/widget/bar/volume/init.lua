@@ -40,7 +40,9 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					awesome.emit_signal("volumeCenter:toggle")
+					awesome.emit_signal("bar::centers:toggle:off")
+					awesome.emit_signal("volume::center:toggle")
+					awesome.emit_signal("volume::devices:refreshPanel")
 				end
 			)
 		)

@@ -74,7 +74,7 @@ widget:connect_signal(
 )
 
 awesome.connect_signal(
-  "bluetoothctl:toggle",
+  "bluetooth::power:toggle",
   function()
     if power_status == false then
       power_status = true
@@ -90,6 +90,27 @@ awesome.connect_signal(
   end
 )
 
+awesome.connect_signal(
+  "bluetooth::power:refresh",
+  function()
+    awful.spawn.easy_async_with_shell(
+      [[bash -c "bluetoothctl show | sed -n '5p'"]],
+      function(stdout)
+        stdout = stdout:match("[%w:]+",10)
+        if stdout == "yes" then
+          power_status = true
+          widget_icon.icon:set_image(icons.bluetooth_on)
+          widget.bg = colors.cyan
+        elseif stdout == "no" then
+          power_status = false
+          widget_icon.icon:set_image(icons.bluetooth_off)
+          widget.bg = colors.background
+        end
+      end
+    )
+  end
+)
+
 widget:buttons(
   gears.table.join(
     awful.button(
@@ -97,7 +118,7 @@ widget:buttons(
 			1,
 			nil,
 			function()
-				awesome.emit_signal("bluetoothctl:toggle")
+				awesome.emit_signal("bluetooth::power:toggle")
 			end
     )
   )

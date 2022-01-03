@@ -46,7 +46,7 @@ Bar
     -Device pairing and connecting
       -bluetoothctl
     -Searching
-    -Check adapter power status on open
+    -Check adapter power status on open (DONE)
   -Wifi
     -Ethernet & Network Detection
     -Network
@@ -64,7 +64,7 @@ Bar
 
 Control center
   -Top text
-    -Fix weird shell output on laptop
+    -Fix weird shell output on laptop (DONE)
   -Buttons
     -DND
       -Make sure still works okay

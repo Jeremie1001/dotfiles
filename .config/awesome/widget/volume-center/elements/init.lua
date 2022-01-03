@@ -9,27 +9,27 @@ local watch = require('awful.widget.watch')
 
 local elements = {}
 
-elements.create = function(title, message)
+elements.create = function(description, sinkNumText, sinkNum, isDefault)
   local box = {}
 
-  local clearIcon = wibox.widget {
+  local setDefaultSinkIcon = wibox.widget {
     layout = wibox.layout.align.vertical,
     expand = 'none',
     nil,
     {
       id = 'icon',
-      image = icons.clearNotificationIndividual,
+      image = icons.mute,
       resize = true,
       widget = wibox.widget.imagebox
     },
     nil
   }
-  
-  local clear = wibox.widget {
+
+  local setDefaultSink = wibox.widget {
     {
       {
         {
-          clearIcon,
+          setDefaultSinkIcon,
           layout = wibox.layout.fixed.horizontal,
         },
         margins = dpi(9),
@@ -44,34 +44,64 @@ elements.create = function(title, message)
     widget = wibox.container.background
   }
 
-  clear:connect_signal(
+  setDefaultSink:connect_signal(
     "mouse::enter",
     function()
-      clear.bg = colors.comment
+      setDefaultSink.bg = colors.comment
     end
   )
 
-  clear:connect_signal(
+  setDefaultSink:connect_signal(
     "mouse::leave",
     function()
-      clear.bg = colors.background
+      setDefaultSink.bg = colors.background
     end
   )
 
-  clear:buttons(
+  setDefaultSink:buttons(
     gears.table.join(
       awful.button(
         {},
         1,
         nil,
         function()
-          _G.removeElement(box)
+          awful.spawn.with_shell("pactl set-default-sink "..sinkNum)
+					awesome.emit_signal("volume::devices:refreshPanel")
         end
       )
     )
   )
 
-  local notifIcon = wibox.widget {
+  local defaultSinkIcon = wibox.widget {
+    layout = wibox.layout.align.vertical,
+    expand = 'none',
+    nil,
+    {
+      id = 'icon',
+      image = icons.volume,
+      resize = true,
+      widget = wibox.widget.imagebox
+    },
+    nil
+  }
+
+  local defaultSink = wibox.widget {
+    {
+      {
+        defaultSinkIcon,
+        layout = wibox.layout.fixed.horizontal,
+      },
+      margins = dpi(8),
+      widget = wibox.container.margin
+    },
+    forced_height = dpi(30),
+    forced_width = dpi(30),
+    shape = gears.shape.circle,
+    bg = colors.comment,
+    widget = wibox.container.background
+  }
+
+  local headphonesIcon = wibox.widget {
     {
       {
         {
@@ -79,16 +109,16 @@ elements.create = function(title, message)
           expand = 'none',
           nil,
           {
-            image = icons.notifications,
+            image = icons.headphones,
             widget = wibox.widget.imagebox,
           },
           nil
         },
-        margins = dpi(5),
+        margins = dpi(7),
         widget = wibox.container.margin
       },
       shape = gears.shape.rect,
-      bg = colors.purple,
+      bg = colors.yellow,
       widget = wibox.container.background
     },
     forced_width = 40,
@@ -100,12 +130,12 @@ elements.create = function(title, message)
     {
       {
         {
-          text = title,
+          text = description,
           font = 'Inter Bold 10',
           widget = wibox.widget.textbox,
         },
         {
-          text = message,
+          text = sinkNumText,
           font = 'Inter 8',
           widget = wibox.widget.textbox,
         },
@@ -118,21 +148,28 @@ elements.create = function(title, message)
     bg = colors.selection,
     widget = wibox.container.background
   }
-  
+
+  local buttons = {}
+
+  if isDefault == true then
+    buttons = {
+      layout = wibox.layout.align.horizontal,
+      spacing = dpi(15),
+      defaultSink,
+    }
+  elseif isDefault == false then
+    buttons = {
+      layout = wibox.layout.align.horizontal,
+      spacing = dpi(15),
+      setDefaultSink,
+    }
+  end
+
   box = wibox.widget {
     {
-      notifIcon,
+      headphonesIcon,
       content,
-      {
-        {
-          clear,
-          align = "center",
-          forced_height = 30,
-          layout = wibox.layout.align.vertical,
-        },
-        margins = dpi(5),
-        widget = wibox.container.margin
-      },
+      buttons,
       layout = wibox.layout.align.horizontal,
     },
     shape = function(cr, width, height)

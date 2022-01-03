@@ -56,9 +56,9 @@ local spacer_bar = wibox.widget {
 
 local update_host = function()
 	awful.spawn.easy_async_with_shell(
-		[[bash -c "iw dev | grep "ssid" | sed 's/ssid //'"]],
+		[[bash -c "iw dev | grep "ssid" | sed 's/ssid //' | sed 's/\t//g'"]],
 		function(stdout)
-			local networkName = stdout
+			local networkName = stdout:gsub("\n", "")
 			host_content:set_text(networkName)
 		end
 	)

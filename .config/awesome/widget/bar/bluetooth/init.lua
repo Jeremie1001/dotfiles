@@ -44,8 +44,10 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					awesome.emit_signal("bluetoothCenter:toggle")
+					awesome.emit_signal("bar::centers:toggle:off")
 					awesome.emit_signal("bluetooth::devices:refreshPanel")
+					awesome.emit_signal("bluetooth::power:refresh")
+					awesome.emit_signal("bluetooth::center:toggle")
 				end
 			)
 		)

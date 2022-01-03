@@ -52,7 +52,6 @@ local dials = wibox.widget {
     			spacing = dpi(10),
           require('widget.control-center.hdd-meter'),
           require('widget.control-center.battery-meter'),
-          --require('widget.control-center.temp-meter'),
     		}
     	),
     },

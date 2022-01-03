@@ -19,7 +19,7 @@ local return_button = function(color, space)
 		[[bash -c "xdotool getwindowname $(xdotool getactivewindow)"]],
 		1,
 		function(_, stdout)
-			local name = stdout
+			local name = stdout:gsub("\n","")
 			if name == "" then
 				name = "Arch Dracula"
 			end

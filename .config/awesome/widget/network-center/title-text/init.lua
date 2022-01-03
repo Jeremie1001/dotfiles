@@ -58,8 +58,8 @@ local update_host = function()
 	awful.spawn.easy_async_with_shell(
 		[[bash -c "uname -n"]],
 		function(stdout)
-			local hostname = stdout
-			host_content:set_text("archdracula")
+			local hostname = stdout:gsub("\n","")
+			host_content:set_text(hostname)
 		end
 	)
 end

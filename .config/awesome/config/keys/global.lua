@@ -371,7 +371,7 @@ local globalKeys = awful.util.table.join(
     {modkey, "Shift"},
     "k",
 		function()
-			awesome.emit_signal("nc:toggle")
+			awesome.emit_signal("notifications::center:toggle")
 		end,
 		{description = 'toggle notification center', group = 'Awesome'}
 	),
@@ -380,7 +380,7 @@ local globalKeys = awful.util.table.join(
     {modkey, "Shift"},
     "l",
 		function()
-			awesome.emit_signal("cal:toggle")
+			awesome.emit_signal("bar::centers:toggle:off")
 		end,
 		{description = 'toggle calendar', group = 'Awesome'}
 	),

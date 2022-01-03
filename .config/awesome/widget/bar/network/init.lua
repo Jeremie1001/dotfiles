@@ -43,7 +43,8 @@ local return_button = function(color, space)
 				1,
 				nil,
 				function()
-					awesome.emit_signal("network:toggle")
+					awesome.emit_signal("bar::centers:toggle:off")
+					awesome.emit_signal("network::center:toggle")
 				end
 			)
 		)

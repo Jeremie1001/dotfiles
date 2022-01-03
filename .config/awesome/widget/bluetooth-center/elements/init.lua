@@ -252,10 +252,16 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
     {
       {
         {
-          image = icons.bluetooth_on,
-          widget = wibox.widget.imagebox,
+          layout = wibox.layout.align.vertical,
+          expand = 'none',
+          nil,
+          {
+            image = icons.bluetooth_on,
+            widget = wibox.widget.imagebox,
+          },
+          nil
         },
-        margins = dpi(5),
+        margins = dpi(7),
         widget = wibox.container.margin
       },
       shape = gears.shape.rect,
@@ -292,14 +298,14 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
 
   local buttons = {}
 
-  if pairStatus and connectStatus then
+  if pairStatus and connectStatus == "yes" then
     buttons = {
       layout = wibox.layout.align.horizontal,
       spacing = dpi(15),
       unpair,
       disconnect,
     }
-  elseif pairStatus and connectStatus == false then
+  elseif pairStatus and connectStatus == "no" then
     buttons = {
       layout = wibox.layout.align.horizontal,
       spacing = dpi(15),
@@ -312,7 +318,6 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       pair,
     }
   end
-
   
   box = wibox.widget {
     {

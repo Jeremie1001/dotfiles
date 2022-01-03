@@ -119,7 +119,7 @@ awesome.connect_signal(
 _G.nc_status = false
 
 awesome.connect_signal(
-  "nc:toggle",
+  "notifications::center:toggle",
   function()
     if notificationCenter.visible == false then
       nc_status = true
@@ -128,6 +128,14 @@ awesome.connect_signal(
       nc_status = false
       notificationCenter.visible = false
     end
+  end
+)
+
+awesome.connect_signal(
+  "notifications::center:toggle:off",
+  function()
+      nc_status = false
+      notificationCenter.visible = false
   end
 )
 

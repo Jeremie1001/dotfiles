@@ -162,15 +162,20 @@ bluetoothCenter = wibox(
 )
 
 awesome.connect_signal(
-  "bluetoothCenter:toggle",
+  "bluetooth::center:toggle",
   function()
     if bluetoothCenter.visible == false then
-      blue_status = true
       bluetoothCenter.visible = true
     elseif bluetoothCenter.visible == true then
-      blue_status = false
       bluetoothCenter.visible = false
     end
+  end
+)
+
+awesome.connect_signal(
+  "bluetooth::center:toggle:off",
+  function()
+    bluetoothCenter.visible = false
   end
 )
 

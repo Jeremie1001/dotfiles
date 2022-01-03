@@ -112,4 +112,15 @@ awesome.connect_signal(
 	end
 )
 
+awesome.connect_signal(
+  "bar::centers:toggle:off",
+	function()
+		awesome.emit_signal("volume::center:toggle:off")
+		awesome.emit_signal("network::center:toggle:off")
+		awesome.emit_signal("notifications::center:toggle:off")
+		awesome.emit_signal("bluetooth::center:toggle:off")
+		awesome.emit_signal("cal::center:toggle:off")
+	end
+)
+
 return bar

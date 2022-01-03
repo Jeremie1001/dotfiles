@@ -206,7 +206,7 @@ _G.cal_status = false
 
 -- Toggle panel visibility
 awesome.connect_signal(
-  "cal:toggle",
+  "cal::center:toggle",
   function()
     if calendarPanel.visible == false then
       cal_status = true
@@ -216,6 +216,13 @@ awesome.connect_signal(
       cal_status = false
       calendarPanel.visible = false
     end
+  end
+)
+
+awesome.connect_signal(
+  "cal::center:toggle:off",
+  function()
+    calendarPanel.visible = false
   end
 )
 

@@ -107,15 +107,20 @@ networkCenter = wibox(
 _G.nc_status = false
 
 awesome.connect_signal(
-  "network:toggle",
+  "network::center:toggle",
   function()
     if networkCenter.visible == false then
-      network_status = true
       networkCenter.visible = true
     elseif networkCenter.visible == true then
-      network_status = false
       networkCenter.visible = false
     end
+  end
+)
+
+awesome.connect_signal(
+  "network::center:toggle:off",
+  function()
+    networkCenter.visible = false
   end
 )
 

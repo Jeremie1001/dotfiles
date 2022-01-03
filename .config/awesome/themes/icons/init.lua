@@ -18,6 +18,7 @@ return {
 	dot			= dir .. 'dot.svg',
 	dracula			= dir .. 'dracula.svg',
 	forward			= dir .. 'right-arrow.svg',
+	headphones			= dir .. 'headphones.svg',
 	lock 				= dir .. 'lock.svg',
 	logout				= dir .. 'logout.svg',
 	moon			= dir .. 'moon.svg',
