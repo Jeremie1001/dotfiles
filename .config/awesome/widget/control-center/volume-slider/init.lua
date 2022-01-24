@@ -9,10 +9,10 @@ local spawn = awful.spawn
 local dpi = beautiful.xresources.apply_dpi
 local icons = require('widget.control-center.volume-slider.icons')
 local clickable_container = require('widget.clickable-container')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
-local main_color = colors.yellow
+local main_color = colors.color7
 
 local widget_name = wibox.widget {
 	text = 'Volume',
@@ -56,7 +56,7 @@ local slider = wibox.widget {
 		id 					= 'volume_slider',
 		bar_shape           = gears.shape.rounded_rect,
 		bar_height          = dpi(24),
-		bar_color           = colors.selection,
+		bar_color           = colors.colorB,
 		bar_active_color		= main_color,
 		handle_color        = main_color,
 		handle_shape        = gears.shape.rounded_rect,
@@ -221,7 +221,7 @@ local cc_volume = wibox.widget {
     widget = wibox.container.margin
   },
   shape = gears.shape.rounded_rect,
-  bg = colors.background,
+  bg = colors.colorA,
   fg = main_color,
   widget = wibox.container.background
 }

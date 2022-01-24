@@ -8,7 +8,8 @@ local awful = require('awful')
 local beautiful = require('beautiful')
 local dpi = beautiful.xresources.apply_dpi
 local clickable_container = require('widget.clickable-container')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
+local settings = require("settings")
 
 local bar = function(s)
 
@@ -62,43 +63,61 @@ local bar = function(s)
 		client.connect_signal(signal, fullscreen_bar_toggle)
 	end
 
-	s.end_session = require('widget.bar.end-session')(colors.comment, 7)
-	s.clock = require('widget.bar.clock')(colors.purple, 7)
-	s.bluetooth = require('widget.bar.bluetooth')(colors.cyan, 7)
-	s.notificationCenterBar = require('widget.bar.notifications-bar')(colors.pink, 7)
-	s.network = require('widget.bar.network')(colors.red, 7)
-	s.battery = require('widget.bar.battery')(colors.orange, 7)
-	s.volume = require('widget.bar.volume')(colors.yellow, 7)
-	s.vpn = require('widget.bar.vpn')(colors.green, 7)
-	s.focused = require('widget.bar.focused')(colors.purple, 7)
-	s.menu = require('widget.bar.menu')(colors.comment, 7)
-	local tags = require('widget.bar.tags')(s, colors.purple, colors.cyan, 3)
+	local leftBar = {
+		layout = wibox.layout.fixed.horizontal,
+		spacing = dpi(5),
+	}
+
+	local centerBar = {
+		layout = wibox.layout.fixed.horizontal,
+		spacing = dpi(5),
+	}
+
+	local rightBar = {
+		layout = wibox.layout.fixed.horizontal,
+		spacing = dpi(5),
+	}
+
+	for i,widget in pairs(settings.bar.left) do 
+		if widget[1] == "tags" then
+			table.insert(leftBar, require('widget.bar.'..widget[1])(s, colors[widget[2][1]], colors[widget[2][2]], 3, 4, 4))
+		else
+			table.insert(leftBar, require('widget.bar.'..widget[1])({color = colors[widget[2]]}, 4, 4))
+		end
+	end
+
+	for i,widget in pairs(settings.bar.center) do
+		if widget[1] == "tags" then
+			table.insert(centerBar, require('widget.bar.'..widget[1])(s, colors[widget[2][1]], colors[widget[2][2]], 3, 4, 4))
+		else
+			table.insert(centerBar, require('widget.bar.'..widget[1])({color = colors[widget[2]]}, 4, 4))
+		end
+	end
+
+	for i,widget in pairs(settings.bar.right) do
+		if widget[1] == "tags" then
+			table.insert(rightBar, require('widget.bar.'..widget[1])(s, colors[widget[2][1]], colors[widget[2][2]], 3, 4, 4))
+		else
+			table.insert(rightBar, require('widget.bar.'..widget[1])({color = colors[widget[2]]}, 4, 4))
+		end
+	end
 
 	s.panel:setup {
 		layout = wibox.layout.align.horizontal,
 		expand = 'none',
 		{
-			layout = wibox.layout.fixed.horizontal,
-			spacing = dpi(5),
-			s.menu,
-			s.focused,
+			leftBar,
+	    left = dpi(4),
+	    widget = wibox.container.margin
 		},
 		{
-			layout = wibox.layout.fixed.horizontal,
-			spacing = dpi(5),
-			tags,
+			centerBar,
+			widget = wibox.container.margin
 		},
 		{
-			layout = wibox.layout.fixed.horizontal,
-			spacing = dpi(5),
-			--s.vpn,
-			s.volume,
-			s.battery,
-			s.network,
-			s.notificationCenterBar,
-			s.bluetooth,
-			s.clock,
-			s.end_session,
+			rightBar,
+			right = dpi(4),
+			widget = wibox.container.margin
 		}
 	}
 

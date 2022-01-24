@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local elements = {}
@@ -40,21 +40,21 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       widget = clickable_container
     },
     shape = gears.shape.circle,
-    bg = colors.background,
+    bg = colors.colorA,
     widget = wibox.container.background
   }
 
   pair:connect_signal(
     "mouse::enter",
     function()
-      pair.bg = colors.comment
+      pair.bg = colors.color1
     end
   )
 
   pair:connect_signal(
     "mouse::leave",
     function()
-      pair.bg = colors.background
+      pair.bg = colors.colorA
     end
   )
 
@@ -86,21 +86,21 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       widget = clickable_container
     },
     shape = gears.shape.circle,
-    bg = colors.background,
+    bg = colors.colorA,
     widget = wibox.container.background
   }
 
   unpair:connect_signal(
     "mouse::enter",
     function()
-      unpair.bg = colors.comment
+      unpair.bg = colors.color1
     end
   )
 
   unpair:connect_signal(
     "mouse::leave",
     function()
-      unpair.bg = colors.background
+      unpair.bg = colors.colorA
     end
   )
 
@@ -132,25 +132,25 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       widget = clickable_container
     },
     shape = gears.shape.circle,
-    bg = colors.background,
+    bg = colors.colorA,
     widget = wibox.container.background
   }
 
   connect:connect_signal(
     "mouse::enter",
     function()
-      connect.bg = colors.comment
+      connect.bg = colors.color1
     end
   )
 
   connect:connect_signal(
     "mouse::leave",
     function()
-      connect.bg = colors.background
+      connect.bg = colors.colorA
     end
   )
 
-  local disonnectIcon = wibox.widget {
+  local disconnectIcon = wibox.widget {
     layout = wibox.layout.align.vertical,
     expand = 'none',
     nil,
@@ -178,21 +178,21 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       widget = clickable_container
     },
     shape = gears.shape.circle,
-    bg = colors.background,
+    bg = colors.colorA,
     widget = wibox.container.background
   }
 
   disconnect:connect_signal(
     "mouse::enter",
     function()
-      disconnect.bg = colors.comment
+      disconnect.bg = colors.color1
     end
   )
 
   disconnect:connect_signal(
     "mouse::leave",
     function()
-      disconnect.bg = colors.background
+      disconnect.bg = colors.colorA
     end
   )
 
@@ -265,7 +265,7 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
         widget = wibox.container.margin
       },
       shape = gears.shape.rect,
-      bg = colors.purple,
+      bg = colors.color8,
       widget = wibox.container.background
     },
     forced_width = 40,
@@ -292,7 +292,7 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
       widget = wibox.container.margin
     },
     shape = gears.shape.rect,
-    bg = colors.selection,
+    bg = colors.colorB,
     widget = wibox.container.background
   }
 
@@ -331,7 +331,7 @@ elements.create = function(name, macAddress, pairStatus, connectStatus)
     end,
     fg = colors.white,
     border_width = dpi(1),
-    border_color = colors.background,
+    border_color = colors.colorA,
     widget = wibox.container.background
   }
 

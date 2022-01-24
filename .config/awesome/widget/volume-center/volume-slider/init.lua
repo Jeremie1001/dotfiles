@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local box = {}
@@ -37,21 +37,21 @@ local mute = wibox.widget {
     widget = clickable_container
   },
   shape = gears.shape.circle,
-  bg = colors.background,
+  bg = colors.colorA,
   widget = wibox.container.background
 }
 
 mute:connect_signal(
   "mouse::enter",
   function()
-    mute.bg = colors.comment
+    mute.bg = colors.color1
   end
 )
 
 mute:connect_signal(
   "mouse::leave",
   function()
-    mute.bg = colors.background
+    mute.bg = colors.colorA
   end
 )
 
@@ -85,7 +85,7 @@ local volumeIcon = wibox.widget {
       widget = wibox.container.margin
     },
     shape = gears.shape.rect,
-    bg = colors.yellow,
+    bg = colors.color7,
     widget = wibox.container.background
   },
   forced_width = 40,
@@ -99,9 +99,9 @@ local slider = wibox.widget {
 		id 					        = 'volume_slider',
 		bar_shape           = gears.shape.rounded_rect,
 		bar_height          = dpi(40),
-		bar_color           = colors.background,
-		bar_active_color		= colors.yellow,
-		handle_color        = colors.yellow,
+		bar_color           = colors.colorA,
+		bar_active_color		= colors.color7,
+		handle_color        = colors.color7,
 		handle_shape        = gears.shape.rounded_rect,
 		handle_width        = dpi(40),
 		maximum							= 100,
@@ -218,7 +218,7 @@ box = wibox.widget {
   end,
   fg = colors.white,
   border_width = dpi(1),
-  border_color = colors.background,
+  border_color = colors.colorA,
   widget = wibox.container.background
 }
 

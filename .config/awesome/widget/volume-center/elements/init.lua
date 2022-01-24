@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local elements = {}
@@ -40,21 +40,21 @@ elements.create = function(description, sinkNumText, sinkNum, isDefault)
       widget = clickable_container
     },
     shape = gears.shape.circle,
-    bg = colors.background,
+    bg = colors.colorA,
     widget = wibox.container.background
   }
 
   setDefaultSink:connect_signal(
     "mouse::enter",
     function()
-      setDefaultSink.bg = colors.comment
+      setDefaultSink.bg = colors.color1
     end
   )
 
   setDefaultSink:connect_signal(
     "mouse::leave",
     function()
-      setDefaultSink.bg = colors.background
+      setDefaultSink.bg = colors.colorA
     end
   )
 
@@ -97,7 +97,7 @@ elements.create = function(description, sinkNumText, sinkNum, isDefault)
     forced_height = dpi(30),
     forced_width = dpi(30),
     shape = gears.shape.circle,
-    bg = colors.comment,
+    bg = colors.color1,
     widget = wibox.container.background
   }
 
@@ -118,7 +118,7 @@ elements.create = function(description, sinkNumText, sinkNum, isDefault)
         widget = wibox.container.margin
       },
       shape = gears.shape.rect,
-      bg = colors.yellow,
+      bg = colors.color7,
       widget = wibox.container.background
     },
     forced_width = 40,
@@ -145,7 +145,7 @@ elements.create = function(description, sinkNumText, sinkNum, isDefault)
       widget = wibox.container.margin
     },
     shape = gears.shape.rect,
-    bg = colors.selection,
+    bg = colors.colorB,
     widget = wibox.container.background
   }
 
@@ -177,7 +177,7 @@ elements.create = function(description, sinkNumText, sinkNum, isDefault)
     end,
     fg = colors.white,
     border_width = dpi(1),
-    border_color = colors.background,
+    border_color = colors.colorA,
     widget = wibox.container.background
   }
 

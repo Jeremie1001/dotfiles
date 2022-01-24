@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local widget_icon = wibox.widget {
@@ -34,7 +34,7 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.background,
+	bg = colors.colorA,
 	widget = wibox.container.background
 }
 
@@ -49,10 +49,10 @@ widget:buttons(
 			function()
 				if dnd_status == true then
 					dnd_status = false
-					widget.bg = colors.background
+					widget.bg = colors.colorA
 				elseif dnd_status == false then
 					dnd_status = true
-					widget.bg = colors.purple
+					widget.bg = colors.color2
 				end
 			end
 		)

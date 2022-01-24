@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local addEvent = require('widget.calendar.to-do.add-event')
 
 --- Creates button that goes backwards in calendar by date on left click and by month on right click
@@ -38,7 +38,7 @@ local widget = wibox.widget {
 	},
 	forced_height = dpi(30),
 	shape = gears.shape.circle,
-	bg = colors.background,
+	bg = colors.colorA,
 	widget = wibox.container.background
 }
 
@@ -47,14 +47,14 @@ local widget = wibox.widget {
 widget:connect_signal(
 	"mouse::enter",
 	function()
-		widget.bg = colors.comment
+		widget.bg = colors.color1
 	end
 )
 
 widget:connect_signal(
 	"mouse::leave",
 	function()
-		widget.bg = colors.background
+		widget.bg = colors.colorA
 	end
 )
 

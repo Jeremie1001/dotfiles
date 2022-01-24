@@ -1,10 +1,7 @@
-local awful = require('awful')
 local gears = require('gears')
 local wibox = require('wibox')
 local beautiful = require('beautiful')
-local colors = require('themes.dracula.colors')
 local dpi = require('beautiful').xresources.apply_dpi
-local screen_geometry = require('awful').screen.focused().geometry
 
 local format_item = function(widget)
   return wibox.widget {
@@ -26,3 +23,5 @@ local format_item = function(widget)
 		widget = wibox.container.background
 	}
 end
+
+return format_item

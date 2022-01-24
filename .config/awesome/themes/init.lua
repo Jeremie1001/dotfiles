@@ -1,5 +1,8 @@
 local beautiful = require("beautiful")
+local settings = require("settings")
 
-local theme = "dracula"
+beautiful.init("/home/jeremie1001/.config/awesome/themes/theme.lua")
 
-beautiful.init("/home/jeremie1001/.config/awesome/themes/"..theme.."/theme.lua")
+return {
+  colors = require('themes.schemes.'..settings.theme)
+}

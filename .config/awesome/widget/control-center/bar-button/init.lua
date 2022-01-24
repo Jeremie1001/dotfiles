@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local widget_icon = wibox.widget {
@@ -34,21 +34,21 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.comment,
+	bg = colors.color1,
 	widget = wibox.container.background
 }
 
 awesome.connect_signal(
 	"bar:false",
 	function()
-		widget.bg = colors.background
+		widget.bg = colors.colorA
 	end
 )
 
 awesome.connect_signal(
 	"bar:true",
 	function()
-		widget.bg = colors.comment
+		widget.bg = colors.color1
 	end
 )
 
@@ -61,7 +61,7 @@ widget:buttons(
 			function()
 				awesome.emit_signal("bar:toggle")
 	      cc_resize()
-				widget.bg = colors.alpha(colors.comment, '40')
+				widget.bg = colors.alpha(colors.color1, '40')
 			end
 		)
 	)

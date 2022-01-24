@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 
 --- Function that creates box element with specified title string and message string to be added to the panel
 
@@ -28,7 +28,7 @@ elements.create = function(dateString, int, elementTable)
       widget = wibox.container.margin
     },
     shape = gears.shape.rect,
-    bg = colors.purple,
+    bg = colors.color2,
     widget = wibox.container.background
   }
 
@@ -45,7 +45,7 @@ elements.create = function(dateString, int, elementTable)
   toDoWidget:connect_signal(
     "mouse::enter",
     function()
-      toDoBg.bg = colors.pink
+      toDoBg.bg = colors.color3
       toDoIcon.image = icons.toDoDone
     end
   )
@@ -53,7 +53,7 @@ elements.create = function(dateString, int, elementTable)
   toDoWidget:connect_signal(
     "mouse::leave",
     function()
-      toDoBg.bg = colors.purple
+      toDoBg.bg = colors.color2
       toDoIcon.image = icons.toDo
     end
   )
@@ -92,7 +92,7 @@ elements.create = function(dateString, int, elementTable)
       widget = wibox.container.margin
     },
     shape = gears.shape.rect,
-    bg = colors.selection,
+    bg = colors.colorB,
     widget = wibox.container.background
   }
   
@@ -108,7 +108,7 @@ elements.create = function(dateString, int, elementTable)
     end,
     fg = colors.white,
     border_width = dpi(1),
-    border_color = colors.background,
+    border_color = colors.colorA,
     widget = wibox.container.background
   }
 

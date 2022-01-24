@@ -4,16 +4,16 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
-local user_content = wibox.widget {
+local left_content = wibox.widget {
 	text = "status",
   font = 'Inter Bold 14',
 	widget = wibox.widget.textbox
 }
 
-local host_content = wibox.widget {
+local right_content = wibox.widget {
 	text = "placeholder",
   font = 'Inter Bold 14',
 	widget = wibox.widget.textbox,
@@ -24,7 +24,7 @@ local widget_user = wibox.widget {
 	expand = 'none',
 	nil,
 	{
-		user_content,
+		left_content,
 		layout = wibox.layout.align.horizontal,
 
 	},
@@ -36,7 +36,7 @@ local widget_host = wibox.widget {
 	expand = 'none',
 	nil,
 	{
-		host_content,
+		right_content,
 		layout = wibox.layout.align.horizontal,
 	},
 	nil
@@ -56,10 +56,10 @@ local spacer_bar = wibox.widget {
 
 local update_host = function()
 	awful.spawn.easy_async_with_shell(
-		[[bash -c "iw dev | grep "ssid" | sed 's/ssid //' | sed 's/\t//g'"]],
+		[[bash -c "nmcli c | awk 'NF{NF-=3};1' | sed '2!d'"]],
 		function(stdout)
 			local networkName = stdout:gsub("\n", "")
-			host_content:set_text(networkName)
+			right_content:set_text(networkName)
 		end
 	)
 end

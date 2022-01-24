@@ -7,7 +7,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local widget_icon = wibox.widget {
@@ -37,7 +37,7 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.yellow,
+	bg = colors.color7,
 	widget = wibox.container.background
 }
 
@@ -49,11 +49,11 @@ local mute_toggle = function()
 			if status == 'true' then
 				awful.spawn('pamixer -u')
 				widget_icon.icon:set_image(icons.volume)
-				widget.bg = colors.yellow
+				widget.bg = colors.color7
 			elseif status == "false" then
 				awful.spawn('pamixer -m')
 				widget_icon.icon:set_image(icons.mute)
-				widget.bg = colors.background
+				widget.bg = colors.colorA
 			end
 		end
 	)

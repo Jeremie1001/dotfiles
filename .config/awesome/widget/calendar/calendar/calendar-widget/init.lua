@@ -2,7 +2,7 @@ local wibox = require('wibox')
 local calendar = require('library.wibox.widget.calendar')
 local awful = require('awful')
 local gears = require('gears')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local clickable_container = require('widget.clickable-container')
 
 -- Initialize empty styles table
@@ -29,7 +29,7 @@ end
 --Default background shape of calendar
 styles.month   = {
   padding      = 5,
-  bg_color     = colors.background,
+  bg_color     = colors.colorA,
   border_width = 2,
   shape        = rounded_shape(10),
 }
@@ -41,8 +41,8 @@ styles.normal = {
 
 -- Styles for focused date
 styles.focus   = {
-  bg_color = colors.purple,
-  fg_color = colors.background,
+  bg_color = colors.color2,
+  fg_color = colors.colorA,
   markup   = function(t) return '<b>' .. t .. '</b>' end,
   shape    = rounded_shape(5),
   widget   = clickable_container
@@ -54,9 +54,9 @@ styles.focus   = {
 
 local function update_color()
   if os.date("%Y/%m/%d", os.time(os.date('*t'))) == os.date("%Y/%m/%d", os.time(cal.date)) then
-    styles.focus.bg_color = colors.purple
+    styles.focus.bg_color = colors.color2
   elseif os.date("%Y/%m/%d", os.time(os.date('*t'))) ~= os.date("%Y/%m/%d", os.time(cal.date)) then
-    styles.focus.bg_color = colors.cyan
+    styles.focus.bg_color = colors.color8
   end
 
   -- Refresh calendar

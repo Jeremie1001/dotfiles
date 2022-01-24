@@ -8,14 +8,14 @@ local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
 
-local return_button = function(color, space)
+local return_button = function(color, lspace, rspace)
 	local widget_button = wibox.widget {
 	     {
 	       {
 	         {
 						 {
-		          image = icons.wifi_3,
-		          widget = wibox.widget.imagebox
+							image = icons.wifi_2,
+							widget = wibox.widget.imagebox
 		        },
 						top = dpi(4),
 						bottom = dpi(4),
@@ -24,7 +24,7 @@ local return_button = function(color, space)
 		        widget = wibox.container.margin
 					},
 					shape = gears.shape.rounded_bar,
-					bg = color,
+					bg = color.color,
 					widget = wibox.container.background
 	      },
 	      forced_width = icon_size,
@@ -32,7 +32,8 @@ local return_button = function(color, space)
 	      widget = clickable_container
 	    },
 			top = dpi(5),
-	    right = dpi(space),
+	    left = dpi(lspace),
+	    right = dpi(rspace),
 	    widget = wibox.container.margin
   	}
 
@@ -45,6 +46,7 @@ local return_button = function(color, space)
 				function()
 					awesome.emit_signal("bar::centers:toggle:off")
 					awesome.emit_signal("network::center:toggle")
+					awesome.emit_signal("network::networks:refreshPanel")
 				end
 			)
 		)

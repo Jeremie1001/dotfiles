@@ -7,7 +7,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local awful = require('awful')
@@ -41,21 +41,21 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.background,
+	bg = colors.colorA,
 	widget = wibox.container.background
 }
 
 widget:connect_signal(
 	"mouse::enter",
 	function()
-		widget.bg = colors.pink
+		widget.bg = colors.color3
 	end
 )
 
 widget:connect_signal(
 	"mouse::leave",
 	function()
-		widget.bg = colors.background
+		widget.bg = colors.colorA
 	end
 )
 

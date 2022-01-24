@@ -3,6 +3,8 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
+local settings = require("settings")
+local dir = os.getenv('HOME') .. '/.config/awesome/themes/profile_pictures/'
 
 --- Widget for dracula icon used in all title bars
 
@@ -13,7 +15,7 @@ local widget_icon = wibox.widget {
 	nil,
 	{
 		id = 'icon',
-		image = icons.dracula,
+		image = dir .. settings.profile_picture,
 		resize = true,
 		widget = wibox.widget.imagebox
 	},

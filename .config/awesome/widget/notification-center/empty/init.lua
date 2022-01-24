@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local notifIcon = wibox.widget {
@@ -18,7 +18,7 @@ local notifIcon = wibox.widget {
 		 widget = wibox.container.margin
 	 },
 	 shape = gears.shape.rect,
-	 bg = colors.purple,
+	 bg = colors.color3,
 	 widget = wibox.container.background
  },
  forced_width = 40,
@@ -37,7 +37,7 @@ local content = wibox.widget {
 		widget = wibox.container.margin
 		},
 	shape = gears.shape.rect,
-	bg = colors.selection,
+	bg = colors.colorB,
 	widget = wibox.container.background
 }
 	
@@ -52,7 +52,7 @@ local box = wibox.widget {
 	end,
 	fg = colors.white,
 	border_width = dpi(1),
-	border_color = colors.background,
+	border_color = colors.colorA,
 	widget = wibox.container.background
 }
 

@@ -23,12 +23,37 @@ ArchDracula By:
 Based on terminal color theme Dracula and inpired by https://github.com/manilarome/the-glorious-dotfiles
 
 Dependencies
-	i3lock-fancy (exit_screen module)
-	blueman (bluetooth buttons)
-	rofi (launchers)
-  pamixer (volume controls)
-	nordvpn-bin (vpn widgets)
-	lm_sensors (temperature dial in control center)
+	aur
+		i3lock-fancy
+	community
+		rofi
+		flameshot
+		picom
+		feh
+		vpn service
+		light
+		pamixer
+		xdotool
+	core
+		procps-ng
+			free
+		sed
+		grep
+		awk
+		coreutils
+			uname
+			cat
+			df
+	extra
+		libpulse
+			pactl
+		networkmanager
+			nmcli
+		bluez-utils
+			bluetoothctl
+		xprop
+		lm_sensors
+		upower
 
 	SHORTCUT DEPENDENCIES
 		firefox
@@ -38,8 +63,8 @@ Dependencies
 		vscodium
 		discord
 
-8692 lines of code as of December 29 2021
-	find . -name '*.lua' | xargs wc -l
+18046 lines of code as of January 22 2021
+	find . -name '*.*' | xargs wc -l
 
 Disclaimer, some of the aspects of this rice arent completely functional at this time as this is still a work in progress so please be please be patient
   This includes the do not disturb function, bluetooth, wifi, battery and volume buttons on the main bar, and various volume functionality syncing, see TODO.txt file for updated status

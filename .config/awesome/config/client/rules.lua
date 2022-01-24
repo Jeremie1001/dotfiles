@@ -56,9 +56,6 @@ awful.rules.rules = {
     },
 
     --Set Firefox to always map on the tag named "2" on screen 1.
-    { rule = { class = "firefox" },
-      { tag = "3" }
-    },
     { rule = { class = "nemo" },
       { tag = "2" }
     },

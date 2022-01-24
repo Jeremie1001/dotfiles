@@ -43,24 +43,25 @@ Bar
   -Calendar
     -Finish todo list input functionalities
   -Bluetooth
-    -Device pairing and connecting
-      -bluetoothctl
+    -Device pairing and connecting (DONE)
+      -bluetoothctl (DONE)
     -Searching
     -Check adapter power status on open (DONE)
   -Wifi
     -Ethernet & Network Detection
-    -Network
+    -Network (DONE)
   -Battery
     -Percentage update on open
     -Anything else?
-  -Volume
-    -Slider
-    -Output devices
-      -Pulse audio
+  -Volume (DONE)
+    -Slider (DONE)
+    -Output devices (DONE)
+      -Pulse audio (DONE)
   -VPN
     -Modify to work with PIA
-  -Focus
-    -Fix for laptop
+  -Focus (DONE)
+    -Fix for laptop (DONE, xdotool is not a core util)
+  -Quick info tooltips
 
 Control center
   -Top text
@@ -73,19 +74,22 @@ Control center
     -Volume
       -Check mute on panel opening
   -Dials
-    -Fix watch function dials to actually work lol?
+    -Fix watch function dials to actually work lol (DONE)
+      -Fix the full circle glitch at <3%
     -Stop watch functions while control center is closed
   -Slider
     -Volume
       -Adjust current output device
     -Brightness
       -Make do something
+  -Dual monitor open on focused screen
+    -Use get screen function in hotkeys module
 
 Theme
-  -Change color variables to generic names with dracula subtheme
+  -Change color variables to generic names with dracula subtheme (DONE)
   -Central theming GUI
     -Allows changing of theme colors
-      -Have active colors in seperate simple variable init.lua file
+      -Have active colors in seperate simple variable init.lua file (DONE)
     -Allow saving of themes
       -Write available themes to file
     -Allows changing of wallpapers

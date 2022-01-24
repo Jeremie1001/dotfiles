@@ -8,30 +8,10 @@ local awful = require('awful')
 local gears = require('gears')
 local wibox = require('wibox')
 local beautiful = require('beautiful')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local dpi = require('beautiful').xresources.apply_dpi
 local screen_geometry = require('awful').screen.focused().geometry
-
-local format_item = function(widget)
-  return wibox.widget {
-		{
-			{
-				layout = wibox.layout.align.vertical,
-				expand = 'none',
-				nil,
-				widget,
-				nil
-			},
-			margins = dpi(5),
-			widget = wibox.container.margin
-		},
-		shape = function(cr, width, height)
-			gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
-		end,
-    bg = 'transparent',
-		widget = wibox.container.background
-	}
-end
+local format_item = require('library.format_item')
 
 local dials = wibox.widget {
   {
@@ -61,11 +41,11 @@ local dials = wibox.widget {
   shape = function(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
   end,
-  bg = colors.alpha(colors.selection, 'F2'),
+  bg = colors.alpha(colors.colorB, 'F2'),
   forced_width = 400,
   forced_height = 400,
   border_width = dpi(2),
-  border_color = colors.background,
+  border_color = colors.colorA,
   widget = wibox.container.background,
   layout,
 }
@@ -90,11 +70,11 @@ local sliders = wibox.widget {
   shape = function(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
   end,
-  bg = colors.alpha(colors.selection, 'F2'),
+  bg = colors.alpha(colors.colorB, 'F2'),
   forced_width = 400,
   forced_height = 190,
   border_width = dpi(2),
-  border_color = colors.background,
+  border_color = colors.colorA,
   widget = wibox.container.background,
   layout,
 }
@@ -123,11 +103,11 @@ local buttons = wibox.widget {
   shape = function(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
   end,
-  bg = colors.alpha(colors.selection, 'F2'),
+  bg = colors.alpha(colors.colorB, 'F2'),
   forced_width = 400,
   forced_height = 70,
   border_width = dpi(2),
-  border_color = colors.background,
+  border_color = colors.colorA,
   widget = wibox.container.background,
   layout,
 }
@@ -152,11 +132,11 @@ local title = wibox.widget {
   shape = function(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
   end,
-  bg = colors.alpha(colors.selection, 'F2'),
+  bg = colors.alpha(colors.colorB, 'F2'),
   forced_width = 400,
   forced_height = 70,
   border_width = dpi(2),
-  border_color = colors.background,
+  border_color = colors.colorA,
   widget = wibox.container.background,
   layout,
 }

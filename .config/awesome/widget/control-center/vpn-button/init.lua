@@ -7,7 +7,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local widget_icon = wibox.widget {
@@ -37,7 +37,7 @@ local widget = wibox.widget {
 		widget = clickable_container
 	},
 	shape = gears.shape.circle,
-	bg = colors.green,
+	bg = colors.color6,
 	widget = wibox.container.background
 }
 
@@ -47,10 +47,10 @@ watch (
 	function(_, stdout)
 		local status = string.match(stdout, '%a+')
 		if status == "Disconnected" then
-			widget.bg = colors.background
+			widget.bg = colors.colorA
 			widget_icon.icon:set_image(icons.shield_off)
 		else
-			widget.bg = colors.green
+			widget.bg = colors.color6
 			widget_icon.icon:set_image(icons.shield)
 		end
 		collectgarbage('collect')
@@ -65,7 +65,7 @@ widget:buttons(
 			nil,
 			function()
 				awful.spawn.with_shell('~/.config/awesome/scripts/vpn.sh --toggle-connection')
-				widget.bg = colors.alpha(colors.green, '40')
+				widget.bg = colors.alpha(colors.color6, '40')
 			end
 		),
 		awful.button(

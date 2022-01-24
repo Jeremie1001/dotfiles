@@ -7,7 +7,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local awful = require('awful')
@@ -41,7 +41,7 @@ local widget = wibox.widget {
     widget = clickable_container
   },
   shape = gears.shape.circle,
-  bg = colors.background,
+  bg = colors.colorA,
   widget = wibox.container.background
 }
 
@@ -52,10 +52,10 @@ widget:connect_signal(
   function()
     if power_status == false then
       widget_icon.icon:set_image(icons.bluetooth_on)
-      widget.bg = colors.cyan
+      widget.bg = colors.color8
     elseif power_status == true then
       widget_icon.icon:set_image(icons.bluetooth_off)
-      widget.bg = colors.background
+      widget.bg = colors.colorA
     end
   end
 )
@@ -65,10 +65,10 @@ widget:connect_signal(
   function()
     if power_status == false then
       widget_icon.icon:set_image(icons.bluetooth_off)
-      widget.bg = colors.background
+      widget.bg = colors.colorA
     elseif power_status == true then
       widget_icon.icon:set_image(icons.bluetooth_on)
-      widget.bg = colors.cyan
+      widget.bg = colors.color8
     end
   end
 )
@@ -80,12 +80,12 @@ awesome.connect_signal(
       power_status = true
       awful.spawn.with_shell('bluetoothctl power on')
       widget_icon.icon:set_image(icons.bluetooth_on)
-      widget.bg = colors.cyan
+      widget.bg = colors.color8
     elseif power_status == true then
       power_status = false
       awful.spawn.with_shell('bluetoothctl power off')
       widget_icon.icon:set_image(icons.bluetooth_off)
-      widget.bg = colors.background
+      widget.bg = colors.colorA
     end
   end
 )
@@ -100,11 +100,11 @@ awesome.connect_signal(
         if stdout == "yes" then
           power_status = true
           widget_icon.icon:set_image(icons.bluetooth_on)
-          widget.bg = colors.cyan
+          widget.bg = colors.color8
         elseif stdout == "no" then
           power_status = false
           widget_icon.icon:set_image(icons.bluetooth_off)
-          widget.bg = colors.background
+          widget.bg = colors.colorA
         end
       end
     )

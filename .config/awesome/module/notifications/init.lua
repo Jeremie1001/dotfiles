@@ -8,7 +8,7 @@ local icons = require('themes.icons')
 local beautiful = require('beautiful')
 local dpi = beautiful.xresources.apply_dpi
 local clickable_container = require('widget.clickable-container')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 
 -- Apply theme variables
 naughty.config.padding = dpi(8)
@@ -59,15 +59,15 @@ naughty.connect_signal(
 )
 
 local main_color = {
-    ['low'] = colors.green,
-    ['normal'] = colors.selection,
+    ['low'] = colors.color6,
+    ['normal'] = colors.colorB,
     ['critical'] = '#cc6666',
 }
 
 local edge_color = {
-    ['low'] = colors.purple,
-    ['normal'] = colors.purple,
-    ['critical'] = colors.red,
+    ['low'] = colors.color2,
+    ['normal'] = colors.color2,
+    ['critical'] = colors.color4,
 }
 
 naughty.connect_signal(
@@ -192,7 +192,7 @@ naughty.connect_signal(
 	      bg = main_color,
 				fg = colors.white,
 				border_width = dpi(1),
-			  border_color = colors.background,
+			  border_color = colors.colorA,
 	      widget = wibox.container.background
 	    }
 		}

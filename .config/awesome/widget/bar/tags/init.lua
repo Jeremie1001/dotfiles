@@ -4,7 +4,7 @@ local beautiful = require('beautiful')
 local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local modkey = require('config.keys.mod').modKey
 local icons = require('themes.icons')
 

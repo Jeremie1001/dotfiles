@@ -9,9 +9,9 @@ local spawn = awful.spawn
 local dpi = beautiful.xresources.apply_dpi
 local icons = require('widget.control-center.brightness-slider.icons')
 local clickable_container = require('widget.clickable-container')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 
-local main_color = colors.cyan
+local main_color = colors.color8
 
 local widget_name = wibox.widget {
 	text = 'Brightness',
@@ -55,7 +55,7 @@ local slider = wibox.widget {
 		id 					= 'brightness_slider',
 		bar_shape           = gears.shape.rounded_rect,
 		bar_height          = dpi(24),
-		bar_color           = colors.selection,
+		bar_color           = colors.colorB,
 		bar_active_color		= main_color,
 		handle_color        = main_color,
 		handle_shape        = gears.shape.circle,
@@ -162,7 +162,7 @@ local cc_brightness = wibox.widget {
     widget = wibox.container.margin
   },
   shape = gears.shape.rounded_rect,
-  bg = colors.background,
+  bg = colors.colorA,
   fg = main_color,
   widget = wibox.container.background
 }

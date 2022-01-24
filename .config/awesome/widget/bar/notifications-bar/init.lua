@@ -9,7 +9,7 @@ local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
 local watch = require('awful.widget.watch')
 
-local return_button = function(color, space)
+local return_button = function(color, lspace, rspace)
 
 	local widget_icon = wibox.widget {
 		layout = wibox.layout.align.vertical,
@@ -39,7 +39,7 @@ local return_button = function(color, space)
 		        widget = wibox.container.margin
 					},
 					shape = gears.shape.rounded_bar,
-					bg = color,
+					bg = color.color,
 					widget = wibox.container.background
 	      },
 	      forced_width = icon_size,
@@ -47,7 +47,8 @@ local return_button = function(color, space)
 	      widget = clickable_container
 	    },
 			top = dpi(5),
-	    right = dpi(space),
+	    left = dpi(lspace),
+	    right = dpi(rspace),
 	    widget = wibox.container.margin
 		}
 

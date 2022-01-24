@@ -360,6 +360,15 @@ local globalKeys = awful.util.table.join(
 
   awful.key(
     {modkey},
+    "j",
+		function()
+			awesome.emit_signal("settings::window:toggle")
+		end,
+		{description = 'toggle control center', group = 'Awesome'}
+	),
+
+	awful.key(
+    {modkey},
     "k",
 		function()
 			awesome.emit_signal("cc:toggle")

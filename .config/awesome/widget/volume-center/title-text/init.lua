@@ -4,7 +4,7 @@ local gears = require('gears')
 local clickable_container = require('widget.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
 local user_content = wibox.widget {
@@ -59,7 +59,7 @@ local update_host = function()
 		[[bash -c "uname -n"]],
 		function(stdout)
 			local hostname = stdout:gsub("\n","")
-			host_content:set_text(hostname)
+			host_content:set_text(colors[color5])
 		end
 	)
 end

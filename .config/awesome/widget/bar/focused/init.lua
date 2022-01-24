@@ -6,7 +6,7 @@ local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('themes.icons')
 local watch = require('awful.widget.watch')
 
-local return_button = function(color, space)
+local return_button = function(color, lspace, rspace)
 	local widget_content = wibox.widget {
 		text = "Arch Dracula",
 		widget = wibox.widget.textbox
@@ -15,8 +15,8 @@ local return_button = function(color, space)
 	local lenMax = 42
 
 	watch (
---		[[bash -c "xprop -id $(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)' | awk {'print $5'}) | grep '_WM_NAME(UTF8_STRING)' | awk '{for(i=1; i<NF-1; ++i) $i=$(i+2); NF-=2; print $0}' | sed 's/\"//g'"]],
-		[[bash -c "xdotool getwindowname $(xdotool getactivewindow)"]],
+		[[bash -c "xprop -id $(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)' | awk {'print $5'}) | grep '_WM_NAME(UTF8_STRING)' | awk '{for(i=1; i<NF-1; ++i) $i=$(i+2); NF-=2; print $0}' | sed 's/\"//g'"]],
+--		[[bash -c "xdotool getwindowname $(xdotool getactivewindow)"]],
 		1,
 		function(_, stdout)
 			local name = stdout:gsub("\n","")
@@ -24,7 +24,7 @@ local return_button = function(color, space)
 				name = "Arch Dracula"
 			end
 			if string.len(name) > lenMax then
-				name = string.sub(name, 1, 42).."..."
+				name = string.sub(name, 1, lenMax).."..."
 			end
 			widget_content:set_text(name)
 			collectgarbage('collect')
@@ -46,14 +46,15 @@ local return_button = function(color, space)
 		        widget = wibox.container.margin
 					},
 					shape = gears.shape.rounded_bar,
-					bg = color,
+					bg = color.color,
 					fg = 'white',
 					widget = wibox.container.background
 	      },
 	      widget = clickable_container
 	    },
 			top = dpi(5),
-	    left = dpi(space),
+	    right = dpi(rspace),
+	    left = dpi(lspace),
 	    widget = wibox.container.margin
   	}
 

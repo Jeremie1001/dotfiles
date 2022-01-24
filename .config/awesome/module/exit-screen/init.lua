@@ -6,7 +6,7 @@ local gears = require('gears')
 local wibox = require('wibox')
 local icons = require('themes.icons')
 local clickable_container = require('widget.clickable-container')
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local apps = require('config.apps')
 local dpi = require('beautiful').xresources.apply_dpi
 
@@ -128,7 +128,7 @@ local exit_screen = function(s)
       type = 'splash',
       height = s.geometry.height,
       width = s.geometry.width,
-      bg = colors.alpha(colors.selection, 'E0'),
+      bg = colors.alpha(colors.colorB, 'E0'),
       fg = '#FEFEFE'
     }
   )
@@ -144,7 +144,7 @@ local exit_screen = function(s)
       type = 'splash',
       height = s.geometry.height,
       width = s.geometry.width,
-      bg = colors.alpha(colors.selection, 'E0'),
+      bg = colors.alpha(colors.colorB, 'E0'),
       fg = '#FEFEFE'
     }
   )

@@ -4,10 +4,10 @@
 local wibox = require('wibox')
 local gears = require('gears')
 local dpi = require('beautiful').xresources.apply_dpi
-local colors = require('themes.dracula.colors')
+local colors = require('themes').colors
 local watch = require('awful.widget.watch')
 
-local main_color = colors.cyan
+local main_color = colors.color8
 
 local widget_text = wibox.widget {
   font = 'Inter Bold 12',
@@ -51,7 +51,7 @@ local ram_meter = wibox.widget {
     widget = wibox.container.margin
   },
   shape = gears.shape.rounded_rect,
-  bg = colors.background,
+  bg = colors.colorA,
   fg = main_color,
   widget = wibox.container.background
 }
