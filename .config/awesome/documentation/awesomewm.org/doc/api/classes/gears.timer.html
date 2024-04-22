@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class gears.timer - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+<li><a href="#Signals">Signals</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><strong>gears.timer</strong></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>gears.timer</code></h1>
+<p>Timer objects and functions.</p>
+<p></p>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">-- Create a widget and update its content using the output of a shell
+-- command every 10 seconds:
+local mybatterybar = wibox.widget {
+    {
+        min_value    = 0,
+        max_value    = 100,
+        value        = 0,
+        paddings     = 1,
+        border_width = 1,
+        forced_width = 50,
+        border_color = &quot;#0000ff&quot;,
+        id           = &quot;mypb&quot;,
+        widget       = wibox.widget.progressbar,
+    },
+    {
+        id           = &quot;mytb&quot;,
+        text         = &quot;100%&quot;,
+        widget       = wibox.widget.textbox,
+    },
+    layout      = wibox.layout.stack,
+    set_battery = function(self, val)
+        self.mytb.text  = tonumber(val)..&quot;%&quot;
+        self.mypb.value = tonumber(val)
+    end,
+}
+
+gears.timer {
+    timeout   = 10,
+    call_now  = true,
+    autostart = true,
+    callback  = function()
+        -- You should read it from `/sys/class/power_supply/` (on Linux)
+        -- instead of spawning a shell. This is only an example.
+        awful.spawn.easy_async(
+            {&quot;sh&quot;, &quot;-c&quot;, &quot;acpi | sed -n &apos;s/^.*, \([0-9]*\)%/\1/p&apos;&quot;},
+            function(out)
+                mybatterybar.battery = out
+            end
+        )
+    end
+}
+</pre>
+    </ul>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2014 Uli Schlachter</li>
+        <li><strong>Author</strong>: Uli Schlachter</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.timer">gears.timer (args)</a></td>
+	<td class="summary">Create a new timer object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.start_new">gears.timer.start_new (timeout, callback)</a></td>
+	<td class="summary">Create a timeout for calling some callback function.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.weak_start_new">gears.timer.weak_start_new (timeout, callback)</a></td>
+	<td class="summary">Create a timeout for calling some callback function.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.delayed_call">gears.timer.delayed_call (callback, ...)</a></td>
+	<td class="summary">Call the given function at the end of the current main loop iteration</td>
+	</tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.timer.started">started</a></td>
+	<td class="summary">The timer is started.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.timeout">timeout</a></td>
+	<td class="summary">The timer timeout value.</td>
+	</tr>
+</table>
+<h2><a href="#Signals">Signals</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.timer.start">start</a></td>
+	<td class="summary">When the timer is started.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.stop">stop</a></td>
+	<td class="summary">When the timer is stopped.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer.timeout">timeout</a></td>
+	<td class="summary">When the timer had a timeout event.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.timer.timer">gears.timer.timer</a></td>
+	<td class="summary">Timer objects.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.timer:start">gears.timer:start ()</a></td>
+	<td class="summary">Start the timer.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer:stop">gears.timer:stop ()</a></td>
+	<td class="summary">Stop the timer.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.timer:again">gears.timer:again ()</a></td>
+	<td class="summary">Restart the timer.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "gears.timer"></a>
+    <strong>gears.timer (args)</strong>
+    </dt>
+    <dd>
+    Create a new timer object.
+
+
+    <ul>
+        <li><span class="parameter">args</span> Arguments.
+        <ul>
+        <li><span class="parameter">timeout</span>
+            <span class="types"><span class="type">number</span></span>
+         Timeout in seconds (e.g. 1.5).
+        </li>
+        <li><span class="parameter">autostart</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Automatically start the timer.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">call_now</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Call the callback at timer creation.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">callback</span>
+            <span class="types"><span class="type">function</span></span>
+         Callback function to connect to the
+  &ldquo;timeout&rdquo; signal.
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">single_shot</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Run only once then stop.
+         (<em>default</em> false)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/gears.timer.html">timer</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.start_new"></a>
+    <strong>gears.timer.start_new (timeout, callback)</strong>
+    </dt>
+    <dd>
+    Create a timeout for calling some callback function.
+ When the callback function returns true, it will be called again after the
+ same timeout. If false is returned, no more calls will be done. If the
+ callback function causes an error, no more calls are done.
+
+
+    <ul>
+        <li><span class="parameter">timeout</span>
+            <span class="types"><span class="type">number</span></span>
+         Timeout in seconds (e.g. 1.5).
+        </li>
+        <li><span class="parameter">callback</span>
+            <span class="types"><span class="type">function</span></span>
+         Function to run.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/gears.timer.html">timer</a></span>
+        The timer object that was set up.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/gears.timer.html#gears.timer.weak_start_new">gears.timer.weak_start_new</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.weak_start_new"></a>
+    <strong>gears.timer.weak_start_new (timeout, callback)</strong>
+    </dt>
+    <dd>
+    Create a timeout for calling some callback function.
+ This function is almost identical to <a href="../classes/gears.timer.html#gears.timer.start_new">gears.timer.start_new</a>. The only difference
+ is that this does not prevent the callback function from being garbage
+ collected. After the callback function was collected, the timer returned
+ will automatically be stopped.
+
+
+    <ul>
+        <li><span class="parameter">timeout</span>
+            <span class="types"><span class="type">number</span></span>
+         Timeout in seconds (e.g. 1.5).
+        </li>
+        <li><span class="parameter">callback</span>
+            <span class="types"><span class="type">function</span></span>
+         Function to start.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/gears.timer.html">timer</a></span>
+        The timer object that was set up.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/gears.timer.html#gears.timer.start_new">gears.timer.start_new</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.delayed_call"></a>
+    <strong>gears.timer.delayed_call (callback, ...)</strong>
+    </dt>
+    <dd>
+    Call the given function at the end of the current main loop iteration
+
+
+    <ul>
+        <li><span class="parameter">callback</span>
+            <span class="types"><span class="type">function</span></span>
+         The function that should be called
+        </li>
+        <li><span class="parameter">...</span>
+         Arguments to the callback function
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.timer.started"></a>
+    <strong>started</strong>
+    </dt>
+    <dd>
+    The timer is started.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.timeout"></a>
+    <strong>timeout</strong>
+    </dt>
+    <dd>
+    The timer timeout value.
+ <strong>Signal:</strong> property::timeout
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Signals"></a>Signals</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.timer.start"></a>
+    <strong>start</strong>
+    </dt>
+    <dd>
+    When the timer is started.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.stop"></a>
+    <strong>stop</strong>
+    </dt>
+    <dd>
+    When the timer is stopped.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer.timeout"></a>
+    <strong>timeout</strong>
+    </dt>
+    <dd>
+    When the timer had a timeout event.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.timer.timer"></a>
+    <strong>gears.timer.timer</strong>
+    </dt>
+    <dd>
+    Timer objects.  This type of object is useful when triggering events repeatedly.
+ The timer will emit the &ldquo;timeout&rdquo; signal every N seconds, N being the timeout
+ value. Note that a started timer will not be garbage collected. Call <code>:stop</code>
+ to enable garbage collection.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">timeout</span>
+            <span class="types"><span class="type">number</span></span>
+         Interval in seconds to emit the timeout signal.
+   Can be any value, including floating point ones (e.g. 1.5 seconds).
+        </li>
+        <li><span class="parameter">started</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Read-only boolean field indicating if the timer has been
+   started.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.timer:start"></a>
+    <strong>gears.timer:start ()</strong>
+    </dt>
+    <dd>
+    Start the timer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer:stop"></a>
+    <strong>gears.timer:stop ()</strong>
+    </dt>
+    <dd>
+    Stop the timer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.timer:again"></a>
+    <strong>gears.timer:again ()</strong>
+    </dt>
+    <dd>
+    Restart the timer.
+ This is equivalent to stopping the timer if it is running and then starting
+ it.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

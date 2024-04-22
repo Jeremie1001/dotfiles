@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ldoc.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200pt" height="70pt" viewBox="0 0 200 70" version="1.1">
+<g id="surface2">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,0%);fill-opacity:1;" d="M 10 10 L 60 10 L 60 60 L 10 60 Z M 10 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,100%,0%);fill-opacity:1;" d="M 70 10 L 120 10 L 120 60 L 70 60 Z M 70 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,100%);fill-opacity:1;" d="M 130 10 L 180 10 L 180 60 L 130 60 Z M 130 10 "/>
+</g>
+</svg>

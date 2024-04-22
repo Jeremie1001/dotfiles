@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module gears.table - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><strong>gears.table</strong></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>gears.table</code></h1>
+<p>Table module for gears</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#join">join (...)</a></td>
+	<td class="summary">Join all tables given as arguments.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#crush">crush (t, set[, raw=false])</a></td>
+	<td class="summary">Override elements in the first table by the one in the second.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#from_sparse">from_sparse (t)</a></td>
+	<td class="summary">Pack all elements with an integer key into a new table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#hasitem">hasitem (t, item)</a></td>
+	<td class="summary">Check if a table has an item and return its key.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gtable.find_keys">gtable.find_keys (t, matcher[, ordered=false[, max=nil]])</a></td>
+	<td class="summary">Get all matching table keys for a <code>matcher</code> function.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gtable.find_first_key">gtable.find_first_key (t, matcher[, ordered=false])</a></td>
+	<td class="summary">Find the first key that matches a function.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#keys">keys (t)</a></td>
+	<td class="summary">Get a sorted table with all integer keys from a table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#keys_filter">keys_filter (t, ...)</a></td>
+	<td class="summary">Filter a table&rsquo;s keys for certain content type.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#reverse">reverse (t)</a></td>
+	<td class="summary">Reverse a table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#clone">clone (t[, deep=true])</a></td>
+	<td class="summary">Clone a table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#iterate">iterate (t, filter, start)</a></td>
+	<td class="summary">Iterate over a table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#merge">merge (t, set)</a></td>
+	<td class="summary">Merge items from one table to another one.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#map">map (f, tbl)</a></td>
+	<td class="summary">Map a function to a table.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "join"></a>
+    <strong>join (...)</strong>
+    </dt>
+    <dd>
+    Join all tables given as arguments.
+ This will iterate over all tables and insert their entries into a new table.
+
+
+    <ul>
+        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Tables to join.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A new table containing all entries from the arguments.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "crush"></a>
+    <strong>crush (t, set[, raw=false])</strong>
+    </dt>
+    <dd>
+    Override elements in the first table by the one in the second.</p>
+
+<p> Note that this method doesn&rsquo;t copy entries found in <code>__index</code>.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the table to be overriden
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the table used to override members of <code>t</code>
+        </li>
+        <li><span class="parameter">raw</span>
+            <span class="types"><span class="type">bool</span></span>
+         Use rawset (avoid the metatable)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        t (for convenience)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "from_sparse"></a>
+    <strong>from_sparse (t)</strong>
+    </dt>
+    <dd>
+    Pack all elements with an integer key into a new table.
+ While both lua and luajit implement __len over sparse
+ tables, the standard defines it as an implementation
+ detail.</p>
+
+<p> This function removes any entries with non-numeric keys.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A potentially sparse table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A packed table with only numeric keys.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hasitem"></a>
+    <strong>hasitem (t, item)</strong>
+    </dt>
+    <dd>
+    Check if a table has an item and return its key.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table.
+        </li>
+        <li><span class="parameter">item</span>
+         The item to look for in values of the table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">number</span></span>
+        The key of the item.
+    </ol>
+     <h3>Or</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gtable.find_keys"></a>
+    <strong>gtable.find_keys (t, matcher[, ordered=false[, max=nil]])</strong>
+    </dt>
+    <dd>
+    Get all matching table keys for a <code>matcher</code> function.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table.
+        </li>
+        <li><span class="parameter">matcher</span>
+            <span class="types"><span class="type">function</span></span>
+         A function taking the key and value as arguments and
+   returning a boolean.
+        </li>
+        <li><span class="parameter">ordered</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If true, only look for continuous
+   numeric keys.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">number</span></span>
+         The maximum number of entries to find.
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
+        An ordered table with all the keys or <code>nil</code> if none were
+   found.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gtable.find_first_key"></a>
+    <strong>gtable.find_first_key (t, matcher[, ordered=false])</strong>
+    </dt>
+    <dd>
+    Find the first key that matches a function.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table.
+        </li>
+        <li><span class="parameter">matcher</span>
+            <span class="types"><span class="type">function</span></span>
+         A function taking the key and value as arguments and
+   returning a boolean.
+        </li>
+        <li><span class="parameter">ordered</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If true, only look for continuous
+   numeric keys.
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The table key or nil
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "keys"></a>
+    <strong>keys (t)</strong>
+    </dt>
+    <dd>
+    Get a sorted table with all integer keys from a table.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table for which the keys to get.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A table with keys
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "keys_filter"></a>
+    <strong>keys_filter (t, ...)</strong>
+    </dt>
+    <dd>
+    Filter a table&rsquo;s keys for certain content type.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table to retrieve the keys for.
+        </li>
+        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The types to look for.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A filtered table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "reverse"></a>
+    <strong>reverse (t)</strong>
+    </dt>
+    <dd>
+    Reverse a table.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table to reverse.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A reversed table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "clone"></a>
+    <strong>clone (t[, deep=true])</strong>
+    </dt>
+    <dd>
+    Clone a table.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table to clone.
+        </li>
+        <li><span class="parameter">deep</span>
+            <span class="types"><span class="type">bool</span></span>
+         Create a deep clone?
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A clone of <code>t</code>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "iterate"></a>
+    <strong>iterate (t, filter, start)</strong>
+    </dt>
+    <dd>
+    Iterate over a table.
+ Returns an iterator to cycle through all elements of a table that match a
+ given criteria, starting from the first element or the given index.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table to iterate.
+        </li>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">func</span></span>
+         A function that returns true to indicate a positive
+   match.
+        </li>
+        <li><span class="parameter">start</span>
+            <span class="types"><span class="type">int</span></span>
+         Index to start iterating from.
+   Default is 1 (=> start of the table).
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">func</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "merge"></a>
+    <strong>merge (t, set)</strong>
+    </dt>
+    <dd>
+    Merge items from one table to another one.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The container table
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The mixin table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        (for convenience)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "map"></a>
+    <strong>map (f, tbl)</strong>
+    </dt>
+    <dd>
+    Map a function to a table.
+ The function is applied to each value on the table, returning a modified
+ table.
+
+
+    <ul>
+        <li><span class="parameter">f</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to be applied to each value in the table.
+        </li>
+        <li><span class="parameter">tbl</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The container table whose values will be operated on.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

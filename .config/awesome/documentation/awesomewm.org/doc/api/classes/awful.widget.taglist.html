@@ -1,0 +1,1547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class awful.widget.taglist - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#List_source_functions">List source functions</a></li>
+<li><a href="#List_filters">List filters</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><strong>awful.widget.taglist</strong></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>awful.widget.taglist</code></h1>
+<p>Taglist widget module for awful</p>
+
+<p> Here is a more advanced example of how to extent the <a href="../classes/awful.widget.taglist.html">taglist</a>.</p>
+<p><p> It provides:</p>
+
+<ul>
+<li>mouse &ldquo;hover&rdquo; color</li>
+<li>an extra index field</li>
+<li>a powerline look and feel</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_wibox_awidget_taglist_indexed.svg" alt="Usage example" /></p>
+
+<pre>s.mytaglist = awful.widget.taglist {
+    screen  = s,
+    filter  = awful.widget.taglist.filter.all,
+    style   = {
+        shape = gears.shape.powerline
+    },
+    layout   = {
+        spacing = -<span class="number">12</span>,
+        spacing_widget = {
+            color  = <span class="string">'#dddddd'</span>,
+            shape  = gears.shape.powerline,
+            widget = wibox.widget.separator,
+        },
+        layout  = wibox.layout.fixed.horizontal
+    },
+    widget_template = {
+        {
+            {
+                {
+                    {
+                        {
+                            id     = <span class="string">'index_role'</span>,
+                            widget = wibox.widget.textbox,
+                        },
+                        margins = <span class="number">4</span>,
+                        widget  = wibox.container.margin,
+                    },
+                    bg     = <span class="string">'#dddddd'</span>,
+                    shape  = gears.shape.circle,
+                    widget = wibox.container.background,
+                },
+                {
+                    {
+                        id     = <span class="string">'icon_role'</span>,
+                        widget = wibox.widget.imagebox,
+                    },
+                    margins = <span class="number">2</span>,
+                    widget  = wibox.container.margin,
+                },
+                {
+                    id     = <span class="string">'text_role'</span>,
+                    widget = wibox.widget.textbox,
+                },
+                layout = wibox.layout.fixed.horizontal,
+            },
+            left  = <span class="number">18</span>,
+            right = <span class="number">18</span>,
+            widget = wibox.container.margin
+        },
+        id     = <span class="string">'background_role'</span>,
+        widget = wibox.container.background,
+        <span class="comment">-- Add support for hover colors and an index label
+</span>        create_callback = <span class="keyword">function</span>(self, c3, index, objects) <span class="comment">--luacheck: no unused args
+</span>            self:get_children_by_id(<span class="string">'index_role'</span>)[<span class="number">1</span>].markup = <span class="string">'&lt;b&gt; '</span>..index..<span class="string">' &lt;/b&gt;'</span>
+            self:connect_signal(<span class="string">'mouse::enter'</span>, <span class="keyword">function</span>()
+                <span class="keyword">if</span> self.bg ~= <span class="string">'#ff0000'</span> <span class="keyword">then</span>
+                    self.backup     = self.bg
+                    self.has_backup = <span class="keyword">true</span>
+                <span class="keyword">end</span>
+                self.bg = <span class="string">'#ff0000'</span>
+            <span class="keyword">end</span>)
+            self:connect_signal(<span class="string">'mouse::leave'</span>, <span class="keyword">function</span>()
+                <span class="keyword">if</span> self.has_backup <span class="keyword">then</span> self.bg = self.backup <span class="keyword">end</span>
+            <span class="keyword">end</span>)
+        <span class="keyword">end</span>,
+        update_callback = <span class="keyword">function</span>(self, c3, index, objects) <span class="comment">--luacheck: no unused args
+</span>            self:get_children_by_id(<span class="string">'index_role'</span>)[<span class="number">1</span>].markup = <span class="string">'&lt;b&gt; '</span>..index..<span class="string">' &lt;/b&gt;'</span>
+        <span class="keyword">end</span>,
+    },
+    buttons = taglist_buttons
+}
+</pre>
+
+
+<p> As demonstrated in the example above, there are a few &ldquo;shortcuts&rdquo; to avoid
+ re-inventing the wheel. By setting the predefined roles as widget <code>id</code>s,
+ <a href="../classes/awful.widget.common.html#">awful.widget.common</a> will do most of the work to update the values
+ automatically. All of them are optional. The supported roles are:</p>
+
+<ul>
+<li><code>icon_role</code>: A <a href="../classes/wibox.widget.imagebox.html#">wibox.widget.imagebox</a></li>
+<li><code>text_role</code>: A <a href="../classes/wibox.widget.textbox.html#">wibox.widget.textbox</a></li>
+<li><code>background_role</code>: A <a href="../classes/wibox.container.background.html#">wibox.container.background</a></li>
+<li><code>text_margin_role</code>: A <a href="../classes/wibox.container.margin.html#">wibox.container.margin</a></li>
+<li><code>icon_margin_role</code>: A <a href="../classes/wibox.container.margin.html#">wibox.container.margin</a></li>
+</ul>
+
+
+<p> <a href="../classes/awful.widget.common.html#">awful.widget.common</a> also has 2 callbacks to give more control over the widget:</p>
+
+<ul>
+<li><code>create_callback</code>: Called once after the widget instance is created</li>
+<li><code>update_callback</code>: Called everytime the data is refreshed</li>
+</ul>
+
+
+<p> Both callback have the same parameters:</p>
+
+<ul>
+<li><code>self</code>: The widget instance (<em>widget</em>).</li>
+<li><code>t</code>: The tag (<em>tag</em>)</li>
+<li><code>index</code>: The widget position in the list (<em>number</em>)</li>
+<li><code>tags</code>: The list of tag, in order (<em>table</em>)</li>
+</ul>
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2349564f4a464d6347424d494c560d4a4d454c">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.taglist">awful.taglist (args, filter, buttons, style[, update_function[, base_widget]])</a></td>
+	<td class="summary">Create a new taglist widget.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_fg_focus">beautiful.taglist_fg_focus</a></td>
+	<td class="summary">The tag list main foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_bg_focus">beautiful.taglist_bg_focus</a></td>
+	<td class="summary">The tag list main background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_fg_urgent">beautiful.taglist_fg_urgent</a></td>
+	<td class="summary">The tag list urgent elements foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_bg_urgent">beautiful.taglist_bg_urgent</a></td>
+	<td class="summary">The tag list urgent elements background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_bg_occupied">beautiful.taglist_bg_occupied</a></td>
+	<td class="summary">The tag list occupied elements background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_fg_occupied">beautiful.taglist_fg_occupied</a></td>
+	<td class="summary">The tag list occupied elements foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_bg_empty">beautiful.taglist_bg_empty</a></td>
+	<td class="summary">The tag list empty elements background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_fg_empty">beautiful.taglist_fg_empty</a></td>
+	<td class="summary">The tag list empty elements foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_bg_volatile">beautiful.taglist_bg_volatile</a></td>
+	<td class="summary">The tag list volatile elements background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_fg_volatile">beautiful.taglist_fg_volatile</a></td>
+	<td class="summary">The tag list volatile elements foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_squares_sel">beautiful.taglist_squares_sel</a></td>
+	<td class="summary">The selected elements background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_squares_unsel">beautiful.taglist_squares_unsel</a></td>
+	<td class="summary">The unselected elements background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_squares_sel_empty">beautiful.taglist_squares_sel_empty</a></td>
+	<td class="summary">The selected empty elements background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_squares_unsel_empty">beautiful.taglist_squares_unsel_empty</a></td>
+	<td class="summary">The unselected empty elements background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_squares_resize">beautiful.taglist_squares_resize</a></td>
+	<td class="summary">If the background images can be resized.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_disable_icon">beautiful.taglist_disable_icon</a></td>
+	<td class="summary">Do not display the tag icons, even if they are set.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_font">beautiful.taglist_font</a></td>
+	<td class="summary">The taglist font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_spacing">beautiful.taglist_spacing</a></td>
+	<td class="summary">The space between the taglist elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape">beautiful.taglist_shape</a></td>
+	<td class="summary">The main shape used for the elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_width">beautiful.taglist_shape_border_width</a></td>
+	<td class="summary">The shape elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_color">beautiful.taglist_shape_border_color</a></td>
+	<td class="summary">The elements shape border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_empty">beautiful.taglist_shape_empty</a></td>
+	<td class="summary">The shape used for the empty elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_width_empty">beautiful.taglist_shape_border_width_empty</a></td>
+	<td class="summary">The shape used for the empty elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_color_empty">beautiful.taglist_shape_border_color_empty</a></td>
+	<td class="summary">The empty elements shape border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_focus">beautiful.taglist_shape_focus</a></td>
+	<td class="summary">The shape used for the selected elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_width_focus">beautiful.taglist_shape_border_width_focus</a></td>
+	<td class="summary">The shape used for the selected elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_color_focus">beautiful.taglist_shape_border_color_focus</a></td>
+	<td class="summary">The selected elements shape border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_urgent">beautiful.taglist_shape_urgent</a></td>
+	<td class="summary">The shape used for the urgent elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_width_urgent">beautiful.taglist_shape_border_width_urgent</a></td>
+	<td class="summary">The shape used for the urgent elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_color_urgent">beautiful.taglist_shape_border_color_urgent</a></td>
+	<td class="summary">The urgents elements shape border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_volatile">beautiful.taglist_shape_volatile</a></td>
+	<td class="summary">The shape used for the volatile elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_width_volatile">beautiful.taglist_shape_border_width_volatile</a></td>
+	<td class="summary">The shape used for the volatile elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.taglist_shape_border_color_volatile">beautiful.taglist_shape_border_color_volatile</a></td>
+	<td class="summary">The volatile elements shape border color.</td>
+	</tr>
+</table>
+<h2><a href="#List_source_functions">List source functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.taglist.source.for_screen">awful.taglist.source.for_screen</a></td>
+	<td class="summary">All tags for the defined screen ordered by indices.</td>
+	</tr>
+</table>
+<h2><a href="#List_filters">List filters</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.taglist.filter.noempty">awful.taglist.filter.noempty</a></td>
+	<td class="summary">Filtering function to include all nonempty tags on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.taglist.filter.selected">awful.taglist.filter.selected</a></td>
+	<td class="summary">Filtering function to include selected tags on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.taglist.filter.all">awful.taglist.filter.all</a></td>
+	<td class="summary">Filtering function to include all tags on the screen.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "awful.taglist"></a>
+    <strong>awful.taglist (args, filter, buttons, style[, update_function[, base_widget]])</strong>
+    </dt>
+    <dd>
+    Create a new taglist widget.  The last two arguments (update_function
+ and layout) serve to customize the layout of the taglist (eg. to
+ make it vertical). For that, you will need to copy the
+ awful.widget.common.list_update function, make your changes to it
+ and pass it as update_function here. Also change the layout if the
+ default is not what you want.
+
+
+    <ul>
+        <li><span class="parameter">args</span>
+        <ul>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen to draw taglist for.
+        </li>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">function[opt=nil]</span></span>
+         Filter function to define what clients will be listed.
+        </li>
+        <li><span class="parameter">buttons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table with buttons binding to set.
+        </li>
+        <li><span class="parameter">update_function</span>
+            <span class="types"><span class="type">function</span></span>
+         Function to create a tag widget on each
+   update. See <a href="../classes/awful.widget.common.html#">awful.widget.common</a>.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">layout</span>
+            <span class="types"><span class="type">widget</span></span>
+         Optional layout widget for tag widgets. Default
+   is wibox.layout.fixed.horizontal().
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><span class="type">function</span></span>
+         The
+  function used to generate the list of tag.
+         (<em>default</em> awful.taglist.source.for_screen)
+        </li>
+        <li><span class="parameter">widget_template</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A custom widget to be used for each tag
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The style overrides default theme.
+         (<em>default</em> {})
+        </li>
+        <li><span class="parameter">style.fg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The foreground color for focused client.
+        </li>
+        <li><span class="parameter">style.bg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The background color for focused client.
+        </li>
+        <li><span class="parameter">style.fg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The foreground color for urgent clients.
+        </li>
+        <li><span class="parameter">style.bg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The background color for urgent clients.
+        </li>
+        <li><span class="parameter">style.bg_occupied</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_occupied</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_volatile</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_volatile</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.squares_sel</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for selected squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_unsel</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for unselected squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_sel_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for selected squares for empty tags.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_unsel_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for unselected squares for empty tags.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_resize</span>
+            <span class="types"><span class="type">boolean</span></span>
+         True or false to resize squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.disable_icon</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The font.
+        </li>
+        <li><span class="parameter">style.spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         The spacing between tags.
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.squares_sel</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for selected squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_unsel</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for unselected squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_sel_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for selected squares for empty tags.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_unsel_empty</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A user provided image for unselected squares for empty tags.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.squares_resize</span>
+            <span class="types"><span class="type">boolean</span></span>
+         True or false to resize squares.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style.bg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The background color for focused client.
+        </li>
+        <li><span class="parameter">style.fg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The foreground color for focused client.
+        </li>
+        <li><span class="parameter">style.bg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The background color for urgent clients.
+        </li>
+        <li><span class="parameter">style.fg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+         The foreground color for urgent clients.
+        </li>
+        <li><span class="parameter">style.font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The font.
+        </li>
+        </li></ul>
+        <li><span class="parameter">filter</span>
+         <strong>DEPRECATED</strong> use args.filter
+        </li>
+        <li><span class="parameter">buttons</span>
+         <strong>DEPRECATED</strong> use args.buttons
+        </li>
+        <li><span class="parameter">style</span>
+         <strong>DEPRECATED</strong> use args.style
+        </li>
+        <li><span class="parameter">update_function</span>
+         <strong>DEPRECATED</strong> use args.update_function
+        </li>
+        <li><span class="parameter">base_widget</span>
+         <strong>DEPRECATED</strong> use args.base_widget
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.taglist_fg_focus"></a>
+    <strong>beautiful.taglist_fg_focus</strong>
+    </dt>
+    <dd>
+    The tag list main foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+         (<em>default</em> fg_focus)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_bg_focus"></a>
+    <strong>beautiful.taglist_bg_focus</strong>
+    </dt>
+    <dd>
+    The tag list main background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+         (<em>default</em> bg_focus)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_fg_urgent"></a>
+    <strong>beautiful.taglist_fg_urgent</strong>
+    </dt>
+    <dd>
+    The tag list urgent elements foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+         (<em>default</em> fg_urgent)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_bg_urgent"></a>
+    <strong>beautiful.taglist_bg_urgent</strong>
+    </dt>
+    <dd>
+    The tag list urgent elements background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+         (<em>default</em> bg_urgent)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_bg_occupied"></a>
+    <strong>beautiful.taglist_bg_occupied</strong>
+    </dt>
+    <dd>
+    The tag list occupied elements background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_fg_occupied"></a>
+    <strong>beautiful.taglist_fg_occupied</strong>
+    </dt>
+    <dd>
+    The tag list occupied elements foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_bg_empty"></a>
+    <strong>beautiful.taglist_bg_empty</strong>
+    </dt>
+    <dd>
+    The tag list empty elements background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_fg_empty"></a>
+    <strong>beautiful.taglist_fg_empty</strong>
+    </dt>
+    <dd>
+    The tag list empty elements foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_bg_volatile"></a>
+    <strong>beautiful.taglist_bg_volatile</strong>
+    </dt>
+    <dd>
+    The tag list volatile elements background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_fg_volatile"></a>
+    <strong>beautiful.taglist_fg_volatile</strong>
+    </dt>
+    <dd>
+    The tag list volatile elements foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_squares_sel"></a>
+    <strong>beautiful.taglist_squares_sel</strong>
+    </dt>
+    <dd>
+    The selected elements background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_squares_unsel"></a>
+    <strong>beautiful.taglist_squares_unsel</strong>
+    </dt>
+    <dd>
+    The unselected elements background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_squares_sel_empty"></a>
+    <strong>beautiful.taglist_squares_sel_empty</strong>
+    </dt>
+    <dd>
+    The selected empty elements background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_squares_unsel_empty"></a>
+    <strong>beautiful.taglist_squares_unsel_empty</strong>
+    </dt>
+    <dd>
+    The unselected empty elements background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_squares_resize"></a>
+    <strong>beautiful.taglist_squares_resize</strong>
+    </dt>
+    <dd>
+    If the background images can be resized.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_disable_icon"></a>
+    <strong>beautiful.taglist_disable_icon</strong>
+    </dt>
+    <dd>
+    Do not display the tag icons, even if they are set.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_font"></a>
+    <strong>beautiful.taglist_font</strong>
+    </dt>
+    <dd>
+    The taglist font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_spacing"></a>
+    <strong>beautiful.taglist_spacing</strong>
+    </dt>
+    <dd>
+    The space between the taglist elements.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         The spacing between tags.
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape"></a>
+    <strong>beautiful.taglist_shape</strong>
+    </dt>
+    <dd>
+    The main shape used for the elements.
+ This will be the fallback for state specific shapes.
+ To get a shape for the whole taglist, use <a href="../classes/wibox.container.background.html#">wibox.container.background</a>.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/gears.shape.html#">gears.shape</a></li>
+         <li><a href="../classes/awful.widget.taglist.html#beautiful.taglist_shape_empty">beautiful.taglist_shape_empty</a></li>
+         <li><a href="../classes/awful.widget.taglist.html#beautiful.taglist_shape_focus">beautiful.taglist_shape_focus</a></li>
+         <li><a href="../classes/awful.widget.taglist.html#beautiful.taglist_shape_urgent">beautiful.taglist_shape_urgent</a></li>
+         <li><a href="../classes/awful.widget.taglist.html#beautiful.taglist_shape_volatile">beautiful.taglist_shape_volatile</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_width"></a>
+    <strong>beautiful.taglist_shape_border_width</strong>
+    </dt>
+    <dd>
+    The shape elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.container.background.html#">wibox.container.background</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_color"></a>
+    <strong>beautiful.taglist_shape_border_color</strong>
+    </dt>
+    <dd>
+    The elements shape border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_empty"></a>
+    <strong>beautiful.taglist_shape_empty</strong>
+    </dt>
+    <dd>
+    The shape used for the empty elements.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_width_empty"></a>
+    <strong>beautiful.taglist_shape_border_width_empty</strong>
+    </dt>
+    <dd>
+    The shape used for the empty elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.container.background.html#">wibox.container.background</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_color_empty"></a>
+    <strong>beautiful.taglist_shape_border_color_empty</strong>
+    </dt>
+    <dd>
+    The empty elements shape border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_focus"></a>
+    <strong>beautiful.taglist_shape_focus</strong>
+    </dt>
+    <dd>
+    The shape used for the selected elements.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_width_focus"></a>
+    <strong>beautiful.taglist_shape_border_width_focus</strong>
+    </dt>
+    <dd>
+    The shape used for the selected elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.container.background.html#">wibox.container.background</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_color_focus"></a>
+    <strong>beautiful.taglist_shape_border_color_focus</strong>
+    </dt>
+    <dd>
+    The selected elements shape border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_urgent"></a>
+    <strong>beautiful.taglist_shape_urgent</strong>
+    </dt>
+    <dd>
+    The shape used for the urgent elements.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_width_urgent"></a>
+    <strong>beautiful.taglist_shape_border_width_urgent</strong>
+    </dt>
+    <dd>
+    The shape used for the urgent elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.container.background.html#">wibox.container.background</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_color_urgent"></a>
+    <strong>beautiful.taglist_shape_border_color_urgent</strong>
+    </dt>
+    <dd>
+    The urgents elements shape border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_volatile"></a>
+    <strong>beautiful.taglist_shape_volatile</strong>
+    </dt>
+    <dd>
+    The shape used for the volatile elements.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_width_volatile"></a>
+    <strong>beautiful.taglist_shape_border_width_volatile</strong>
+    </dt>
+    <dd>
+    The shape used for the volatile elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.container.background.html#">wibox.container.background</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.taglist_shape_border_color_volatile"></a>
+    <strong>beautiful.taglist_shape_border_color_volatile</strong>
+    </dt>
+    <dd>
+    The volatile elements shape border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="List_source_functions"></a>List source functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.taglist.source.for_screen"></a>
+    <strong>awful.taglist.source.for_screen</strong>
+    </dt>
+    <dd>
+    All tags for the defined screen ordered by indices.</p>
+
+<p> This is the default source.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/screen.html#">screen</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="List_filters"></a>List filters</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.taglist.filter.noempty"></a>
+    <strong>awful.taglist.filter.noempty</strong>
+    </dt>
+    <dd>
+    Filtering function to include all nonempty tags on the screen.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+         The tag.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.taglist.filter.selected"></a>
+    <strong>awful.taglist.filter.selected</strong>
+    </dt>
+    <dd>
+    Filtering function to include selected tags on the screen.
+
+
+    <ul>
+        <li><span class="parameter">t</span>
+         The tag.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.taglist.filter.all"></a>
+    <strong>awful.taglist.filter.all</strong>
+    </dt>
+    <dd>
+    Filtering function to include all tags on the screen.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

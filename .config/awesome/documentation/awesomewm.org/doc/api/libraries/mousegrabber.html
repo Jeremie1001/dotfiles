@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module mousegrabber - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><strong>mousegrabber</strong></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>mousegrabber</code></h1>
+<p>awesome mousegrabber API</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a405f46434f446a4e4b4440455f0443444c45">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#run">run (func, cursor)</a></td>
+	<td class="summary">Grab the mouse pointer and list motions, calling callback function at each
+ motion.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stop">stop ()</a></td>
+	<td class="summary">Stop grabbing the mouse pointer.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#isrunning">isrunning ()</a></td>
+	<td class="summary">Check if mousegrabber is running.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "run"></a>
+    <strong>run (func, cursor)</strong>
+    </dt>
+    <dd>
+    <p>Grab the mouse pointer and list motions, calling callback function at each
+ motion.  The callback function must return a boolean value: true to
+ continue grabbing, false to stop.
+ The function is called with one argument:
+ a table containing modifiers pointer coordinates.</p>
+
+<p> The list of valid cusrors are:</p>
+
+<ul>
+<li><table class='widget_list' border=1>
+<tr><td>num_glyphs          </td></tr>
+<tr><td>cursor              </td></tr>
+<tr><td>arrow               </td></tr>
+<tr><td>based_arrow_down    </td></tr>
+<tr><td>based_arrow_up      </td></tr>
+<tr><td>boat                </td></tr>
+<tr><td>bogosity            </td></tr>
+<tr><td>bottom_left_corner  </td></tr>
+<tr><td>bottom_right_corner </td></tr>
+<tr><td>bottom_side         </td></tr>
+<tr><td>bottom_tee          </td></tr>
+<tr><td>box_spiral          </td></tr>
+<tr><td>center_ptr          </td></tr>
+<tr><td>circle              </td></tr>
+<tr><td>clock               </td></tr>
+<tr><td>coffee_mug          </td></tr>
+<tr><td>cross               </td></tr>
+<tr><td>cross_reverse       </td></tr>
+<tr><td>crosshair           </td></tr>
+<tr><td>diamond_cross       </td></tr>
+<tr><td>dot                 </td></tr>
+<tr><td>dotbox              </td></tr>
+<tr><td>double_arrow        </td></tr>
+<tr><td>draft_large         </td></tr>
+<tr><td>draft_small         </td></tr>
+<tr><td>draped_box          </td></tr>
+<tr><td>exchange            </td></tr>
+<tr><td>fleur               </td></tr>
+<tr><td>gobbler             </td></tr>
+<tr><td>gumby               </td></tr>
+<tr><td>hand                </td></tr>
+<tr><td>hand                </td></tr>
+<tr><td>heart               </td></tr>
+<tr><td>icon                </td></tr>
+<tr><td>iron_cross          </td></tr>
+<tr><td>left_ptr            </td></tr>
+<tr><td>left_side           </td></tr>
+<tr><td>left_tee            </td></tr>
+<tr><td>leftbutton          </td></tr>
+<tr><td>ll_angle            </td></tr>
+<tr><td>lr_angle            </td></tr>
+<tr><td>man                 </td></tr>
+<tr><td>middlebutton        </td></tr>
+<tr><td>mouse               </td></tr>
+<tr><td>pencil              </td></tr>
+<tr><td>pirate              </td></tr>
+<tr><td>plus                </td></tr>
+<tr><td>question_arrow      </td></tr>
+<tr><td>right_ptr           </td></tr>
+<tr><td>right_side          </td></tr>
+<tr><td>right_tee           </td></tr>
+<tr><td>rightbutton         </td></tr>
+<tr><td>rtl_logo            </td></tr>
+<tr><td>sailboat            </td></tr>
+<tr><td>sb_down_arrow       </td></tr>
+<tr><td>sb_h_double_arrow   </td></tr>
+<tr><td>sb_left_arrow       </td></tr>
+<tr><td>sb_right_arrow      </td></tr>
+<tr><td>sb_up_arrow         </td></tr>
+<tr><td>sb_v_double_arrow   </td></tr>
+<tr><td>shuttle             </td></tr>
+<tr><td>sizing              </td></tr>
+<tr><td>spider              </td></tr>
+<tr><td>spraycan            </td></tr>
+<tr><td>star                </td></tr>
+<tr><td>target              </td></tr>
+<tr><td>tcross              </td></tr>
+<tr><td>top_left_arrow      </td></tr>
+<tr><td>top_left_corner     </td></tr>
+<tr><td>top_right_corner    </td></tr>
+<tr><td>top_side            </td></tr>
+<tr><td>top_tee             </td></tr>
+<tr><td>trek                </td></tr>
+<tr><td>ul_angle            </td></tr>
+<tr><td>umbrella            </td></tr>
+<tr><td>ur_angle            </td></tr>
+<tr><td>watch               </td></tr>
+<tr><td>xterm               </td></tr>
+</table>
+</li>
+</ul>
+
+
+
+    <ul>
+        <li><span class="parameter">func</span>
+         A callback function as described above.
+        </li>
+        <li><span class="parameter">cursor</span>
+         The name of a X cursor to use while grabbing.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "stop"></a>
+    <strong>stop ()</strong>
+    </dt>
+    <dd>
+    Stop grabbing the mouse pointer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isrunning"></a>
+    <strong>isrunning ()</strong>
+    </dt>
+    <dd>
+    Check if mousegrabber is running.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        True if running, false otherwise.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

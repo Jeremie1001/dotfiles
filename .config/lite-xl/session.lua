@@ -1,0 +1,1 @@
+return {recents={[2]="/home/jeremie1001/.config/awesome",[1]="/home/jeremie1001/.config/lite-xl"}, window={[1]=831,[2]=1015,[3]=19,[4]=46,["n"]=4}, window_mode="normal", previous_find={[1]="minimap"}, previous_replace={}}

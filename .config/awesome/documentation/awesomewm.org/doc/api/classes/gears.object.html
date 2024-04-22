@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class gears.object - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
+<li><a href="#lib_gears_object_properties_Functions">lib.gears.object.properties Functions</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><strong>gears.object</strong></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>gears.object</code></h1>
+<p>The object oriented programming base class used by various Awesome
+ widgets and components.</p>
+<p> It provide basic observer pattern, signaling and dynamic properties.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+        <li><strong>Author</strong>: Uli Schlachter</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.object">gears.object ([args={}])</a></td>
+	<td class="summary">Returns a new object.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.object:connect_signal">gears.object:connect_signal (name, func)</a></td>
+	<td class="summary">Connect to a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.object:weak_connect_signal">gears.object:weak_connect_signal (name, func)</a></td>
+	<td class="summary">Connect to a signal weakly.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.object:disconnect_signal">gears.object:disconnect_signal (name, func)</a></td>
+	<td class="summary">Disonnect to a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.object:emit_signal">gears.object:emit_signal (name, ...)</a></td>
+	<td class="summary">Emit a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#gears.object:modulename">gears.object:modulename ([level=2])</a></td>
+	<td class="summary">Helper function to get the module name out of <code>debug.getinfo</code>.</td>
+	</tr>
+</table>
+<h2><a href="#lib_gears_object_properties_Functions">lib.gears.object.properties Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#gears.object.properties.capi_index_fallback">gears.object.properties.capi_index_fallback (class[, args={}])</a></td>
+	<td class="summary">Add the missing properties handler to a CAPI object such as client/tag/screen.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "gears.object"></a>
+    <strong>gears.object ([args={}])</strong>
+    </dt>
+    <dd>
+    <p>Returns a new object.  You can call <code>:emit_signal()</code>, <code>:disconnect_signal()</code>
+  and <code>:connect_signal()</code> on the resulting object.</p>
+
+<p> Note that <code>args.enable_auto_signals</code> is only supported when
+ <code>args.enable_properties</code> is true.</p>
+
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>In get foo  bar
+bar
+In set foo  42
+In get foo  42
+42
+In a method 1   2   3
+nil
+In the connection handler!  a cow
+a cow
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">args</span> The arguments
+        <ul>
+        <li><span class="parameter">enable_properties</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Automatically call getters and setters
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">enable_auto_signals</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Generate &ldquo;property::xxxx&rdquo; signals
+   when an unknown property is set.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">class</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A new object
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Create a class for this object. It will be used as a backup source for
+</span><span class="comment">-- methods and accessors. It is also possible to set them directly on the
+</span><span class="comment">-- object.
+</span><span class="keyword">local</span> class = {}
+<span class="keyword">function</span> class:get_foo()
+    <span class="global">print</span>(<span class="string">'In get foo'</span>, self._foo <span class="keyword">or</span> <span class="string">'bar'</span>)
+    <span class="keyword">return</span> self._foo <span class="keyword">or</span> <span class="string">'bar'</span>
+<span class="keyword">end</span>
+<span class="keyword">function</span> class:set_foo(value)
+    <span class="global">print</span>(<span class="string">'In set foo'</span>, value)
+    <span class="comment">-- In case it is necessary to bypass the object property system, use
+</span>    <span class="comment">-- <a href="https://www.lua.org/manual/5.1/manual.html#pdf-rawset">rawset</a>
+</span>    <span class="global">rawset</span>(self, <span class="string">'_foo'</span>, value)
+    <span class="comment">-- When using custom accessors, the signals need to be handled manually
+</span>    self:emit_signal(<span class="string">'property::foo'</span>, value)
+<span class="keyword">end</span>
+<span class="keyword">function</span> class:method(a, b, c)
+    <span class="global">print</span>(<span class="string">'In a method'</span>, a, b, c)
+<span class="keyword">end</span>
+<span class="keyword">local</span> o = gears.object {
+    class               = class,
+    enable_properties   = <span class="keyword">true</span>,
+    enable_auto_signals = <span class="keyword">true</span>,
+}
+<span class="global">print</span>(o.foo)
+o.foo = <span class="number">42</span>
+<span class="global">print</span>(o.foo)
+o:method(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)
+<span class="comment">-- Random properties can also be added, the signal will be emitted automatically.
+</span>o:connect_signal(<span class="string">'property::something'</span>, <span class="keyword">function</span>(obj, value)
+    <span class="global">assert</span>(obj == o)
+    <span class="global">print</span>(<span class="string">'In the connection handler!'</span>, value)
+<span class="keyword">end</span>)
+<span class="global">print</span>(o.something)
+o.something = <span class="string">'a cow'</span>
+<span class="global">print</span>(o.something)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.object:connect_signal"></a>
+    <strong>gears.object:connect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    <p>Connect to a signal.</p>
+
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>In slot [obj]   nil nil nil
+In slot [obj]   foo bar 42
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback to call when the signal is emitted
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> o = gears.object{}
+<span class="comment">-- Function can be attached to signals
+</span><span class="keyword">local</span> <span class="keyword">function</span> slot(obj, a, b, c)
+    <span class="global">print</span>(<span class="string">'In slot'</span>, obj, a, b, c)
+<span class="keyword">end</span>
+o:connect_signal(<span class="string">'my_signal'</span>, slot)
+<span class="comment">-- Emitting can be done without arguments. In that case, the object will be
+</span><span class="comment">-- implicitly added as an argument.
+</span>o:emit_signal <span class="string">'my_signal'</span>
+<span class="comment">-- It is also possible to add as many random arguments are required.
+</span>o:emit_signal(<span class="string">'my_signal'</span>, <span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="number">42</span>)
+<span class="comment">-- Finally, to allow the object to be garbage collected (the memory freed), it
+</span><span class="comment">-- is necessary to disconnect the signal or use <a href="../classes/gears.object.html#gears.object:weak_connect_signal">weak_connect_signal</a>
+</span>o:disconnect_signal(<span class="string">'my_signal'</span>, slot)
+<span class="comment">-- This time, the <code>slot</code> wont be called as it is no longer connected.
+</span>o:emit_signal <span class="string">'my_signal'</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "gears.object:weak_connect_signal"></a>
+    <strong>gears.object:weak_connect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Connect to a signal weakly.  This allows the callback function to be garbage
+ collected and automatically disconnects the signal when that happens.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback to call when the signal is emitted
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.object:disconnect_signal"></a>
+    <strong>gears.object:disconnect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Disonnect to a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback that should be disconnected
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.object:emit_signal"></a>
+    <strong>gears.object:emit_signal (name, ...)</strong>
+    </dt>
+    <dd>
+    Emit a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal
+        </li>
+        <li><span class="parameter">...</span>
+         Extra arguments for the callback functions. Each connected
+   function receives the object as first argument and then any extra arguments
+   that are given to emit_signal()
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gears.object:modulename"></a>
+    <strong>gears.object:modulename ([level=2])</strong>
+    </dt>
+    <dd>
+    Helper function to get the module name out of <code>debug.getinfo</code>.
+
+
+    <ul>
+        <li><span class="parameter">level</span>
+            <span class="types"><span class="type">integer</span></span>
+         Level for <code>debug.getinfo(level, &quot;S&quot;)</code>.
+   Typically 2 or 3.
+         (<em>default</em> 2)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The module name, e.g. &ldquo;wibox.container.background&rdquo;.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> mt = {}
+mt.__tostring = <span class="keyword">function</span>(o)
+    <span class="keyword">return</span> <span class="global">require</span>(<span class="string">"gears.object"</span>).modulename(<span class="number">2</span>)
+<span class="keyword">end</span>
+<span class="keyword">return</span> <span class="global">setmetatable</span>(ret, mt)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_gears_object_properties_Functions"></a>lib.gears.object.properties Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gears.object.properties.capi_index_fallback"></a>
+    <strong>gears.object.properties.capi_index_fallback (class[, args={}])</strong>
+    </dt>
+    <dd>
+    <p>Add the missing properties handler to a CAPI object such as client/tag/screen.
+ Valid args:</p>
+
+<ul>
+<li><strong>getter</strong>: A smart getter (handle property getter itself)</li>
+<li><strong>getter_fallback</strong>: A dumb getter method (don&rsquo;t handle individual property getter)</li>
+<li><strong>getter_class</strong>: A module with individual property getter/setter</li>
+<li><strong>getter_prefix</strong>: A special getter prefix (like &ldquo;get&rdquo; or &ldquo;get_&rdquo; (default))</li>
+<li><strong>setter</strong>: A smart setter (handle property setter itself)</li>
+<li><strong>setter_fallback</strong>: A dumb setter method (don&rsquo;t handle individual property setter)</li>
+<li><strong>setter_class</strong>: A module with individual property getter/setter</li>
+<li><strong>setter_prefix</strong>: A special setter prefix (like &ldquo;set&rdquo; or &ldquo;set_&rdquo; (default))</li>
+<li><strong>auto_emit</strong>: Emit &ldquo;property::___&rdquo; automatically (default: false). This is
+  ignored when setter_fallback is set or a setter is found</li>
+</ul>
+
+
+
+    <ul>
+        <li><span class="parameter">class</span>
+         A standard luaobject derived object
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A set of accessors configuration parameters
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

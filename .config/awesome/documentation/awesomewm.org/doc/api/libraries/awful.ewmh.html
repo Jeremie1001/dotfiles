@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module awful.ewmh - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Request_handlers">Request handlers</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><strong>awful.ewmh</strong></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>awful.ewmh</code></h1>
+<p>Implements EWMH requests handling.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2009 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6ccd3cacfc3c8e6c2c7c8ccc9d388cfc8c0c9">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#add_activate_filter">add_activate_filter (f[, context])</a></td>
+	<td class="summary">Add an activate (focus stealing) filter function.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#remove_activate_filter">remove_activate_filter (f[, context])</a></td>
+	<td class="summary">Remove an activate (focus stealing) filter function.</td>
+	</tr>
+</table>
+<h2><a href="#Request_handlers">Request handlers</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.activate">awful.ewmh.activate</a></td>
+	<td class="summary">Activate a window.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.tag">awful.ewmh.tag</a></td>
+	<td class="summary">Tag a window with its requested tag.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.urgent">awful.ewmh.urgent</a></td>
+	<td class="summary">Handle client urgent request</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.geometry">awful.ewmh.geometry</a></td>
+	<td class="summary">Move and resize the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.merge_maximization">awful.ewmh.merge_maximization</a></td>
+	<td class="summary">Merge the 2 requests sent by clients wanting to be maximized.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.ewmh.client_geometry_requests">awful.ewmh.client_geometry_requests</a></td>
+	<td class="summary">Allow the client to move itself.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.maximized_honor_padding">beautiful.maximized_honor_padding</a></td>
+	<td class="summary">Honor the screen padding when maximizing.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.fullscreen_hide_border">beautiful.fullscreen_hide_border</a></td>
+	<td class="summary">Hide the border on fullscreen clients.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.maximized_hide_border">beautiful.maximized_hide_border</a></td>
+	<td class="summary">Hide the border on maximized clients.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#generic_activate_filters">generic_activate_filters</a></td>
+	<td class="summary">The list of all registered generic request::activate (focus stealing)
+ filters.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#contextual_activate_filters">contextual_activate_filters</a></td>
+	<td class="summary">The list of all registered contextual request::activate (focus stealing)
+ filters.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "add_activate_filter"></a>
+    <strong>add_activate_filter (f[, context])</strong>
+    </dt>
+    <dd>
+    <p>Add an activate (focus stealing) filter function.</p>
+
+<p> The callback takes the following parameters:</p>
+
+<ul>
+<li><strong>c</strong> (<em>client</em>) The client requesting the activation</li>
+<li><strong>context</strong> (<em>string</em>) The activation context.</li>
+<li><strong>hints</strong> (<em>table</em>) Some additional hints (depending on the context)</li>
+</ul>
+
+
+<p> If the callback returns <code>true</code>, the client will be activated. If the callback
+ returns <code>false</code>, the activation request is cancelled unless the <code>force</code> hint is
+ set. If the callback returns <code>nil</code>, the previous callback will be executed.
+ This will continue until either a callback handles the request or when it runs
+ out of callbacks. In that case, the request will be granted if the client is
+ visible.</p>
+
+<p> For example, to block Firefox from stealing the focus, use:</p>
+
+<pre><code>awful.ewmh.add_activate_filter(function(c)
+    if c.class == "Firefox" then return false end
+end, "ewmh")
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">f</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The <code>request::activate</code> context
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/awful.ewmh.html#generic_activate_filters">generic_activate_filters</a></li>
+         <li><a href="../libraries/awful.ewmh.html#contextual_activate_filters">contextual_activate_filters</a></li>
+         <li><a href="../libraries/awful.ewmh.html#remove_activate_filter">remove_activate_filter</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "remove_activate_filter"></a>
+    <strong>remove_activate_filter (f[, context])</strong>
+    </dt>
+    <dd>
+    Remove an activate (focus stealing) filter function.
+ This is an helper to avoid dealing with <a href="../libraries/awful.ewmh.html#add_activate_filter">ewmh.add_activate_filter</a> directly.
+
+
+    <ul>
+        <li><span class="parameter">f</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The <code>request::activate</code> context
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the callback existed
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/awful.ewmh.html#generic_activate_filters">generic_activate_filters</a></li>
+         <li><a href="../libraries/awful.ewmh.html#contextual_activate_filters">contextual_activate_filters</a></li>
+         <li><a href="../libraries/awful.ewmh.html#add_activate_filter">add_activate_filter</a></li>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Request_handlers"></a>Request handlers</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.ewmh.activate"></a>
+    <strong>awful.ewmh.activate</strong>
+    </dt>
+    <dd>
+    Activate a window.</p>
+
+<p> This sets the focus only if the client is visible.</p>
+
+<p> It is the default signal handler for <code>request::activate</code> on a <a href="../classes/client.html#">client</a>.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client to use
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context where this signal was used.
+        </li>
+        <li><span class="parameter">hints</span> A table with additional hints:
+        <ul>
+        <li><span class="parameter">raise</span>
+            <span class="types"><span class="type">boolean</span></span>
+         should the client be raised?
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">switch_to_tag</span>
+            <span class="types"><span class="type">boolean</span></span>
+         should the client&rsquo;s first tag
+  be selected if none of the client&rsquo;s tags are selected?
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">switch_to_tags</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Select all tags associated
+  with the client.
+         (<em>default</em> false)
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.ewmh.tag"></a>
+    <strong>awful.ewmh.tag</strong>
+    </dt>
+    <dd>
+    Tag a window with its requested tag.</p>
+
+<p> It is the default signal handler for <code>request::tag</code> on a <a href="../classes/client.html#">client</a>.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client to tag
+        </li>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="../classes/tag.html#">tag</a> or <span class="type">boolean</span></span>
+         A tag to use. If true, then the client is made sticky.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Extra information
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.ewmh.urgent"></a>
+    <strong>awful.ewmh.urgent</strong>
+    </dt>
+    <dd>
+    Handle client urgent request
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client
+        </li>
+        <li><span class="parameter">urgent</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the client should be urgent
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.ewmh.geometry"></a>
+    <strong>awful.ewmh.geometry</strong>
+    </dt>
+    <dd>
+    Move and resize the client.</p>
+
+<p> This is the default geometry request handler.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         The client
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The hints to pass to the handler
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.ewmh.merge_maximization"></a>
+    <strong>awful.ewmh.merge_maximization</strong>
+    </dt>
+    <dd>
+    Merge the 2 requests sent by clients wanting to be maximized.</p>
+
+<p> The X clients set 2 flags (atoms) when they want to be maximized. This caused
+ 2 request::geometry to be sent. This code gives some time for them to arrive
+ and send a new <code>request::geometry</code> (through the property change) with the
+ combined state.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         The client
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The hints to pass to the handler
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.ewmh.client_geometry_requests"></a>
+    <strong>awful.ewmh.client_geometry_requests</strong>
+    </dt>
+    <dd>
+    Allow the client to move itself.</p>
+
+<p> This is the default geometry request handler when the context is <a href="../libraries/awful.ewmh.html">ewmh</a>.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         The client
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The hints to pass to the handler
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.maximized_honor_padding"></a>
+    <strong>beautiful.maximized_honor_padding</strong>
+    </dt>
+    <dd>
+    Honor the screen padding when maximizing.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">maximized_honor_padding</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.fullscreen_hide_border"></a>
+    <strong>beautiful.fullscreen_hide_border</strong>
+    </dt>
+    <dd>
+    Hide the border on fullscreen clients.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">fullscreen_hide_border</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.maximized_hide_border"></a>
+    <strong>beautiful.maximized_hide_border</strong>
+    </dt>
+    <dd>
+    Hide the border on maximized clients.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">maximized_hide_border</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "generic_activate_filters"></a>
+    <strong>generic_activate_filters</strong>
+    </dt>
+    <dd>
+    The list of all registered generic request::activate (focus stealing)
+ filters.  If a filter is added to only one context, it will be in
+ <a href="../libraries/awful.ewmh.html#contextual_activate_filters">ewmh.contextual_activate_filters</a>[&ldquo;context_name&rdquo;].
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/awful.ewmh.html#awful.ewmh.activate">ewmh.activate</a></li>
+         <li><a href="../libraries/awful.ewmh.html#add_activate_filter">ewmh.add_activate_filter</a></li>
+         <li><a href="../libraries/awful.ewmh.html#remove_activate_filter">ewmh.remove_activate_filter</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "contextual_activate_filters"></a>
+    <strong>contextual_activate_filters</strong>
+    </dt>
+    <dd>
+    The list of all registered contextual request::activate (focus stealing)
+ filters.  If a filter is added to only one context, it will be in
+ <a href="../libraries/awful.ewmh.html#generic_activate_filters">ewmh.generic_activate_filters</a>.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/awful.ewmh.html#awful.ewmh.activate">ewmh.activate</a></li>
+         <li><a href="../libraries/awful.ewmh.html#add_activate_filter">ewmh.add_activate_filter</a></li>
+         <li><a href="../libraries/awful.ewmh.html#remove_activate_filter">ewmh.remove_activate_filter</a></li>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

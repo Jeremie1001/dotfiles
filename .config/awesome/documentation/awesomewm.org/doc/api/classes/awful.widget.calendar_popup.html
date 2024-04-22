@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class awful.widget.calendar_popup - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><strong>awful.widget.calendar_popup</strong></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>awful.widget.calendar_popup</code></h1>
+<p>A calendar popup wibox</p>
+
+<p> Display a month or year calendar popup using <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.month">calendar_popup.month</a> or <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.year">calendar_popup.year</a>.</p>
+<p> The calendar style can be tweaked by providing tables of style properties at creation:
+ <code>style_year</code>, <code>style_month</code>, <code>style_yearheader</code>, <code>style_header</code>,
+ <code>style_weekday</code>, <code>style_weeknumber</code>, <code>style_normal</code>, <code>style_focus</code> (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>).</p>
+
+<p> The wibox accepts arguments for the calendar widget: <code>font</code>, <code>spacing</code>, <code>week_numbers</code>,
+ <code>start_sunday</code>, <code>long_weekdays</code>.
+ It also accepts the extra arguments <code>opacity</code>, <code>bg</code>, <a href="../classes/screen.html#">screen</a> and <code>position</code>.
+ <code>opacity</code> and <code>bg</code> apply to the wibox itself, they are mainly useful to manage opacity
+ by setting <code>opacity</code> for the false opacity or setting <code>bg=&quot;#00000000&quot;</code> for compositor opacity.
+ The <a href="../classes/screen.html#">screen</a> argument forces the display of the wibox to this screen (instead of the focused screen by default).
+ The <code>position</code> argument is a two-characters string describing the screen alignment &ldquo;[vertical][horizontal]&rdquo;,
+ e.g. &ldquo;cc&rdquo;, &ldquo;tr&rdquo;, &ldquo;bl&rdquo;, &hellip;</p>
+
+<p> The wibox visibility can be changed calling the <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup:toggle">toggle</a> method.
+ The <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup:attach">attach</a> method adds mouse bindings to an existing widget in order to toggle the display of the wibox.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2017 getzze</li>
+        <li><strong>Author</strong>: getzze</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup.month">awful.widget.calendar_popup.month (args)</a></td>
+	<td class="summary">A month calendar wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup.year">awful.widget.calendar_popup.year (args)</a></td>
+	<td class="summary">A year calendar wibox.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_style">beautiful.calendar_style</a></td>
+	<td class="summary">The generic calendar style table.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup.cell_properties">awful.widget.calendar_popup.cell_properties</a></td>
+	<td class="summary">Cell properties.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup.cell_flags">awful.widget.calendar_popup.cell_flags</a></td>
+	<td class="summary">Cell types (flags).</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup:call_calendar">awful.widget.calendar_popup:call_calendar (offset, position, screen)</a></td>
+	<td class="summary">Call the calendar with offset</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup:toggle">awful.widget.calendar_popup:toggle ()</a></td>
+	<td class="summary">Toggle calendar visibility</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.widget.calendar_popup:attach">awful.widget.calendar_popup:attach (widget[, position="tr"[, args={}]])</a></td>
+	<td class="summary">Attach the calendar to a widget to display at a specific position.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "awful.widget.calendar_popup.month"></a>
+    <strong>awful.widget.calendar_popup.month (args)</strong>
+    </dt>
+    <dd>
+    <p>A month calendar wibox.</p>
+
+<p> It is highly customizable using the same options as for the widgets.
+ The options are set once and for all at creation, though.</p>
+
+<pre><code>local mytextclock = wibox.widget.textclock()
+local month_calendar = awful.widget.calendar_popup.month()
+month_calendar:attach( mytextclock, "tr" )
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">args</span> Properties of the widget
+        <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Two-character position of the calendar in the screen
+        </li>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen where to display the calendar
+        </li>
+        <li><span class="parameter">opacity</span>
+            <span class="types"><span class="type">number</span></span>
+         Wibox opacity
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Wibox background color
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Calendar font
+        </li>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         Calendar spacing
+        </li>
+        <li><span class="parameter">margin</span>
+            <span class="types"><span class="type">number</span></span>
+         Margin around calendar widget
+        </li>
+        <li><span class="parameter">week_numbers</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Show weeknumbers
+        </li>
+        <li><span class="parameter">start_sunday</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Start week on Sunday
+        </li>
+        <li><span class="parameter">long_weekdays</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Format the weekdays with three characters instead of two
+        </li>
+        <li><span class="parameter">style_month</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Container style for the month calendar (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_header</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the month calendar header (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_weekday</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the weekday cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_weeknumber</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the weeknumber cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the normal day cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the current day cell (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#">wibox</a></span>
+        A wibox containing the calendar
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.widget.calendar_popup.year"></a>
+    <strong>awful.widget.calendar_popup.year (args)</strong>
+    </dt>
+    <dd>
+    <p>A year calendar wibox.</p>
+
+<p> It is highly customizable using the same options as for the widgets.
+ The options are set once and for all at creation, though.</p>
+
+<pre><code>globalkeys = gears.table.join(globalkeys, awful.key(
+        { modkey, "Control" }, "c",  function () year_calendar:toggle() end))
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">args</span> Properties of the widget
+        <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Two-character position of the calendar in the screen
+        </li>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen where to display the calendar
+        </li>
+        <li><span class="parameter">opacity</span>
+            <span class="types"><span class="type">number</span></span>
+         Wibox opacity
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Wibox background color
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Calendar font
+        </li>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         Calendar spacing
+        </li>
+        <li><span class="parameter">margin</span>
+            <span class="types"><span class="type">number</span></span>
+         Margin around calendar widget
+        </li>
+        <li><span class="parameter">week_numbers</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Show weeknumbers
+        </li>
+        <li><span class="parameter">start_sunday</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Start week on Sunday
+        </li>
+        <li><span class="parameter">long_weekdays</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Format the weekdays with three characters instead of two
+        </li>
+        <li><span class="parameter">style_year</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Container style for the year calendar (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_month</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Container style for the month calendar (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>).
+ This field can also be called <code>style_monthheader</code>.
+        </li>
+        <li><span class="parameter">style_yearheader</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the year calendar header (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_header</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the month calendar header (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_weekday</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the weekday cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_weeknumber</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the weeknumber cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the normal day cells (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        <li><span class="parameter">style_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Cell style for the current day cell (see <a href="../classes/awful.widget.calendar_popup.html#awful.widget.calendar_popup.cell_properties">cell_properties</a>)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#">wibox</a></span>
+        A wibox containing the calendar
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.calendar_style"></a>
+    <strong>beautiful.calendar_style</strong>
+    </dt>
+    <dd>
+    The generic calendar style table.</p>
+
+<p> Each table property can also be defined by <code>beautiful.calendar_[flag]_[property]=val</code>.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><span class="type">cell_properties</span></span>
+         Table of cell style properties
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.widget.calendar_popup.cell_properties"></a>
+    <strong>awful.widget.calendar_popup.cell_properties</strong>
+    </dt>
+    <dd>
+    Cell properties.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">markup</span>
+         Markup function or format string
+        </li>
+        <li><span class="parameter">fg_color</span>
+         Text foreground color
+        </li>
+        <li><span class="parameter">bg_color</span>
+         Text background color
+        </li>
+        <li><span class="parameter">shape</span>
+         Cell shape
+        </li>
+        <li><span class="parameter">padding</span>
+         Cell padding
+        </li>
+        <li><span class="parameter">border_width</span>
+         Calendar border width
+        </li>
+        <li><span class="parameter">border_color</span>
+         Calendar border color
+        </li>
+        <li><span class="parameter">opacity</span>
+         Cell opacity
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.widget.calendar_popup.cell_flags"></a>
+    <strong>awful.widget.calendar_popup.cell_flags</strong>
+    </dt>
+    <dd>
+    Cell types (flags).
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">year</span>
+         Year calendar grid properties table
+        </li>
+        <li><span class="parameter">month</span>
+         Month calendar grid properties table
+        </li>
+        <li><span class="parameter">yearheader</span>
+         Year header cell properties table
+        </li>
+        <li><span class="parameter">header</span>
+         Month header cell properties table (called <code>monthheader</code> for a year calendar)
+        </li>
+        <li><span class="parameter">weekday</span>
+         Weekday cell properties table
+        </li>
+        <li><span class="parameter">weeknumber</span>
+         Weeknumber cell properties table
+        </li>
+        <li><span class="parameter">normal</span>
+         Normal day cell properties table
+        </li>
+        <li><span class="parameter">focus</span>
+         Current day cell properties table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.widget.calendar_popup:call_calendar"></a>
+    <strong>awful.widget.calendar_popup:call_calendar (offset, position, screen)</strong>
+    </dt>
+    <dd>
+    Call the calendar with offset
+
+
+    <ul>
+        <li><span class="parameter">offset</span>
+            <span class="types"><span class="type">number</span></span>
+         Offset with respect to current month or year
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Two-character position of the calendar in the screen
+        </li>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen where to display the calendar
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#">wibox</a></span>
+        The wibox calendar
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.widget.calendar_popup:toggle"></a>
+    <strong>awful.widget.calendar_popup:toggle ()</strong>
+    </dt>
+    <dd>
+    Toggle calendar visibility
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.widget.calendar_popup:attach"></a>
+    <strong>awful.widget.calendar_popup:attach (widget[, position="tr"[, args={}]])</strong>
+    </dt>
+    <dd>
+    <p>Attach the calendar to a widget to display at a specific position.</p>
+
+<pre><code>local mytextclock = wibox.widget.textclock()
+local month_calendar = awful.widget.calendar_popup.month()
+month_calendar:attach(mytextclock, 'tr')
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">widget</span>
+         Widget to attach the calendar
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Two characters string defining the position on the screen
+         (<em>default</em> "tr")
+        </li>
+        <li><span class="parameter">args</span> Additional options
+        <ul>
+        <li><span class="parameter">on_hover</span>
+            <span class="types"><span class="type">bool</span></span>
+         Show popup during mouse hover
+         (<em>default</em> true)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#">wibox</a></span>
+        The wibox calendar
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

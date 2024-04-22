@@ -1,0 +1,1126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module gears.shape - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><strong>gears.shape</strong></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>gears.shape</code></h1>
+<p>Module dedicated to gather common shape painters.</p>
+<p><p> It add the concept of &ldquo;shape&rdquo; to Awesome. A shape can be applied to a
+ background, a margin, a mask or a drawable shape bounding.</p>
+
+<p> The functions exposed by this module always take a context as first
+ parameter followed by the widget and height and additional parameters.</p>
+
+<p> The functions provided by this module only create a path in the content.
+ to actually draw the content, use <code>cr:fill()</code>, <code>cr:mask()</code>, <code>cr:clip()</code> or
+ <code>cr:stroke()</code></p>
+
+<p> In many case, it is necessary to apply the shape using a transformation
+ such as a rotation. The preferred way to do this is to wrap the function
+ in another function calling <code>cr:rotate()</code> (or any other transformation
+ matrix).</p>
+
+<p> To specialize a shape where the API doesn&rsquo;t allows extra arguments to be
+ passed, it is possible to wrap the shape function like:</p>
+
+<pre><span class="keyword">local</span> new_shape = <span class="keyword">function</span>(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, <span class="number">2</span>)
+<span class="keyword">end</span>
+</pre>
+
+
+<p> Many elements can be shaped. This include:</p>
+
+<ul>
+<li><a href="../classes/client.html#">client</a>s (see <a href="../libraries/gears.surface.html#apply_shape_bounding">gears.surface.apply_shape_bounding</a>)</li>
+<li><a href="../classes/wibox.html#">wibox</a>es (see <a href="../classes/wibox.html#wibox.shape">wibox.shape</a>)</li>
+<li>All widgets (see <a href="../classes/wibox.container.background.html#">wibox.container.background</a>)</li>
+<li>The progressbar (see <a href="../classes/wibox.widget.progressbar.html#wibox.widget.progressbar.bar_shape">wibox.widget.progressbar.bar_shape</a>)</li>
+<li>The graph (see <a href="../classes/wibox.widget.graph.html#wibox.widget.graph.step_shape">wibox.widget.graph.step_shape</a>)</li>
+<li>The checkboxes (see <a href="../classes/wibox.widget.checkbox.html#wibox.widget.checkbox.check_shape">wibox.widget.checkbox.check_shape</a>)</li>
+<li>Images (see <a href="../classes/wibox.widget.imagebox.html#wibox.widget.imagebox.clip_shape">wibox.widget.imagebox.clip_shape</a>)</li>
+<li>The taglist tags (see <a href="../classes/awful.widget.taglist.html#">awful.widget.taglist</a>)</li>
+<li>The tasklist clients (see <a href="../classes/awful.widget.tasklist.html#">awful.widget.tasklist</a>)</li>
+<li>The tooltips (see <a href="../classes/awful.tooltip.html#">awful.tooltip</a>)</li>
+</ul>
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2011-2016 Emmanuel Lepage Vallee</li>
+        <li><strong>Author</strong>: Emmanuel Lepage Vallee</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#module.rounded_rect">module.rounded_rect (cr, width, height, radius)</a></td>
+	<td class="summary">Add a rounded rectangle to the current path.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.rounded_bar">module.rounded_bar (cr, width, height)</a></td>
+	<td class="summary">Add a rectangle delimited by 2 180 degree arcs to the path.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.partially_rounded_rect">module.partially_rounded_rect (cr, width, height, tl, tr, br, bl, rad)</a></td>
+	<td class="summary">A rounded rect with only some of the corners rounded.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.infobubble">module.infobubble (cr, width, height[, corner_radius=5[, arrow_size=10[, arrow_position=width/2 - arrow_size/2]]])</a></td>
+	<td class="summary">A rounded rectangle with a triangle at the top.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.rectangular_tag">module.rectangular_tag (cr, width, height[, arrow_length=height/2])</a></td>
+	<td class="summary">A rectangle terminated by an arrow.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.arrow">module.arrow (cr, width, height[, head_width=head_width[, shaft_width=width /2[, shaft_length=height/2]]])</a></td>
+	<td class="summary">A simple arrow shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.hexagon">module.hexagon (cr, width, height)</a></td>
+	<td class="summary">A squeezed hexagon filling the rectangle.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.powerline">module.powerline (cr, width, height[, arrow_depth=height/2])</a></td>
+	<td class="summary">Double arrow popularized by the vim-powerline module.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.isosceles_triangle">module.isosceles_triangle (cr, width, height)</a></td>
+	<td class="summary">An isosceles triangle.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.cross">module.cross (cr, width, height[, thickness=width/3])</a></td>
+	<td class="summary">A cross (<strong>+</strong>) symbol.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.octogon">module.octogon (cr, width, height, corner_radius)</a></td>
+	<td class="summary">A similar shape to the <a href="../libraries/gears.shape.html#module.rounded_rect">rounded_rect</a>, but with sharp corners.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.circle">module.circle (cr, width, height[, radius=math.min(width  height) / 2)])</a></td>
+	<td class="summary">A circle shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.rectangle">module.rectangle (cr, width, height)</a></td>
+	<td class="summary">A simple rectangle.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.parallelogram">module.parallelogram (cr, width, height[, base_width=width/3])</a></td>
+	<td class="summary">A diagonal parallelogram with the bottom left corner at x=0 and top right
+ at x=width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.losange">module.losange (cr, width, height)</a></td>
+	<td class="summary">A losange.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.pie">module.pie (cr, width, height[, start_angle=0[, end_angle=math.pi/2[, radius=math.min(width height)/2]]])</a></td>
+	<td class="summary">A pie.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.arc">module.arc (cr, width, height[, thickness=math.min(width height)/2[, start_angle=0[, end_angle=math.pi/2[, start_rounded=false[, end_rounded=false]]]]])</a></td>
+	<td class="summary">A rounded arc.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.radial_progress">module.radial_progress (cr, w, h, percent, hide_left)</a></td>
+	<td class="summary">A partial rounded bar.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#module.transform">module.transform (shape)</a></td>
+	<td class="summary">Adjust the shape using a transformation object</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "module.rounded_rect"></a>
+    <strong>module.rounded_rect (cr, width, height, radius)</strong>
+    </dt>
+    <dd>
+    Add a rounded rectangle to the current path.
+ Note: If the radius is bigger than either half side, it will be reduced.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_rounded_rect.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo content
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The rectangle width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The rectangle height
+        </li>
+        <li><span class="parameter">radius</span>
+            <span class="types"><span class="type">number</span></span>
+         the corner radius
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.rounded_rect(cr, <span class="number">70</span>, <span class="number">70</span>, <span class="number">10</span>)
+shape.rounded_rect(cr,<span class="number">20</span>,<span class="number">70</span>, <span class="number">5</span>)
+shape.transform(shape.rounded_rect) : translate(<span class="number">0</span>,<span class="number">25</span>) (cr,<span class="number">70</span>,<span class="number">20</span>, <span class="number">5</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.rounded_bar"></a>
+    <strong>module.rounded_bar (cr, width, height)</strong>
+    </dt>
+    <dd>
+    Add a rectangle delimited by 2 180 degree arcs to the path.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_rounded_bar.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo content
+        </li>
+        <li><span class="parameter">width</span>
+         The rectangle width
+        </li>
+        <li><span class="parameter">height</span>
+         The rectangle height
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.rounded_bar(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.rounded_bar(cr, <span class="number">20</span>, <span class="number">70</span>)
+shape.rounded_bar(cr, <span class="number">70</span>, <span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.partially_rounded_rect"></a>
+    <strong>module.partially_rounded_rect (cr, width, height, tl, tr, br, bl, rad)</strong>
+    </dt>
+    <dd>
+    A rounded rect with only some of the corners rounded.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_partially_rounded_rect.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">tl</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the top left corner is rounded
+        </li>
+        <li><span class="parameter">tr</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the top right corner is rounded
+        </li>
+        <li><span class="parameter">br</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the bottom right corner is rounded
+        </li>
+        <li><span class="parameter">bl</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the bottom left corner is rounded
+        </li>
+        <li><span class="parameter">rad</span>
+            <span class="types"><span class="type">number</span></span>
+         The corner radius
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="number">70</span>, <span class="keyword">true</span>)
+shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="number">70</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="number">30</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.infobubble"></a>
+    <strong>module.infobubble (cr, width, height[, corner_radius=5[, arrow_size=10[, arrow_position=width/2 - arrow_size/2]]])</strong>
+    </dt>
+    <dd>
+    A rounded rectangle with a triangle at the top.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_infobubble.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">corner_radius</span>
+            <span class="types"><span class="type">number</span></span>
+         The corner radius
+         (<em>default</em> 5)
+        </li>
+        <li><span class="parameter">arrow_size</span>
+            <span class="types"><span class="type">number</span></span>
+         The width and height of the arrow
+         (<em>default</em> 10)
+        </li>
+        <li><span class="parameter">arrow_position</span>
+            <span class="types"><span class="type">number</span></span>
+         The position of the arrow
+         (<em>default</em> width/2 - arrow_size/2)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.infobubble(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.transform(shape.infobubble) : translate(<span class="number">0</span>, <span class="number">20</span>)
+: rotate_at(<span class="number">35</span>,<span class="number">35</span>,<span class="global">math</span>.pi) (cr,<span class="number">70</span>,<span class="number">20</span>,<span class="number">10</span>, <span class="number">5</span>, <span class="number">35</span> - <span class="number">5</span>)
+shape.transform(shape.infobubble)
+: rotate_at(<span class="number">35</span>,<span class="number">35</span>,<span class="number">3</span>*<span class="global">math</span>.pi/<span class="number">2</span>) (cr,<span class="number">70</span>,<span class="number">70</span>, <span class="keyword">nil</span>, <span class="keyword">nil</span>, <span class="number">40</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.rectangular_tag"></a>
+    <strong>module.rectangular_tag (cr, width, height[, arrow_length=height/2])</strong>
+    </dt>
+    <dd>
+    A rectangle terminated by an arrow.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_rectangular_tag.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">arrow_length</span>
+            <span class="types"><span class="type">number</span></span>
+         The length of the arrow part
+         (<em>default</em> height/2)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.rectangular_tag(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.transform(shape.rectangular_tag) : translate(<span class="number">0</span>, <span class="number">30</span>) (cr, <span class="number">70</span>, <span class="number">10</span>,  <span class="number">10</span>)
+shape.transform(shape.rectangular_tag) : translate(<span class="number">0</span>, <span class="number">30</span>) (cr, <span class="number">70</span>, <span class="number">10</span>, -<span class="number">10</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.arrow"></a>
+    <strong>module.arrow (cr, width, height[, head_width=head_width[, shaft_width=width /2[, shaft_length=height/2]]])</strong>
+    </dt>
+    <dd>
+    A simple arrow shape.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_arrow.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">head_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The width of the head (/) of the arrow
+         (<em>default</em> head_width)
+        </li>
+        <li><span class="parameter">shaft_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The width of the shaft of the arrow
+         (<em>default</em> width /2)
+        </li>
+        <li><span class="parameter">shaft_length</span>
+            <span class="types"><span class="type">number</span></span>
+         The head_length of the shaft (the rest is the head)
+         (<em>default</em> height/2)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.arrow(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.arrow(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="number">30</span>, <span class="number">10</span>, <span class="number">60</span>)
+shape.transform(shape.arrow) : rotate_at(<span class="number">35</span>,<span class="number">35</span>,<span class="global">math</span>.pi/<span class="number">2</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.hexagon"></a>
+    <strong>module.hexagon (cr, width, height)</strong>
+    </dt>
+    <dd>
+    A squeezed hexagon filling the rectangle.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_hexagon.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.hexagon(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.transform(shape.hexagon) : translate(<span class="number">0</span>,<span class="number">15</span>)(cr,<span class="number">70</span>,<span class="number">20</span>)
+shape.transform(shape.hexagon) : rotate_at(<span class="number">35</span>,<span class="number">35</span>,<span class="global">math</span>.pi/<span class="number">2</span>)(cr,<span class="number">70</span>,<span class="number">40</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.powerline"></a>
+    <strong>module.powerline (cr, width, height[, arrow_depth=height/2])</strong>
+    </dt>
+    <dd>
+    Double arrow popularized by the vim-powerline module.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_powerline.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">arrow_depth</span>
+            <span class="types"><span class="type">number</span></span>
+         The width of the arrow part of the shape
+         (<em>default</em> height/2)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.powerline(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.transform(shape.powerline) : translate(<span class="number">0</span>, <span class="number">25</span>) (cr,<span class="number">70</span>,<span class="number">20</span>)
+shape.transform(shape.powerline) : translate(<span class="number">0</span>, <span class="number">25</span>) (cr,<span class="number">70</span>,<span class="number">20</span>, -<span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.isosceles_triangle"></a>
+    <strong>module.isosceles_triangle (cr, width, height)</strong>
+    </dt>
+    <dd>
+    An isosceles triangle.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_isosceles_triangle.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.isosceles_triangle(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.isosceles_triangle(cr,<span class="number">20</span>,<span class="number">70</span>)
+shape.transform(shape.isosceles_triangle) : rotate_at(<span class="number">35</span>, <span class="number">35</span>, <span class="global">math</span>.pi/<span class="number">2</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.cross"></a>
+    <strong>module.cross (cr, width, height[, thickness=width/3])</strong>
+    </dt>
+    <dd>
+    A cross (<strong>+</strong>) symbol.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_cross.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">thickness</span>
+            <span class="types"><span class="type">number</span></span>
+         The cross section thickness
+         (<em>default</em> width/3)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.cross(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.cross(cr,<span class="number">20</span>,<span class="number">70</span>)
+shape.transform(shape.cross) : scale(<span class="number">0.5</span>, <span class="number">1</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.octogon"></a>
+    <strong>module.octogon (cr, width, height, corner_radius)</strong>
+    </dt>
+    <dd>
+    A similar shape to the <a href="../libraries/gears.shape.html#module.rounded_rect">rounded_rect</a>, but with sharp corners.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_octogon.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">corner_radius</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.octogon(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.octogon(cr,<span class="number">70</span>,<span class="number">70</span>,<span class="number">70</span>/<span class="number">2.5</span>)
+shape.transform(shape.octogon) : translate(<span class="number">0</span>, <span class="number">25</span>) (cr,<span class="number">70</span>,<span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.circle"></a>
+    <strong>module.circle (cr, width, height[, radius=math.min(width  height) / 2)])</strong>
+    </dt>
+    <dd>
+    A circle shape.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_circle.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">radius</span>
+            <span class="types"><span class="type">number</span></span>
+         The radius
+         (<em>default</em> math.min(width  height) / 2))
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.circle(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.circle(cr,<span class="number">20</span>,<span class="number">70</span>)
+shape.transform(shape.circle) : scale(<span class="number">0.5</span>, <span class="number">1</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.rectangle"></a>
+    <strong>module.rectangle (cr, width, height)</strong>
+    </dt>
+    <dd>
+    A simple rectangle.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_rectangle.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.rectangle(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.rectangle(cr,<span class="number">20</span>,<span class="number">70</span>)
+shape.transform(shape.rectangle) : scale(<span class="number">0.5</span>, <span class="number">1</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.parallelogram"></a>
+    <strong>module.parallelogram (cr, width, height[, base_width=width/3])</strong>
+    </dt>
+    <dd>
+    A diagonal parallelogram with the bottom left corner at x=0 and top right
+ at x=width.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_parallelogram.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">base_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The parallelogram base width
+         (<em>default</em> width/3)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.parallelogram(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.parallelogram(cr,<span class="number">70</span>,<span class="number">20</span>)
+shape.transform(shape.parallelogram) : scale(<span class="number">0.5</span>, <span class="number">1</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.losange"></a>
+    <strong>module.losange (cr, width, height)</strong>
+    </dt>
+    <dd>
+    A losange.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_losange.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.losange(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.losange(cr,<span class="number">20</span>,<span class="number">70</span>)
+shape.transform(shape.losange) : scale(<span class="number">0.5</span>, <span class="number">1</span>)(cr,<span class="number">70</span>,<span class="number">70</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.pie"></a>
+    <strong>module.pie (cr, width, height[, start_angle=0[, end_angle=math.pi/2[, radius=math.min(width height)/2]]])</strong>
+    </dt>
+    <dd>
+    A pie.</p>
+
+<p> The pie center is the center of the area.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_pie.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">start_angle</span>
+            <span class="types"><span class="type">number</span></span>
+         The start angle (in radian)
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">end_angle</span>
+            <span class="types"><span class="type">number</span></span>
+         The end angle (in radian)
+         (<em>default</em> math.pi/2)
+        </li>
+        <li><span class="parameter">radius</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+         (<em>default</em> math.min(width height)/2)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.pie(cr, <span class="number">70</span>, <span class="number">70</span>)
+shape.pie(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="number">1.0471975511966</span>,   <span class="number">4.1887902047864</span>)
+shape.pie(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="global">math</span>.pi, <span class="number">10</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.arc"></a>
+    <strong>module.arc (cr, width, height[, thickness=math.min(width height)/2[, start_angle=0[, end_angle=math.pi/2[, start_rounded=false[, end_rounded=false]]]]])</strong>
+    </dt>
+    <dd>
+    A rounded arc.</p>
+
+<p> The pie center is the center of the area.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_arc.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">thickness</span>
+            <span class="types"><span class="type">number</span></span>
+         The arc thickness
+         (<em>default</em> math.min(width height)/2)
+        </li>
+        <li><span class="parameter">start_angle</span>
+            <span class="types"><span class="type">number</span></span>
+         The start angle (in radian)
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">end_angle</span>
+            <span class="types"><span class="type">number</span></span>
+         The end angle (in radian)
+         (<em>default</em> math.pi/2)
+        </li>
+        <li><span class="parameter">start_rounded</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if the arc start rounded
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">end_rounded</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if the arc end rounded
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.arc(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="number">10</span>)
+shape.arc(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="number">10</span>, <span class="keyword">nil</span>, <span class="keyword">nil</span>, <span class="keyword">true</span>, <span class="keyword">true</span>)
+shape.arc(cr,<span class="number">70</span>,<span class="number">70</span>, <span class="keyword">nil</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="global">math</span>.pi)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.radial_progress"></a>
+    <strong>module.radial_progress (cr, w, h, percent, hide_left)</strong>
+    </dt>
+    <dd>
+    A partial rounded bar.  How much of the rounded bar is visible depends on
+ the given percentage value.</p>
+
+<p> Note that this shape is not closed and thus filling it doesn&rsquo;t make much
+ sense.</p>
+
+<p><img src="../images/AUTOGEN_gears_shape_radial_progress.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         A cairo context
+        </li>
+        <li><span class="parameter">w</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape width
+        </li>
+        <li><span class="parameter">h</span>
+            <span class="types"><span class="type">number</span></span>
+         The shape height
+        </li>
+        <li><span class="parameter">percent</span>
+            <span class="types"><span class="type">number</span></span>
+         The progressbar percent
+        </li>
+        <li><span class="parameter">hide_left</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Do not draw the left side of the shape
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">shape.radial_progress(cr, <span class="number">70</span>, <span class="number">20</span>, .<span class="number">3</span>)
+shape.radial_progress(cr, <span class="number">70</span>, <span class="number">20</span>, .<span class="number">6</span>)
+shape.radial_progress(cr, <span class="number">70</span>, <span class="number">20</span>, .<span class="number">9</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "module.transform"></a>
+    <strong>module.transform (shape)</strong>
+    </dt>
+    <dd>
+    Adjust the shape using a transformation object  Apply various transformations to the shape
+
+
+    <ul>
+        <li><span class="parameter">shape</span>
+         A shape function
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A transformation handle, also act as a shape function
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">gears.shape.transform(gears.shape.rounded_bar)
+   : rotate(<span class="global">math</span>.pi/<span class="number">2</span>)
+      : translate(<span class="number">10</span>, <span class="number">10</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

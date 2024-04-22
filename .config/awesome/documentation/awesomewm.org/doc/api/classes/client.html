@@ -1,0 +1,5845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class client - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+<li><a href="#Signals">Signals</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Deprecated_functions">Deprecated functions</a></li>
+<li><a href="#Layout_related_functions">Layout related functions</a></li>
+<li><a href="#Extra_properties_available_in_awful_rules_and_awful_spawn">Extra properties available in awful.rules and awful.spawn</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Fields">Fields</a></li>
+<li><a href="#Methods">Methods</a></li>
+<li><a href="#lib_awful_client_focus_Functions">lib.awful.client.focus Functions</a></li>
+<li><a href="#lib_awful_client_shape_Functions">lib.awful.client.shape Functions</a></li>
+<li><a href="#lib_awful_client_urgent_Functions">lib.awful.client.urgent Functions</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><strong>client</strong></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>client</code></h1>
+<p>A process window.</p>
+<p> Clients are the name used by Awesome (and X11) to refer to a window.</p>
+
+<p> A program can have multiple clients (e.g. for dialogs) or none at all (e.g.
+ command line applications).
+ Clients are usually grouped by classes.
+ A class is the name used by X11 to help the window manager distinguish
+ between windows and write rules for them.  A client&rsquo;s behavior is also
+ defined by its <a href="../classes/client.html#client.type">type</a> and <a href="../classes/client.html#client.size_hints">size_hints</a> properties.
+ See the <code>xprop</code> command line application to query properties for a client.</p>
+
+<p> <img src="../images/client_geo.svg" alt="Client geometry" /></p>
+
+<p> The client&rsquo;s <code>:geometry()</code> function returns a table with <em>x</em>, <em>y</em>, <em>width</em>
+ and <em>height</em>.  The area returned <strong>excludes the border width</strong>.
+ All clients also have a <a href="../classes/client.html#client.shape_bounding">shape_bounding</a> and <a href="../classes/client.html#client.shape_clip">shape_clip</a> used to &ldquo;crop&rdquo; the
+ client&rsquo;s content.
+ Finally, each clients can have titlebars (see <a href="../classes/awful.titlebar.html#">awful.titlebar</a>).</p>
+
+<p> Additionally to the classes described here, one can also use signals as
+ described in <a href="../classes/signals.html#">signals</a> and X properties as described in <a href="../classes/xproperties.html#">xproperties</a>.</p>
+
+<p> Some signal names are starting with a dot. These dots are artefacts from
+ the documentation generation, you get the real signal name by
+ removing the starting dot.</p>
+
+<p> Accessing client objects can be done in multiple ways depending on the
+ context.
+ To get the currently focused client:</p>
+
+<pre><span class="keyword">local</span> c = client.focus
+<span class="keyword">if</span> c <span class="keyword">then</span>
+    <span class="comment">-- do something
+</span><span class="keyword">end</span>
+</pre>
+
+
+<p> To get a list of all clients, use <a href="../classes/client.html#client:get">client:get</a>:</p>
+
+<pre><span class="keyword">for</span> _, c <span class="keyword">in</span> <span class="global">ipairs</span>(client.get()) <span class="keyword">do</span>
+    <span class="comment">-- do something
+</span><span class="keyword">end</span>
+</pre>
+
+
+<p> To execute a callback when a new client is added, use the <a href="../classes/client.html#client.manage">manage</a> signal:</p>
+
+<pre>client.connect_signal(<span class="string">"manage"</span>, <span class="keyword">function</span>(c)
+    <span class="comment">-- do something
+</span><span class="keyword">end</span>)
+</pre>
+
+
+<p> To be notified when a property of a client changed:</p>
+
+<pre>client.connect_signal(<span class="string">"property::name"</span>, <span class="keyword">function</span>(c)
+    <span class="comment">-- do something
+</span><span class="keyword">end</span>)
+</pre>
+
+
+<p> To be notified when a property of a specific client <code>c</code> changed:</p>
+
+<pre>c:connect_signal(<span class="string">"property::name"</span>, <span class="keyword">function</span>()
+    <span class="comment">-- do something
+</span><span class="keyword">end</span>)
+</pre>
+
+
+<p> To get all the clients for a screen use either <a href="../classes/screen.html#screen.clients">screen.clients</a> or
+ <a href="../classes/screen.html#screen.tiled_clients">screen.tiled_clients</a>.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cda7b8a1a4a8a38da9aca3a7a2b8e3a4a3aba2">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.client.next">awful.client.next (i[, sel[, stacked=false]])</a></td>
+	<td class="summary">Get a client by its relative index to another client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.swap.bydirection">awful.client.swap.bydirection (dir[, c=focused[, stacked=false]])</a></td>
+	<td class="summary">Swap a client with another client in the given direction.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.swap.global_bydirection">awful.client.swap.global_bydirection (dir[, sel])</a></td>
+	<td class="summary">Swap a client with another client in the given direction.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.swap.byidx">awful.client.swap.byidx (i[, c])</a></td>
+	<td class="summary">Swap a client by its relative index.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.cycle">awful.client.cycle (clockwise[, s[, stacked=false]])</a></td>
+	<td class="summary">Cycle clients.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.getmarked">awful.client.getmarked ()</a></td>
+	<td class="summary">Return the marked clients and empty the marked table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.restore">awful.client.restore (s)</a></td>
+	<td class="summary">Restore (=unminimize) a random client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.property.persist">awful.client.property.persist (prop, kind)</a></td>
+	<td class="summary">Set a client property to be persistent across restarts (via X properties).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.iterate">awful.client.iterate (filter, start, s)</a></td>
+	<td class="summary">Returns an iterator to cycle through, starting from the client in focus or
+ the given index, all clients that match a given criteria.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.disable_tracking">awful.client.focus.history.disable_tracking ()</a></td>
+	<td class="summary">Disable history tracking.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.enable_tracking">awful.client.focus.history.enable_tracking ()</a></td>
+	<td class="summary">Enable history tracking.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.is_enabled">awful.client.focus.history.is_enabled ()</a></td>
+	<td class="summary">Is history tracking enabled?</td>
+	</tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#client.window">window</a></td>
+	<td class="summary">The X window id.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.name">name</a></td>
+	<td class="summary">The client title.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.skip_taskbar">skip_taskbar</a></td>
+	<td class="summary">True if the client does not want to be in taskbar.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.type">type</a></td>
+	<td class="summary">The window type.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.class">class</a></td>
+	<td class="summary">The client class.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.instance">instance</a></td>
+	<td class="summary">The client instance.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.pid">pid</a></td>
+	<td class="summary">The client PID, if available.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.role">role</a></td>
+	<td class="summary">The window role, if available.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.machine">machine</a></td>
+	<td class="summary">The machine client is running on.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.icon_name">icon_name</a></td>
+	<td class="summary">The client name when iconified.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.icon">icon</a></td>
+	<td class="summary">The client icon as a surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.icon_sizes">icon_sizes</a></td>
+	<td class="summary">The available sizes of client icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.screen">screen</a></td>
+	<td class="summary">Client screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.hidden">hidden</a></td>
+	<td class="summary">Define if the client must be hidden, i.e.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.minimized">minimized</a></td>
+	<td class="summary">Define it the client must be iconify, i.e.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.size_hints_honor">size_hints_honor</a></td>
+	<td class="summary">Honor size hints, e.g.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.border_width">border_width</a></td>
+	<td class="summary">The client border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.border_color">border_color</a></td>
+	<td class="summary">The client border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.urgent">urgent</a></td>
+	<td class="summary">The client urgent state.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.content">content</a></td>
+	<td class="summary">A cairo surface for the client window content.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.opacity">opacity</a></td>
+	<td class="summary">The client opacity.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.ontop">ontop</a></td>
+	<td class="summary">The client is on top of every other windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.above">above</a></td>
+	<td class="summary">The client is above normal windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.below">below</a></td>
+	<td class="summary">The client is below normal windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.fullscreen">fullscreen</a></td>
+	<td class="summary">The client is fullscreen or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.maximized">maximized</a></td>
+	<td class="summary">The client is maximized (horizontally and vertically) or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.maximized_horizontal">maximized_horizontal</a></td>
+	<td class="summary">The client is maximized horizontally or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.maximized_vertical">maximized_vertical</a></td>
+	<td class="summary">The client is maximized vertically or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.transient_for">transient_for</a></td>
+	<td class="summary">The client the window is transient for.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.group_window">group_window</a></td>
+	<td class="summary">Window identification unique to a group of windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.leader_window">leader_window</a></td>
+	<td class="summary">Identification unique to windows spawned by the same command.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.size_hints">size_hints</a></td>
+	<td class="summary">A table with size hints of the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.motif_wm_hints">motif_wm_hints</a></td>
+	<td class="summary">The motif WM hints of the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.sticky">sticky</a></td>
+	<td class="summary">Set the client sticky, i.e.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.modal">modal</a></td>
+	<td class="summary">Indicate if the client is modal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.focusable">focusable</a></td>
+	<td class="summary">True if the client can receive the input focus.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.shape_bounding">shape_bounding</a></td>
+	<td class="summary">The client&rsquo;s bounding shape as set by awesome as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.shape_clip">shape_clip</a></td>
+	<td class="summary">The client&rsquo;s clip shape as set by awesome as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.shape_input">shape_input</a></td>
+	<td class="summary">The client&rsquo;s input shape as set by awesome as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.client_shape_bounding">client_shape_bounding</a></td>
+	<td class="summary">The client&rsquo;s bounding shape as set by the program as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.client_shape_clip">client_shape_clip</a></td>
+	<td class="summary">The client&rsquo;s clip shape as set by the program as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.startup_id">startup_id</a></td>
+	<td class="summary">The FreeDesktop StartId.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.valid">valid</a></td>
+	<td class="summary">If the client that this object refers to is still managed by awesome.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.first_tag">first_tag</a></td>
+	<td class="summary">The first tag of the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.marked">marked</a></td>
+	<td class="summary">If a client is marked or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.is_fixed">is_fixed</a></td>
+	<td class="summary">Return if a client has a fixed size or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.immobilized">immobilized</a></td>
+	<td class="summary">Is the client immobilized horizontally?</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.immobilized">immobilized</a></td>
+	<td class="summary">Is the client immobilized vertically?</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.floating">floating</a></td>
+	<td class="summary">The client floating state.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.x">x</a></td>
+	<td class="summary">The x coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.y">y</a></td>
+	<td class="summary">The y coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.width">width</a></td>
+	<td class="summary">The width of the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.height">height</a></td>
+	<td class="summary">The height of the client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.dockable">dockable</a></td>
+	<td class="summary">If the client is dockable.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.requests_no_titlebar">requests_no_titlebar</a></td>
+	<td class="summary">If the client requests not to be decorated with a titlebar.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.shape">shape</a></td>
+	<td class="summary">Set the client shape.</td>
+	</tr>
+</table>
+<h2><a href="#Signals">Signals</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#client.focus">focus</a></td>
+	<td class="summary">When a client gains focus.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.list">list</a></td>
+	<td class="summary">Before manage, after unmanage, and when clients swap.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.swapped">swapped</a></td>
+	<td class="summary">When 2 clients are swapped</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.manage">manage</a></td>
+	<td class="summary">When a new client appears and gets managed by Awesome.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#button::press">button::press</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#button::release">button::release</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mouse::enter">mouse::enter</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mouse::leave">mouse::leave</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mouse::move">mouse::move</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#property::window">property::window</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#request::activate">request::activate</a></td>
+	<td class="summary">When a client should get activated (focused and/or raised).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#request::geometry">request::geometry</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#request::tag">request::tag</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#request::urgent">request::urgent</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.tagged">tagged</a></td>
+	<td class="summary">When a client gets tagged.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.unfocus">unfocus</a></td>
+	<td class="summary">When a client gets unfocused.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.unmanage">unmanage</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.untagged">untagged</a></td>
+	<td class="summary">When a client gets untagged.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.raised">raised</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.lowered">lowered</a></td>
+	<td class="summary"></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#property::size">property::size</a></td>
+	<td class="summary">When the height or width changed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#property::position">property::position</a></td>
+	<td class="summary">When the x or y coordinate changed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#property::floating_geometry">property::floating_geometry</a></td>
+	<td class="summary">The last geometry when client was floating.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#request::titlebars">request::titlebars</a></td>
+	<td class="summary">Emited when a client need to get a titlebar.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.marked">marked</a></td>
+	<td class="summary">The client marked signal (deprecated).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.unmarked">unmarked</a></td>
+	<td class="summary">The client unmarked signal (deprecated).</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.border_focus">beautiful.border_focus</a></td>
+	<td class="summary">The border color when the client is focused.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.border_normal">beautiful.border_normal</a></td>
+	<td class="summary">The border color when the client is not focused.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.border_width">beautiful.border_width</a></td>
+	<td class="summary">The client border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.border_marked">beautiful.border_marked</a></td>
+	<td class="summary">The border color when the client is focused.</td>
+	</tr>
+</table>
+<h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.client.jumpto">awful.client.jumpto</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Jump to the given client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.visible">awful.client.visible</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get visible clients from a screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.tiled">awful.client.tiled</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get visible and tiled clients</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.moveresize">awful.client.moveresize</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Move/resize a client relative to current coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.movetotag">awful.client.movetotag</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Move a client to a tag.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.toggletag">awful.client.toggletag</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Toggle a tag on a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.movetoscreen">awful.client.movetoscreen</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Move a client to a screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.mark">awful.client.mark</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Mark a client, and then call &lsquo;marked&rsquo; hook.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.unmark">awful.client.unmark</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Unmark a client and then call &lsquo;unmarked&rsquo; hook.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.ismarked">awful.client.ismarked</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Check if a client is marked.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.togglemarked">awful.client.togglemarked</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Toggle a client as marked.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.floating.set">awful.client.floating.set</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Set a client floating state, overriding auto-detection.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.isfixed">awful.client.isfixed</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Return if a client has a fixed size or not.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.floating.get">awful.client.floating.get</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a client floating state.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.floating.toggle">awful.client.floating.toggle</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Toggle the floating state of a client between &lsquo;auto&rsquo; and &lsquo;true&rsquo;.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.dockable.get">awful.client.dockable.get</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a client&rsquo;s dockable state.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.dockable.set">awful.client.dockable.set</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Set a client&rsquo;s dockable state, overriding auto-detection.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.property.get">awful.client.property.get</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a client property.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.property.set">awful.client.property.set</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Set a client property.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.run_or_raise">awful.client.run_or_raise</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Switch to a client matching the given condition if running, else spawn it.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.get_transient_for_matching">awful.client.get_transient_for_matching</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a matching transient_for client (if any).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.is_transient_for">awful.client.is_transient_for</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Is a client transient for another one?</td>
+	</tr>
+</table>
+<h2><a href="#Layout_related_functions">Layout related functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.client.getmaster">awful.client.getmaster</a></td>
+	<td class="summary">Get the master window.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.setmaster">awful.client.setmaster</a></td>
+	<td class="summary">Set the client as master: put it at the beginning of other windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.setslave">awful.client.setslave</a></td>
+	<td class="summary">Set the client as slave: put it at the end of other windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.idx">awful.client.idx</a></td>
+	<td class="summary">Calculate a client&rsquo;s column number, index in that column, and
+ number of visible clients in this column.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.setwfact">awful.client.setwfact</a></td>
+	<td class="summary">Set the window factor of a client</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.incwfact">awful.client.incwfact</a></td>
+	<td class="summary">Change window factor of a client.</td>
+	</tr>
+</table>
+<h2><a href="#Extra_properties_available_in_awful_rules_and_awful_spawn">Extra properties available in awful.rules and awful.spawn</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#client.placement">placement</a></td>
+	<td class="summary">The client default placement on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.honor_padding">honor_padding</a></td>
+	<td class="summary">When applying the placement, honor the screen padding.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.honor_workarea">honor_workarea</a></td>
+	<td class="summary">When applying the placement, honor the screen work area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.tag">tag</a></td>
+	<td class="summary">The client default tag.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.tags">tags</a></td>
+	<td class="summary">The client default tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.new_tag">new_tag</a></td>
+	<td class="summary">Create a new tag for this client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.switch_to_tags">switch_to_tags</a></td>
+	<td class="summary">Unselect the current tags and select this client tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.focus">focus</a></td>
+	<td class="summary">Define if the client should grab focus by default.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.titlebars_enabled">titlebars_enabled</a></td>
+	<td class="summary">Should this client have a titlebar by default.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client.callback">callback</a></td>
+	<td class="summary">A function to call when this client is ready.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.object">awful.object</a></td>
+	<td class="summary">Client class.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#client.focus">client.focus</a></td>
+	<td class="summary">The focused <a href="../classes/client.html#">client</a> or nil (in case there is none).</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#client:struts">client:struts (struts)</a></td>
+	<td class="summary">Return client struts (reserved space at the edge of the screen).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:buttons">client:buttons (buttons_table)</a></td>
+	<td class="summary">Get or set mouse buttons bindings for a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:instances">client:instances ()</a></td>
+	<td class="summary">Get the number of instances.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:get">client:get ([screen[, stacked]])</a></td>
+	<td class="summary">Get all clients into a table.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:isvisible">client:isvisible ()</a></td>
+	<td class="summary">Check if a client is visible on its screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:kill">client:kill ()</a></td>
+	<td class="summary">Kill a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:swap">client:swap (c)</a></td>
+	<td class="summary">Swap a client with another one in global client list.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:tags">client:tags (tags_table)</a></td>
+	<td class="summary">Access or set the client tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:raise">client:raise ()</a></td>
+	<td class="summary">Raise a client on top of others which are on the same layer.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:lower">client:lower ()</a></td>
+	<td class="summary">Lower a client on bottom of others which are on the same layer.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:unmanage">client:unmanage ()</a></td>
+	<td class="summary">Stop managing a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:geometry">client:geometry (geo)</a></td>
+	<td class="summary">Return or set client geometry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:apply_size_hints">client:apply_size_hints (width, height)</a></td>
+	<td class="summary">Apply size hints to a size.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:keys">client:keys (keys_table)</a></td>
+	<td class="summary">Get or set keys bindings for a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:get_icon">client:get_icon (index)</a></td>
+	<td class="summary">Get the client&rsquo;s n-th icon.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:disconnect_signal">client:disconnect_signal (name, func)</a></td>
+	<td class="summary">Disconnect from a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:emit_signal">client:emit_signal (name, ...)</a></td>
+	<td class="summary">Emit a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:connect_signal">client:connect_signal (name, func)</a></td>
+	<td class="summary">Connect to a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:jump_to">client:jump_to (merge)</a></td>
+	<td class="summary">Jump to the given client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:relative_move">client:relative_move ([x=c.x[, y=c.y[, w=c.width[, h=c.height]]]])</a></td>
+	<td class="summary">Move/resize a client relative to current coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:move_to_tag">client:move_to_tag (target)</a></td>
+	<td class="summary">Move a client to a tag.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:toggle_tag">client:toggle_tag (target)</a></td>
+	<td class="summary">Toggle a tag on a client.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:move_to_screen">client:move_to_screen ([s=c.screen.index+1])</a></td>
+	<td class="summary">Move a client to a screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:to_selected_tags">client:to_selected_tags ()</a></td>
+	<td class="summary">Tag a client with the set of current tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:get_transient_for_matching">client:get_transient_for_matching (matcher)</a></td>
+	<td class="summary">Get a matching transient_for client (if any).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#client:is_transient_for">client:is_transient_for (c2)</a></td>
+	<td class="summary">Is a client transient for another one?</td>
+	</tr>
+</table>
+<h2><a href="#lib_awful_client_focus_Functions">lib.awful.client.focus Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.delete">awful.client.focus.history.delete (c)</a></td>
+	<td class="summary">Remove a client from the focus history</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.byidx">awful.client.focus.byidx (i[, c])</a></td>
+	<td class="summary">Focus a client by its relative index.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.filter">awful.client.focus.filter (c)</a></td>
+	<td class="summary">Filter out window that we do not want handled by focus.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.add">awful.client.focus.history.add (c)</a></td>
+	<td class="summary">Update client focus history.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.get">awful.client.focus.history.get (s, idx, filter)</a></td>
+	<td class="summary">Get the latest focused client for a screen in history.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.history.previous">awful.client.focus.history.previous ()</a></td>
+	<td class="summary">Focus the previous client in history.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.bydirection">awful.client.focus.bydirection (dir[, c[, stacked=false]])</a></td>
+	<td class="summary">Focus a client by the given direction.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.focus.global_bydirection">awful.client.focus.global_bydirection (dir[, c[, stacked=false]])</a></td>
+	<td class="summary">Focus a client by the given direction.</td>
+	</tr>
+</table>
+<h2><a href="#lib_awful_client_shape_Functions">lib.awful.client.shape Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.client.shape.get_transformed">awful.client.shape.get_transformed (c, shape_name)</a></td>
+	<td class="summary">Get one of a client&rsquo;s shapes and transform it to include window decorations.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.shape.update.all">awful.client.shape.update.all (c)</a></td>
+	<td class="summary">Update all of a client&rsquo;s shapes from the shapes the client set itself.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.shape.update.bounding">awful.client.shape.update.bounding (c)</a></td>
+	<td class="summary">Update a client&rsquo;s bounding shape from the shape the client set itself.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.client.shape.update.clip">awful.client.shape.update.clip (c)</a></td>
+	<td class="summary">Update a client&rsquo;s clip shape from the shape the client set itself.</td>
+	</tr>
+</table>
+<h2><a href="#lib_awful_client_urgent_Functions">lib.awful.client.urgent Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.urgent.get">awful.urgent.get ()</a></td>
+	<td class="summary">Get the first client that got the urgent hint.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.urgent.jumpto">awful.urgent.jumpto (merge)</a></td>
+	<td class="summary">Jump to the client that received the urgent hint first.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.urgent.add">awful.urgent.add (c, prop)</a></td>
+	<td class="summary">Adds client to urgent stack.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.urgent.delete">awful.urgent.delete (c)</a></td>
+	<td class="summary">Remove client from urgent stack.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "awful.client.next"></a>
+    <strong>awful.client.next (i[, sel[, stacked=false]])</strong>
+    </dt>
+    <dd>
+    Get a client by its relative index to another client.
+ If no client is passed, the focused client will be used.
+
+
+    <ul>
+        <li><span class="parameter">i</span>
+            <span class="types"><span class="type">int</span></span>
+         The index.  Use 1 to get the next, -1 to get the previous.
+        </li>
+        <li><span class="parameter">sel</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A client, or nil if no client is available.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- focus the next window in the index
+</span>awful.client.<span class="global">next</span>(<span class="number">1</span>)
+<span class="comment">-- focus the previous
+</span>awful.client.<span class="global">next</span>(-<span class="number">1</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "awful.client.swap.bydirection"></a>
+    <strong>awful.client.swap.bydirection (dir[, c=focused[, stacked=false]])</strong>
+    </dt>
+    <dd>
+    Swap a client with another client in the given direction.
+
+
+    <ul>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The direction, can be either &ldquo;up&rdquo;, &ldquo;down&rdquo;, &ldquo;left&rdquo; or &ldquo;right&rdquo;.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>default</em> focused)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.swap.global_bydirection"></a>
+    <strong>awful.client.swap.global_bydirection (dir[, sel])</strong>
+    </dt>
+    <dd>
+    Swap a client with another client in the given direction.  Swaps across screens.
+
+
+    <ul>
+        <li><span class="parameter">dir</span>
+         The direction, can be either &ldquo;up&rdquo;, &ldquo;down&rdquo;, &ldquo;left&rdquo; or &ldquo;right&rdquo;.
+        </li>
+        <li><span class="parameter">sel</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.swap.byidx"></a>
+    <strong>awful.client.swap.byidx (i[, c])</strong>
+    </dt>
+    <dd>
+    Swap a client by its relative index.
+
+
+    <ul>
+        <li><span class="parameter">i</span>
+         The index.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client, otherwise focused one is used.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.cycle"></a>
+    <strong>awful.client.cycle (clockwise[, s[, stacked=false]])</strong>
+    </dt>
+    <dd>
+    Cycle clients.
+
+
+    <ul>
+        <li><span class="parameter">clockwise</span>
+         True to cycle clients clockwise.
+        </li>
+        <li><span class="parameter">s</span>
+         The screen where to cycle clients.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.getmarked"></a>
+    <strong>awful.client.getmarked ()</strong>
+    </dt>
+    <dd>
+    Return the marked clients and empty the marked table.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table with all marked clients.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.restore"></a>
+    <strong>awful.client.restore (s)</strong>
+    </dt>
+    <dd>
+    Restore (=unminimize) a random client.
+
+
+    <ul>
+        <li><span class="parameter">s</span>
+         The screen to use.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The restored client if some client was restored, otherwise nil.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.property.persist"></a>
+    <strong>awful.client.property.persist (prop, kind)</strong>
+    </dt>
+    <dd>
+    Set a client property to be persistent across restarts (via X properties).
+
+
+    <ul>
+        <li><span class="parameter">prop</span>
+         The property name.
+        </li>
+        <li><span class="parameter">kind</span>
+         The type (used for register_xproperty).
+   One of &ldquo;string&rdquo;, &ldquo;number&rdquo; or &ldquo;boolean&rdquo;.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.iterate"></a>
+    <strong>awful.client.iterate (filter, start, s)</strong>
+    </dt>
+    <dd>
+    Returns an iterator to cycle through, starting from the client in focus or
+ the given index, all clients that match a given criteria.
+
+
+    <ul>
+        <li><span class="parameter">filter</span>
+         a function that returns true to indicate a positive match
+        </li>
+        <li><span class="parameter">start</span>
+          what index to start iterating from.  Defaults to using the
+   index of the currently focused client.
+        </li>
+        <li><span class="parameter">s</span>
+         which screen to use.  nil means all screens.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- un-minimize all urxvt instances
+</span><span class="keyword">local</span> urxvt = <span class="keyword">function</span> (c)
+  <span class="keyword">return</span> awful.rules.match(c, {class = <span class="string">"URxvt"</span>})
+<span class="keyword">end</span>
+
+<span class="keyword">for</span> c <span class="keyword">in</span> awful.client.iterate(urxvt) <span class="keyword">do</span>
+  c.minimized = <span class="keyword">false</span>
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.disable_tracking"></a>
+    <strong>awful.client.focus.history.disable_tracking ()</strong>
+    </dt>
+    <dd>
+    Disable history tracking.</p>
+
+<p> See <a href="../classes/client.html#awful.client.focus.history.enable_tracking">awful.client.focus.history.enable_tracking</a> to enable it again.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        The internal value of <code>disabled_count</code> (calls to this
+   function without calling <a href="../classes/client.html#awful.client.focus.history.enable_tracking">awful.client.focus.history.enable_tracking</a>).
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.enable_tracking"></a>
+    <strong>awful.client.focus.history.enable_tracking ()</strong>
+    </dt>
+    <dd>
+    Enable history tracking.</p>
+
+<p> This is the default, but can be disabled
+ through <a href="../classes/client.html#awful.client.focus.history.disable_tracking">awful.client.focus.history.disable_tracking</a>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        True if history tracking has been enabled.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.is_enabled"></a>
+    <strong>awful.client.focus.history.is_enabled ()</strong>
+    </dt>
+    <dd>
+    Is history tracking enabled?
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">bool</span></span>
+        True if history tracking is enabled.</li>
+        <li>
+           <span class="types"><span class="type">int</span></span>
+        The number of times that tracking has been disabled.</li>
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "client.window"></a>
+    <strong>window</strong>
+    </dt>
+    <dd>
+    <p>The X window id.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::window</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.name"></a>
+    <strong>name</strong>
+    </dt>
+    <dd>
+    <p>The client title.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::name</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.skip_taskbar"></a>
+    <strong>skip_taskbar</strong>
+    </dt>
+    <dd>
+    <p>True if the client does not want to be in taskbar.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::skip_taskbar</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.type"></a>
+    <strong>type</strong>
+    </dt>
+    <dd>
+    <p>The window type.</p>
+
+<p> Valid types are:</p>
+
+<ul>
+<li><strong>desktop</strong>: The root client, it cannot be moved or resized.</li>
+<li><strong>dock</strong>: A client attached to the side of the screen.</li>
+<li><strong>splash</strong>: A client, usually without titlebar shown when an application starts.</li>
+<li><strong>dialog</strong>: A dialog, see <a href="../classes/client.html#client.transient_for">transient_for</a>.</li>
+<li><strong>menu</strong>: A context menu.</li>
+<li><strong>toolbar</strong>: A floating toolbar.</li>
+<li><strong>utility</strong>:</li>
+<li><strong>dropdown_menu</strong>: A context menu attached to a parent position.</li>
+<li><strong>popup_menu</strong>: A context menu.</li>
+<li><strong>notification</strong>: A notification popup.</li>
+<li><strong>combo</strong>: A combobox list menu.</li>
+<li><strong>dnd</strong>: A drag and drop indicator.</li>
+<li><strong>normal</strong>: A normal application main window.</li>
+</ul>
+
+
+<p> More information can be found <a href="https://specifications.freedesktop.org/wm-spec/wm-spec-latest.html#idm140200472629520">here</a></p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::type</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.class"></a>
+    <strong>class</strong>
+    </dt>
+    <dd>
+    <p>The client class.</p>
+
+<p> To get a client class from the command line, use the command <code>xprop
+ WM_CLASS</code>. The class will be the second string.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::class</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.instance"></a>
+    <strong>instance</strong>
+    </dt>
+    <dd>
+    <p>The client instance.</p>
+
+<p> To get a client instance from the command line, use the command <code>xprop
+ WM_CLASS</code>. The instance will be the first string.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::instance</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.pid"></a>
+    <strong>pid</strong>
+    </dt>
+    <dd>
+    <p>The client PID, if available.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::pid</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.role"></a>
+    <strong>role</strong>
+    </dt>
+    <dd>
+    <p>The window role, if available.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::role</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.machine"></a>
+    <strong>machine</strong>
+    </dt>
+    <dd>
+    <p>The machine client is running on.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::machine</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.icon_name"></a>
+    <strong>icon_name</strong>
+    </dt>
+    <dd>
+    <p>The client name when iconified.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::icon_name</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.icon"></a>
+    <strong>icon</strong>
+    </dt>
+    <dd>
+    <p>The client icon as a surface.</p>
+
+<p> This property holds the client icon closest to the size configured via
+ <a href="../libraries/awesome.html#set_preferred_icon_size">awesome.set_preferred_icon_size</a>.</p>
+
+<p> It is not a path or an &ldquo;real&rdquo; file. Rather, it is already a bitmap surface.</p>
+
+<p> Typically you would want to use <a href="../classes/awful.widget.clienticon.html#">awful.widget.clienticon</a> to get this as a
+ widget.</p>
+
+<p> Working with icons is tricky because their surfaces do not use reference
+ counting correctly. If <code>gears.surface(c.icon)</code> is called multiple time on
+ the same icon, it will cause a double-free error and Awesome will crash. To
+ get a copy of the icon, you can use:</p>
+
+<pre><code> local s = gears.surface(c.icon)
+ local img = cairo.ImageSurface.create(cairo.Format.ARGB32, s:get_width(), s:get_height())
+ local cr  = cairo.Context(img)
+ cr:set_source_surface(s, 0, 0)
+ cr:paint()
+</code></pre>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::icon</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ib = wibox.widget.imagebox(c.icon)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "client.icon_sizes"></a>
+    <strong>icon_sizes</strong>
+    </dt>
+    <dd>
+    <p>The available sizes of client icons.  This is a table where each entry
+ contains the width and height of an icon.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::icon_sizes</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">sizes</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:get_icon">get_icon</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.screen"></a>
+    <strong>screen</strong>
+    </dt>
+    <dd>
+    <p>Client screen.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::screen</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">screen</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.hidden"></a>
+    <strong>hidden</strong>
+    </dt>
+    <dd>
+    <p>Define if the client must be hidden, i.e.  never mapped,
+   invisible in taskbar.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::hidden</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.minimized"></a>
+    <strong>minimized</strong>
+    </dt>
+    <dd>
+    <p>Define it the client must be iconify, i.e.  only visible in
+   taskbar.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::minimized</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.size_hints_honor"></a>
+    <strong>size_hints_honor</strong>
+    </dt>
+    <dd>
+    <p>Honor size hints, e.g.  respect size ratio.</p>
+
+<p> For example, a terminal such as <code>xterm</code> require the client size to be a
+ multiple of the character size. Honoring size hints will cause the terminal
+ window to have a small gap at the bottom.</p>
+
+<p> This is enabled by default. To disable it by default, see <a href="../libraries/awful.rules.html#">awful.rules</a>.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::size_hints_honor</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client.size_hints">size_hints</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.border_width"></a>
+    <strong>border_width</strong>
+    </dt>
+    <dd>
+    The client border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.border_color"></a>
+    <strong>border_color</strong>
+    </dt>
+    <dd>
+    <p>The client border color.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::border_color</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">pattern</span>
+         Any string, gradients and patterns will be converted to a
+  cairo pattern.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.urgent"></a>
+    <strong>urgent</strong>
+    </dt>
+    <dd>
+    <p>The client urgent state.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::urgent</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.content"></a>
+    <strong>content</strong>
+    </dt>
+    <dd>
+    <p>A cairo surface for the client window content.</p>
+
+<p> To get the screenshot, use:</p>
+
+<pre><code>gears.surface(c.content)
+</code></pre>
+
+<p> To save it, use:</p>
+
+<pre><code>gears.surface(c.content):write_to_png(path)
+</code></pre>
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.opacity"></a>
+    <strong>opacity</strong>
+    </dt>
+    <dd>
+    <p>The client opacity.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::opacity</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+         Between 0 (transparent) to 1 (opaque)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.ontop"></a>
+    <strong>ontop</strong>
+    </dt>
+    <dd>
+    The client is on top of every other windows.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.above"></a>
+    <strong>above</strong>
+    </dt>
+    <dd>
+    <p>The client is above normal windows.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::above</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.below"></a>
+    <strong>below</strong>
+    </dt>
+    <dd>
+    <p>The client is below normal windows.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::below</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.fullscreen"></a>
+    <strong>fullscreen</strong>
+    </dt>
+    <dd>
+    <p>The client is fullscreen or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::fullscreen</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.maximized"></a>
+    <strong>maximized</strong>
+    </dt>
+    <dd>
+    <p>The client is maximized (horizontally and vertically) or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::maximized</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.maximized_horizontal"></a>
+    <strong>maximized_horizontal</strong>
+    </dt>
+    <dd>
+    <p>The client is maximized horizontally or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::maximized_horizontal</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.maximized_vertical"></a>
+    <strong>maximized_vertical</strong>
+    </dt>
+    <dd>
+    <p>The client is maximized vertically or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::maximized_vertical</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.transient_for"></a>
+    <strong>transient_for</strong>
+    </dt>
+    <dd>
+    <p>The client the window is transient for.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::transient_for</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.group_window"></a>
+    <strong>group_window</strong>
+    </dt>
+    <dd>
+    <p>Window identification unique to a group of windows.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::group_window</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.leader_window"></a>
+    <strong>leader_window</strong>
+    </dt>
+    <dd>
+    Identification unique to windows spawned by the same command.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.size_hints"></a>
+    <strong>size_hints</strong>
+    </dt>
+    <dd>
+    <p>A table with size hints of the client.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::size_hints</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+        <ul>
+        <li><span class="parameter">user_position</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">user_size</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">program_position</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">program_size</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">max_width</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">max_height</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">min_width</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">min_height</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">width_inc</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        <li><span class="parameter">height_inc</span>
+            <span class="types"><span class="type">integer</span></span>
+
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client.size_hints_honor">size_hints_honor</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.motif_wm_hints"></a>
+    <strong>motif_wm_hints</strong>
+    </dt>
+    <dd>
+    <p>The motif WM hints of the client.</p>
+
+<p> This is nil if the client has no motif hints. Otherwise, this is a table that
+ contains the present properties. Note that awesome provides these properties
+ as-is and does not interpret them for you. For example, if the function table
+ only has &ldquo;resize&rdquo; set to true, this means that the window requests to be only
+ resizable, but asks for the other functions not to be able. If however both
+ &ldquo;resize&rdquo; and &ldquo;all&rdquo; are set, this means that all but the resize function
+ should be enabled.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::motif_wm_hints</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+        <ul>
+        <li><span class="parameter">functions</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.all</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.resize</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.move</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.minimize</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.maximize</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">functions.close</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.all</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.border</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.resizeh</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.title</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.menu</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.minimize</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">decorations.maximize</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">input_mode</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">status</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">status.tearoff_window</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>optional</em>)
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.sticky"></a>
+    <strong>sticky</strong>
+    </dt>
+    <dd>
+    <p>Set the client sticky, i.e.  available on all tags.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::sticky</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.modal"></a>
+    <strong>modal</strong>
+    </dt>
+    <dd>
+    <p>Indicate if the client is modal.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::modal</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.focusable"></a>
+    <strong>focusable</strong>
+    </dt>
+    <dd>
+    <p>True if the client can receive the input focus.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::focusable</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.shape_bounding"></a>
+    <strong>shape_bounding</strong>
+    </dt>
+    <dd>
+    <p>The client&rsquo;s bounding shape as set by awesome as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_bounding</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#apply_shape_bounding">gears.surface.apply_shape_bounding</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.shape_clip"></a>
+    <strong>shape_clip</strong>
+    </dt>
+    <dd>
+    <p>The client&rsquo;s clip shape as set by awesome as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_clip</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.shape_input"></a>
+    <strong>shape_input</strong>
+    </dt>
+    <dd>
+    <p>The client&rsquo;s input shape as set by awesome as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_input</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.client_shape_bounding"></a>
+    <strong>client_shape_bounding</strong>
+    </dt>
+    <dd>
+    <p>The client&rsquo;s bounding shape as set by the program as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_client_bounding</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.client_shape_clip"></a>
+    <strong>client_shape_clip</strong>
+    </dt>
+    <dd>
+    <p>The client&rsquo;s clip shape as set by the program as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_client_clip</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">surface</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.startup_id"></a>
+    <strong>startup_id</strong>
+    </dt>
+    <dd>
+    <p>The FreeDesktop StartId.</p>
+
+<p> When a client is spawned (like using a terminal or <a href="../libraries/awful.spawn.html#">awful.spawn</a>, a startup
+ notification identifier is created. When the client is created, this
+ identifier remain the same. This allow to match a spawn event to an actual
+ client.</p>
+
+<p> This is used to display a different mouse cursor when the application is
+ loading and also to attach some properties to the newly created client (like
+ a <a href="../classes/tag.html#">tag</a> or <a href="../classes/client.html#client.floating">floating</a> state).</p>
+
+<p> Some applications, like <code>xterm</code>, don&rsquo;t support startup notification. While
+ not perfect, the addition the following code to <a href="../sample files/rc.lua.html#">rc.lua</a> will mitigate the
+ issue. Please note that this code is Linux specific.</p>
+
+<pre><code>local blacklisted_snid = setmetatable({}, {__mode = "v" })
+
+--- Make startup notification work for some clients like XTerm. This is ugly
+-- but works often enough to be useful.
+local function fix_startup_id(c)
+    -- Prevent "broken" sub processes created by &lt;code&gt;c&lt;/code&gt; to inherit its SNID
+    if c.startup_id then
+        blacklisted_snid[c.startup_id] = blacklisted_snid[c.startup_id] or c
+        return
+    end
+
+    if not c.pid then return end
+
+    -- Read the process environment variables
+    local f = io.open("/proc/"..c.pid.."/environ", "rb")
+
+    -- It will only work on Linux, that's already 99% of the userbase.
+    if not f then return end
+
+    local value = _VERSION &lt;= "Lua 5.1" and "([^\z]*)\0" or "([^\0]*)\0"
+    local snid = f:read("*all"):match("STARTUP_ID=" .. value)
+    f:close()
+
+    -- If there is already a client using this SNID, it means it's either a
+    -- subprocess or another window for the same process. While it makes sense
+    -- in some case to apply the same rules, it is not always the case, so
+    -- better doing nothing rather than something stupid.
+    if blacklisted_snid[snid] then return end
+
+    c.startup_id = snid
+
+    blacklisted_snid[snid] = c
+end
+
+awful.rules.add_rule_source(
+    "snid", fix_startup_id, {}, {"awful.spawn", "awful.rules"}
+)
+</code></pre>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::startup_id</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/awful.spawn.html#">awful.spawn</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.valid"></a>
+    <strong>valid</strong>
+    </dt>
+    <dd>
+    <p>If the client that this object refers to is still managed by awesome.</p>
+
+<p> To avoid errors, use:</p>
+
+<pre><code>local is_valid = pcall(function() return c.valid end) and c.valid
+</code></pre>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::valid</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.first_tag"></a>
+    <strong>first_tag</strong>
+    </dt>
+    <dd>
+    <p>The first tag of the client.   Optimized form of <code>c:tags()[1]</code>.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::first_tag</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.marked"></a>
+    <strong>marked</strong>
+    </dt>
+    <dd>
+    <p>If a client is marked or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>marked</em> (for legacy reasons, use <code>property::marked</code>)</li>
+<li><em>unmarked</em> (for legacy reasons, use <code>property::marked</code>)</li>
+<li><em>property::marked</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.is_fixed"></a>
+    <strong>is_fixed</strong>
+    </dt>
+    <dd>
+    Return if a client has a fixed size or not.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::is_fixed</em></li>
+</ul>
+
+
+<p> This property is read only.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         The fixed size state
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/client.html#client.size_hints">size_hints</a></li>
+         <li><a href="../classes/client.html#client.size_hints_honor">size_hints_honor</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.immobilized"></a>
+    <strong>immobilized</strong>
+    </dt>
+    <dd>
+    Is the client immobilized horizontally?</p>
+
+<p> Does the client have a fixed horizontal position and width, i.e. is it
+ fullscreen, maximized, or horizontally maximized?</p>
+
+<p> This property is read only.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         The immobilized state
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/client.html#client.maximized">maximized</a></li>
+         <li><a href="../classes/client.html#client.maximized_horizontal">maximized_horizontal</a></li>
+         <li><a href="../classes/client.html#client.maximized_vertical">maximized_vertical</a></li>
+         <li><a href="../classes/client.html#client.fullscreen">fullscreen</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.immobilized"></a>
+    <strong>immobilized</strong>
+    </dt>
+    <dd>
+    Is the client immobilized vertically?</p>
+
+<p> Does the client have a fixed vertical position and width, i.e. is it
+ fullscreen, maximized, or vertically maximized?</p>
+
+<p> This property is read only.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         The immobilized state
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/client.html#client.maximized">maximized</a></li>
+         <li><a href="../classes/client.html#client.maximized_horizontal">maximized_horizontal</a></li>
+         <li><a href="../classes/client.html#client.maximized_vertical">maximized_vertical</a></li>
+         <li><a href="../classes/client.html#client.fullscreen">fullscreen</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.floating"></a>
+    <strong>floating</strong>
+    </dt>
+    <dd>
+    <p>The client floating state.
+ If the client is part of the tiled layout or free floating.</p>
+
+<p> Note that some windows might be floating even if you
+ did not set them manually. For example, windows with a type different than
+ normal.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::floating</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         The floating state
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.x"></a>
+    <strong>x</strong>
+    </dt>
+    <dd>
+    <p>The x coordinates.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::x</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.y"></a>
+    <strong>y</strong>
+    </dt>
+    <dd>
+    <p>The y coordinates.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::y</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.width"></a>
+    <strong>width</strong>
+    </dt>
+    <dd>
+    <p>The width of the client.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::width</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.height"></a>
+    <strong>height</strong>
+    </dt>
+    <dd>
+    <p>The height of the client.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::height</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">height</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.dockable"></a>
+    <strong>dockable</strong>
+    </dt>
+    <dd>
+    <p>If the client is dockable.</p>
+
+<p> A dockable client is an application confined to the edge of the screen. The
+ space it occupies is substracted from the <a href="../classes/screen.html#screen.workarea">screen.workarea</a>.</p>
+
+<p> Clients with a type of &ldquo;utility&rdquo;, &ldquo;toolbar&rdquo; or &ldquo;dock&rdquo; are dockable by
+ default.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::dockable</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         The dockable state
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.requests_no_titlebar"></a>
+    <strong>requests_no_titlebar</strong>
+    </dt>
+    <dd>
+    <p>If the client requests not to be decorated with a titlebar.</p>
+
+<p> The motif wm hints allow a client to request not to be decorated by the WM in
+ various ways. This property uses the motif MWM_DECOR_TITLE hint and
+ interprets it as the client (not) wanting a titlebar.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::requests_no_titlebar</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Whether the client requests not to get a titlebar
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.shape"></a>
+    <strong>shape</strong>
+    </dt>
+    <dd>
+    Set the client shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">A</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+         gears.shape compatible function.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Signals"></a>Signals</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "client.focus"></a>
+    <strong>focus</strong>
+    </dt>
+    <dd>
+    When a client gains focus.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.list"></a>
+    <strong>list</strong>
+    </dt>
+    <dd>
+    Before manage, after unmanage, and when clients swap.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.swapped"></a>
+    <strong>swapped</strong>
+    </dt>
+    <dd>
+    When 2 clients are swapped
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         The other client
+        </li>
+        <li><span class="parameter">is_source</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If self is the source or the destination of the swap
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.manage"></a>
+    <strong>manage</strong>
+    </dt>
+    <dd>
+    When a new client appears and gets managed by Awesome.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "button::press"></a>
+    <strong>button::press</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mouse::move"></a>
+    <strong>mouse::move</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "property::window"></a>
+    <strong>property::window</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "request::activate"></a>
+    <strong>request::activate</strong>
+    </dt>
+    <dd>
+    When a client should get activated (focused and/or raised).</p>
+
+<p> <strong>Contexts are:</strong></p>
+
+<ul>
+<li><em>ewmh</em>: When a client asks for focus (from <code>X11</code> events).</li>
+<li><em>autofocus.check_focus</em>: When autofocus is enabled (from
+<code>awful.autofocus</code>).</li>
+<li><em>autofocus.check_focus_tag</em>: When autofocus is enabled
+(from <code>awful.autofocus</code>).</li>
+<li><em>client.jumpto</em>: When a custom lua extension asks a client to be focused
+(from <a href="../classes/client.html#client:jump_to">client.jump_to</a>).</li>
+<li><em>client.swap.global_bydirection</em>: When client swapping requires a focus
+change (from <a href="../classes/client.html#awful.client.swap.bydirection">awful.client.swap.bydirection</a>).</li>
+<li><em>client.movetotag</em>: When a client is moved to a new tag
+(from <a href="../classes/client.html#client:move_to_tag">client.move_to_tag</a>).</li>
+<li><em>client.movetoscreen</em>: When the client is moved to a new screen
+(from <a href="../classes/client.html#client:move_to_screen">client.move_to_screen</a>).</li>
+<li><em>client.focus.byidx</em>: When selecting a client using its index
+(from <a href="../classes/client.html#awful.client.focus.byidx">awful.client.focus.byidx</a>).</li>
+<li><em>client.focus.history.previous</em>: When cycling through history
+(from <a href="../classes/client.html#awful.client.focus.history.previous">awful.client.focus.history.previous</a>).</li>
+<li><em>menu.clients</em>: When using the builtin client menu
+(from <a href="../libraries/awful.menu.html#clients">awful.menu.clients</a>).</li>
+<li><em>rules</em>: When a new client is focused from a rule (from <a href="../libraries/awful.rules.html#">awful.rules</a>).</li>
+<li><em>screen.focus</em>: When a screen is focused (from <code>awful.screen.focus</code>).</li>
+</ul>
+
+
+<p> Default implementation: <a href="../libraries/awful.ewmh.html#awful.ewmh.activate">awful.ewmh.activate</a>.</p>
+
+<p> To implement focus stealing filters see <a href="../libraries/awful.ewmh.html#add_activate_filter">awful.ewmh.add_activate_filter</a>.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context where this signal was used.
+        </li>
+        <li><span class="parameter">hints</span> A table with additional hints:
+        <ul>
+        <li><span class="parameter">raise</span>
+            <span class="types"><span class="type">boolean</span></span>
+         should the client be raised?
+         (<em>default</em> false)
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "request::geometry"></a>
+    <strong>request::geometry</strong>
+    </dt>
+    <dd>
+
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         The client
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Why and what to resize. This is used for the
+   handlers to know if they are capable of applying the new geometry.
+        </li>
+        <li><span class="parameter">Additional</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         arguments. Each context handler may
+   interpret this differently.
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "request::tag"></a>
+    <strong>request::tag</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "request::urgent"></a>
+    <strong>request::urgent</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.tagged"></a>
+    <strong>tagged</strong>
+    </dt>
+    <dd>
+    When a client gets tagged.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="../classes/tag.html#">tag</a></span>
+         The tag object.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.unfocus"></a>
+    <strong>unfocus</strong>
+    </dt>
+    <dd>
+    When a client gets unfocused.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.unmanage"></a>
+    <strong>unmanage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.untagged"></a>
+    <strong>untagged</strong>
+    </dt>
+    <dd>
+    When a client gets untagged.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="../classes/tag.html#">tag</a></span>
+         The tag object.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.raised"></a>
+    <strong>raised</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.lowered"></a>
+    <strong>lowered</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "property::size"></a>
+    <strong>property::size</strong>
+    </dt>
+    <dd>
+    When the height or width changed.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:geometry">client.geometry</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "property::position"></a>
+    <strong>property::position</strong>
+    </dt>
+    <dd>
+    When the x or y coordinate changed.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:geometry">client.geometry</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "property::floating_geometry"></a>
+    <strong>property::floating_geometry</strong>
+    </dt>
+    <dd>
+    The last geometry when client was floating.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "request::titlebars"></a>
+    <strong>request::titlebars</strong>
+    </dt>
+    <dd>
+    Emited when a client need to get a titlebar.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">content</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The context (like &ldquo;rules&rdquo;)
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Some hints.
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.marked"></a>
+    <strong>marked</strong>
+    </dt>
+    <dd>
+    The client marked signal (deprecated).
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.unmarked"></a>
+    <strong>unmarked</strong>
+    </dt>
+    <dd>
+    The client unmarked signal (deprecated).
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.border_focus"></a>
+    <strong>beautiful.border_focus</strong>
+    </dt>
+    <dd>
+    The border color when the client is focused.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.border_normal"></a>
+    <strong>beautiful.border_normal</strong>
+    </dt>
+    <dd>
+    The border color when the client is not focused.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.border_width"></a>
+    <strong>beautiful.border_width</strong>
+    </dt>
+    <dd>
+    The client border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.border_marked"></a>
+    <strong>beautiful.border_marked</strong>
+    </dt>
+    <dd>
+    The border color when the client is focused.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Deprecated_functions"></a>Deprecated functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.client.jumpto"></a>
+    <strong>awful.client.jumpto</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Jump to the given client.
+ Takes care of focussing the screen, the right tag, etc.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         the client to jump to
+        </li>
+        <li><span class="parameter">merge</span>
+            <span class="types"><span class="type">bool</span> or <span class="type">function</span></span>
+         If true then merge tags (select the client&rsquo;s
+   first tag additionally) when the client is not visible.
+   If it is a function, it will be called with the client and its first
+   tag as arguments.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:jump_to">client.jump_to</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.visible"></a>
+    <strong>awful.client.visible</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get visible clients from a screen.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">integer</span> or <a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen, or nil for all screens.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/screen.html#screen.clients">screen.clients</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.tiled"></a>
+    <strong>awful.client.tiled</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get visible and tiled clients
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">integer</span> or <a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen, or nil for all screens.
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/screen.html#screen.tiled_clients">screen.tiled_clients</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.moveresize"></a>
+    <strong>awful.client.moveresize</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Move/resize a client relative to current coordinates.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         The relative x coordinate.
+        </li>
+        <li><span class="parameter">y</span>
+         The relative y coordinate.
+        </li>
+        <li><span class="parameter">w</span>
+         The relative width.
+        </li>
+        <li><span class="parameter">h</span>
+         The relative height.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client, otherwise focused one is used.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:relative_move">client.relative_move</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.movetotag"></a>
+    <strong>awful.client.movetotag</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Move a client to a tag.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         The tag to move the client to.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to move, otherwise the focused one is used.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:move_to_tag">client.move_to_tag</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.toggletag"></a>
+    <strong>awful.client.toggletag</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Toggle a tag on a client.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+         The tag to toggle.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to toggle, otherwise the focused one is used.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:toggle_tag">client.toggle_tag</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.movetoscreen"></a>
+    <strong>awful.client.movetoscreen</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Move a client to a screen.  Default is next screen, cycling.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to move.
+        </li>
+        <li><span class="parameter">s</span>
+         The screen, default to current + 1.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/screen.html#">screen</a></li>
+         <li><a href="../classes/client.html#client:move_to_screen">client.move_to_screen</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.mark"></a>
+    <strong>awful.client.mark</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Mark a client, and then call &lsquo;marked&rsquo; hook.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to mark, the focused one if not specified.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.unmark"></a>
+    <strong>awful.client.unmark</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Unmark a client and then call &lsquo;unmarked&rsquo; hook.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to unmark, or the focused one if not specified.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.ismarked"></a>
+    <strong>awful.client.ismarked</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Check if a client is marked.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to check, or the focused one otherwise.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.togglemarked"></a>
+    <strong>awful.client.togglemarked</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Toggle a client as marked.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to toggle mark.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.floating.set"></a>
+    <strong>awful.client.floating.set</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Set a client floating state, overriding auto-detection.
+ Floating client are not handled by tiling layouts.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+        <li><span class="parameter">s</span>
+         True or false.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.isfixed"></a>
+    <strong>awful.client.isfixed</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Return if a client has a fixed size or not.
+ This function is deprecated, use <code>c.is_fixed</code>
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/client.html#client.is_fixed">is_fixed</a></li>
+         <li><a href="../classes/client.html#client.size_hints_honor">size_hints_honor</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.floating.get"></a>
+    <strong>awful.client.floating.get</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a client floating state.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client.floating">floating</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.floating.toggle"></a>
+    <strong>awful.client.floating.toggle</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Toggle the floating state of a client between &lsquo;auto&rsquo; and &lsquo;true&rsquo;.
+ Use <code>c.floating = not c.floating</code>
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client.floating">floating</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.dockable.get"></a>
+    <strong>awful.client.dockable.get</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a client&rsquo;s dockable state.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.dockable.set"></a>
+    <strong>awful.client.dockable.set</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Set a client&rsquo;s dockable state, overriding auto-detection.</p>
+
+<p> With this enabled you can dock windows by moving them from the center
+ to the edge of the workarea.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+        <li><span class="parameter">value</span>
+         True or false.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.property.get"></a>
+    <strong>awful.client.property.get</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a client property.</p>
+
+<p> This method is deprecated. It is now possible to use <code>c.value</code> directly.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+        </li>
+        <li><span class="parameter">prop</span>
+         The property name.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.property.set"></a>
+    <strong>awful.client.property.set</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Set a client property.</p>
+
+<p> This method is deprecated. It is now possible to use <code>c.value = value</code>
+ directly.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+        </li>
+        <li><span class="parameter">prop</span>
+         The property name.
+        </li>
+        <li><span class="parameter">value</span>
+         The value.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.run_or_raise"></a>
+    <strong>awful.client.run_or_raise</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Switch to a client matching the given condition if running, else spawn it.
+ If multiple clients match the given condition then the next one is
+ focussed.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">cmd</span>
+         the command to execute
+        </li>
+        <li><span class="parameter">matcher</span>
+         a function that returns true to indicate a matching client
+        </li>
+        <li><span class="parameter">merge</span>
+            <span class="types"><span class="type">bool</span> or <span class="type">function</span></span>
+         If true then merge tags (select the client&rsquo;s
+   first tag additionally) when the client is not visible.
+   If it is a function, it will be called with the client as argument.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../libraries/awful.spawn.html#once">awful.spawn.once</a></li>
+         <li><a href="../libraries/awful.spawn.html#single_instance">awful.spawn.single_instance</a></li>
+         <li><a href="../libraries/awful.spawn.html#raise_or_spawn">awful.spawn.raise_or_spawn</a></li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- run or raise urxvt (perhaps, with tabs) on modkey + semicolon
+</span>awful.key({ modkey, }, <span class="string">'semicolon'</span>, <span class="keyword">function</span> ()
+    <span class="keyword">local</span> matcher = <span class="keyword">function</span> (c)
+        <span class="keyword">return</span> awful.rules.match(c, {class = <span class="string">'URxvt'</span>})
+    <span class="keyword">end</span>
+    awful.client.run_or_raise(<span class="string">'urxvt'</span>, matcher)
+<span class="keyword">end</span>);</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "awful.client.get_transient_for_matching"></a>
+    <strong>awful.client.get_transient_for_matching</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a matching transient_for client (if any).
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+        </li>
+        <li><span class="parameter">matcher</span>
+            <span class="types"><span class="type">function</span></span>
+         A function that should return true, if
+   a matching parent client is found.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:get_transient_for_matching">client.get_transient_for_matching</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.is_transient_for"></a>
+    <strong>awful.client.is_transient_for</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Is a client transient for another one?
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The child client (having transient_for).
+        </li>
+        <li><span class="parameter">c2</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The parent client to check.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#awful.client.is_transient_for">client.is_transient_for</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Layout_related_functions"></a>Layout related functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.client.getmaster"></a>
+    <strong>awful.client.getmaster</strong>
+    </dt>
+    <dd>
+    Get the master window.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">_or_idx</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+        [opt=awful.screen.focused()] s The screen.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.setmaster"></a>
+    <strong>awful.client.setmaster</strong>
+    </dt>
+    <dd>
+    Set the client as master: put it at the beginning of other windows.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The window to set as master.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.setslave"></a>
+    <strong>awful.client.setslave</strong>
+    </dt>
+    <dd>
+    Set the client as slave: put it at the end of other windows.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The window to set as slave.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.idx"></a>
+    <strong>awful.client.idx</strong>
+    </dt>
+    <dd>
+    Calculate a client&rsquo;s column number, index in that column, and
+ number of visible clients in this column.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         the client
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.setwfact"></a>
+    <strong>awful.client.setwfact</strong>
+    </dt>
+    <dd>
+    Set the window factor of a client
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">wfact</span>
+         the window factor value
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         the client
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.incwfact"></a>
+    <strong>awful.client.incwfact</strong>
+    </dt>
+    <dd>
+    Change window factor of a client.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">add</span>
+            <span class="types"><span class="type">number</span></span>
+         Amount to increase/decrease the client&rsquo;s window factor.
+   Should be between <code>-current_window_factor</code> and something close to
+   infinite.  The normalisation then ensures that the sum of all factors is 1.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         the client
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Extra_properties_available_in_awful_rules_and_awful_spawn"></a>Extra properties available in awful.rules and awful.spawn</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "client.placement"></a>
+    <strong>placement</strong>
+    </dt>
+    <dd>
+    <p>The client default placement on the screen.</p>
+
+<p> The default config uses:</p>
+
+<pre><code>awful.placement.no_overlap+awful.placement.no_offscreen
+</code></pre>
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/awful.placement.html#">awful.placement</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.honor_padding"></a>
+    <strong>honor_padding</strong>
+    </dt>
+    <dd>
+    When applying the placement, honor the screen padding.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/awful.placement.html#">awful.placement</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.honor_workarea"></a>
+    <strong>honor_workarea</strong>
+    </dt>
+    <dd>
+    When applying the placement, honor the screen work area.</p>
+
+<p> The workarea is the part of the screen that excludes the bars and docks.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/awful.placement.html#">awful.placement</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.tag"></a>
+    <strong>tag</strong>
+    </dt>
+    <dd>
+    The client default tag.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/tag.html#">tag</a></li>
+         <li><a href="../classes/client.html#client.new_tag">new_tag</a></li>
+         <li><a href="../classes/client.html#client:tags">tags</a></li>
+         <li><a href="../classes/client.html#client.switch_to_tags">switch_to_tags</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.tags"></a>
+    <strong>tags</strong>
+    </dt>
+    <dd>
+    The client default tags.</p>
+
+<p> Avoid using the tag and tags properties at the same time, it will cause
+ issues.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+
+         (<em>default</em> {tag})
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/tag.html#">tag</a></li>
+         <li><a href="../classes/client.html#client.new_tag">new_tag</a></li>
+         <li><a href="../classes/client.html#client:tags">tags</a></li>
+         <li><a href="../classes/client.html#client.switch_to_tags">switch_to_tags</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.new_tag"></a>
+    <strong>new_tag</strong>
+    </dt>
+    <dd>
+    <p>Create a new tag for this client.</p>
+
+<p> If the value is <code>true</code>, the new tag will be named after the client <a href="../classes/client.html#client.class">class</a>.
+ If it is a string, it will be the tag name.</p>
+
+<p> If a table is used, all of its properties will be passed to the tag
+ constructor:</p>
+
+<pre><code>new_tag = {
+    name     = "My new tag!", -- The tag name.
+    layout   = awful.layout.suit.max, -- Set the tag layout.
+    volatile = true, -- Remove the tag when the client is closed.
+}
+</code></pre>
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">new_tag</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/tag.html#">tag</a></li>
+         <li><a href="../classes/client.html#client:tags">tags</a></li>
+         <li><a href="../classes/client.html#client.switch_to_tags">switch_to_tags</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.switch_to_tags"></a>
+    <strong>switch_to_tags</strong>
+    </dt>
+    <dd>
+    Unselect the current tags and select this client tags.
+ Note that this property was called <code>switchtotag</code> in previous Awesome versions.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/tag.html#tag.selected">tag.selected</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.focus"></a>
+    <strong>focus</strong>
+    </dt>
+    <dd>
+    Define if the client should grab focus by default.</p>
+
+<p> The <a href="../classes/client.html#request::activate">request::activate</a> context for this call is <code>rules</code>.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client.titlebars_enabled"></a>
+    <strong>titlebars_enabled</strong>
+    </dt>
+    <dd>
+    Should this client have a titlebar by default.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/awful.titlebar.html#">awful.titlebar</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client.callback"></a>
+    <strong>callback</strong>
+    </dt>
+    <dd>
+    A function to call when this client is ready.</p>
+
+<p> It can be useful to set extra properties or perform actions.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/awful.spawn.html#">awful.spawn</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.object"></a>
+    <strong>awful.object</strong>
+    </dt>
+    <dd>
+    Client class.</p>
+
+<p> This table allow to add more dynamic properties to the clients. For example,
+ doing:</p>
+
+<pre><code> function awful.client.object.set_my_cool_property(c, value)
+     -- Some logic code
+     c._my_secret_my_cool_property = value
+     c:emit_signal("property::my_cool_property)
+ end
+
+ function awful.client.object.get_my_cool_property()
+     return c._my_secret_my_cool_property
+ end
+</code></pre>
+
+<p> Will add a new &ldquo;my_cool_property&rdquo; dyanmic property to all client. These
+ methods will be called when an user does <code>c.my_cool_property = &quot;something&quot;</code>
+ or set them in <code>awdul.rules</code>.</p>
+
+<p> Note that doing this isn&rsquo;t required to set random properties to the client,
+ it is only useful when setting or getting these properties require code to
+ executed.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "client.focus"></a>
+    <strong>client.focus</strong>
+    </dt>
+    <dd>
+    The focused <a href="../classes/client.html#">client</a> or nil (in case there is none).
+
+
+    <ul>
+        <li><span class="parameter">focus</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "client:struts"></a>
+    <strong>client:struts (struts)</strong>
+    </dt>
+    <dd>
+    Return client struts (reserved space at the edge of the screen).
+
+
+    <ul>
+        <li><span class="parameter">struts</span>
+         A table with new strut values, or none.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table with strut values.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:buttons"></a>
+    <strong>client:buttons (buttons_table)</strong>
+    </dt>
+    <dd>
+    Get or set mouse buttons bindings for a client.
+
+
+    <ul>
+        <li><span class="parameter">buttons_table</span>
+         An array of mouse button bindings objects, or nothing.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table with all buttons.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:instances"></a>
+    <strong>client:instances ()</strong>
+    </dt>
+    <dd>
+    Get the number of instances.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The number of client objects alive.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:get"></a>
+    <strong>client:get ([screen[, stacked]])</strong>
+    </dt>
+    <dd>
+    Get all clients into a table.
+
+
+    <ul>
+        <li><span class="parameter">screen</span>
+            <span class="types"><span class="type">integer</span></span>
+         A screen number to filter clients on.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Return clients in stacking order? (ordered from
+   top to bottom).
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A table with clients.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:isvisible"></a>
+    <strong>client:isvisible ()</strong>
+    </dt>
+    <dd>
+    Check if a client is visible on its screen.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A boolean value, true if the client is visible, false otherwise.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:kill"></a>
+    <strong>client:kill ()</strong>
+    </dt>
+    <dd>
+    Kill a client.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:swap"></a>
+    <strong>client:swap (c)</strong>
+    </dt>
+    <dd>
+    Swap a client with another one in global client list.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client to swap with.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:tags"></a>
+    <strong>client:tags (tags_table)</strong>
+    </dt>
+    <dd>
+    <p>Access or set the client tags.</p>
+
+<p> Use the <a href="../classes/client.html#client.first_tag">first_tag</a> field to access the first tag of a client directly.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::tags</em></li>
+</ul>
+
+
+
+    <ul>
+        <li><span class="parameter">tags_table</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table with tags to set, or <code>nil</code> to get the
+   current tags.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A table with all tags.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:raise"></a>
+    <strong>client:raise ()</strong>
+    </dt>
+    <dd>
+    Raise a client on top of others which are on the same layer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:lower"></a>
+    <strong>client:lower ()</strong>
+    </dt>
+    <dd>
+    Lower a client on bottom of others which are on the same layer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:unmanage"></a>
+    <strong>client:unmanage ()</strong>
+    </dt>
+    <dd>
+    Stop managing a client.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:geometry"></a>
+    <strong>client:geometry (geo)</strong>
+    </dt>
+    <dd>
+    Return or set client geometry.
+
+
+    <ul>
+        <li><span class="parameter">geo</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
+         A table with new coordinates, or nil.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A table with client geometry and coordinates.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:apply_size_hints"></a>
+    <strong>client:apply_size_hints (width, height)</strong>
+    </dt>
+    <dd>
+    Apply size hints to a size.
+
+
+    <ul>
+        <li><span class="parameter">width</span>
+         Desired width of client
+        </li>
+        <li><span class="parameter">height</span>
+         Desired height of client
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        Actual width of client</li>
+        <li>
+        Actual height of client</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:keys"></a>
+    <strong>client:keys (keys_table)</strong>
+    </dt>
+    <dd>
+    Get or set keys bindings for a client.
+
+
+    <ul>
+        <li><span class="parameter">keys_table</span>
+         An array of key bindings objects, or nothing.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table with all keys.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:get_icon"></a>
+    <strong>client:get_icon (index)</strong>
+    </dt>
+    <dd>
+    <p>Get the client&rsquo;s n-th icon.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::icon</em></li>
+</ul>
+
+
+
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">interger</span></span>
+         The index in the list of icons to get.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">surface</span></span>
+        A lightuserdata for a cairo surface. This reference must be
+ destroyed!
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:disconnect_signal"></a>
+    <strong>client:disconnect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Disconnect from a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback that should be disconnected.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:emit_signal"></a>
+    <strong>client:emit_signal (name, ...)</strong>
+    </dt>
+    <dd>
+    Emit a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">...</span>
+         Extra arguments for the callback functions. Each connected
+   function receives the object as first argument and then any extra
+   arguments that are given to emit_signal().
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:connect_signal"></a>
+    <strong>client:connect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Connect to a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback to call when the signal is emitted.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:jump_to"></a>
+    <strong>client:jump_to (merge)</strong>
+    </dt>
+    <dd>
+    Jump to the given client.
+ Takes care of focussing the screen, the right tag, etc.
+
+
+    <ul>
+        <li><span class="parameter">merge</span>
+            <span class="types"><span class="type">bool</span> or <span class="type">function</span></span>
+         If true then merge tags (select the client&rsquo;s
+   first tag additionally) when the client is not visible.
+   If it is a function, it will be called with the client and its first
+   tag as arguments.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:relative_move"></a>
+    <strong>client:relative_move ([x=c.x[, y=c.y[, w=c.width[, h=c.height]]]])</strong>
+    </dt>
+    <dd>
+    Move/resize a client relative to current coordinates.
+
+
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         The relative x coordinate.
+         (<em>default</em> c.x)
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         The relative y coordinate.
+         (<em>default</em> c.y)
+        </li>
+        <li><span class="parameter">w</span>
+            <span class="types"><span class="type">number</span></span>
+         The relative width.
+         (<em>default</em> c.width)
+        </li>
+        <li><span class="parameter">h</span>
+            <span class="types"><span class="type">number</span></span>
+         The relative height.
+         (<em>default</em> c.height)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:geometry">geometry</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client:move_to_tag"></a>
+    <strong>client:move_to_tag (target)</strong>
+    </dt>
+    <dd>
+    Move a client to a tag.
+
+
+    <ul>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="../classes/tag.html#">tag</a></span>
+         The tag to move the client to.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:toggle_tag"></a>
+    <strong>client:toggle_tag (target)</strong>
+    </dt>
+    <dd>
+    Toggle a tag on a client.
+
+
+    <ul>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="../classes/tag.html#">tag</a></span>
+         The tag to move the client to.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:move_to_screen"></a>
+    <strong>client:move_to_screen ([s=c.screen.index+1])</strong>
+    </dt>
+    <dd>
+    Move a client to a screen.  Default is next screen, cycling.
+
+
+    <ul>
+        <li><span class="parameter">s</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen, default to current + 1.
+         (<em>default</em> c.screen.index+1)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/screen.html#">screen</a></li>
+         <li><a href="../classes/client.html#request::activate">request::activate</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client:to_selected_tags"></a>
+    <strong>client:to_selected_tags ()</strong>
+    </dt>
+    <dd>
+    Tag a client with the set of current tags.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/screen.html#screen.selected_tags">screen.selected_tags</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "client:get_transient_for_matching"></a>
+    <strong>client:get_transient_for_matching (matcher)</strong>
+    </dt>
+    <dd>
+    Get a matching transient_for client (if any).
+
+
+    <ul>
+        <li><span class="parameter">matcher</span>
+            <span class="types"><span class="type">function</span></span>
+         A function that should return true, if
+   a matching parent client is found.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">client.client</span> or <span class="type">nil</span></span>
+        The matching parent client or nil.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "client:is_transient_for"></a>
+    <strong>client:is_transient_for (c2)</strong>
+    </dt>
+    <dd>
+    Is a client transient for another one?
+
+
+    <ul>
+        <li><span class="parameter">c2</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The parent client to check.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">client.client</span> or <span class="type">nil</span></span>
+        The parent client or nil.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_awful_client_focus_Functions"></a>lib.awful.client.focus Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.client.focus.history.delete"></a>
+    <strong>awful.client.focus.history.delete (c)</strong>
+    </dt>
+    <dd>
+    Remove a client from the focus history
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client that must be removed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.byidx"></a>
+    <strong>awful.client.focus.byidx (i[, c])</strong>
+    </dt>
+    <dd>
+    Focus a client by its relative index.
+
+
+    <ul>
+        <li><span class="parameter">i</span>
+         The index.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.filter"></a>
+    <strong>awful.client.focus.filter (c)</strong>
+    </dt>
+    <dd>
+    Filter out window that we do not want handled by focus.
+ This usually means that desktop, dock and splash windows are
+ not registered and cannot get focus.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         A client.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The same client if it&rsquo;s ok, nil otherwise.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.add"></a>
+    <strong>awful.client.focus.history.add (c)</strong>
+    </dt>
+    <dd>
+    Update client focus history.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client that has been focused.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.get"></a>
+    <strong>awful.client.focus.history.get (s, idx, filter)</strong>
+    </dt>
+    <dd>
+    Get the latest focused client for a screen in history.
+
+
+    <ul>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">int</span> or <a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen to look for.
+        </li>
+        <li><span class="parameter">idx</span>
+            <span class="types"><span class="type">int</span></span>
+         The index: 0 will return first candidate,
+   1 will return second, etc.
+        </li>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">function</span></span>
+         An optional filter.  If no client is found in the
+   first iteration, <a href="../classes/client.html#awful.client.focus.filter">awful.client.focus.filter</a> is used by default to get any
+   client.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+        A client.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.history.previous"></a>
+    <strong>awful.client.focus.history.previous ()</strong>
+    </dt>
+    <dd>
+    Focus the previous client in history.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.bydirection"></a>
+    <strong>awful.client.focus.bydirection (dir[, c[, stacked=false]])</strong>
+    </dt>
+    <dd>
+    Focus a client by the given direction.
+
+
+    <ul>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The direction, can be either
+   <code>&quot;up&quot;</code>, <code>&quot;down&quot;</code>, <code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.focus.global_bydirection"></a>
+    <strong>awful.client.focus.global_bydirection (dir[, c[, stacked=false]])</strong>
+    </dt>
+    <dd>
+    Focus a client by the given direction.  Moves across screens.
+
+
+    <ul>
+        <li><span class="parameter">dir</span>
+         The direction, can be either &ldquo;up&rdquo;, &ldquo;down&rdquo;, &ldquo;left&rdquo; or &ldquo;right&rdquo;.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">stacked</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use stacking order? (top to bottom)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_awful_client_shape_Functions"></a>lib.awful.client.shape Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.client.shape.get_transformed"></a>
+    <strong>awful.client.shape.get_transformed (c, shape_name)</strong>
+    </dt>
+    <dd>
+    Get one of a client&rsquo;s shapes and transform it to include window decorations.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client whose shape should be retrieved
+        </li>
+        <li><span class="parameter">shape_name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Either &ldquo;bounding&rdquo; or &ldquo;clip&rdquo;
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.shape.update.all"></a>
+    <strong>awful.client.shape.update.all (c)</strong>
+    </dt>
+    <dd>
+    Update all of a client&rsquo;s shapes from the shapes the client set itself.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to act on
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.shape.update.bounding"></a>
+    <strong>awful.client.shape.update.bounding (c)</strong>
+    </dt>
+    <dd>
+    Update a client&rsquo;s bounding shape from the shape the client set itself.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to act on
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.client.shape.update.clip"></a>
+    <strong>awful.client.shape.update.clip (c)</strong>
+    </dt>
+    <dd>
+    Update a client&rsquo;s clip shape from the shape the client set itself.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client to act on
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_awful_client_urgent_Functions"></a>lib.awful.client.urgent Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.urgent.get"></a>
+    <strong>awful.urgent.get ()</strong>
+    </dt>
+    <dd>
+    Get the first client that got the urgent hint.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+        The first urgent client.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.urgent.jumpto"></a>
+    <strong>awful.urgent.jumpto (merge)</strong>
+    </dt>
+    <dd>
+    Jump to the client that received the urgent hint first.
+
+
+    <ul>
+        <li><span class="parameter">merge</span>
+            <span class="types"><span class="type">bool</span> or <span class="type">function</span></span>
+         If true then merge tags (select the client&rsquo;s
+   first tag additionally) when the client is not visible.
+   If it is a function, it will be called with the client as argument.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.urgent.add"></a>
+    <strong>awful.urgent.add (c, prop)</strong>
+    </dt>
+    <dd>
+    Adds client to urgent stack.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client object.
+        </li>
+        <li><span class="parameter">prop</span>
+         The property which is updated.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.urgent.delete"></a>
+    <strong>awful.urgent.delete (c)</strong>
+    </dt>
+    <dd>
+    Remove client from urgent stack.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client object.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

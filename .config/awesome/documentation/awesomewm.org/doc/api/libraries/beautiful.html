@@ -1,0 +1,1061 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module beautiful - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Fields">Fields</a></li>
+<li><a href="#lib_beautiful_theme_assets_Functions">lib.beautiful.theme_assets Functions</a></li>
+<li><a href="#lib_beautiful_xresources_Functions">lib.beautiful.xresources Functions</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><strong>beautiful</strong></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>beautiful</code></h1>
+<p>Theme library.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008-2009 Damien Leone, Julien Danjou</li>
+        <li><strong>Author</strong>: Damien Leone &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfdbded2d6dad191d3dad0d1daffd8d2ded6d391dcd0d2">[email&#160;protected]</a>&gt;,Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c4659404549426c484d424643590245424a43">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#get_font">get_font (name)</a></td>
+	<td class="summary">Get a font description.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_merged_font">get_merged_font (name, merge)</a></td>
+	<td class="summary">Get a new font with merged attributes, based on another one.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_font_height">get_font_height (name)</a></td>
+	<td class="summary">Get the height of a font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#init">init (config)</a></td>
+	<td class="summary">Function that initializes the theme settings.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get">get ()</a></td>
+	<td class="summary">Get the current theme.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#font">font</a></td>
+	<td class="summary">The default font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#useless_gap">useless_gap</a></td>
+	<td class="summary">The gap between clients.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#border_width">border_width</a></td>
+	<td class="summary">The client border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#border_normal">border_normal</a></td>
+	<td class="summary">The default clients border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#border_focus">border_focus</a></td>
+	<td class="summary">The focused client border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#border_marked">border_marked</a></td>
+	<td class="summary">The marked clients border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wallpaper">wallpaper</a></td>
+	<td class="summary">The wallpaper path.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awesome_icon">awesome_icon</a></td>
+	<td class="summary">The Awesome icon path.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#theme_path">theme_path</a></td>
+	<td class="summary">The current theme path (if any)</td>
+	</tr>
+</table>
+<h2><a href="#lib_beautiful_theme_assets_Functions">lib.beautiful.theme_assets Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#theme_assets.taglist_squares_sel">theme_assets.taglist_squares_sel (size, fg)</a></td>
+	<td class="summary">Generate selected taglist square.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.taglist_squares_unsel">theme_assets.taglist_squares_unsel (size, fg)</a></td>
+	<td class="summary">Generate unselected taglist square.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.gen_awesome_name">theme_assets.gen_awesome_name (cr, height, bg, fg, alt_fg)</a></td>
+	<td class="summary">Put Awesome WM name onto cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.gen_logo">theme_assets.gen_logo (cr, width, height, bg, fg)</a></td>
+	<td class="summary">Put Awesome WM logo onto cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.awesome_icon">theme_assets.awesome_icon (size, bg, fg)</a></td>
+	<td class="summary">Generate Awesome WM logo.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.wallpaper">theme_assets.wallpaper (bg, fg, alt_fg, s)</a></td>
+	<td class="summary">Generate Awesome WM wallpaper.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.recolor_titlebar">theme_assets.recolor_titlebar (theme, color, state, postfix)</a></td>
+	<td class="summary">Recolor titlebar icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#recolor_titlebar_normal">recolor_titlebar_normal</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Recolor unfocused titlebar icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#recolor_titlebar_focus">recolor_titlebar_focus</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Recolor focused titlebar icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#theme_assets.recolor_layout">theme_assets.recolor_layout (theme, color)</a></td>
+	<td class="summary">Recolor layout icons.</td>
+	</tr>
+</table>
+<h2><a href="#lib_beautiful_xresources_Functions">lib.beautiful.xresources Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#xresources.get_current_theme">xresources.get_current_theme ()</a></td>
+	<td class="summary">Get current base colorscheme from xrdb.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#xresources.get_dpi">xresources.get_dpi</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get global or per-screen DPI value falling back to xrdb.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#xresources.set_dpi">xresources.set_dpi (dpi[, s])</a></td>
+	<td class="summary">Set DPI for a given screen (defaults to global).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#xresources.apply_dpi">xresources.apply_dpi (size[, s])</a></td>
+	<td class="summary">Compute resulting size applying current DPI value (optionally per screen).</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "get_font"></a>
+    <strong>get_font (name)</strong>
+    </dt>
+    <dd>
+    Get a font description.</p>
+
+<p> See https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+         The name of the font.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">lgi.Pango.FontDescription</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_merged_font"></a>
+    <strong>get_merged_font (name, merge)</strong>
+    </dt>
+    <dd>
+    Get a new font with merged attributes, based on another one.</p>
+
+<p> See https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">Pango.FontDescription</span></span>
+         The base font.
+        </li>
+        <li><span class="parameter">merge</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Attributes that should be merged, e.g. &ldquo;bold&rdquo;.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">lgi.Pango.FontDescription</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_font_height"></a>
+    <strong>get_font_height (name)</strong>
+    </dt>
+    <dd>
+    Get the height of a font.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+         Name of the font
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "init"></a>
+    <strong>init (config)</strong>
+    </dt>
+    <dd>
+    <p>Function that initializes the theme settings.  Should be run at the
+ beginning of the awesome configuration file (normally rc.lua).</p>
+
+<p> Example usages:</p>
+
+<pre><code>-- Using a table
+beautiful.init({font = 'Monospace Bold 10'})
+
+-- From a config file
+beautiful.init("&lt;path&gt;/theme.lua")
+</code></pre>
+
+<p> Example &ldquo;<path>/theme.lua&rdquo; (see <a href="../documentation/05-awesomerc.md.html#Variable_definitions">05-awesomerc.md:Variable_definitions</a>):</p>
+
+<pre><code>theme = {}
+    theme.font = 'Monospace Bold 10'
+return theme
+</code></pre>
+
+<p> Example using the return value:</p>
+
+<pre><code>local beautiful = require("beautiful")
+if not beautiful.init("&lt;path&gt;/theme.lua") then
+    beautiful.init("&lt;path&gt;/.last.theme.lua") -- a known good fallback
+end
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">config</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The theme to load. It can be either the path to
+   the theme file (which should return a table) or directly a table
+   containing all the theme values.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">true</span> or <span class="type">nil</span></span>
+        True if successful, nil in case of error.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get"></a>
+    <strong>get ()</strong>
+    </dt>
+    <dd>
+    Get the current theme.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The current theme table.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "font"></a>
+    <strong>font</strong>
+    </dt>
+    <dd>
+    The default font.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "useless_gap"></a>
+    <strong>useless_gap</strong>
+    </dt>
+    <dd>
+    The gap between clients.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "border_width"></a>
+    <strong>border_width</strong>
+    </dt>
+    <dd>
+    The client border width.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "border_normal"></a>
+    <strong>border_normal</strong>
+    </dt>
+    <dd>
+    The default clients border color.
+ Note that only solid colors are supported.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "border_focus"></a>
+    <strong>border_focus</strong>
+    </dt>
+    <dd>
+    The focused client border color.
+ Note that only solid colors are supported.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "border_marked"></a>
+    <strong>border_marked</strong>
+    </dt>
+    <dd>
+    The marked clients border color.
+ Note that only solid colors are supported.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wallpaper"></a>
+    <strong>wallpaper</strong>
+    </dt>
+    <dd>
+    The wallpaper path.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awesome_icon"></a>
+    <strong>awesome_icon</strong>
+    </dt>
+    <dd>
+    The Awesome icon path.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "theme_path"></a>
+    <strong>theme_path</strong>
+    </dt>
+    <dd>
+    The current theme path (if any)
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_beautiful_theme_assets_Functions"></a>lib.beautiful.theme_assets Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "theme_assets.taglist_squares_sel"></a>
+    <strong>theme_assets.taglist_squares_sel (size, fg)</strong>
+    </dt>
+    <dd>
+    Generate selected taglist square.
+
+
+    <ul>
+        <li><span class="parameter">size</span>
+            <span class="types"><span class="type">number</span></span>
+         Size.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Image with the square.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.taglist_squares_unsel"></a>
+    <strong>theme_assets.taglist_squares_unsel (size, fg)</strong>
+    </dt>
+    <dd>
+    Generate unselected taglist square.
+
+
+    <ul>
+        <li><span class="parameter">size</span>
+            <span class="types"><span class="type">number</span></span>
+         Size.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Image with the square.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.gen_awesome_name"></a>
+    <strong>theme_assets.gen_awesome_name (cr, height, bg, fg, alt_fg)</strong>
+    </dt>
+    <dd>
+    Put Awesome WM name onto cairo surface.
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         Cairo surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         Height.
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Main foreground color.
+        </li>
+        <li><span class="parameter">alt_fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Accent foreground color.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.gen_logo"></a>
+    <strong>theme_assets.gen_logo (cr, width, height, bg, fg)</strong>
+    </dt>
+    <dd>
+    Put Awesome WM logo onto cairo surface.
+
+
+    <ul>
+        <li><span class="parameter">cr</span>
+         Cairo surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         Width.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         Height.
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Foreground color.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.awesome_icon"></a>
+    <strong>theme_assets.awesome_icon (size, bg, fg)</strong>
+    </dt>
+    <dd>
+    Generate Awesome WM logo.
+
+
+    <ul>
+        <li><span class="parameter">size</span>
+            <span class="types"><span class="type">number</span></span>
+         Size.
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Image with the logo.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.wallpaper"></a>
+    <strong>theme_assets.wallpaper (bg, fg, alt_fg, s)</strong>
+    </dt>
+    <dd>
+    Generate Awesome WM wallpaper.
+
+
+    <ul>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Main foreground color.
+        </li>
+        <li><span class="parameter">alt_fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Accent foreground color.
+        </li>
+        <li><span class="parameter">s</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen (to get wallpaper size).
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Wallpaper image.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.recolor_titlebar"></a>
+    <strong>theme_assets.recolor_titlebar (theme, color, state, postfix)</strong>
+    </dt>
+    <dd>
+    Recolor titlebar icons.
+
+
+    <ul>
+        <li><span class="parameter">theme</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Beautiful theme table.
+        </li>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">color</span></span>
+         Icons' color.
+        </li>
+        <li><span class="parameter">state</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         <code>&quot;normal&quot;</code> or <code>&quot;focus&quot;</code>.
+        </li>
+        <li><span class="parameter">postfix</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         <code>nil</code>, <code>&quot;hover&quot;</code> or <code>&quot;press&quot;</code>.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Beautiful theme table with the images recolored.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "recolor_titlebar_normal"></a>
+    <strong>recolor_titlebar_normal</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Recolor unfocused titlebar icons.
+ This method is deprecated.  Use a <code>beautiful.theme_assets.recolor_titlebar</code>.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">theme</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Beautiful theme table
+        </li>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">color</span></span>
+         Icons' color.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "recolor_titlebar_focus"></a>
+    <strong>recolor_titlebar_focus</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Recolor focused titlebar icons.
+ This method is deprecated.  Use a <code>beautiful.theme_assets.recolor_titlebar</code>.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">theme</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Beautiful theme table
+        </li>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">color</span></span>
+         Icons' color.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "theme_assets.recolor_layout"></a>
+    <strong>theme_assets.recolor_layout (theme, color)</strong>
+    </dt>
+    <dd>
+    Recolor layout icons.
+
+
+    <ul>
+        <li><span class="parameter">theme</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Beautiful theme table
+        </li>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">color</span></span>
+         Icons' color.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Beautiful theme table with the images recolored.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="lib_beautiful_xresources_Functions"></a>lib.beautiful.xresources Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "xresources.get_current_theme"></a>
+    <strong>xresources.get_current_theme ()</strong>
+    </dt>
+    <dd>
+    Get current base colorscheme from xrdb.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Color table with keys &lsquo;background&rsquo;, &lsquo;foreground&rsquo; and &lsquo;color0&rsquo;..&lsquo;color15&rsquo;
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "xresources.get_dpi"></a>
+    <strong>xresources.get_dpi</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get global or per-screen DPI value falling back to xrdb.</p>
+
+<p> This function is deprecated. Use <code>s.dpi</code> and avoid getting the DPI without
+ a screen.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">integer</span> or <a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "xresources.set_dpi"></a>
+    <strong>xresources.set_dpi (dpi[, s])</strong>
+    </dt>
+    <dd>
+    Set DPI for a given screen (defaults to global).
+
+
+    <ul>
+        <li><span class="parameter">dpi</span>
+            <span class="types"><span class="type">number</span></span>
+         DPI value.
+        </li>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">integer</span></span>
+         Screen.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "xresources.apply_dpi"></a>
+    <strong>xresources.apply_dpi (size[, s])</strong>
+    </dt>
+    <dd>
+    Compute resulting size applying current DPI value (optionally per screen).
+
+
+    <ul>
+        <li><span class="parameter">size</span>
+            <span class="types"><span class="type">number</span></span>
+         Size
+        </li>
+        <li><span class="parameter">s</span>
+            <span class="types"><span class="type">integer</span> or <a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span></span>
+        Resulting size (rounded to integer).
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

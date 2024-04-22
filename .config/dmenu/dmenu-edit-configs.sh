@@ -1,0 +1,89 @@
+declare options=("alacritty
+atom
+awesome
+bash-scripts
+bashrc
+BetterDiscord
+dmenu-configs
+firefox
+kitty
+nemo
+neofetch
+nitrogen
+picom
+polybar
+powerline-shell
+rofi
+thunderbird
+xmenu
+zshrc
+quit")
+
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'Edit config file: ')
+
+case "$choice" in
+	quit)
+		echo "Program terminated." && exit 1
+	;;
+	alacritty)
+		choice="$HOME/.config/alacritty/alacritty.yml"
+	;;
+	atom)
+		choice="$HOME/.config/.atom/"
+	;;
+	awesome)
+		choice="$HOME/.config/awesome/"
+	;;
+	bash-scripts)
+		choice="$HOME/.config/bash/"
+	;;
+	bashrc)
+		choice="$HOME/.bashrc"
+	;;
+	BetterDiscord)
+		choice="$HOME/.config/BetterDiscord/"
+	;;
+	dmenu-configs)
+		choice="$HOME/.config/dmenu/dmenu-edit-configs.sh"
+	;;
+	firefox)
+		choice="$HOME/.mozilla/firefox/0e0o55h8.default-release-1596153952478/chrome/"
+	;;
+	kitty)
+		choice="$HOME/.config/kitty/kitty.conf"
+	;;
+	nemo)
+		choice="$HOME/.config/nemo/"
+	;;
+	neofetch)
+		choice="$HOME/.config/neofetch/config.conf"
+	;;
+	nitrogen)
+		choice="$HOME/.config/nitrogen/nitrogen.cfg"
+	;;
+	picom)
+		choice="$HOME/.config/picom/picom.conf"
+	;;
+	polybar)
+		choice="$HOME/.config/polybar/"
+	;;
+	powerline-shell)
+		choice="$HOME/.config/powerline-shell/config.json"
+	;;
+	rofi)
+		choice="$HOME/.config/rofi/"
+	;;
+	thunderbird)
+		choice="$HOME/.thunderbird/"
+	;;
+	xmenu)
+		choice="$HOME/.config/xmenu/xmenu.sh"
+	;;
+	zshrc)
+		choice="$HOME/.zshrc"
+	;;
+	*)
+		exit 1
+	;;
+esac
+codium "$choice"

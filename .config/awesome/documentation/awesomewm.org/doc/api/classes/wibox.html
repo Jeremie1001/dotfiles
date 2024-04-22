@@ -1,0 +1,1333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class wibox - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><strong>wibox</strong></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>wibox</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+        <li><strong>Author</strong>: Uli Schlachter</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#.wibox">.wibox ([args=nil])</a></td>
+	<td class="summary">Create a wibox.</td>
+	</tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.border_width">border_width</a></td>
+	<td class="summary">Border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.border_color">border_color</a></td>
+	<td class="summary">Border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.ontop">ontop</a></td>
+	<td class="summary">On top of other windows.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.cursor">cursor</a></td>
+	<td class="summary">The mouse cursor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.visible">visible</a></td>
+	<td class="summary">Visibility.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.opacity">opacity</a></td>
+	<td class="summary">The opacity of the wibox, between 0 and 1.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.type">type</a></td>
+	<td class="summary">The window type (desktop, normal, dock, &hellip;).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.x">x</a></td>
+	<td class="summary">The x coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.y">y</a></td>
+	<td class="summary">The y coordinates.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.width">width</a></td>
+	<td class="summary">The width of the wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.height">height</a></td>
+	<td class="summary">The height of the wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.screen">screen</a></td>
+	<td class="summary">The wibox screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.drawable">drawable</a></td>
+	<td class="summary">The wibox&rsquo;s <a href="../classes/drawable.html#">drawable</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget">widget</a></td>
+	<td class="summary">The widget that the <a href="../classes/wibox.html#">wibox</a> displays.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.window">window</a></td>
+	<td class="summary">The X window id.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.shape_bounding">shape_bounding</a></td>
+	<td class="summary">The wibox&rsquo;s bounding shape as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.shape_clip">shape_clip</a></td>
+	<td class="summary">The wibox&rsquo;s clip shape as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.shape_input">shape_input</a></td>
+	<td class="summary">The wibox&rsquo;s input shape as a (native) cairo surface.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.shape">shape</a></td>
+	<td class="summary">The wibar&rsquo;s shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.input_passthrough">input_passthrough</a></td>
+	<td class="summary">Forward the inputs to the client below the wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.bg">bg</a></td>
+	<td class="summary">The background of the wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.bgimage">bgimage</a></td>
+	<td class="summary">The background image of the drawable.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.fg">fg</a></td>
+	<td class="summary">The foreground (text) of the wibox.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.bg_normal">beautiful.bg_normal</a></td>
+	<td class="summary">The default background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.fg_normal">beautiful.fg_normal</a></td>
+	<td class="summary">The default foreground (text) color.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox:buttons">wibox:buttons (buttons_table)</a></td>
+	<td class="summary">Get or set mouse buttons bindings to a wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:geometry">wibox:geometry (A)</a></td>
+	<td class="summary">Get or set wibox geometry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:struts">wibox:struts (strut)</a></td>
+	<td class="summary">Get or set wibox struts.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:setup">wibox:setup (args)</a></td>
+	<td class="summary">Set a declarative widget hierarchy description.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:find_widgets">wibox:find_widgets (x, y)</a></td>
+	<td class="summary">Find a widget by a point.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:to_widget">wibox:to_widget ()</a></td>
+	<td class="summary">Create a widget that reflects the current state of this wibox.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:save_to_svg">wibox:save_to_svg (path[, context=nil])</a></td>
+	<td class="summary">Save a screenshot of the wibox to <code>path</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox:draw">wibox:draw (wibox)</a></td>
+	<td class="summary">Redraw a wibox.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = ".wibox"></a>
+    <strong>.wibox ([args=nil])</strong>
+    </dt>
+    <dd>
+    Create a wibox.
+
+
+    <ul>
+        <li><span class="parameter">args</span>
+        <ul>
+        <li><span class="parameter">border_width</span>
+            <span class="types"><span class="type">integer</span></span>
+         Border width.
+        </li>
+        <li><span class="parameter">border_color</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Border color.
+        </li>
+        <li><span class="parameter">ontop</span>
+            <span class="types"><span class="type">boolean</span></span>
+         On top of other windows.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">cursor</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The mouse cursor.
+        </li>
+        <li><span class="parameter">visible</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Visibility.
+        </li>
+        <li><span class="parameter">opacity</span>
+            <span class="types"><span class="type">number</span></span>
+         The opacity, between 0 and 1.
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The window type (desktop, normal, dock, …).
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">integer</span></span>
+         The x coordinates.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">integer</span></span>
+         The y coordinates.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">integer</span></span>
+         The width.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">integer</span></span>
+         The height.
+        </li>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         The wibox screen.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html#">wibox.widget</a></span>
+         The widget that the wibox displays.
+        </li>
+        <li><span class="parameter">shape_bounding</span>
+         The wibox’s bounding shape as a (native) cairo surface.
+        </li>
+        <li><span class="parameter">shape_clip</span>
+         The wibox’s clip shape as a (native) cairo surface.
+        </li>
+        <li><span class="parameter">shape_input</span>
+         The wibox’s input shape as a (native) cairo surface.
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         The background.
+        </li>
+        <li><span class="parameter">bgimage</span>
+            <span class="types"><span class="type">surface</span></span>
+         The background image of the drawable.
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         The foreground (text) color.
+        </li>
+        <li><span class="parameter">shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+         The shape.
+        </li>
+        <li><span class="parameter">input_passthrough</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If the inputs are
+  forward to the element below.
+         (<em>default</em> false)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#">wibox</a></span>
+        The new wibox
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "wibox.border_width"></a>
+    <strong>border_width</strong>
+    </dt>
+    <dd>
+    <p>Border width.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::border_width</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.border_color"></a>
+    <strong>border_color</strong>
+    </dt>
+    <dd>
+    <p>Border color.</p>
+
+<p> Please note that this property only support string based 24 bit or 32 bit
+ colors:</p>
+
+<pre><code>Red Blue
+ _|  _|
+#FF00FF
+   T‾
+ Green
+
+
+Red Blue
+ _|  _|
+#FF00FF00
+   T‾  ‾T
+Green   Alpha
+</code></pre>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::border_color</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.ontop"></a>
+    <strong>ontop</strong>
+    </dt>
+    <dd>
+    <p>On top of other windows.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::ontop</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.cursor"></a>
+    <strong>cursor</strong>
+    </dt>
+    <dd>
+    <p>The mouse cursor.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::cursor</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/mouse.html#">mouse</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.visible"></a>
+    <strong>visible</strong>
+    </dt>
+    <dd>
+    <p>Visibility.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::visible</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.opacity"></a>
+    <strong>opacity</strong>
+    </dt>
+    <dd>
+    <p>The opacity of the wibox, between 0 and 1.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::opacity</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">opacity</span>
+            <span class="types"><span class="type">number</span></span>
+         (between 0 and 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.type"></a>
+    <strong>type</strong>
+    </dt>
+    <dd>
+    <p>The window type (desktop, normal, dock, &hellip;).</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::type</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client.type">client.type</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.x"></a>
+    <strong>x</strong>
+    </dt>
+    <dd>
+    <p>The x coordinates.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::x</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.y"></a>
+    <strong>y</strong>
+    </dt>
+    <dd>
+    <p>The y coordinates.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::y</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">integer</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.width"></a>
+    <strong>width</strong>
+    </dt>
+    <dd>
+    <p>The width of the wibox.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::width</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.height"></a>
+    <strong>height</strong>
+    </dt>
+    <dd>
+    <p>The height of the wibox.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::height</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">height</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.screen"></a>
+    <strong>screen</strong>
+    </dt>
+    <dd>
+    The wibox screen.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">screen</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.drawable"></a>
+    <strong>drawable</strong>
+    </dt>
+    <dd>
+    <p>The wibox&rsquo;s <a href="../classes/drawable.html#">drawable</a>.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::drawable</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.widget"></a>
+    <strong>widget</strong>
+    </dt>
+    <dd>
+    The widget that the <a href="../classes/wibox.html#">wibox</a> displays.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">widget</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.window"></a>
+    <strong>window</strong>
+    </dt>
+    <dd>
+    <p>The X window id.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::window</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#property::window">client.window</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.shape_bounding"></a>
+    <strong>shape_bounding</strong>
+    </dt>
+    <dd>
+    <p>The wibox&rsquo;s bounding shape as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_bounding</em></li>
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.shape_clip"></a>
+    <strong>shape_clip</strong>
+    </dt>
+    <dd>
+    <p>The wibox&rsquo;s clip shape as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_clip</em></li>
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.shape_input"></a>
+    <strong>shape_input</strong>
+    </dt>
+    <dd>
+    <p>The wibox&rsquo;s input shape as a (native) cairo surface.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape_input</em></li>
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.shape"></a>
+    <strong>shape</strong>
+    </dt>
+    <dd>
+    <p>The wibar&rsquo;s shape.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::shape</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.input_passthrough"></a>
+    <strong>input_passthrough</strong>
+    </dt>
+    <dd>
+    <p>Forward the inputs to the client below the wibox.</p>
+
+<p> This replace the <a href="../classes/wibox.html#wibox.shape_input">shape_input</a> mask with an empty area. All mouse and
+ keyboard events are sent to the object (such as a client) positioned below
+ this wibox. When used alongside compositing, it allows, for example, to have
+ a subtle transparent wibox on top a fullscreen client to display important
+ data such as a low battery warning.</p>
+
+<p> <strong>Signal:</strong></p>
+
+<ul>
+<li><em>property::input_passthrough</em></li>
+</ul>
+
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.html#wibox.shape_input">shape_input</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.bg"></a>
+    <strong>bg</strong>
+    </dt>
+    <dd>
+    The background of the wibox.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The background to use. This must either be a cairo pattern object,
+   nil or a string that gears.color() understands.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.bgimage"></a>
+    <strong>bgimage</strong>
+    </dt>
+    <dd>
+    The background image of the drawable.
+ If <code>image</code> is a function, it will be called with <code>(context, cr, width, height)</code>
+ as arguments. Any other arguments passed to this method will be appended.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">image</span>
+         A background image or a function
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox.fg"></a>
+    <strong>fg</strong>
+    </dt>
+    <dd>
+    The foreground (text) of the wibox.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The foreground to use. This must either be a cairo pattern object,
+   nil or a string that gears.color() understands.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.bg_normal"></a>
+    <strong>beautiful.bg_normal</strong>
+    </dt>
+    <dd>
+    The default background color.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.html#wibox.bg">bg</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.fg_normal"></a>
+    <strong>beautiful.fg_normal</strong>
+    </dt>
+    <dd>
+    The default foreground (text) color.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.html#wibox.fg">fg</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "wibox:buttons"></a>
+    <strong>wibox:buttons (buttons_table)</strong>
+    </dt>
+    <dd>
+    Get or set mouse buttons bindings to a wibox.
+
+
+    <ul>
+        <li><span class="parameter">buttons_table</span>
+         A table of buttons objects, or nothing.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:geometry"></a>
+    <strong>wibox:geometry (A)</strong>
+    </dt>
+    <dd>
+    Get or set wibox geometry.  That&rsquo;s the same as accessing or setting the x,
+ y, width or height properties of a wibox.
+
+
+    <ul>
+        <li><span class="parameter">A</span>
+         table with coordinates to modify.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table with wibox coordinates and geometry.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:struts"></a>
+    <strong>wibox:struts (strut)</strong>
+    </dt>
+    <dd>
+    Get or set wibox struts.
+
+
+    <ul>
+        <li><span class="parameter">strut</span>
+         A table with new strut, or nothing
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The wibox strut in a table.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/client.html#client:struts">client.struts</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wibox:setup"></a>
+    <strong>wibox:setup (args)</strong>
+    </dt>
+    <dd>
+    Set a declarative widget hierarchy description.
+ See <a href="../documentation/03-declarative-layout.md.html">The declarative layout system</a>
+
+
+    <ul>
+        <li><span class="parameter">args</span>
+         An array containing the widgets disposition
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:find_widgets"></a>
+    <strong>wibox:find_widgets (x, y)</strong>
+    </dt>
+    <dd>
+    Find a widget by a point.
+ The wibox must have drawn itself at least once for this to work.
+
+
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         X coordinate of the point
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         Y coordinate of the point
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A sorted table of widgets positions. The first element is the biggest
+ container while the last is the topmost widget. The table contains <em>x</em>, <em>y</em>,
+ <em>width</em>, <em>height</em> and <em>widget</em>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:to_widget"></a>
+    <strong>wibox:to_widget ()</strong>
+    </dt>
+    <dd>
+    Create a widget that reflects the current state of this wibox.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.html#wibox.widget">widget</a></span>
+        A new widget.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:save_to_svg"></a>
+    <strong>wibox:save_to_svg (path[, context=nil])</strong>
+    </dt>
+    <dd>
+    Save a screenshot of the wibox to <code>path</code>.
+
+
+    <ul>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The path.
+        </li>
+        <li><span class="parameter">context</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A widget context.
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox:draw"></a>
+    <strong>wibox:draw (wibox)</strong>
+    </dt>
+    <dd>
+    Redraw a wibox.  You should never have to call this explicitely because it is
+ automatically called when needed.
+
+
+    <ul>
+        <li><span class="parameter">wibox</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

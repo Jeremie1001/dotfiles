@@ -1,0 +1,1742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class awful.widget.tasklist - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#List_source_functions">List source functions</a></li>
+<li><a href="#List_filters">List filters</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><strong>awful.widget.tasklist</strong></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>awful.widget.tasklist</code></h1>
+<p>Tasklist widget module for awful.</p>
+<p><p> <a name="status_icons"></a>
+ <strong>Status icons:</strong></p>
+
+<p> By default, the tasklist prepends some symbols in front of the client name.
+ This is used to notify that the client has some specific properties that are
+ currently enabled. This can be disabled using
+ <a href="../classes/awful.widget.tasklist.html#beautiful.tasklist_plain_task_name">beautiful.tasklist_plain_task_name</a>=true in the theme.</p>
+
+<p> <table class='widget_list' border=1>
+ <tr style='font-weight: bold;'>
+  <th align='center'>Icon</th>
+  <th align='center'>Client property</th>
+ </tr>
+ <tr><td>▪</td><td><a href="./client.html#client.sticky">sticky</a></td></tr>
+ <tr><td>⌃</td><td><a href="./client.html#client.ontop">ontop</a></td></tr>
+ <tr><td>▴</td><td><a href="./client.html#client.above">above</a></td></tr>
+ <tr><td>▾</td><td><a href="./client.html#client.below">below</a></td></tr>
+ <tr><td>✈</td><td><a href="./client.html#client.floating">floating</a></td></tr>
+ <tr><td>+</td><td><a href="./client.html#client.maximized">maximized</a></td></tr>
+ <tr><td>⬌</td><td><a href="./client.html#client.maximized_horizontal">maximized_horizontal</a></td></tr>
+ <tr><td>⬍</td><td><a href="./client.html#client.maximized_vertical">maximized_vertical</a></td></tr>
+ </table></p>
+
+<p> <strong>Customizing the tasklist:</strong></p>
+
+<p> The <a href="../classes/awful.widget.tasklist.html">tasklist</a> created by <a href="../sample files/rc.lua.html#">rc.lua</a> use the default values for almost
+ everything. However, it is possible to override each aspects to create a
+ very different widget. Here&rsquo;s an example that create a tasklist similar to
+ the default one, but with an explicit layout and some spacing widgets:</p>
+
+<p><img src="../images/AUTOGEN_wibox_awidget_tasklist_rounded.svg" alt="Usage example" /></p>
+
+<pre>s.mytasklist = awful.widget.tasklist {
+    screen   = s,
+    filter   = awful.widget.tasklist.filter.currenttags,
+    buttons  = tasklist_buttons,
+    style    = {
+        shape_border_width = <span class="number">1</span>,
+        shape_border_color = <span class="string">'#777777'</span>,
+        shape  = gears.shape.rounded_bar,
+    },
+    layout   = {
+        spacing = <span class="number">10</span>,
+        spacing_widget = {
+            {
+                forced_width = <span class="number">5</span>,
+                shape        = gears.shape.circle,
+                widget       = wibox.widget.separator
+            },
+            valign = <span class="string">'center'</span>,
+            halign = <span class="string">'center'</span>,
+            widget = wibox.container.place,
+        },
+        layout  = wibox.layout.flex.horizontal
+    },
+    <span class="comment">-- Notice that there is *NO* <a href="../classes/wibox.html#.wibox">wibox.wibox</a> prefix, it is a template,
+</span>    <span class="comment">-- not a widget instance.
+</span>    widget_template = {
+        {
+            {
+                {
+                    {
+                        id     = <span class="string">'icon_role'</span>,
+                        widget = wibox.widget.imagebox,
+                    },
+                    margins = <span class="number">2</span>,
+                    widget  = wibox.container.margin,
+                },
+                {
+                    id     = <span class="string">'text_role'</span>,
+                    widget = wibox.widget.textbox,
+                },
+                layout = wibox.layout.fixed.horizontal,
+            },
+            left  = <span class="number">10</span>,
+            right = <span class="number">10</span>,
+            widget = wibox.container.margin
+        },
+        id     = <span class="string">'background_role'</span>,
+        widget = wibox.container.background,
+    },
+}
+</pre>
+
+
+<p> As demonstrated in the example above, there are a few &ldquo;shortcuts&rdquo; to avoid
+ re-inventing the wheel. By setting the predefined roles as widget <code>id</code>s,
+ <a href="../classes/awful.widget.common.html#">awful.widget.common</a> will do most of the work to update the values
+ automatically. All of them are optional. The supported roles are:</p>
+
+<ul>
+<li><code>icon_role</code>: A <a href="../classes/wibox.widget.imagebox.html#">wibox.widget.imagebox</a></li>
+<li><code>text_role</code>: A <a href="../classes/wibox.widget.textbox.html#">wibox.widget.textbox</a></li>
+<li><code>background_role</code>: A <a href="../classes/wibox.container.background.html#">wibox.container.background</a></li>
+<li><code>text_margin_role</code>: A <a href="../classes/wibox.container.margin.html#">wibox.container.margin</a></li>
+<li><code>icon_margin_role</code>: A <a href="../classes/wibox.container.margin.html#">wibox.container.margin</a></li>
+</ul>
+
+
+<p> <a href="../classes/awful.widget.common.html#">awful.widget.common</a> also has 2 callbacks to give more control over the widget:</p>
+
+<ul>
+<li><code>create_callback</code>: Called once after the widget instance is created</li>
+<li><code>update_callback</code>: Called everytime the data is refreshed</li>
+</ul>
+
+
+<p> Both callback have the same parameters:</p>
+
+<ul>
+<li><code>self</code>: The widget instance (<em>widget</em>).</li>
+<li><code>c</code>: The client (<em>client</em>)</li>
+<li><code>index</code>: The widget position in the list (<em>number</em>)</li>
+<li><code>clients</code>: The list of client, in order (<em>table</em>)</li>
+</ul>
+
+
+<p> It is also possible to omit some roles and create an icon only tasklist.
+ Notice that this example use the <a href="../classes/awful.widget.clienticon.html#">awful.widget.clienticon</a> widget instead
+ of an <code>imagebox</code>. This allows higher resoluton icons to be loaded. This
+ example reproduces the Windows 10 tasklist look and feel:</p>
+
+<p><img src="../images/AUTOGEN_wibox_awidget_tasklist_windows10.svg" alt="Usage example" /></p>
+
+<pre>s.mytasklist = awful.widget.tasklist {
+    screen   = s,
+    filter   = awful.widget.tasklist.filter.currenttags,
+    buttons  = tasklist_buttons,
+    layout   = {
+        spacing_widget = {
+            {
+                forced_width  = <span class="number">5</span>,
+                forced_height = <span class="number">24</span>,
+                thickness     = <span class="number">1</span>,
+                color         = <span class="string">'#777777'</span>,
+                widget        = wibox.widget.separator
+            },
+            valign = <span class="string">'center'</span>,
+            halign = <span class="string">'center'</span>,
+            widget = wibox.container.place,
+        },
+        spacing = <span class="number">1</span>,
+        layout  = wibox.layout.fixed.horizontal
+    },
+    <span class="comment">-- Notice that there is *NO* <a href="../classes/wibox.html#.wibox">wibox.wibox</a> prefix, it is a template,
+</span>    <span class="comment">-- not a widget instance.
+</span>    widget_template = {
+        {
+            wibox.widget.base.make_widget(),
+            forced_height = <span class="number">5</span>,
+            id            = <span class="string">'background_role'</span>,
+            widget        = wibox.container.background,
+        },
+        {
+            {
+                id     = <span class="string">'clienticon'</span>,
+                widget = awful.widget.clienticon,
+            },
+            margins = <span class="number">5</span>,
+            widget  = wibox.container.margin
+        },
+        <span class="keyword">nil</span>,
+        create_callback = <span class="keyword">function</span>(self, c, index, objects) <span class="comment">--luacheck: no unused args
+</span>            self:get_children_by_id(<span class="string">'clienticon'</span>)[<span class="number">1</span>].client = c
+        <span class="keyword">end</span>,
+        layout = wibox.layout.align.vertical,
+    },
+}
+</pre>
+
+
+<p> The tasklist can also be created in an <a href="../classes/awful.popup.html#">awful.popup</a> in case there is no
+ permanent <a href="../classes/awful.wibar.html#">awful.wibar</a>:</p>
+
+<p><img src="../images/AUTOGEN_awful_popup_alttab.svg" alt="Usage example" /></p>
+
+<pre>awful.popup {
+    widget = awful.widget.tasklist {
+        screen   = screen[<span class="number">1</span>],
+        filter   = awful.widget.tasklist.filter.allscreen,
+        buttons  = tasklist_buttons,
+        style    = {
+            shape = gears.shape.rounded_rect,
+        },
+        layout   = {
+            spacing = <span class="number">5</span>,
+            forced_num_rows = <span class="number">2</span>,
+            layout = wibox.layout.grid.horizontal
+        },
+        widget_template = {
+            {
+                {
+                    id     = <span class="string">'clienticon'</span>,
+                    widget = awful.widget.clienticon,
+                },
+                margins = <span class="number">4</span>,
+                widget  = wibox.container.margin,
+            },
+            id              = <span class="string">'background_role'</span>,
+            forced_width    = <span class="number">48</span>,
+            forced_height   = <span class="number">48</span>,
+            widget          = wibox.container.background,
+            create_callback = <span class="keyword">function</span>(self, c, index, objects) <span class="comment">--luacheck: no unused
+</span>                self:get_children_by_id(<span class="string">'clienticon'</span>)[<span class="number">1</span>].client = c
+            <span class="keyword">end</span>,
+        },
+    },
+    border_color = <span class="string">'#777777'</span>,
+    border_width = <span class="number">2</span>,
+    ontop        = <span class="keyword">true</span>,
+    placement    = awful.placement.centered,
+    shape        = gears.shape.rounded_rect
+}
+</pre>
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cba1bea7a2aea58bafaaa5a1a4bee5a2a5ada4">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.tasklist">awful.tasklist (args, filter, buttons, style[, update_function[, base_widget]])</a></td>
+	<td class="summary">Create a new tasklist widget.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_fg_normal">beautiful.tasklist_fg_normal</a></td>
+	<td class="summary">The default foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_normal">beautiful.tasklist_bg_normal</a></td>
+	<td class="summary">The default background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_fg_focus">beautiful.tasklist_fg_focus</a></td>
+	<td class="summary">The focused client foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_focus">beautiful.tasklist_bg_focus</a></td>
+	<td class="summary">The focused client background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_fg_urgent">beautiful.tasklist_fg_urgent</a></td>
+	<td class="summary">The urgent clients foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_urgent">beautiful.tasklist_bg_urgent</a></td>
+	<td class="summary">The urgent clients background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_fg_minimize">beautiful.tasklist_fg_minimize</a></td>
+	<td class="summary">The minimized clients foreground (text) color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_minimize">beautiful.tasklist_bg_minimize</a></td>
+	<td class="summary">The minimized clients background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_image_normal">beautiful.tasklist_bg_image_normal</a></td>
+	<td class="summary">The elements default background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_image_focus">beautiful.tasklist_bg_image_focus</a></td>
+	<td class="summary">The focused client background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_image_urgent">beautiful.tasklist_bg_image_urgent</a></td>
+	<td class="summary">The urgent clients background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_bg_image_minimize">beautiful.tasklist_bg_image_minimize</a></td>
+	<td class="summary">The minimized clients background image.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_disable_icon">beautiful.tasklist_disable_icon</a></td>
+	<td class="summary">Disable the tasklist client icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_disable_task_name">beautiful.tasklist_disable_task_name</a></td>
+	<td class="summary">Disable the tasklist client titles.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_plain_task_name">beautiful.tasklist_plain_task_name</a></td>
+	<td class="summary">Disable the extra tasklist client property notification icons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_font">beautiful.tasklist_font</a></td>
+	<td class="summary">The tasklist font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_align">beautiful.tasklist_align</a></td>
+	<td class="summary">The focused client alignment.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_font_focus">beautiful.tasklist_font_focus</a></td>
+	<td class="summary">The focused client title alignment.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_font_minimized">beautiful.tasklist_font_minimized</a></td>
+	<td class="summary">The minimized clients font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_font_urgent">beautiful.tasklist_font_urgent</a></td>
+	<td class="summary">The urgent clients font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_spacing">beautiful.tasklist_spacing</a></td>
+	<td class="summary">The space between the tasklist elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape">beautiful.tasklist_shape</a></td>
+	<td class="summary">The default tasklist elements shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_width">beautiful.tasklist_shape_border_width</a></td>
+	<td class="summary">The default tasklist elements border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_color">beautiful.tasklist_shape_border_color</a></td>
+	<td class="summary">The default tasklist elements border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_focus">beautiful.tasklist_shape_focus</a></td>
+	<td class="summary">The focused client shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_width_focus">beautiful.tasklist_shape_border_width_focus</a></td>
+	<td class="summary">The focused client border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_color_focus">beautiful.tasklist_shape_border_color_focus</a></td>
+	<td class="summary">The focused client border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_minimized">beautiful.tasklist_shape_minimized</a></td>
+	<td class="summary">The minimized clients shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_width_minimized">beautiful.tasklist_shape_border_width_minimized</a></td>
+	<td class="summary">The minimized clients border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_color_minimized">beautiful.tasklist_shape_border_color_minimized</a></td>
+	<td class="summary">The minimized clients border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_urgent">beautiful.tasklist_shape_urgent</a></td>
+	<td class="summary">The urgent clients shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_width_urgent">beautiful.tasklist_shape_border_width_urgent</a></td>
+	<td class="summary">The urgent clients border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.tasklist_shape_border_color_urgent">beautiful.tasklist_shape_border_color_urgent</a></td>
+	<td class="summary">The urgent clients border color.</td>
+	</tr>
+</table>
+<h2><a href="#List_source_functions">List source functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.source.all_clients">awful.tasklist.source.all_clients</a></td>
+	<td class="summary">Get all the clients in an undefined order.</td>
+	</tr>
+</table>
+<h2><a href="#List_filters">List filters</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.filter.allscreen">awful.tasklist.filter.allscreen</a></td>
+	<td class="summary">Filtering function to include all clients.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.filter.alltags">awful.tasklist.filter.alltags</a></td>
+	<td class="summary">Filtering function to include the clients from all tags on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.filter.currenttags">awful.tasklist.filter.currenttags</a></td>
+	<td class="summary">Filtering function to include only the clients from currently selected tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.filter.minimizedcurrenttags">awful.tasklist.filter.minimizedcurrenttags</a></td>
+	<td class="summary">Filtering function to include only the minimized clients from currently selected tags.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.tasklist.filter.focused">awful.tasklist.filter.focused</a></td>
+	<td class="summary">Filtering function to include only the currently focused client.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "awful.tasklist"></a>
+    <strong>awful.tasklist (args, filter, buttons, style[, update_function[, base_widget]])</strong>
+    </dt>
+    <dd>
+    Create a new tasklist widget.
+ The last two arguments (update_function
+ and layout) serve to customize the layout of the tasklist (eg. to
+ make it vertical). For that, you will need to copy the
+ awful.widget.common.list_update function, make your changes to it
+ and pass it as update_function here. Also change the layout if the
+ default is not what you want.
+
+
+    <ul>
+        <li><span class="parameter">args</span>
+        <ul>
+        <li><span class="parameter">screen</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         The screen to draw tasklist for.
+        </li>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">function</span></span>
+         Filter function to define what clients will be listed.
+        </li>
+        <li><span class="parameter">buttons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table with buttons binding to set.
+        </li>
+        <li><span class="parameter">update_function</span>
+            <span class="types"><span class="type">function</span></span>
+         Function to create a tag widget on each
+   update. See <a href="../classes/awful.widget.common.html#awful.widget.common:list_update">awful.widget.common.list_update</a>.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">layout</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Container widget for tag widgets. Default
+   is <a href="../classes/wibox.layout.flex.html#wibox.layout.flex.horizontal">wibox.layout.flex.horizontal</a>.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><span class="type">function</span></span>
+         The
+  function used to generate the list of client.
+         (<em>default</em> awful.tasklist.source.all_clients)
+        </li>
+        <li><span class="parameter">widget_template</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A custom widget to be used for each client
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">style</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The style overrides default theme.
+         (<em>default</em> {})
+        </li>
+        <li><span class="parameter">style.fg_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.fg_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_image_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_image_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_image_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.bg_image_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.tasklist_disable_icon</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.disable_task_name</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">style.font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.align</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         <em>left</em>, <em>right</em> or <em>center</em>
+         (<em>default</em> left)
+        </li>
+        <li><span class="parameter">style.font_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.font_minimized</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.font_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         The spacing between tags.
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_width</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_color</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_focus</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_width_focus</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_color_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_minimized</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_width_minimized</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_color_minimized</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_urgent</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_width_urgent</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">style.shape_border_color_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+        </li></ul>
+        <li><span class="parameter">filter</span>
+         <strong>DEPRECATED</strong> use args.filter
+        </li>
+        <li><span class="parameter">buttons</span>
+         <strong>DEPRECATED</strong> use args.buttons
+        </li>
+        <li><span class="parameter">style</span>
+         <strong>DEPRECATED</strong> use args.style
+        </li>
+        <li><span class="parameter">update_function</span>
+         <strong>DEPRECATED</strong> use args.update_function
+        </li>
+        <li><span class="parameter">base_widget</span>
+         <strong>DEPRECATED</strong> use args.base_widget
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.tasklist_fg_normal"></a>
+    <strong>beautiful.tasklist_fg_normal</strong>
+    </dt>
+    <dd>
+    The default foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">fg_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_normal"></a>
+    <strong>beautiful.tasklist_bg_normal</strong>
+    </dt>
+    <dd>
+    The default background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_fg_focus"></a>
+    <strong>beautiful.tasklist_fg_focus</strong>
+    </dt>
+    <dd>
+    The focused client foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">fg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_focus"></a>
+    <strong>beautiful.tasklist_bg_focus</strong>
+    </dt>
+    <dd>
+    The focused client background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_fg_urgent"></a>
+    <strong>beautiful.tasklist_fg_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">fg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_urgent"></a>
+    <strong>beautiful.tasklist_bg_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_fg_minimize"></a>
+    <strong>beautiful.tasklist_fg_minimize</strong>
+    </dt>
+    <dd>
+    The minimized clients foreground (text) color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">fg_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_minimize"></a>
+    <strong>beautiful.tasklist_bg_minimize</strong>
+    </dt>
+    <dd>
+    The minimized clients background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_image_normal"></a>
+    <strong>beautiful.tasklist_bg_image_normal</strong>
+    </dt>
+    <dd>
+    The elements default background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_image_normal</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_image_focus"></a>
+    <strong>beautiful.tasklist_bg_image_focus</strong>
+    </dt>
+    <dd>
+    The focused client background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_image_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_image_urgent"></a>
+    <strong>beautiful.tasklist_bg_image_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_image_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_bg_image_minimize"></a>
+    <strong>beautiful.tasklist_bg_image_minimize</strong>
+    </dt>
+    <dd>
+    The minimized clients background image.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">bg_image_minimize</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_disable_icon"></a>
+    <strong>beautiful.tasklist_disable_icon</strong>
+    </dt>
+    <dd>
+    Disable the tasklist client icons.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">tasklist_disable_icon</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_disable_task_name"></a>
+    <strong>beautiful.tasklist_disable_task_name</strong>
+    </dt>
+    <dd>
+    Disable the tasklist client titles.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">tasklist_disable_task_name</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_plain_task_name"></a>
+    <strong>beautiful.tasklist_plain_task_name</strong>
+    </dt>
+    <dd>
+    Disable the extra tasklist client property notification icons.</p>
+
+<p> See the <a href="status_icons">Status icons</a> section for more details.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">tasklist_plain_task_name</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_font"></a>
+    <strong>beautiful.tasklist_font</strong>
+    </dt>
+    <dd>
+    The tasklist font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_align"></a>
+    <strong>beautiful.tasklist_align</strong>
+    </dt>
+    <dd>
+    The focused client alignment.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">align</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         <em>left</em>, <em>right</em> or <em>center</em>
+         (<em>default</em> left)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_font_focus"></a>
+    <strong>beautiful.tasklist_font_focus</strong>
+    </dt>
+    <dd>
+    The focused client title alignment.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">font_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_font_minimized"></a>
+    <strong>beautiful.tasklist_font_minimized</strong>
+    </dt>
+    <dd>
+    The minimized clients font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">font_minimized</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_font_urgent"></a>
+    <strong>beautiful.tasklist_font_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">font_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_spacing"></a>
+    <strong>beautiful.tasklist_spacing</strong>
+    </dt>
+    <dd>
+    The space between the tasklist elements.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         The spacing between tasks.
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape"></a>
+    <strong>beautiful.tasklist_shape</strong>
+    </dt>
+    <dd>
+    The default tasklist elements shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_width"></a>
+    <strong>beautiful.tasklist_shape_border_width</strong>
+    </dt>
+    <dd>
+    The default tasklist elements border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_width</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_color"></a>
+    <strong>beautiful.tasklist_shape_border_color</strong>
+    </dt>
+    <dd>
+    The default tasklist elements border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_color</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_focus"></a>
+    <strong>beautiful.tasklist_shape_focus</strong>
+    </dt>
+    <dd>
+    The focused client shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_focus</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_width_focus"></a>
+    <strong>beautiful.tasklist_shape_border_width_focus</strong>
+    </dt>
+    <dd>
+    The focused client border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_width_focus</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_color_focus"></a>
+    <strong>beautiful.tasklist_shape_border_color_focus</strong>
+    </dt>
+    <dd>
+    The focused client border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_color_focus</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_minimized"></a>
+    <strong>beautiful.tasklist_shape_minimized</strong>
+    </dt>
+    <dd>
+    The minimized clients shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_minimized</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_width_minimized"></a>
+    <strong>beautiful.tasklist_shape_border_width_minimized</strong>
+    </dt>
+    <dd>
+    The minimized clients border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_width_minimized</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_color_minimized"></a>
+    <strong>beautiful.tasklist_shape_border_color_minimized</strong>
+    </dt>
+    <dd>
+    The minimized clients border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_color_minimized</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_urgent"></a>
+    <strong>beautiful.tasklist_shape_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_urgent</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_width_urgent"></a>
+    <strong>beautiful.tasklist_shape_border_width_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_width_urgent</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.tasklist_shape_border_color_urgent"></a>
+    <strong>beautiful.tasklist_shape_border_color_urgent</strong>
+    </dt>
+    <dd>
+    The urgent clients border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">shape_border_color_urgent</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">color</span></span>
+
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="List_source_functions"></a>List source functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.tasklist.source.all_clients"></a>
+    <strong>awful.tasklist.source.all_clients</strong>
+    </dt>
+    <dd>
+    Get all the clients in an undefined order.</p>
+
+<p> This is the default source.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="List_filters"></a>List filters</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.tasklist.filter.allscreen"></a>
+    <strong>awful.tasklist.filter.allscreen</strong>
+    </dt>
+    <dd>
+    Filtering function to include all clients.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.tasklist.filter.alltags"></a>
+    <strong>awful.tasklist.filter.alltags</strong>
+    </dt>
+    <dd>
+    Filtering function to include the clients from all tags on the screen.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+         The client.
+        </li>
+        <li><span class="parameter">screen</span>
+         The screen we are drawing on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.tasklist.filter.currenttags"></a>
+    <strong>awful.tasklist.filter.currenttags</strong>
+    </dt>
+    <dd>
+    Filtering function to include only the clients from currently selected tags.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+         The client.
+        </li>
+        <li><span class="parameter">screen</span>
+         The screen we are drawing on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.tasklist.filter.minimizedcurrenttags"></a>
+    <strong>awful.tasklist.filter.minimizedcurrenttags</strong>
+    </dt>
+    <dd>
+    Filtering function to include only the minimized clients from currently selected tags.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+         The client.
+        </li>
+        <li><span class="parameter">screen</span>
+         The screen we are drawing on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "awful.tasklist.filter.focused"></a>
+    <strong>awful.tasklist.filter.focused</strong>
+    </dt>
+    <dd>
+    Filtering function to include only the currently focused client.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+         The client.
+        </li>
+        <li><span class="parameter">screen</span>
+         The screen we are drawing on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

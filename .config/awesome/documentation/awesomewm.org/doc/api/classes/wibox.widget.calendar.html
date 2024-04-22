@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class wibox.widget.calendar - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><strong>wibox.widget.calendar</strong></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>wibox.widget.calendar</code></h1>
+<p>A calendar widget</p>
+
+<p> This module defines two widgets: a month calendar and a year calendar</p>
+
+<p> The two widgets have a <a href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.date">date</a> property, in the form of
+ a table {day=[number|nil], month=[number|nil], year=[number]}.</p>
+<p> The <a href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.year">year</a> widget displays the whole specified year, e.g. {year=2006}.</p>
+
+<p> The <a href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.month">month</a> widget displays the calendar for the specified month, e.g. {month=12, year=2006},
+ highlighting the specified day if the day is provided in the date, e.g. {day=22, month=12, year=2006}.</p>
+
+<p> Cell and container styles can be overridden using the <a href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.fn_embed">fn_embed</a> callback function
+ which is called before adding the widgets to the layouts. The <a href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.fn_embed">fn_embed</a> function
+ takes three arguments, the original widget, the flag (<a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> used to identified the widget)
+ and the date (<a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>).
+ It returns another widget, embedding (and modifying) the original widget.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_defaults_calendar.svg" alt="Usage example" /></p>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">local cal = wibox.widget.calendar.month(os.date(&apos;*t&apos;))
+</pre>
+    </ul>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2017 getzze</li>
+        <li><strong>Author</strong>: getzze</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.month">wibox.widget.calendar.month (date, font)</a></td>
+	<td class="summary">A month calendar widget.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.year">wibox.widget.calendar.year (date, font)</a></td>
+	<td class="summary">A year calendar widget.</td>
+	</tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.date">date</a></td>
+	<td class="summary">The calendar date.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.font">font</a></td>
+	<td class="summary">The calendar font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.spacing">spacing</a></td>
+	<td class="summary">The calendar spacing.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.week_numbers">week_numbers</a></td>
+	<td class="summary">Display the calendar week numbers.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.start_sunday">start_sunday</a></td>
+	<td class="summary">Start the week on Sunday.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.long_weekdays">long_weekdays</a></td>
+	<td class="summary">Format the weekdays with three characters instead of two</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.widget.calendar.fn_embed">fn_embed</a></td>
+	<td class="summary">The widget encapsulating function.</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_font">beautiful.calendar_font</a></td>
+	<td class="summary">The calendar font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_spacing">beautiful.calendar_spacing</a></td>
+	<td class="summary">The calendar spacing.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_week_numbers">beautiful.calendar_week_numbers</a></td>
+	<td class="summary">Display the calendar week numbers.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_start_sunday">beautiful.calendar_start_sunday</a></td>
+	<td class="summary">Start the week on Sunday.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.calendar_long_weekdays">beautiful.calendar_long_weekdays</a></td>
+	<td class="summary">Format the weekdays with three characters instead of two</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "wibox.widget.calendar.month"></a>
+    <strong>wibox.widget.calendar.month (date, font)</strong>
+    </dt>
+    <dd>
+    A month calendar widget.</p>
+
+<p> A calendar widget is a grid containing the calendar for one month.
+ If the day is specified in the date, its cell is highlighted.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_month.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">date</span> Date of the calendar
+        <ul>
+        <li><span class="parameter">year</span>
+            <span class="types"><span class="type">number</span></span>
+         Date year
+        </li>
+        <li><span class="parameter">month</span>
+            <span class="types"><span class="type">number</span></span>
+         Date month
+        </li>
+        <li><span class="parameter">day</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+         Date day
+        </li>
+        </li></ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Font of the calendar
+         (<em>default</em> "Monospace 10")
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+        The month calendar widget
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.year"></a>
+    <strong>wibox.widget.calendar.year (date, font)</strong>
+    </dt>
+    <dd>
+    A year calendar widget.</p>
+
+<p> A calendar widget is a grid containing the calendar for one year.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_year.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">date</span> Date of the calendar
+        <ul>
+        <li><span class="parameter">year</span>
+            <span class="types"><span class="type">number</span></span>
+         Date year
+        </li>
+        <li><span class="parameter">month</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+         Date month
+        </li>
+        <li><span class="parameter">day</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+         Date day
+        </li>
+        </li></ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Font of the calendar
+         (<em>default</em> "Monospace 10")
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+        The year calendar widget
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> cal = wibox.widget {
+    date         = <span class="global">os</span>.date(<span class="string">'*t'</span>),
+    font         = <span class="string">'Monospace 8'</span>,
+    spacing      = <span class="number">2</span>,
+    week_numbers = <span class="keyword">false</span>,
+    start_sunday = <span class="keyword">false</span>,
+    widget       = wibox.widget.calendar.year
+}</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "wibox.widget.calendar.date"></a>
+    <strong>date</strong>
+    </dt>
+    <dd>
+    The calendar date.</p>
+
+<p> A table representing the date {day=[number|nil], month=[number|nil], year=[number]}.</p>
+
+<p> E.g.. {day=21, month=2, year=2005}, {month=2, year=2005}, {year=2005}
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.calendar.html#wibox.widget.calendar.date">date</a></span>
+         Date table.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.font"></a>
+    <strong>font</strong>
+    </dt>
+    <dd>
+    The calendar font.</p>
+
+<p> Choose a monospace font for a better rendering.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_font.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         Font of the calendar
+         (<em>default</em> "Monospace 10")
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> cal = wibox.widget.calendar.month(
+    <span class="global">os</span>.date(<span class="string">'*t'</span>), <span class="string">'sans 12'</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.spacing"></a>
+    <strong>spacing</strong>
+    </dt>
+    <dd>
+    The calendar spacing.</p>
+
+<p> The spacing between cells in the month.
+ The spacing between months in a year calendar is twice this value.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">number</span>
+         Spacing of the grid
+         (<em>default</em> 5)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.week_numbers"></a>
+    <strong>week_numbers</strong>
+    </dt>
+    <dd>
+    Display the calendar week numbers.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_week_numbers.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Display week numbers
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> cal = wibox.widget {
+    date         = <span class="global">os</span>.date(<span class="string">'*t'</span>),
+    font         = <span class="string">'Monospace 10'</span>,
+    week_numbers = <span class="keyword">true</span>,
+    widget       = wibox.widget.calendar.month
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.start_sunday"></a>
+    <strong>start_sunday</strong>
+    </dt>
+    <dd>
+    Start the week on Sunday.</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_start_sunday.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Start the week on Sunday
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> cal = wibox.widget {
+    date         = <span class="global">os</span>.date(<span class="string">'*t'</span>),
+    font         = <span class="string">'Monospace 10'</span>,
+    start_sunday = <span class="keyword">true</span>,
+    widget       = wibox.widget.calendar.month
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.long_weekdays"></a>
+    <strong>long_weekdays</strong>
+    </dt>
+    <dd>
+    Format the weekdays with three characters instead of two</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_long_weekdays.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Use three characters for the weekdays instead of two
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> cal = wibox.widget {
+    date          = <span class="global">os</span>.date(<span class="string">'*t'</span>),
+    font          = <span class="string">'Monospace 10'</span>,
+    long_weekdays = <span class="keyword">true</span>,
+    widget        = wibox.widget.calendar.month
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.widget.calendar.fn_embed"></a>
+    <strong>fn_embed</strong>
+    </dt>
+    <dd>
+    The widget encapsulating function.</p>
+
+<p> Function that takes a widget, flag (<a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>) and date (<a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>) as argument
+ and returns a widget encapsulating the input widget.</p>
+
+<p> Default value: function (widget, flag, date) return widget end</p>
+
+<p> It is used to add a container to the grid layout and to the cells:</p>
+
+<p><img src="../images/AUTOGEN_wibox_widget_calendar_fn_embed_cell.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">function</span>
+         Function to embed the widget depending on its flag
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> styles = {}
+<span class="keyword">local</span> <span class="keyword">function</span> rounded_shape(size, partial)
+    <span class="keyword">if</span> partial <span class="keyword">then</span>
+        <span class="keyword">return</span> <span class="keyword">function</span>(cr, width, height)
+                   gears.shape.partially_rounded_rect(cr, width, height,
+                        <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="number">5</span>)
+               <span class="keyword">end</span>
+    <span class="keyword">else</span>
+        <span class="keyword">return</span> <span class="keyword">function</span>(cr, width, height)
+                   gears.shape.rounded_rect(cr, width, height, size)
+               <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+styles.month   = { padding      = <span class="number">5</span>,
+                   bg_color     = <span class="string">'#555555'</span>,
+                   border_width = <span class="number">2</span>,
+                   shape        = rounded_shape(<span class="number">10</span>)
+}
+styles.normal  = { shape    = rounded_shape(<span class="number">5</span>) }
+styles.focus   = { fg_color = <span class="string">'#000000'</span>,
+                   bg_color = <span class="string">'#ff9800'</span>,
+                   markup   = <span class="keyword">function</span>(t) <span class="keyword">return</span> <span class="string">'&lt;b&gt;'</span> .. t .. <span class="string">'&lt;/b&gt;'</span> <span class="keyword">end</span>,
+                   shape    = rounded_shape(<span class="number">5</span>, <span class="keyword">true</span>)
+}
+styles.header  = { fg_color = <span class="string">'#de5e1e'</span>,
+                   markup   = <span class="keyword">function</span>(t) <span class="keyword">return</span> <span class="string">'&lt;b&gt;'</span> .. t .. <span class="string">'&lt;/b&gt;'</span> <span class="keyword">end</span>,
+                   shape    = rounded_shape(<span class="number">10</span>)
+}
+styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
+                   markup   = <span class="keyword">function</span>(t) <span class="keyword">return</span> <span class="string">'&lt;b&gt;'</span> .. t .. <span class="string">'&lt;/b&gt;'</span> <span class="keyword">end</span>,
+                   shape    = rounded_shape(<span class="number">5</span>)
+}
+<span class="keyword">local</span> <span class="keyword">function</span> decorate_cell(widget, flag, date)
+    <span class="keyword">if</span> flag==<span class="string">'monthheader'</span> <span class="keyword">and</span> <span class="keyword">not</span> styles.monthheader <span class="keyword">then</span>
+        flag = <span class="string">'header'</span>
+    <span class="keyword">end</span>
+    <span class="keyword">local</span> props = styles[flag] <span class="keyword">or</span> {}
+    <span class="keyword">if</span> props.markup <span class="keyword">and</span> widget.get_text <span class="keyword">and</span> widget.set_markup <span class="keyword">then</span>
+        widget:set_markup(props.markup(widget:get_text()))
+    <span class="keyword">end</span>
+    <span class="comment">-- Change bg color for weekends
+</span>    <span class="keyword">local</span> d = {year=date.year, month=(date.month <span class="keyword">or</span> <span class="number">1</span>), day=(date.day <span class="keyword">or</span> <span class="number">1</span>)}
+    <span class="keyword">local</span> weekday = <span class="global">tonumber</span>(<span class="global">os</span>.date(<span class="string">'%w'</span>, <span class="global">os</span>.time(d)))
+    <span class="keyword">local</span> default_bg = (weekday==<span class="number">0</span> <span class="keyword">or</span> weekday==<span class="number">6</span>) <span class="keyword">and</span> <span class="string">'#232323'</span> <span class="keyword">or</span> <span class="string">'#383838'</span>
+    <span class="keyword">local</span> ret = wibox.widget {
+        {
+            widget,
+            margins = (props.padding <span class="keyword">or</span> <span class="number">2</span>) + (props.border_width <span class="keyword">or</span> <span class="number">0</span>),
+            widget  = wibox.container.margin
+        },
+        shape              = props.shape,
+        shape_border_color = props.border_color <span class="keyword">or</span> <span class="string">'#b9214f'</span>,
+        shape_border_width = props.border_width <span class="keyword">or</span> <span class="number">0</span>,
+        fg                 = props.fg_color <span class="keyword">or</span> <span class="string">'#999999'</span>,
+        bg                 = props.bg_color <span class="keyword">or</span> default_bg,
+        widget             = wibox.container.background
+    }
+    <span class="keyword">return</span> ret
+<span class="keyword">end</span>
+<span class="keyword">local</span> cal = wibox.widget {
+    date     = <span class="global">os</span>.date(<span class="string">'*t'</span>),
+    fn_embed = decorate_cell,
+    widget   = wibox.widget.calendar.month
+}</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.calendar_font"></a>
+    <strong>beautiful.calendar_font</strong>
+    </dt>
+    <dd>
+    The calendar font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Font of the calendar
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.calendar_spacing"></a>
+    <strong>beautiful.calendar_spacing</strong>
+    </dt>
+    <dd>
+    The calendar spacing.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         Spacing of the grid (twice this value for inter-month spacing)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.calendar_week_numbers"></a>
+    <strong>beautiful.calendar_week_numbers</strong>
+    </dt>
+    <dd>
+    Display the calendar week numbers.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Display week numbers
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.calendar_start_sunday"></a>
+    <strong>beautiful.calendar_start_sunday</strong>
+    </dt>
+    <dd>
+    Start the week on Sunday.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Start the week on Sunday
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.calendar_long_weekdays"></a>
+    <strong>beautiful.calendar_long_weekdays</strong>
+    </dt>
+    <dd>
+    Format the weekdays with three characters instead of two
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+         Use three characters for the weekdays instead of two
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

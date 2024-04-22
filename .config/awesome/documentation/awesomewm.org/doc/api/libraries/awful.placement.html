@@ -1,0 +1,1594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module awful.placement - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><strong>awful.placement</strong></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>awful.placement</code></h1>
+<p>Algorithms used to place various drawables.</p>
+<p> The functions provided by this module all follow the same arguments
+ conventions. This allow:</p>
+
+<ul>
+<li>To use them in various other module as
+<a href="https://en.wikipedia.org/wiki/Visitor_pattern">visitor objects</a></li>
+<li>Turn each function into an API with various common customization parameters.</li>
+<li>Re-use the same functions for the <a href="../libraries/mouse.html#">mouse</a>, <a href="../classes/client.html#">client</a>s, <a href="../classes/screen.html#">screen</a>s and <a href="../classes/wibox.html#">wibox</a>es</li>
+</ul>
+
+
+<p> <h3>Compositing</h3></p>
+
+<p> It is possible to compose placement function using the <code>+</code> or <code>*</code> operator:</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_compose.svg" alt="Usage example" /></p>
+
+<pre><span class="comment">-- 'right' will be replaced by 'left'
+</span><span class="keyword">local</span> f = (awful.placement.right + awful.placement.left)
+f(client.focus)
+</pre>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_compose2.svg" alt="Usage example" /></p>
+
+<pre><span class="comment">-- Simulate Windows 7 'edge snap' (also called aero snap) feature
+</span><span class="keyword">local</span> axis = <span class="string">'vertically'</span>
+<span class="keyword">local</span> f = awful.placement.scale
+    + awful.placement.left
+    + (axis <span class="keyword">and</span> awful.placement[<span class="string">'maximize_'</span>..axis] <span class="keyword">or</span> <span class="keyword">nil</span>)
+<span class="keyword">local</span> geo = f(client.focus, {honor_workarea=<span class="keyword">true</span>, to_percent = <span class="number">0.5</span>})
+</pre>
+
+
+<p> <h3>Common arguments</h3></p>
+
+<p> <strong>pretend</strong> (<em>boolean</em>):</p>
+
+<p> Do not apply the new geometry. This is useful if only the return values is
+ necessary.</p>
+
+<p> <strong>honor_workarea</strong> (<em>boolean</em>):</p>
+
+<p>  Take workarea into account when placing the drawable (default: false)</p>
+
+<p> <strong>honor_padding</strong> (<em>boolean</em>):</p>
+
+<p>  Take the screen padding into account (see <a href="../classes/screen.html#screen.padding">screen.padding</a>)</p>
+
+<p> <strong>tag</strong> (<em>tag</em>):</p>
+
+<p>  Use a tag geometry</p>
+
+<p> <strong>margins</strong> (<em>number</em> or <em>table</em>):</p>
+
+<p>  A table with left, right, top, bottom keys or a number</p>
+
+<p> <strong>parent</strong> (client, wibox, mouse or screen):</p>
+
+<p>  A parent drawable to use a base geometry</p>
+
+<p> <strong>bounding_rect</strong> (table):</p>
+
+<p> A bounding rectangle</p>
+
+<p> <strong>attach</strong> (<em>boolean</em>):</p>
+
+<p> When the parent geometry (like the screen) changes, re-apply the placement
+ function. This will add a <code>detach_callback</code> function to the drawable. Call
+ this to detach the function. This will be called automatically when a new
+ attached function is set.</p>
+
+<p> <strong>offset</strong> (<em>table or number</em>):</p>
+
+<p> The offset(s) to apply to the new geometry.</p>
+
+<p> <strong>store_geometry</strong> (<em>boolean</em>):</p>
+
+<p> Keep a single history of each type of placement. It can be restored using
+ <a href="../libraries/awful.placement.html#restore">awful.placement.restore</a> by setting the right <code>context</code> argument.</p>
+
+<p> When either the parent or the screen geometry change, call the placement
+ function again.</p>
+
+<p> <strong>update_workarea</strong> (<em>boolean</em>):</p>
+
+<p> If <em>attach</em> is true, also update the screen workarea.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008 Julien Danjou, Emmanuel Lepage Vallee 2016</li>
+        <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e98c859fd8dad8daa98e84888085c78a8684">[email&#160;protected]</a>&gt;,Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94fee1f8fdf1fad4f0f5fafefbe1bafdfaf2fb">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#closest_corner">closest_corner ([d=client.focus[, args={}]])</a></td>
+	<td class="summary">Move a drawable to the closest corner of the parent geometry (such as the
+ screen).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#no_offscreen">no_offscreen (c[, args={}])</a></td>
+	<td class="summary">Place the client so no part of it will be outside the screen (workarea).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#no_overlap">no_overlap (c[, args={}])</a></td>
+	<td class="summary">Place the client where there&rsquo;s place available with minimum overlap.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#under_mouse">under_mouse (d[, args={}])</a></td>
+	<td class="summary">Place the client under the mouse.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#next_to_mouse">next_to_mouse (d[, args={}])</a></td>
+	<td class="summary">Place the client next to the mouse.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#resize_to_mouse">resize_to_mouse (d[, args={}])</a></td>
+	<td class="summary">Resize the drawable to the cursor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#align">align (d[, args={}])</a></td>
+	<td class="summary">Move the drawable (client or wibox) <code>d</code> to a screen position or side.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#top_left">top_left (d[, args={}])</a></td>
+	<td class="summary">Align a client to the top left of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#top_right">top_right (d[, args={}])</a></td>
+	<td class="summary">Align a client to the top right of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#bottom_left">bottom_left (d[, args={}])</a></td>
+	<td class="summary">Align a client to the bottom left of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#bottom_right">bottom_right (d[, args={}])</a></td>
+	<td class="summary">Align a client to the bottom right of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#left">left (d[, args={}])</a></td>
+	<td class="summary">Align a client to the left of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#right">right (d[, args={}])</a></td>
+	<td class="summary">Align a client to the right of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#top">top (d[, args={}])</a></td>
+	<td class="summary">Align a client to the top of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#bottom">bottom (d[, args={}])</a></td>
+	<td class="summary">Align a client to the bottom of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#centered">centered (d[, args={}])</a></td>
+	<td class="summary">Align a client to the center of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#center_vertical">center_vertical (d[, args={}])</a></td>
+	<td class="summary">Align a client to the vertical center of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#center_horizontal">center_horizontal (d[, args={}])</a></td>
+	<td class="summary">Align a client to the horizontal center left of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stretch">stretch ([d=client.focus[, args={}]])</a></td>
+	<td class="summary">Stretch a drawable in a specific direction.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stretch_left">stretch_left (d[, args={}])</a></td>
+	<td class="summary">Stretch the drawable to the left of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stretch_right">stretch_right (d[, args={}])</a></td>
+	<td class="summary">Stretch the drawable to the right of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stretch_up">stretch_up (d[, args={}])</a></td>
+	<td class="summary">Stretch the drawable to the top of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#stretch_down">stretch_down (d[, args={}])</a></td>
+	<td class="summary">Stretch the drawable to the bottom of the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#maximize">maximize ([d=client.focus[, args={}]])</a></td>
+	<td class="summary">Maximize a drawable horizontally, vertically or both.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#maximize_vertically">maximize_vertically (d[, args={}])</a></td>
+	<td class="summary">Vetically maximize the drawable in the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#maximize_horizontally">maximize_horizontally (d[, args={}])</a></td>
+	<td class="summary">Horizontally maximize the drawable in the parent area.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#scale">scale ([d=client.focus[, args={}]])</a></td>
+	<td class="summary">Scale the drawable by either a relative or absolute percent.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#next_to">next_to (d, args)</a></td>
+	<td class="summary">Move a drawable to a relative position next to another one.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#restore">restore ([d=client.focus[, args={}]])</a></td>
+	<td class="summary">Restore the geometry.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "closest_corner"></a>
+    <strong>closest_corner ([d=client.focus[, args={}]])</strong>
+    </dt>
+    <dd>
+    <p>Move a drawable to the closest corner of the parent geometry (such as the
+ screen).</p>
+
+<p> Valid arguments include the common ones and:</p>
+
+<ul>
+<li><strong>include_sides</strong>: Also include the left, right, top and bottom positions</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_closest_mouse.svg" alt="Usage example" /></p>
+
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>Closest corner: top_left
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a>
+   or <a href="../classes/wibox.html#">wibox</a>)
+         (<em>default</em> client.focus)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The corner name</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Move the mouse to the closest corner of the focused client
+</span>awful.placement.closest_corner(mouse, {include_sides=<span class="keyword">true</span>, parent=c})
+<span class="comment">-- It is possible to emulate the mouse API to get the closest corner of
+</span><span class="comment">-- random area
+</span><span class="keyword">local</span> _, corner = awful.placement.closest_corner(
+    {coords=<span class="keyword">function</span>() <span class="keyword">return</span> {x = <span class="number">100</span>, y=<span class="number">100</span>} <span class="keyword">end</span>},
+    {include_sides = <span class="keyword">true</span>, bounding_rect = {x=<span class="number">0</span>, y=<span class="number">0</span>, width=<span class="number">200</span>, height=<span class="number">200</span>}}
+)
+<span class="global">print</span>(<span class="string">'Closest corner:'</span>, corner)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "no_offscreen"></a>
+    <strong>no_offscreen (c[, args={}])</strong>
+    </dt>
+    <dd>
+    <p>Place the client so no part of it will be outside the screen (workarea).</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_no_offscreen.svg" alt="Usage example" /></p>
+
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>Before: x=-30, y=-30, width=100, height=100
+After:  x=50, y=50, width=100, height=100
+</code></pre>
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#awful.object">client.object</a></span>
+         The client.
+        </li>
+        <li><span class="parameter">args</span> The arguments
+        <ul>
+        <li><span class="parameter">screen</span>
+            <span class="types"><span class="type">integer</span></span>
+         The screen.
+         (<em>default</em> client's screen)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new client geometry.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.no_offscreen(c, {honor_workarea=<span class="keyword">true</span>, margins=<span class="number">40</span>})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "no_overlap"></a>
+    <strong>no_overlap (c[, args={}])</strong>
+    </dt>
+    <dd>
+    Place the client where there&rsquo;s place available with minimum overlap.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_no_overlap.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+         The client.
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.no_overlap(client.focus)
+<span class="keyword">local</span> x,y = screen[<span class="number">4</span>].geometry.x, screen[<span class="number">4</span>].geometry.y</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "under_mouse"></a>
+    <strong>under_mouse (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Place the client under the mouse.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_under_mouse.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.under_mouse(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "next_to_mouse"></a>
+    <strong>next_to_mouse (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Place the client next to the mouse.</p>
+
+<p> It will place <code>c</code> next to the mouse pointer, trying the following positions
+ in this order: right, left, above and below.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_next_to_mouse.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.next_to_mouse(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "resize_to_mouse"></a>
+    <strong>resize_to_mouse (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Resize the drawable to the cursor.</p>
+
+<p> Valid args:</p>
+
+<ul>
+<li><em>axis</em>: The axis (vertical or horizontal). If none is
+ specified, then the drawable will be resized on both axis.</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_resize_to_mouse.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "align"></a>
+    <strong>align (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Move the drawable (client or wibox) <code>d</code> to a screen position or side.</p>
+
+<p> Supported args.positions are:</p>
+
+<ul>
+<li>top_left</li>
+<li>top_right</li>
+<li>bottom_left</li>
+<li>bottom_right</li>
+<li>left</li>
+<li>right</li>
+<li>top</li>
+<li>bottom</li>
+<li>centered</li>
+<li>center_vertical</li>
+<li>center_horizontal</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_align.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "top_left"></a>
+    <strong>top_left (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the top left of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_top_left.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.top_left(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "top_right"></a>
+    <strong>top_right (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the top right of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_top_right.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.top_right(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "bottom_left"></a>
+    <strong>bottom_left (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the bottom left of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_bottom_left.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.bottom_left(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "bottom_right"></a>
+    <strong>bottom_right (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the bottom right of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_bottom_right.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.bottom_right(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "left"></a>
+    <strong>left (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the left of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_left.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.left(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "right"></a>
+    <strong>right (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the right of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_right.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.right(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "top"></a>
+    <strong>top (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the top of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_top.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.top(client.focus)
+<span class="global">assert</span>(c.x == screen[<span class="number">1</span>].geometry.width/<span class="number">2</span>-<span class="number">40</span>/<span class="number">2</span>-c.border_width)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "bottom"></a>
+    <strong>bottom (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the bottom of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_bottom.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.bottom(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "centered"></a>
+    <strong>centered (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the center of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_centered.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.centered(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "center_vertical"></a>
+    <strong>center_vertical (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the vertical center of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_center_vertical.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.center_vertical(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "center_horizontal"></a>
+    <strong>center_horizontal (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Align a client to the horizontal center left of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_center_horizontal.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a>, <a href="../libraries/mouse.html#">mouse</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.placement.center_horizontal(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "stretch"></a>
+    <strong>stretch ([d=client.focus[, args={}]])</strong>
+    </dt>
+    <dd>
+    Stretch a drawable in a specific direction.
+ Valid args:</p>
+
+<ul>
+<li><strong>direction</strong>: The stretch direction (<em>left</em>, <em>right</em>, <em>up</em>, <em>down</em>) or
+a table with multiple directions.</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_stretch.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+         (<em>default</em> client.focus)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "stretch_left"></a>
+    <strong>stretch_left (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Stretch the drawable to the left of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_stretch_left.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.stretch_left(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "stretch_right"></a>
+    <strong>stretch_right (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Stretch the drawable to the right of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_stretch_right.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.stretch_right(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "stretch_up"></a>
+    <strong>stretch_up (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Stretch the drawable to the top of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_stretch_up.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.stretch_up(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "stretch_down"></a>
+    <strong>stretch_down (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Stretch the drawable to the bottom of the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_stretch_down.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.stretch_down(client.focus)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "maximize"></a>
+    <strong>maximize ([d=client.focus[, args={}]])</strong>
+    </dt>
+    <dd>
+    Maximize a drawable horizontally, vertically or both.
+ Valid args:</p>
+
+<ul>
+<li><em>axis</em>:The axis (vertical or horizontal). If none is
+ specified, then the drawable will be maximized on both axis.</li>
+</ul>
+
+
+<p><img src="../images/AUTOGEN_awful_placement_maximize.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+         (<em>default</em> client.focus)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "maximize_vertically"></a>
+    <strong>maximize_vertically (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Vetically maximize the drawable in the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_maximize_vertically.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.maximize_vertically(c)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "maximize_horizontally"></a>
+    <strong>maximize_horizontally (d[, args={}])</strong>
+    </dt>
+    <dd>
+    Horizontally maximize the drawable in the parent area.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_maximize_horizontally.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Other arguments')
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">placement.maximize_horizontally(c)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "scale"></a>
+    <strong>scale ([d=client.focus[, args={}]])</strong>
+    </dt>
+    <dd>
+    Scale the drawable by either a relative or absolute percent.</p>
+
+<p> Valid args:</p>
+
+<p> <strong>to_percent</strong> : A number between 0 and 1. It represent a percent related to
+  the parent geometry.
+ <strong>by_percent</strong> : A number between 0 and 1. It represent a percent related to
+  the current size.
+ <strong>direction</strong>: Nothing or &ldquo;left&rdquo;, &ldquo;right&rdquo;, &ldquo;up&rdquo;, &ldquo;down&rdquo;.
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+         (<em>default</em> client.focus)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "next_to"></a>
+    <strong>next_to (d, args)</strong>
+    </dt>
+    <dd>
+    Move a drawable to a relative position next to another one.</p>
+
+<p> This placement function offers two additional settings to align the drawable
+ alongside the parent geometry. The first one, the position, sets the side
+ relative to the parent. The second one, the anchor, set the alignment within
+ the side selected by the <code>preferred_positions</code>. Both settings are tables of
+ priorities. The first available slot will be used. If there isn&rsquo;t enough
+ space, then it will fallback to the next until it is possible to fit the
+ drawable. This is meant to avoid going offscreen.</p>
+
+<p> The <code>args.preferred_positions</code> look like this:</p>
+
+<pre><code>{"top", "right", "left", "bottom"}
+</code></pre>
+
+<p> The <code>args.preferred_anchors</code> are:</p>
+
+<ul>
+<li>&ldquo;front&rdquo;: The closest to the origin (0,0)</li>
+<li>&ldquo;middle&rdquo;: Centered aligned with the parent</li>
+<li>&ldquo;back&rdquo;: The opposite side compared to <code>front</code></li>
+</ul>
+
+
+<p> In that case, if there is room on the top of the geometry, then it will have
+ priority, followed by all the others, in order.</p>
+
+<p><img src="../images/AUTOGEN_awful_placement_next_to.svg" alt="Usage example" />
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A wibox or client
+        </li>
+        <li><span class="parameter">args</span>
+        <ul>
+        <li><span class="parameter">mode</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The mode
+        </li>
+        <li><span class="parameter">preferred_positions</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The preferred positions (in order)
+        </li>
+        <li><span class="parameter">preferred_anchors</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The preferred anchor(s) (in order)
+        </li>
+        <li><span class="parameter">geometry</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A geometry inside the other drawable
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The new geometry</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The choosen position (&ldquo;left&rdquo;, &ldquo;right&rdquo;, &ldquo;top&rdquo; or &ldquo;bottom&rdquo;)</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The choosen anchor (&ldquo;front&rdquo;, &ldquo;middle&rdquo; or &ldquo;back&rdquo;)</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, pos <span class="keyword">in</span> <span class="global">ipairs</span>{<span class="string">'left'</span>, <span class="string">'right'</span>, <span class="string">'top'</span>, <span class="string">'bottom'</span>} <span class="keyword">do</span>
+    <span class="keyword">for</span> _, anchor <span class="keyword">in</span> <span class="global">ipairs</span>{<span class="string">'front'</span>, <span class="string">'middle'</span>, <span class="string">'back'</span>} <span class="keyword">do</span>
+        awful.placement.next_to(
+            client.focus,
+            {
+                preferred_positions = pos,
+                preferred_anchors   = anchor,
+                geometry            = parent_client,
+            }
+        )
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+The <span class="backtick"><code>args.mode</code></span> parameters allows to control from which <span class="backtick"><a href="../libraries/awful.placement.html#next_to">next_to</a></span> takes its
+source object from. The valid values are:
+
+* geometry: Next to this geometry, <span class="backtick"><code>args.geometry</code></span> has to be set.
+* cursor: Next to the mouse.
+* cursor_inside
+* geometry_inside</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "restore"></a>
+    <strong>restore ([d=client.focus[, args={}]])</strong>
+    </dt>
+    <dd>
+    Restore the geometry.
+
+
+    <ul>
+        <li><span class="parameter">d</span>
+            <span class="types"><a class="type" href="../classes/drawable.html#">drawable</a></span>
+         A drawable (like <a href="../classes/client.html#">client</a> or <a href="../classes/wibox.html#">wibox</a>)
+         (<em>default</em> client.focus)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The arguments
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the geometry was restored
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

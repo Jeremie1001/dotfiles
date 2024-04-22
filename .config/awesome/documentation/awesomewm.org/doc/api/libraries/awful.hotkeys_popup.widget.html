@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module awful.hotkeys_popup.widget - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Theme_variables">Theme variables</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><strong>awful.hotkeys_popup.widget</strong></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>awful.hotkeys_popup.widget</code></h1>
+<p>Popup widget which shows current hotkeys and their descriptions.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2014-2015 Yauheni Kirylau</li>
+        <li><strong>Author</strong>: Yauheni Kirylau &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfa6bea8b8b7bab19fb8b2beb6b3f1bcb0b2">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#new">new ([args])</a></td>
+	<td class="summary">Create an instance of widget with hotkeys help.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#widget_instance:show_help">widget_instance:show_help ([c[, s[, show_args]]])</a></td>
+	<td class="summary">Show popup with hotkeys help.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#widget_instance:add_hotkeys">widget_instance:add_hotkeys (hotkeys)</a></td>
+	<td class="summary">Add hotkey descriptions for third-party applications.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#widget_instance:add_group_rules">widget_instance:add_group_rules (group, data)</a></td>
+	<td class="summary">Add hotkey group rules for third-party applications.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#show_help">show_help ([c[, s[, args]]])</a></td>
+	<td class="summary">Show popup with hotkeys help (default widget instance will be used).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#add_hotkeys">add_hotkeys (hotkeys)</a></td>
+	<td class="summary">Add hotkey descriptions for third-party applications
+ (default widget instance will be used).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#add_group_rules">add_group_rules (group, data)</a></td>
+	<td class="summary">Add hotkey group rules for third-party applications
+ (default widget instance will be used).</td>
+	</tr>
+</table>
+<h2><a href="#Theme_variables">Theme variables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_bg">beautiful.hotkeys_bg</a></td>
+	<td class="summary">Hotkeys widget background color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_fg">beautiful.hotkeys_fg</a></td>
+	<td class="summary">Hotkeys widget foreground color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_border_width">beautiful.hotkeys_border_width</a></td>
+	<td class="summary">Hotkeys widget border width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_border_color">beautiful.hotkeys_border_color</a></td>
+	<td class="summary">Hotkeys widget border color.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_shape">beautiful.hotkeys_shape</a></td>
+	<td class="summary">Hotkeys widget shape.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_modifiers_fg">beautiful.hotkeys_modifiers_fg</a></td>
+	<td class="summary">Foreground color used for hotkey modifiers (Ctrl, Alt, Super, etc).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_label_bg">beautiful.hotkeys_label_bg</a></td>
+	<td class="summary">Background color used for miscellaneous labels of hotkeys widget.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_label_fg">beautiful.hotkeys_label_fg</a></td>
+	<td class="summary">Foreground color used for hotkey groups and other labels.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_font">beautiful.hotkeys_font</a></td>
+	<td class="summary">Main hotkeys widget font.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_description_font">beautiful.hotkeys_description_font</a></td>
+	<td class="summary">Font used for hotkeys' descriptions.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#beautiful.hotkeys_group_margin">beautiful.hotkeys_group_margin</a></td>
+	<td class="summary">Margin between hotkeys groups.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#hide_without_description">hide_without_description</a></td>
+	<td class="summary">Don&rsquo;t show hotkeys without descriptions.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#merge_duplicates">merge_duplicates</a></td>
+	<td class="summary">Merge hotkey records into one if they have the same modifiers and
+ description.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new ([args])</strong>
+    </dt>
+    <dd>
+    Create an instance of widget with hotkeys help.
+
+
+    <ul>
+        <li><span class="parameter">args</span> Configuration options for the widget.
+        <ul>
+        <li><span class="parameter">hide_without_description</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Don&rsquo;t show hotkeys without descriptions.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">merge_duplicates</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Merge hotkey records into one if
+ they have the same modifiers and description.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">int</span></span>
+         Widget width.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">int</span></span>
+         Widget height.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Widget background color.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Widget foreground color.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">border_width</span>
+            <span class="types"><span class="type">int</span></span>
+         Border width.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">border_color</span>
+            <span class="types"><span class="type">color</span></span>
+         Border color.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+         Widget shape.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+         Main widget font.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">description_font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+         Font used for hotkeys' descriptions.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">modifiers_fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Foreground color used for hotkey
+ modifiers (Ctrl, Alt, Super, etc).
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">label_bg</span>
+            <span class="types"><span class="type">color</span></span>
+         Background color used for miscellaneous labels.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">label_fg</span>
+            <span class="types"><span class="type">color</span></span>
+         Foreground color used for group and other
+ labels.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">group_margin</span>
+            <span class="types"><span class="type">int</span></span>
+         Margin between hotkeys groups.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">labels</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Labels used for displaying human-readable keynames.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">group_rules</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Rules for showing 3rd-party hotkeys. @see <code>awful.hotkeys_popup.keys.vim</code>.
+         (<em>optional</em>)
+        </li>
+        </li></ul>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Widget instance.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "widget_instance:show_help"></a>
+    <strong>widget_instance:show_help ([c[, s[, show_args]]])</strong>
+    </dt>
+    <dd>
+    Show popup with hotkeys help.
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         Client.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">s</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">show_args</span> Additional arguments.
+        <ul>
+        <li><span class="parameter">show_awesome_keys</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Show AwesomeWM hotkeys.
+ When set to <code>false</code> only app-specific hotkeys will be shown.
+         (<em>default</em> true)
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "widget_instance:add_hotkeys"></a>
+    <strong>widget_instance:add_hotkeys (hotkeys)</strong>
+    </dt>
+    <dd>
+    Add hotkey descriptions for third-party applications.
+
+
+    <ul>
+        <li><span class="parameter">hotkeys</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table with bindings,
+ see <code>awful.hotkeys_popup.key.vim</code> as an example.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "widget_instance:add_group_rules"></a>
+    <strong>widget_instance:add_group_rules (group, data)</strong>
+    </dt>
+    <dd>
+    Add hotkey group rules for third-party applications.
+
+
+    <ul>
+        <li><span class="parameter">group</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         hotkeys group name,
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         rule data for the group
+ see <code>awful.hotkeys_popup.key.vim</code> as an example.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "show_help"></a>
+    <strong>show_help ([c[, s[, args]]])</strong>
+    </dt>
+    <dd>
+    Show popup with hotkeys help (default widget instance will be used).
+
+
+    <ul>
+        <li><span class="parameter">c</span>
+            <span class="types"><a class="type" href="../classes/client.html#">client</a></span>
+         Client.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">s</span>
+            <span class="types"><a class="type" href="../classes/screen.html#">screen</a></span>
+         Screen.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">args</span> Additional arguments.
+        <ul>
+        <li><span class="parameter">show_awesome_keys</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Show AwesomeWM hotkeys.
+ When set to <code>false</code> only app-specific hotkeys will be shown.
+         (<em>default</em> true)
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "add_hotkeys"></a>
+    <strong>add_hotkeys (hotkeys)</strong>
+    </dt>
+    <dd>
+    Add hotkey descriptions for third-party applications
+ (default widget instance will be used).
+
+
+    <ul>
+        <li><span class="parameter">hotkeys</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table with bindings,
+ see <code>awful.hotkeys_popup.key.vim</code> as an example.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "add_group_rules"></a>
+    <strong>add_group_rules (group, data)</strong>
+    </dt>
+    <dd>
+    Add hotkey group rules for third-party applications
+ (default widget instance will be used).
+
+
+    <ul>
+        <li><span class="parameter">group</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         rule group name,
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         rule data for the group
+ see <code>awful.hotkeys_popup.key.vim</code> as an example.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Theme_variables"></a>Theme variables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "beautiful.hotkeys_bg"></a>
+    <strong>beautiful.hotkeys_bg</strong>
+    </dt>
+    <dd>
+    Hotkeys widget background color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_bg</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_fg"></a>
+    <strong>beautiful.hotkeys_fg</strong>
+    </dt>
+    <dd>
+    Hotkeys widget foreground color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_fg</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_border_width"></a>
+    <strong>beautiful.hotkeys_border_width</strong>
+    </dt>
+    <dd>
+    Hotkeys widget border width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_border_width</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_border_color"></a>
+    <strong>beautiful.hotkeys_border_color</strong>
+    </dt>
+    <dd>
+    Hotkeys widget border color.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_border_color</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_shape"></a>
+    <strong>beautiful.hotkeys_shape</strong>
+    </dt>
+    <dd>
+    Hotkeys widget shape.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_shape</span>
+            <span class="types"><span class="type">gears.shape</span></span>
+
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.shape.html#">gears.shape</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_modifiers_fg"></a>
+    <strong>beautiful.hotkeys_modifiers_fg</strong>
+    </dt>
+    <dd>
+    Foreground color used for hotkey modifiers (Ctrl, Alt, Super, etc).
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_modifiers_fg</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_label_bg"></a>
+    <strong>beautiful.hotkeys_label_bg</strong>
+    </dt>
+    <dd>
+    Background color used for miscellaneous labels of hotkeys widget.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_label_bg</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_label_fg"></a>
+    <strong>beautiful.hotkeys_label_fg</strong>
+    </dt>
+    <dd>
+    Foreground color used for hotkey groups and other labels.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_label_fg</span>
+            <span class="types"><span class="type">color</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_font"></a>
+    <strong>beautiful.hotkeys_font</strong>
+    </dt>
+    <dd>
+    Main hotkeys widget font.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_description_font"></a>
+    <strong>beautiful.hotkeys_description_font</strong>
+    </dt>
+    <dd>
+    Font used for hotkeys' descriptions.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_description_font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "beautiful.hotkeys_group_margin"></a>
+    <strong>beautiful.hotkeys_group_margin</strong>
+    </dt>
+    <dd>
+    Margin between hotkeys groups.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">hotkeys_group_margin</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "hide_without_description"></a>
+    <strong>hide_without_description</strong>
+    </dt>
+    <dd>
+    Don&rsquo;t show hotkeys without descriptions.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "merge_duplicates"></a>
+    <strong>merge_duplicates</strong>
+    </dt>
+    <dd>
+    Merge hotkey records into one if they have the same modifiers and
+ description.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

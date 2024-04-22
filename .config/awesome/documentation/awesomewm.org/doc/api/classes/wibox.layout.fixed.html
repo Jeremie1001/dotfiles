@@ -1,0 +1,1458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Class wibox.layout.fixed - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+<li><a href="#Signals">Signals</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><strong>wibox.layout.fixed</strong></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>wibox.layout.fixed</code></h1>
+<p></p>
+<p><img src="../images/AUTOGEN_wibox_layout_defaults_fixed.svg" alt="Usage example" /></p>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">wibox.widget {
+    generic_widget( &apos;first&apos;  ),
+    generic_widget( &apos;second&apos; ),
+    generic_widget( &apos;third&apos;  ),
+    layout  = wibox.layout.fixed.horizontal
+}
+</pre>
+    </ul>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+        <li><strong>Author</strong>: Uli Schlachter</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.horizontal">wibox.layout.fixed.horizontal (...)</a></td>
+	<td class="summary">Returns a new horizontal fixed layout.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.vertical">wibox.layout.fixed.vertical (...)</a></td>
+	<td class="summary">Returns a new vertical fixed layout.</td>
+	</tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.spacing_widget">spacing_widget</a></td>
+	<td class="summary">The widget used to fill the spacing between the layout elements.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.fill_space">fill_space</a></td>
+	<td class="summary">Set the layout&rsquo;s fill_space property.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.spacing">spacing</a></td>
+	<td class="summary">Add spacing between each layout widgets.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.children">children</a></td>
+	<td class="summary">Get all direct children of this layout.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.forced_height">forced_height</a></td>
+	<td class="summary">Force a widget height.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.forced_width">forced_width</a></td>
+	<td class="summary">Force a widget width.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.opacity">opacity</a></td>
+	<td class="summary">The widget opacity (transparency).</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed.visible">visible</a></td>
+	<td class="summary">The widget visibility.</td>
+	</tr>
+</table>
+<h2><a href="#Signals">Signals</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#widget::layout_changed">widget::layout_changed</a></td>
+	<td class="summary">When the layout (size) change.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#widget::redraw_needed">widget::redraw_needed</a></td>
+	<td class="summary">When the widget content changed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#button::press">button::press</a></td>
+	<td class="summary">When a mouse button is pressed over the widget.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#button::release">button::release</a></td>
+	<td class="summary">When a mouse button is released over the widget.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mouse::enter">mouse::enter</a></td>
+	<td class="summary">When the mouse enter a widget.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mouse::leave">mouse::leave</a></td>
+	<td class="summary">When the mouse leave a widget.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:add">wibox.layout.fixed:add (...)</a></td>
+	<td class="summary">Add some widgets to the given fixed layout</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:remove">wibox.layout.fixed:remove (index)</a></td>
+	<td class="summary">Remove a widget from the layout</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:remove_widgets">wibox.layout.fixed:remove_widgets (widget)</a></td>
+	<td class="summary">Remove one or more widgets from the layout
+ The last parameter can be a boolean, forcing a recursive seach of the
+ widget(s) to remove.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:replace_widget">wibox.layout.fixed:replace_widget (widget, widget2[, recursive=false])</a></td>
+	<td class="summary">Replace the first instance of <a href="../classes/wibox.widget.html">widget</a> in the layout with <code>widget2</code></td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:insert">wibox.layout.fixed:insert (index, widget)</a></td>
+	<td class="summary">Insert a new widget in the layout at position <code>index</code>
+ <strong>Signal:</strong> widget::inserted The arguments are the widget and the index</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:set">wibox.layout.fixed:set (index, widget2)</a></td>
+	<td class="summary">Set a widget at a specific index, replace the current one.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:replace_widget">wibox.layout.fixed:replace_widget (widget, widget2[, recursive=false])</a></td>
+	<td class="summary">Replace the first instance of <a href="../classes/wibox.widget.html">widget</a> in the layout with <code>widget2</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:swap">wibox.layout.fixed:swap (index1, index2)</a></td>
+	<td class="summary">Swap 2 widgets in a layout.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:swap_widgets">wibox.layout.fixed:swap_widgets (widget1, widget2[, recursive=false])</a></td>
+	<td class="summary">Swap 2 widgets in a layout.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:reset">wibox.layout.fixed:reset (layout)</a></td>
+	<td class="summary">Reset a ratio layout.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:get_all_children">wibox.layout.fixed:get_all_children ()</a></td>
+	<td class="summary">Get all direct and indirect children widgets.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:setup">wibox.layout.fixed:setup (args)</a></td>
+	<td class="summary">Set a declarative widget hierarchy description.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:buttons">wibox.layout.fixed:buttons (_buttons)</a></td>
+	<td class="summary">Set/get a widget&rsquo;s buttons.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:emit_signal_recursive">wibox.layout.fixed:emit_signal_recursive (signal_name, ...)</a></td>
+	<td class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:emit_signal">wibox.layout.fixed:emit_signal (name, ...)</a></td>
+	<td class="summary">Emit a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:connect_signal">wibox.layout.fixed:connect_signal (name, func)</a></td>
+	<td class="summary">Connect to a signal.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#wibox.layout.fixed:weak_connect_signal">wibox.layout.fixed:weak_connect_signal (name, func)</a></td>
+	<td class="summary">Connect to a signal weakly.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "wibox.layout.fixed.horizontal"></a>
+    <strong>wibox.layout.fixed.horizontal (...)</strong>
+    </dt>
+    <dd>
+    Returns a new horizontal fixed layout.  Each widget will get as much space as it
+ asks for and each widget will be drawn next to its neighboring widget.
+ Widgets can be added via :add() or as arguments to this function.
+ Note that widgets ignore <a href="../classes/wibox.layout.fixed.html#wibox.layout.fixed.forced_height">forced_height</a>. They will use the preferred/minimum width
+ on the horizontal axis, and a stretched height on the vertical axis.
+
+
+    <ul>
+        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         Widgets that should be added to the layout.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.vertical"></a>
+    <strong>wibox.layout.fixed.vertical (...)</strong>
+    </dt>
+    <dd>
+    Returns a new vertical fixed layout.  Each widget will get as much space as it
+ asks for and each widget will be drawn next to its neighboring widget.
+ Widgets can be added via :add() or as arguments to this function.
+ Note that widgets ignore <a href="../classes/wibox.layout.fixed.html#wibox.layout.fixed.forced_width">forced_width</a>. They will use the preferred/minimum height
+ on the vertical axis, and a stretched width on the horizontal axis.
+
+
+    <ul>
+        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         Widgets that should be added to the layout.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "wibox.layout.fixed.spacing_widget"></a>
+    <strong>spacing_widget</strong>
+    </dt>
+    <dd>
+    The widget used to fill the spacing between the layout elements.</p>
+
+<p> By default, no widget is used.</p>
+
+<p><img src="../images/AUTOGEN_wibox_layout_fixed_spacing_widget.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">widget</span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Use the separator widget directly
+</span><span class="keyword">local</span> w1 = wibox.widget {
+    spacing        = <span class="number">10</span>,
+    spacing_widget = wibox.widget.separator,
+    layout         = wibox.layout.fixed.horizontal
+}
+<span class="comment">-- Use a standard declarative widget construct
+</span><span class="keyword">local</span> w2 = wibox.widget {
+    spacing = <span class="number">10</span>,
+    spacing_widget = {
+        color  = <span class="string">'#00ff00'</span>,
+        shape  = gears.shape.circle,
+        widget = wibox.widget.separator,
+    },
+    layout = wibox.layout.fixed.horizontal
+}
+<span class="comment">-- Use composed widgets
+</span><span class="keyword">local</span> w3 = wibox.widget {
+    spacing = <span class="number">10</span>,
+    spacing_widget = {
+        {
+            text   = <span class="string">'F'</span>,
+            widget = wibox.widget.textbox,
+        },
+        bg     = <span class="string">'#ff0000'</span>,
+        widget = wibox.container.background,
+    },
+    layout = wibox.layout.fixed.horizontal
+}
+<span class="comment">-- Use negative spacing to create a powerline effect
+</span><span class="keyword">local</span> w4 = wibox.widget {
+    spacing = -<span class="number">12</span>,
+    spacing_widget = {
+        color  = <span class="string">'#ff0000'</span>,
+        shape  = gears.shape.powerline,
+        widget = wibox.widget.separator,
+    },
+    layout = wibox.layout.fixed.horizontal
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.fill_space"></a>
+    <strong>fill_space</strong>
+    </dt>
+    <dd>
+    Set the layout&rsquo;s fill_space property.  If this property is true, the last
+ widget will get all the space that is left. If this is false, the last widget
+ won&rsquo;t be handled specially and there can be space left unused.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.spacing"></a>
+    <strong>spacing</strong>
+    </dt>
+    <dd>
+    Add spacing between each layout widgets.</p>
+
+<p><img src="../images/AUTOGEN_wibox_layout_fixed_spacing.svg" alt="Usage example" />
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">spacing</span>
+            <span class="types"><span class="type">number</span></span>
+         Spacing between widgets.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> i=<span class="number">1</span>, <span class="number">5</span> <span class="keyword">do</span>
+    <span class="keyword">local</span> w = wibox.widget {
+        first,
+        second,
+        third,
+        spacing = i*<span class="number">3</span>,
+        layout  = wibox.layout.fixed.horizontal
+    }
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.children"></a>
+    <strong>children</strong>
+    </dt>
+    <dd>
+    Get all direct children of this layout.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">layout</span>
+         The layout you are modifying.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.forced_height"></a>
+    <strong>forced_height</strong>
+    </dt>
+    <dd>
+    Force a widget height.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+         The height (<code>nil</code> for automatic)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.forced_width"></a>
+    <strong>forced_width</strong>
+    </dt>
+    <dd>
+    Force a widget width.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+         The width (<code>nil</code> for automatic)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.opacity"></a>
+    <strong>opacity</strong>
+    </dt>
+    <dd>
+    The widget opacity (transparency).
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">opacity</span>
+            <span class="types"><span class="type">number</span></span>
+         The opacity (between 0 and 1)
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed.visible"></a>
+    <strong>visible</strong>
+    </dt>
+    <dd>
+    The widget visibility.
+
+
+    <h3>Type:</h3>
+    <ul>
+        <li><span class="parameter">boolean</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Signals"></a>Signals</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "widget::layout_changed"></a>
+    <strong>widget::layout_changed</strong>
+    </dt>
+    <dd>
+    When the layout (size) change.
+ This signal is emitted when the previous results of <code>:layout()</code> and <code>:fit()</code>
+ are no longer valid.  Unless this signal is emitted, <code>:layout()</code> and <code>:fit()</code>
+ must return the same result when called with the same arguments.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.layout.fixed.html#widget::redraw_needed">widget::redraw_needed</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "widget::redraw_needed"></a>
+    <strong>widget::redraw_needed</strong>
+    </dt>
+    <dd>
+    When the widget content changed.
+ This signal is emitted when the content of the widget changes. The widget will
+ be redrawn, it is not re-layouted. Put differently, it is assumed that
+ <code>:layout()</code> and <code>:fit()</code> would still return the same results as before.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/wibox.layout.fixed.html#widget::layout_changed">widget::layout_changed</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "button::press"></a>
+    <strong>button::press</strong>
+    </dt>
+    <dd>
+    When a mouse button is pressed over the widget.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><span class="type">wibox.hierarchy</span></span>
+         The hierarchy
+ managing the widget&rsquo;s geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/mouse.html#">mouse</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
+    </dt>
+    <dd>
+    When a mouse button is released over the widget.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><span class="type">wibox.hierarchy</span></span>
+         The hierarchy
+ managing the widget&rsquo;s geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/mouse.html#">mouse</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><span class="type">wibox.hierarchy</span></span>
+         The hierarchy
+ managing the widget&rsquo;s geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/mouse.html#">mouse</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../classes/wibox.widget.html">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><span class="type">wibox.hierarchy</span></span>
+         The hierarchy
+ managing the widget&rsquo;s geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/mouse.html#">mouse</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "wibox.layout.fixed:add"></a>
+    <strong>wibox.layout.fixed:add (...)</strong>
+    </dt>
+    <dd>
+    Add some widgets to the given fixed layout
+
+
+    <ul>
+        <li><span class="parameter">...</span>
+         Widgets that should be added (must at least be one)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:remove"></a>
+    <strong>wibox.layout.fixed:remove (index)</strong>
+    </dt>
+    <dd>
+    Remove a widget from the layout
+
+
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">number</span></span>
+         The widget index to remove
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        index If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:remove_widgets"></a>
+    <strong>wibox.layout.fixed:remove_widgets (widget)</strong>
+    </dt>
+    <dd>
+    Remove one or more widgets from the layout
+ The last parameter can be a boolean, forcing a recursive seach of the
+ widget(s) to remove.
+
+
+    <ul>
+        <li><span class="parameter">widget</span>
+         &hellip; Widgets that should be removed (must at least be one)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:replace_widget"></a>
+    <strong>wibox.layout.fixed:replace_widget (widget, widget2[, recursive=false])</strong>
+    </dt>
+    <dd>
+    Replace the first instance of <a href="../classes/wibox.widget.html">widget</a> in the layout with <code>widget2</code>
+
+
+    <ul>
+        <li><span class="parameter">widget</span>
+         The widget to replace
+        </li>
+        <li><span class="parameter">widget2</span>
+         The widget to replace <a href="../classes/wibox.widget.html">widget</a> with
+        </li>
+        <li><span class="parameter">recursive</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Digg in all compatible layouts to find the widget.
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:insert"></a>
+    <strong>wibox.layout.fixed:insert (index, widget)</strong>
+    </dt>
+    <dd>
+    Insert a new widget in the layout at position <code>index</code>
+ <strong>Signal:</strong> widget::inserted The arguments are the widget and the index
+
+
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">number</span></span>
+         The position
+        </li>
+        <li><span class="parameter">widget</span>
+         The widget
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:set"></a>
+    <strong>wibox.layout.fixed:set (index, widget2)</strong>
+    </dt>
+    <dd>
+    Set a widget at a specific index, replace the current one.
+ <strong>Signal:</strong> widget::replaced The argument is the new widget and the old one
+ and the index.
+
+
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">number</span></span>
+         A widget or a widget index
+        </li>
+        <li><span class="parameter">widget2</span>
+         The widget to take the place of the first one
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:replace_widget"></a>
+    <strong>wibox.layout.fixed:replace_widget (widget, widget2[, recursive=false])</strong>
+    </dt>
+    <dd>
+    Replace the first instance of <a href="../classes/wibox.widget.html">widget</a> in the layout with <code>widget2</code>.
+ <strong>Signal:</strong> widget::replaced The argument is the new widget and the old one
+ and the index.
+
+
+    <ul>
+        <li><span class="parameter">widget</span>
+         The widget to replace
+        </li>
+        <li><span class="parameter">widget2</span>
+         The widget to replace <a href="../classes/wibox.widget.html">widget</a> with
+        </li>
+        <li><span class="parameter">recursive</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Dig in all compatible layouts to find the widget.
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:swap"></a>
+    <strong>wibox.layout.fixed:swap (index1, index2)</strong>
+    </dt>
+    <dd>
+    Swap 2 widgets in a layout.
+ <strong>Signal:</strong> widget::swapped The arguments are both widgets and both (new) indexes.
+
+
+    <ul>
+        <li><span class="parameter">index1</span>
+            <span class="types"><span class="type">number</span></span>
+         The first widget index
+        </li>
+        <li><span class="parameter">index2</span>
+            <span class="types"><span class="type">number</span></span>
+         The second widget index
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:swap_widgets"></a>
+    <strong>wibox.layout.fixed:swap_widgets (widget1, widget2[, recursive=false])</strong>
+    </dt>
+    <dd>
+    Swap 2 widgets in a layout.
+ If widget1 is present multiple time, only the first instance is swapped
+ <strong>Signal:</strong> widget::swapped The arguments are both widgets and both (new) indexes.
+ if the layouts not the same, then only <code>widget::replaced</code> will be emitted.
+
+
+    <ul>
+        <li><span class="parameter">widget1</span>
+         The first widget
+        </li>
+        <li><span class="parameter">widget2</span>
+         The second widget
+        </li>
+        <li><span class="parameter">recursive</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Dig in all compatible layouts to find the widget.
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If the operation is successful
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:reset"></a>
+    <strong>wibox.layout.fixed:reset (layout)</strong>
+    </dt>
+    <dd>
+    Reset a ratio layout.  This removes all widgets from the layout.
+ <strong>Signal:</strong> widget::reset
+
+
+    <ul>
+        <li><span class="parameter">layout</span>
+         The layout you are modifying.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:get_all_children"></a>
+    <strong>wibox.layout.fixed:get_all_children ()</strong>
+    </dt>
+    <dd>
+    Get all direct and indirect children widgets.
+ This will scan all containers recursively to find widgets
+ Warning: This method it prone to stack overflow id the widget, or any of its
+ children, contain (directly or indirectly) itself.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The children
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:setup"></a>
+    <strong>wibox.layout.fixed:setup (args)</strong>
+    </dt>
+    <dd>
+    Set a declarative widget hierarchy description.
+ See <a href="../documentation/03-declarative-layout.md.html">The declarative layout system</a>
+
+
+    <ul>
+        <li><span class="parameter">args</span>
+         An array containing the widgets disposition
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:buttons"></a>
+    <strong>wibox.layout.fixed:buttons (_buttons)</strong>
+    </dt>
+    <dd>
+    Set/get a widget&rsquo;s buttons.
+
+
+    <ul>
+        <li><span class="parameter">_buttons</span>
+         The table of buttons that should bind to the widget.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:emit_signal_recursive"></a>
+    <strong>wibox.layout.fixed:emit_signal_recursive (signal_name, ...)</strong>
+    </dt>
+    <dd>
+    Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.  This is useful to track signals when there is a dynamic
+ set of containers and layouts wrapping the widget.
+
+
+    <ul>
+        <li><span class="parameter">signal_name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">...</span>
+         Other arguments
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:emit_signal"></a>
+    <strong>wibox.layout.fixed:emit_signal (name, ...)</strong>
+    </dt>
+    <dd>
+    Emit a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">...</span>
+         Extra arguments for the callback functions. Each connected
+   function receives the object as first argument and then any extra
+   arguments that are given to emit_signal().
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:connect_signal"></a>
+    <strong>wibox.layout.fixed:connect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Connect to a signal.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback to call when the signal is emitted.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wibox.layout.fixed:weak_connect_signal"></a>
+    <strong>wibox.layout.fixed:weak_connect_signal (name, func)</strong>
+    </dt>
+    <dd>
+    Connect to a signal weakly.</p>
+
+<p> This allows the callback function to be garbage collected and
+ automatically disconnects the signal when that happens.</p>
+
+<p> <strong>Warning:</strong>
+ Only use this function if you really, really, really know what you
+ are doing.
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the signal.
+        </li>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback to call when the signal is emitted.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

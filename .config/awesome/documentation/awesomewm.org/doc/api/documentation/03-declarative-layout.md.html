@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Topic 03-declarative-layout.md - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#The_default_widgets">The default widgets </a></li>
+<li><a href="#The_different_syntaxes_to_initiate_widgets">The different syntaxes to initiate widgets </a></li>
+<li><a href="#Creating_and_placing_widgets_using_the_declarative_style">Creating and placing widgets using the declarative style </a></li>
+</ul>
+
+
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><strong>The AwesomeWM widget system</strong></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+    <h1>The AwesomeWM widget system</h1>
+
+<p>This document explains how to define, place and manage widgets.</p>
+
+<p><a name="The_default_widgets"></a></p>
+
+<h2>The default widgets</h2>
+
+<h3>Widgets</h3>
+
+<p>Awesome provides 2 collections of widgets:</p>
+
+<ul>
+<li><a href="../classes/wibox.widget.html#">wibox.widget</a>: Generic widgets, containers and layouts</li>
+<li><code>awful.widget</code>: The Awesome specific widgets</li>
+</ul>
+
+
+<table class='widget_list' border=1>
+ <tr style='font-weight: bold;'>
+  <th align='center'>Name</th>
+  <th align='center'>Example</th>
+ </tr>
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.calendar.html'>wibox.widget.calendar</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_calendar.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.checkbox.html'>wibox.widget.checkbox</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_checkbox.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.graph.html'>wibox.widget.graph</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_graph.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.imagebox.html'>wibox.widget.imagebox</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_imagebox.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.piechart.html'>wibox.widget.piechart</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_piechart.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.progressbar.html'>wibox.widget.progressbar</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_progressbar.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.separator.html'>wibox.widget.separator</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_separator.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.slider.html'>wibox.widget.slider</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_slider.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.widget.textbox.html'>wibox.widget.textbox</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_widget_defaults_textbox.svg' /></td>
+</tr>
+</table>
+
+
+<h3>Containers</h3>
+
+<p>A container is a widget that wraps another widget. It can be used to add
+decorations or to modify the content of the child widget.</p>
+
+<table class='widget_list' border=1>
+ <tr style='font-weight: bold;'>
+  <th align='center'>Name</th>
+  <th align='center'>Example</th>
+ </tr>
+<tr>
+ <td>
+  <a href='../classes/wibox.container.arcchart.html'>wibox.container.arcchart</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_arcchart.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.background.html'>wibox.container.background</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_background.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.constraint.html'>wibox.container.constraint</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_constraint.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.margin.html'>wibox.container.margin</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_margin.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.mirror.html'>wibox.container.mirror</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_mirror.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.only_on_screen.html'>wibox.container.only_on_screen</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_only_on_screen.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.place.html'>wibox.container.place</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_place.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.radialprogressbar.html'>wibox.container.radialprogressbar</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_radialprogressbar.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.rotate.html'>wibox.container.rotate</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_rotate.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.container.scroll.html'>wibox.container.scroll</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_container_defaults_scroll.svg' /></td>
+</tr>
+</table>
+
+
+<h3>Layouts</h3>
+
+<p>Layouts are collections of children widgets. They are placed according to
+configurable rules.</p>
+
+<table class='widget_list' border=1>
+ <tr style='font-weight: bold;'>
+  <th align='center'>Name</th>
+  <th align='center'>Example</th>
+ </tr>
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.align.html'>wibox.layout.align</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_align.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.fixed.html'>wibox.layout.fixed</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_fixed.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.flex.html'>wibox.layout.flex</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_flex.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.grid.html'>wibox.layout.grid</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_grid.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.manual.html'>wibox.layout.manual</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_manual.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.ratio.html'>wibox.layout.ratio</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_ratio.svg' /></td>
+</tr>
+
+<tr>
+ <td>
+  <a href='../classes/wibox.layout.stack.html'>wibox.layout.stack</a>
+ </td>
+ <td><img src='../images/AUTOGEN_wibox_layout_defaults_stack.svg' /></td>
+</tr>
+</table>
+
+
+<h3>The different type of widget boxes (Wibox)</h3>
+
+<p>The Awesome API uses the word &ldquo;wibox&rdquo; (widget box) to describe an area of the
+screen filled with widgets. There are many subvariants of wiboxes with
+specialized roles such as widget bars or tooltips. All variants mostly share the
+same characteristics, but add some extra features to make those specialized
+widget boxes easier to work with.</p>
+
+<p>&ndash;</p>
+
+<h2>&ndash;<img src="../images/AUTOGEN_awful_popup_wiboxtypes.svg" alt="Usage example" /></h2>
+
+<p>The normal <a href="../classes/wibox.html#">wibox</a> is the base class for each of these types. It is extremely
+flexible and allows to place just about anything on the screen. However it
+requires a lot of repetitive boilerplate code to use directly. For example,
+the user needs to compute the optimal size by hand or use <a href="../libraries/awful.placement.html#">awful.placement</a>.</p>
+
+<p>The <a href="../classes/awful.wibar.html#">awful.wibar</a> specialization allows to attach a <a href="../classes/wibox.html#">wibox</a> to a screen edge
+and prevents clients from using this area when tiled.</p>
+
+<p>The <a href="../classes/awful.popup.html#">awful.popup</a> allows to easily place widgets on the screen. It automatically
+resizes itself to fit the optimal widget size. It also has helper properties
+and methods to make it easy to place it on the screen. It supports absolute
+positioning, relative positioning, and manual positioning.</p>
+
+<p>The <a href="../classes/awful.tooltip.html#">awful.tooltip</a> is a very simple <a href="../classes/wibox.html#">wibox</a> that allows to display text next
+to an object such as the mouse.</p>
+
+<p>Finally, the <a href="../classes/awful.titlebar.html#">awful.titlebar</a>, while not technically a real <a href="../classes/wibox.html#">wibox</a>, acts
+exactly the same way and allows to attach widgets on each side of clients.</p>
+
+<p><a name="The_different_syntaxes_to_initiate_widgets"></a></p>
+
+<h2>The different syntaxes to initiate widgets</h2>
+
+<p>Awesome provides 2 totally different API access styles to manage widgets. Both
+suit different use cases. Under the hood, both produce the
+exact same code. Consider the declarative API to be compiled into the
+imperative syntax when loaded. Also note that in contrast to technologies such
+as QML, it is interpreted only once and isn&rsquo;t automatically updated when
+values change.</p>
+
+<p>The <strong>imperative</strong> widget initialization is similar to QtWidgets, GTK and Win32.
+You create the object, then set the property and add the widget as a child to
+another already declared widget. It is quite simple to use but very verbose
+and full of boilerplate code. The imperative API also offers properties both
+with accessors or directly. It is useful when creating highly dynamic layouts
+where widgets are added and removed over the course of their lifecycle.</p>
+
+<p>The <strong>declarative</strong> syntax resembles HTML style code
+written in JSON or YAML. The widget instances are created automatically and
+the hierarchy is related to the table nesting (indentation). It is preferred
+when creating static layouts that won&rsquo;t change over the course of their
+lifecycle.</p>
+
+<p>Here is the same code written in both the imperative and declarative style</p>
+
+<p><strong>Imperative with accessors</strong></p>
+
+<p>Code:</p>
+
+<pre><span class="keyword">local</span> bg = wibox.container.background()
+bg:set_bg(<span class="string">"#ff0000"</span>)
+
+<span class="keyword">local</span> tb1 = wibox.widget.textbox()
+<span class="keyword">local</span> tb2 = wibox.widget.textbox(<span class="string">"bar"</span>)
+
+tb1:set_text(<span class="string">"foo"</span>)
+tb2:set_text(<span class="string">"bar"</span>)
+
+<span class="keyword">local</span> l = wibox.layout.fixed.vertical()
+l:add(tb1)
+l:add(tb2)
+
+bg:set_widget(l)
+</pre>
+
+
+<p><strong>Imperative with properties</strong></p>
+
+<p>Code:</p>
+
+<pre><span class="keyword">local</span> bg = wibox.container.background()
+bg.bg = <span class="string">"#ff0000"</span>
+
+<span class="keyword">local</span> tb1 = wibox.widget.textbox(<span class="string">"foo"</span>)
+<span class="keyword">local</span> tb2 = wibox.widget.textbox(<span class="string">"bar"</span>)
+
+tb1.text = <span class="string">"foo"</span>
+tb2.text = <span class="string">"bar"</span>
+
+<span class="keyword">local</span> l = wibox.layout.fixed.vertical()
+l:add(tb1)
+l:add(tb2)
+
+bg.widget = l
+</pre>
+
+
+<p><strong>Declarative</strong></p>
+
+<p>Code:</p>
+
+<pre><span class="keyword">local</span> bg = wibox.widget {
+    {
+        {
+            text = <span class="string">"foo"</span>,
+            widget = wibox.widget.textbox
+        },
+        {
+            text = <span class="string">"bar"</span>,
+            widget = wibox.widget.textbox
+        },
+        layout = wibox.layout.fixed.vertical
+    },
+    bg = <span class="string">"#ff0000"</span>,
+    widget = wibox.container.background
+}
+</pre>
+
+
+<p>The Awesome documentation mostly uses the declarative style for consistency,
+but both are <strong>always</strong> available. Note that each style can be mixed with other
+styles, but this creates very confusing code and should be avoided.</p>
+
+<p><a name="Creating_and_placing_widgets_using_the_declarative_style"></a></p>
+
+<h2>Creating and placing widgets using the declarative style</h2>
+
+<p>The examples below explain in detail how to use the declarative layout system.
+The imperative system is quite self explanatory and the respective widget API
+documentation should be enough for most.</p>
+
+<h3>A simple layout</h3>
+
+<ul>
+<li>Display <code>my_first_widget</code> only on primary screen</li>
+<li>Display <code>my_second_widget</code> only on screen two</li>
+<li>Add a background color to <code>my_fourth_widget</code></li>
+<li>Dispose in a <a href="../classes/wibox.layout.fixed.html#wibox.layout.fixed.horizontal">wibox.layout.fixed.horizontal</a> layout</li>
+</ul>
+
+
+<p>Code:</p>
+
+<pre>s.mywibox : setup {
+    {
+        layout = awful.widget.only_on_screen,
+        screen = <span class="string">"primary"</span>, <span class="comment">-- Only display on primary screen
+</span>        my_first_widget,
+    },
+    {
+        layout = awful.widget.only_on_screen,
+        screen = <span class="number">2</span>, <span class="comment">-- Only display on screen 2
+</span>        my_second_widget,
+    },
+    my_third_widget, <span class="comment">-- Displayed on all screens
+</span>    { <span class="comment">-- Add a background color/pattern for my_fourth_widget
+</span>          my_fourth_widget,
+          bg     = beautiful.bg_focus,
+          widget = wibox.container.background,
+    },
+    layout = wibox.layout.fixed.horizontal,
+}
+</pre>
+
+
+<p>This examples uses the <a href="../classes/awful.widget.only_on_screen.html#">awful.widget.only_on_screen</a> container to display
+widgets only on some screens.</p>
+
+<h3>Composite widgets</h3>
+
+<p><img src="../images/AUTOGEN_wibox_widget_progressbar_encapsulation.svg" alt="Usage example" /></p>
+
+<pre><span class="comment">-- The progressbars will be on top of each other
+</span> <span class="keyword">local</span> mycpubar1 = wibox.widget {
+    { value  = <span class="number">0.2</span>, color = grad1,
+        widget = wibox.widget.progressbar },
+    { value  = <span class="number">0.4</span>, color = grad2,
+        widget = wibox.widget.progressbar },
+    { value  = <span class="number">0.6</span>, color = grad3,
+        widget = wibox.widget.progressbar },
+    layout = wibox.layout.flex.vertical,
+ }
+<span class="comment">-- Now, add a rotate container, the height will become the width.
+</span><span class="comment">-- It act as if the <a href="../classes/wibox.layout.flex.html#wibox.layout.flex.vertical">wibox.layout.flex.vertical</a> was
+</span><span class="comment">-- <a href="../classes/wibox.layout.flex.html#wibox.layout.flex.horizontal">wibox.layout.flex.horizontal</a>
+</span> <span class="keyword">local</span> mycpubar2 = wibox.widget {
+    {
+        { value  = <span class="number">0.2</span>, color = grad1,
+            widget = wibox.widget.progressbar },
+        { value  = <span class="number">0.4</span>, color = grad2,
+            widget = wibox.widget.progressbar },
+        { value  = <span class="number">0.6</span>, color = grad3,
+            widget = wibox.widget.progressbar },
+        layout = wibox.layout.flex.vertical,
+    },
+    direction = <span class="string">'east'</span>,
+    widget    = wibox.container.rotate
+ }
+</pre>
+
+
+<h3>Define widgets inline and place them</h3>
+
+<ul>
+<li>Create a <a href="../classes/wibox.widget.textbox.html#">wibox.widget.textbox</a> with various properties</li>
+<li>Force the textbox size using <code>wibox.layout.constraint</code></li>
+<li>Add a margin around another textbox</li>
+<li>Add a <a href="../classes/wibox.container.background.html#">wibox.container.background</a> (for visualization)</li>
+</ul>
+
+
+<p>Code:</p>
+
+<pre>s.mywibox : setup {
+    {
+        <span class="comment">-- Force the textbox to always be 300 pixel long
+</span>        {
+            {
+                markup = <span class="string">"&lt;b&gt;Hello World!&lt;/b&gt;"</span>,
+                align  = <span class="string">"center"</span>,
+                widget = wibox.widget.textbox
+            },
+            bg     = <span class="string">"#ff0000"</span>,
+            widget = wibox.container.background,
+        },
+        width    = <span class="number">300</span>,
+        strategy = <span class="string">"min"</span>,
+        layout   = wibox.layout.constraint
+    },
+    {
+        <span class="comment">-- Add a border around the background
+</span>        {
+            {
+                markup = <span class="string">"Foobar"</span>,
+                widget = wibox.widget.textbox
+            },
+            bg     = <span class="string">"#0000ff"</span>,
+            widget = wibox.container.background
+        },
+        left   = <span class="number">10</span>,
+        right  = <span class="number">10</span>,
+        top    = <span class="number">1</span>,
+        bottom = <span class="number">2</span>,
+        layout = wibox.container.margin
+    },
+    layout = wibox.layout.fixed.horizontal,
+}
+</pre>
+
+
+<p>Result:
+<img src="../images/widgetlayout1.png" alt="Example2 screenshot" /></p>
+
+<h3>Use a <a href="../classes/wibox.layout.align.html#">wibox.layout.align</a> layout</h3>
+
+<p>The <a href="../classes/wibox.layout.align.html#">wibox.layout.align</a> is a little different. While most layouts will
+ignore any <code>nil</code> lines, the <code>align</code> layout relies on them so <code>left</code>, <code>middle</code>
+and <code>right</code> can be defined.</p>
+
+<p>Code:</p>
+
+<pre>s.mywibox : setup {
+    my_textbox1, <span class="comment">-- Left
+</span>    <span class="keyword">nil</span>,         <span class="comment">-- Nothing in the middle
+</span>    my_textbox2, <span class="comment">-- Right
+</span>    layout = wibox.layout.fixed.horizontal,
+}
+</pre>
+
+
+<h3>Define new widgets</h3>
+
+<p>New trivial widgets can be created directly in the layout declaration. Here
+is a simple circle widget:</p>
+
+<p>Code:</p>
+
+<pre>s.mywibox : setup {
+    fit    = <span class="keyword">function</span>(self, context, width, height)
+        <span class="keyword">return</span> height, height <span class="comment">-- A square taking the full height
+</span>    <span class="keyword">end</span>,
+    draw   = <span class="keyword">function</span>(self, context, cr, width, height)
+        cr:set_source_rgb(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>) <span class="comment">-- Red
+</span>        cr:arc(height/<span class="number">2</span>, height/<span class="number">2</span>, height/<span class="number">2</span>, <span class="number">0</span>, <span class="global">math</span>.pi*<span class="number">2</span>)
+        cr:fill()
+    <span class="keyword">end</span>,
+    layout = wibox.widget.base.make_widget,
+}
+</pre>
+
+
+<p>Result:
+<img src="../images/widgetlayout2.png" alt="Example4 screenshot" /></p>
+
+<p>For more information about how to draw widgets, refer to the <code>Cairo</code> API:</p>
+
+<ul>
+<li><a href="http://cairographics.org/manual/cairo-Paths.html">Path</a></li>
+<li><a href="http://cairographics.org/manual/cairo-cairo-t.html">Context</a></li>
+<li><a href="http://cairographics.org/manual/cairo-cairo-pattern-t.html">Pattern</a></li>
+<li><a href="http://cairographics.org/manual/cairo-Transformations.html">transformation</a></li>
+<li><a href="http://cairographics.org/operators/">Operator</a></li>
+<li><a href="https://developer.gnome.org/pango/stable/">Pango text</a></li>
+</ul>
+
+
+<h3>Externally defined widgets and layouts</h3>
+
+<p>This is useful when the widget is provided by an external module or when it
+requires complex manipulations which would make the declaration unreadable.</p>
+
+<p>Code:</p>
+
+<pre><span class="keyword">local</span> tb = wibox.widget.textbox()
+tb:set_markup(<span class="string">"Hello world! "</span>)
+
+<span class="comment">-- Repeat "tb" 3 times
+</span>s.mywibox : setup {
+    tb,
+    tb,
+    tb,
+    layout = wibox.layout.fixed.horizontal,
+}
+</pre>
+
+
+<h3>Accessing widgets</h3>
+
+<p>For each widget or container, it is possible to add an <code>identifier</code> attribute
+so that it can be accessed later.</p>
+
+<p>Widgets defined using <code>setup</code> can be accessed using these methods:</p>
+
+<ul>
+<li>Avoiding the issue by using externally created widgets</li>
+<li>Using <code>my_wibox.my_first_widget.my_second_widget</code> style access</li>
+<li>Using JavaScript like <code>my_wibox:get_children_by_id(&quot;my_second_widget&quot;)[1]</code></li>
+</ul>
+
+
+<p>The first method mixes the imperative and declarative syntax, and makes the code
+less readable. The second is a little verbose and only works if every node in
+the chain has a valid identifier. The last one doesn&rsquo;t require long paths,
+but it is not easy to get a specific instance if multiple widgets have the
+same identifier.</p>
+
+<p>WARNING: The widget identifier must not use a reserved name. This includes all
+method names, existing widget attributes, <code>layout</code> and <code>widget</code>. Names should
+also respect the Lua variable conventions (case-sensitive, alphanumeric,
+underscore characters and non-numeric first character).</p>
+
+<p>Code:</p>
+
+<pre>s.mywibox : setup {
+    {
+        id     = <span class="string">"second"</span>,
+        widget = wibox.widget.textbox
+    },
+    {
+        id     = <span class="string">"third"</span>,
+        widget = wibox.widget.textbox
+    },
+    id     = <span class="string">"first"</span>,
+    layout = wibox.layout.fixed.horizontal,
+}
+
+s.mywibox.first.second:set_markup(<span class="string">"changed!"</span>)
+s.mywibox:get_children_by_id(<span class="string">"third"</span>)[<span class="number">1</span>]:set_markup(<span class="string">"Also changed!"</span>)
+</pre>
+
+
+<h3>Extending the system</h3>
+
+<p>This system is very flexible. Each section attribute (the entries with string
+keys) is directly linked to the layout or widget API. When setting the
+imaginary <code>myproperty</code>, it will first check if <code>set_myproperty</code> exists. If it
+doesn&rsquo;t, it will check if there is a <code>myproperty</code> method. Finally, it will
+just set the <code>mywidget.myproperty</code> directly in case it is used later or
+caught by a Lua <code>metatable</code> (operator overload).</p>
+
+<p>Code:</p>
+
+<pre><span class="comment">-- "Monkeypatch" a new function to 3 widget classes to add vicious
+</span><span class="comment">-- extension support
+</span><span class="keyword">for</span> _, wdg <span class="keyword">in</span> <span class="global">ipairs</span> {
+    wibox.widget.textbox , wibox.widget.progressbar, wibox.widget.graph
+} <span class="keyword">do</span>
+    <span class="keyword">function</span> wdg:vicious(args)
+        <span class="keyword">local</span> f = <span class="global">unpack</span> <span class="keyword">or</span> <span class="global">table</span>.<span class="global">unpack</span> <span class="comment">-- Lua 5.1 compat
+</span>        vicious.register(self, f(args))
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+s.mywibox : setup {
+    {
+        vicious = {vicious.widgets.cpu, <span class="string">"CPU: $1%"</span>, <span class="number">3</span>},
+        widget  = wibox.widget.textbox
+    },
+    layout = wibox.layout.fixed.horizontal,
+}
+</pre>
+
+
+<p>In this example, the system is extended so that the popular
+<a href="https://github.com/vicious-widgets/vicious">Vicious</a> extension module can be
+used directly in the layout declaration. This example will update the textbox
+every 3 seconds to show the CPU usage.</p>
+
+<h3>Handling sections</h3>
+
+<p>The system allows sections to be defined externally, then composed into
+the final layout declaration. Here is an example re-using one of the above
+example:</p>
+
+<p>Code:</p>
+
+<pre><span class="keyword">local</span> circle = {
+    fit    = <span class="keyword">function</span>(self, context, width, height)
+        <span class="keyword">return</span> height, height <span class="comment">-- A square taking the full height
+</span>    <span class="keyword">end</span>,
+    draw   = <span class="keyword">function</span>(self, context, cr, width, height)
+        cr:set_source_rgb(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>) <span class="comment">-- Red
+</span>        cr:arc(height/<span class="number">2</span>, height/<span class="number">2</span>, height/<span class="number">2</span>, <span class="number">0</span>, <span class="global">math</span>.pi*<span class="number">2</span>)
+        cr:fill()
+    <span class="keyword">end</span>,
+    layout = wibox.widget.base.make_widget,
+}
+
+<span class="comment">-- Define a layout with the imperative syntax
+</span><span class="keyword">local</span> l = wibox.widget.align()
+
+<span class="comment">-- 3 circle
+</span>s.mywibox : setup {
+    circle,
+    circle,
+    circle,
+    l,
+    layout = wibox.layout.align.horizontal
+}
+
+<span class="comment">-- This can be done instead
+</span><span class="keyword">local</span> three_circle = {layout = wibox.layout.align.horizontal}
+<span class="keyword">for</span> i=<span class="number">1</span>, <span class="number">3</span> <span class="keyword">do</span>
+    <span class="global">table</span>.insert(three_circle, circle)
+<span class="keyword">end</span>
+
+s.mywibox : setup (three_circle)
+</pre>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Module awful.util - awesome API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Deprecated_functions">Deprecated functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awesome.html">awesome</a></li>
+  <li><a href="../libraries/awful.client.html">awful.client</a></li>
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.ewmh.html">awful.ewmh</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../libraries/awful.key.html">awful.key</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.menu.html">awful.menu</a></li>
+  <li><a href="../libraries/awful.mouse.html">awful.mouse</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.screen.html">awful.screen</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.tag.html">awful.tag</a></li>
+  <li><strong>awful.util</strong></li>
+  <li><a href="../libraries/awful.wibox.html">awful.wibox</a></li>
+  <li><a href="../libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../libraries/beautiful.gtk.html">beautiful.gtk</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../libraries/gears.shape.html">gears.shape</a></li>
+  <li><a href="../libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../libraries/menubar.html">menubar</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/mouse.html">mouse</a></li>
+  <li><a href="../libraries/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/naughty.dbus.html">naughty.dbus</a></li>
+  <li><a href="../libraries/root.html">root</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/wibox.hierarchy.html">wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.button.html">awful.button</a></li>
+  <li><a href="../classes/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../classes/awful.popup.html">awful.popup</a></li>
+  <li><a href="../classes/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../classes/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../classes/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../classes/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../classes/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../classes/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../classes/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../classes/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../classes/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../classes/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../classes/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../classes/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../classes/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../classes/awful.widget.textclock.html">awful.widget.textclock</a></li>
+  <li><a href="../classes/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../classes/button.html">button</a></li>
+  <li><a href="../classes/client.html">client</a></li>
+  <li><a href="../classes/drawable.html">drawable</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/gears.object.html">gears.object</a></li>
+  <li><a href="../classes/gears.timer.html">gears.timer</a></li>
+  <li><a href="../classes/key.html">key</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/screen.html">screen</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/tag.html">tag</a></li>
+  <li><a href="../classes/wibox.html">wibox</a></li>
+  <li><a href="../classes/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../classes/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../classes/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../classes/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../classes/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../classes/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../classes/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../classes/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../classes/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../classes/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../classes/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../classes/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../classes/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../classes/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../classes/wibox.layout.stack.html">wibox.layout.stack</a></li>
+  <li><a href="../classes/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../classes/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../classes/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../classes/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../classes/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../classes/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../classes/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../classes/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../classes/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../classes/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../classes/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>awful.util</code></h1>
+<p>Utility module for awful</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
+        <li><strong>Author</strong>: Julien Danjou &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0718010408032d090c030702184304030b02">[email&#160;protected]</a>&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#eval">eval (s)</a></td>
+	<td class="summary">Eval Lua code.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#checkfile">checkfile (path)</a></td>
+	<td class="summary">Check if a file is a Lua valid file.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#restart">restart ()</a></td>
+	<td class="summary">Try to restart awesome.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#geticonpath">geticonpath (iconname, exts, dirs[, size])</a></td>
+	<td class="summary">Search for an icon and return the full path.</td>
+	</tr>
+</table>
+<h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#awful.util.pread">awful.util.pread</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Execute a system command and road the output.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#deprecate">deprecate</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Display a deprecation notice, but only once per traceback.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#deprecate_class">deprecate_class</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Create a class proxy with deprecation messages.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#ensure_pango_color">ensure_pango_color</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a valid color for Pango markup</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#cycle">cycle</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Make i cycle.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#mkdir">mkdir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Create a directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#escape">escape</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Escape a string from XML char.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#unescape">unescape</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Unescape a string from entities.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_xdg_config_home">get_xdg_config_home</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the config home according to the XDG basedir specification.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_xdg_cache_home">get_xdg_cache_home</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the cache home according to the XDG basedir specification.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_configuration_dir">get_configuration_dir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the path to the user&rsquo;s config dir.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_cache_dir">get_cache_dir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the path to a directory that should be used for caching data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_themes_dir">get_themes_dir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the path to the directory where themes are installed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#get_awesome_icon_dir">get_awesome_icon_dir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the path to the directory where our icons are installed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#getdir">getdir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the user&rsquo;s config or cache dir.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#file_readable">file_readable</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Check if a file exists, is readable and not a directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#dir_readable">dir_readable</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Check if a path exists, is readable and is a directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#is_dir">is_dir</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Check if a path is a directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#subsets">subsets</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Return all subsets of a specific set.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#awful.util.get_rectangle_in_direction">awful.util.get_rectangle_in_direction</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get the nearest rectangle in the given direction.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.join">util.table.join</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Join all tables given as parameters.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.crush">util.table.crush</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Override elements in the first table by the one in the second.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.from_sparse">util.table.from_sparse</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Pack all elements with an integer key into a new table
+ While both lua and luajit implement __len over sparse
+ table, the standard define it as an implementation
+ detail.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.hasitem">util.table.hasitem</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Check if a table has an item and return its key.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#linewrap">linewrap</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Split a string into multiple lines</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#linecount">linecount</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Count number of lines in a string</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.keys">util.table.keys</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Get a sorted table with all integer keys from a table</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.keys_filter">util.table.keys_filter</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Filter a tables keys for certain content types</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.reverse">util.table.reverse</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Reverse a table</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.clone">util.table.clone</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Clone a table</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.iterate">util.table.iterate</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Returns an iterator to cycle through, starting from the first element or the
+ given index, all elements of a table that match a given criteria.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#util.table.merge">util.table.merge</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Merge items from the one table to another one</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#round">round</a> <i class="deprecated_label">[deprecated]</i><a></a></td>
+	<td class="summary">Round a number to an integer.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#shell">shell</a></td>
+	<td class="summary">The default shell used when spawing processes.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "eval"></a>
+    <strong>eval (s)</strong>
+    </dt>
+    <dd>
+    Eval Lua code.
+
+
+    <ul>
+        <li><span class="parameter">s</span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The return value of Lua code.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "checkfile"></a>
+    <strong>checkfile (path)</strong>
+    </dt>
+    <dd>
+    Check if a file is a Lua valid file.
+ This is done by loading the content and compiling it with loadfile().
+
+
+    <ul>
+        <li><span class="parameter">path</span>
+         The file path.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A function if everything is alright, a string with the error
+ otherwise.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "restart"></a>
+    <strong>restart ()</strong>
+    </dt>
+    <dd>
+    Try to restart awesome.
+ It checks if the configuration file is valid, and then restart if it&rsquo;s ok.
+ If it&rsquo;s not ok, the error will be returned.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Never return if awesome restart, or return a string error.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "geticonpath"></a>
+    <strong>geticonpath (iconname, exts, dirs[, size])</strong>
+    </dt>
+    <dd>
+    Search for an icon and return the full path.
+ It searches for the icon path under the given directories with respect to the
+ given extensions for the icon filename.
+
+
+    <ul>
+        <li><span class="parameter">iconname</span>
+         The name of the icon to search for.
+        </li>
+        <li><span class="parameter">exts</span>
+         Table of image extensions allowed, otherwise { &lsquo;png&rsquo;, gif' }
+        </li>
+        <li><span class="parameter">dirs</span>
+         Table of dirs to search, otherwise { &lsquo;/usr/share/pixmaps/&rsquo; }
+        </li>
+        <li><span class="parameter">size</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The size. If this is specified, subdirectories <code>x</code>
+   of the dirs are searched first.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Deprecated_functions"></a>Deprecated functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "awful.util.pread"></a>
+    <strong>awful.util.pread</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Execute a system command and road the output.
+ This function implementation <strong>has been removed</strong> and no longer
+ do anything. Use <a href="../libraries/awful.spawn.html#easy_async">awful.spawn.easy_async</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deprecate"></a>
+    <strong>deprecate</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Display a deprecation notice, but only once per traceback.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">see</span>
+         The message to a new method / function to use.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">args</span> Extra arguments
+        <ul>
+        <li><span class="parameter">raw</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Print the message as-is without the automatic
+   context (but only append a leading dot).
+        </li>
+        <li><span class="parameter">deprecated_in</span>
+            <span class="types"><span class="type">integer</span></span>
+         Print the message only when Awesome&rsquo;s
+   version is equal to or greater than deprecated_in.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.debug.html#">gears.debug</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "deprecate_class"></a>
+    <strong>deprecate_class</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Create a class proxy with deprecation messages.
+ This is useful when a class has moved somewhere else.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">fallback</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The new class
+        </li>
+        <li><span class="parameter">old_name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The old class name
+        </li>
+        <li><span class="parameter">new_name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The new class name
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.debug.html#">gears.debug</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "ensure_pango_color"></a>
+    <strong>ensure_pango_color</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a valid color for Pango markup
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         The color.
+        </li>
+        <li><span class="parameter">fallback</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The color to return if the first is invalid. (default: black)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.color.html#">gears.color</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "cycle"></a>
+    <strong>cycle</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Make i cycle.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         A length. Must be greater than zero.
+        </li>
+        <li><span class="parameter">i</span>
+         An absolute index to fit into #t.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.math.html#">gears.math</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "mkdir"></a>
+    <strong>mkdir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Create a directory
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">dir</span>
+         The directory.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "escape"></a>
+    <strong>escape</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Escape a string from XML char.
+ Useful to set raw text in textbox.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         Text to escape.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.string.html#">gears.string</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "unescape"></a>
+    <strong>unescape</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Unescape a string from entities.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         Text to unescape.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.string.html#">gears.string</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_xdg_config_home"></a>
+    <strong>get_xdg_config_home</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the config home according to the XDG basedir specification.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_xdg_cache_home"></a>
+    <strong>get_xdg_cache_home</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the cache home according to the XDG basedir specification.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_configuration_dir"></a>
+    <strong>get_configuration_dir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the path to the user&rsquo;s config dir.
+ This is the directory containing the configuration file (&ldquo;rc.lua&rdquo;).
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_cache_dir"></a>
+    <strong>get_cache_dir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the path to a directory that should be used for caching data.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_themes_dir"></a>
+    <strong>get_themes_dir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the path to the directory where themes are installed.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "get_awesome_icon_dir"></a>
+    <strong>get_awesome_icon_dir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the path to the directory where our icons are installed.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "getdir"></a>
+    <strong>getdir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the user&rsquo;s config or cache dir.
+ It first checks XDG_CONFIG_HOME / XDG_CACHE_HOME, but then goes with the
+ default paths.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">d</span>
+         The directory to get (either &ldquo;config&rdquo; or &ldquo;cache&rdquo;).
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "file_readable"></a>
+    <strong>file_readable</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Check if a file exists, is readable and not a directory.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">filename</span>
+         The file path.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "dir_readable"></a>
+    <strong>dir_readable</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Check if a path exists, is readable and is a directory.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The directory path.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "is_dir"></a>
+    <strong>is_dir</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Check if a path is a directory.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.filesystem.html#">gears.filesystem</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "subsets"></a>
+    <strong>subsets</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Return all subsets of a specific set.
+ This function, giving a set, will return all subset it.
+ For example, if we consider a set with value { 10, 15, 34 },
+ it will return a table containing 2<sup>n</sup> set:
+ { }, { 10 }, { 15 }, { 34 }, { 10, 15 }, { 10, 34 }, etc.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+         A set.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.math.html#">gears.math</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "awful.util.get_rectangle_in_direction"></a>
+    <strong>awful.util.get_rectangle_in_direction</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get the nearest rectangle in the given direction.  Every rectangle is specified as a table
+ with &lsquo;x&rsquo;, &lsquo;y&rsquo;, &lsquo;width&rsquo;, &lsquo;height&rsquo; keys, the same as client or screen geometries.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">dir</span>
+         The direction, can be either &ldquo;up&rdquo;, &ldquo;down&rdquo;, &ldquo;left&rdquo; or &ldquo;right&rdquo;.
+        </li>
+        <li><span class="parameter">recttbl</span>
+         A table of rectangle specifications.
+        </li>
+        <li><span class="parameter">cur</span>
+         The current rectangle.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.geometry.html#">gears.geometry</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.join"></a>
+    <strong>util.table.join</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Join all tables given as parameters.
+ This will iterate all tables and insert all their keys into a new table.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">args</span>
+         A list of tables to join
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.crush"></a>
+    <strong>util.table.crush</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Override elements in the first table by the one in the second.</p>
+
+<p> Note that this method doesn&rsquo;t copy entries found in <code>__index</code>.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the table to be overriden
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the table used to override members of <code>t</code>
+        </li>
+        <li><span class="parameter">raw</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Use rawset (avoid the metatable)
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.from_sparse"></a>
+    <strong>util.table.from_sparse</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Pack all elements with an integer key into a new table
+ While both lua and luajit implement __len over sparse
+ table, the standard define it as an implementation
+ detail.</p>
+
+<p> This function remove any non numeric keys from the value set
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A potentially sparse table
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.hasitem"></a>
+    <strong>util.table.hasitem</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Check if a table has an item and return its key.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         The table.
+        </li>
+        <li><span class="parameter">item</span>
+         The item to look for in values of the table.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "linewrap"></a>
+    <strong>linewrap</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Split a string into multiple lines
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         String to wrap.
+        </li>
+        <li><span class="parameter">width</span>
+         Maximum length of each line. Default: 72.
+        </li>
+        <li><span class="parameter">indent</span>
+         Number of spaces added before each wrapped line. Default: 0.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.string.html#">gears.string</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "linecount"></a>
+    <strong>linecount</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Count number of lines in a string
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Input string.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.string.html#">gears.string</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.keys"></a>
+    <strong>util.table.keys</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Get a sorted table with all integer keys from a table
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         the table for which the keys to get
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.keys_filter"></a>
+    <strong>util.table.keys_filter</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Filter a tables keys for certain content types
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         The table to retrieve the keys for
+        </li>
+        <li><span class="parameter">...</span>
+         the types to look for
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.reverse"></a>
+    <strong>util.table.reverse</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Reverse a table
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         the table to reverse
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.clone"></a>
+    <strong>util.table.clone</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Clone a table
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         the table to clone
+        </li>
+        <li><span class="parameter">deep</span>
+         Create a deep clone? (default: true)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.iterate"></a>
+    <strong>util.table.iterate</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Returns an iterator to cycle through, starting from the first element or the
+ given index, all elements of a table that match a given criteria.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+        <pre><code>  the table to iterate
+</code></pre>
+        </li>
+        <li><span class="parameter">filter</span>
+         a function that returns true to indicate a positive match
+        </li>
+        <li><span class="parameter">start</span>
+          what index to start iterating from.  Default is 1 (=> start of
+ the table)
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "util.table.merge"></a>
+    <strong>util.table.merge</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Merge items from the one table to another one
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the container table
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the mixin table
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.table.html#">gears.table</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "round"></a>
+    <strong>round</a> <i class="deprecated_label">[deprecated]</i><a></strong>
+    </dt>
+    <dd>
+    Round a number to an integer.
+
+
+    <h3>param:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.math.html#">gears.math</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "shell"></a>
+    <strong>shell</strong>
+    </dt>
+    <dd>
+    The default shell used when spawing processes.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-09-28 18:14:15 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
