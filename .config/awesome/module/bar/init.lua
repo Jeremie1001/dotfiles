@@ -78,7 +78,7 @@ local bar = function(s)
 		spacing = dpi(5),
 	}
 
-	for i,widget in pairs(settings.bar.left) do 
+	for i,widget in ipairs(settings.bar.left) do 
 		if widget == "tags" then
 			table.insert(leftBar, require('widget.bar.'..widget)(s, colors[settings.bar.colors[widget][1]], colors[settings.bar.colors[widget][2]], 3, 4, 4))
 		else
@@ -86,7 +86,7 @@ local bar = function(s)
 		end
 	end
 
-	for i,widget in pairs(settings.bar.center) do
+	for i,widget in ipairs(settings.bar.center) do
 		if widget == "tags" then
 			table.insert(centerBar, require('widget.bar.'..widget)(s, colors[settings.bar.colors[widget][1]], colors[settings.bar.colors[widget][2]], 3, 4, 4))
 		else
@@ -94,7 +94,7 @@ local bar = function(s)
 		end
 	end
 
-	for i,widget in pairs(settings.bar.right) do
+	for i,widget in ipairs(settings.bar.right) do
 		if widget == "tags" then
 			table.insert(rightBar, require('widget.bar.'..widget)(s, colors[settings.bar.colors[widget][1]], colors[settings.bar.colors[widget][2]], 3, 4, 4))
 		else
@@ -135,7 +135,7 @@ awesome.connect_signal(
 	"bar::tab",
 	function(barId, i)
 		centersList = {}
-		for i,widget in pairs(settings.bar[barId]) do
+		for i,widget in ipairs(settings.bar[barId]) do
 			table.insert(centersList, settings.bar.clickableCenters[widget])
 		end
 		awesome.emit_signal(centersList[i].."::center:tab",centersList,i,false,0)
@@ -146,7 +146,7 @@ awesome.connect_signal(
 	"bar::tab:reverse",
 	function(barId, i)
 		centersList = {}
-		for i,widget in pairs(settings.bar[barId]) do
+		for i,widget in ipairs(settings.bar[barId]) do
 			table.insert(centersList, settings.bar.clickableCenters[widget])
 		end
 		awesome.emit_signal(centersList[i].."::center:tab:reverse",centersList,i,false,0)
@@ -162,6 +162,7 @@ awesome.connect_signal(
 		awesome.emit_signal("battery::center:toggle:off")
 		awesome.emit_signal("network::center:toggle:off")
 		awesome.emit_signal("notification::center:toggle:off")
+		awesome.emit_signal("system::center:toggle:off")
 		awesome.emit_signal("bluetooth::center:toggle:off")
 		awesome.emit_signal("cal::center:toggle:off")
 	end

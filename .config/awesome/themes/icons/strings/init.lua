@@ -35,6 +35,7 @@ return {
 	shield			= require(dir .. 'shield'):gsub("#ffffff", iconsColor),
 	shield_off			= require(dir .. 'shield-off'):gsub("#ffffff", iconsColor),
 	ship_wheel			= require(dir .. 'ship-wheel'):gsub("#ffffff", iconsColor),
+	system			= require(dir .. 'system'):gsub("#ffffff", iconsColor),
 	sleep 				= require(dir .. 'power-sleep'):gsub("#ffffff", iconsColor),
 	toDo = require(dir .. 'circle'):gsub("#ffffff", iconsColor),
 	toDoDone = require(dir .. 'check-circle'):gsub("#ffffff", iconsColor),

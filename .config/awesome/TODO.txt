@@ -16,7 +16,7 @@ VBar
     -Ethernet & Network Detection
     -Network (DONE)
   -Battery
-    -Percentage update on open
+    -Percentage update on open (DONE)
     -Charging status (DONE)
     -Anything else?
   -Volume (DONE)
@@ -27,7 +27,14 @@ VBar
     -Modify to work with PIA
   -Focus (DONE)
     -Fix for laptop (DONE, xdotool is not a core util)
+  -System
+    -Keyboard layout (DONE)
+    -Timezone (DONE)
+    -Pacman updates
+    -Mirrors updates
   -Quick info tooltips (DONE)
+  -Review and fix(?) bar::tab function
+    -Is it expandable in the settings
 
 Control center
   -Top text (DONE)

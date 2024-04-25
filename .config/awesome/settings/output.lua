@@ -10,6 +10,7 @@ return{
 			[5]="bluetooth",
 			[6]="clock",
 			[8]="end-session",
+			[9]="system",
 		},
 		["colors"]={
 			["focused"]="color2",

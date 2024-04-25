@@ -3,13 +3,15 @@ export ZSH=$HOME/.oh-my-zsh
 
 eval "$(starship init zsh)"
 
-COMPLETION_WAITING_DOTS="true"
+autoload -U compinit && compinit
 
-plugins=(git)
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
 
-source $ZSH/oh-my-zsh.sh
-
-RPROMPT='%*'
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
 
 #Ignore upper and lowercase when TAB completion
 #bind "set completion-ignore-case on"
@@ -127,3 +129,4 @@ for f in ~/.config/bash/*; do source $f; done
 #  echo "Current Kernel: ${OUTPUT}"
 #}
 
+eval "$(zoxide init --cmd cd zsh)"
