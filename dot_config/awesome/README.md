@@ -9,11 +9,9 @@ ArchDracula By:
 - Jeremie Cote
 - @jeremie1001
 
-Based on terminal color theme Dracula and inpired by https://github.com/manilarome/the-glorious-dotfiles. Icons modified from [flaticons repository](https://www.flaticon.com/)
+Based on terminal color theme Dracula and inpired by https://github.com/manilarome/the-glorious-dotfiles. Icons modified from [flaticons repository](https://www.flaticon.com/) and [SVGRepo](https://www.svgrepo.com/vectors/chain/)
 
 Disclaimer, some of the aspects of this rice arent completely functional at this time as this is still a work in progress so please be please be patient. Components still be worked on can be found in the TODO.txt file.
-
-This is a more specific repo focused on just the AwesomeWM config portion of my rice. Full git bare repo can be found [here](https://github.com/Jeremie1001/dotfiles). Some relevant configs can be found there such as picom, gtk, [firefox](https://github.com/Jeremie1001/dotfiles/tree/master/.config/chrome), [sddm](https://github.com/Jeremie1001/dotfiles/tree/master/.config/sddm) and [rofi](https://github.com/Jeremie1001/dotfiles/tree/master/.config/rofi) themes.
 
 ### Spoilers
 
@@ -23,20 +21,32 @@ This is a more specific repo focused on just the AwesomeWM config portion of my 
 
 ### Quick stats
 
-- **OS**: Btw... Arch
-- **WM**: AwesomeWM (duh)
+- **OS**: EndeavourOS
+- **WM**: AwesomeWM
   - More specifically, it uses awesome-git since it includes some features not included in mainline awesome such as as the colored and rounded progress bars in the control center
-- **Shell**: zsh with powerlevel10k
+- **Shell**: zsh with starship
 - **Terminal**: Kitty
 - **Editor**: VSCodium
 - **File Manager**: Nemo
-- **Launcher**: Rofi in the style of dmenu
+- **Launcher**: Rofi
 - **Browser**: Firefox
 - **Color Scheme**: [Dracula](https://draculatheme.com/) ([hex codes](https://github.com/dracula/dracula-theme))
 - **GTK Theme**: [Ant Dracula](https://draculatheme.com/gtk)
 - **Wallpaper**: [Arch Kraken](https://i.imgur.com/S0LHsad.png)
 
-**File structure**
+### Awesome Config Dependencies
+
+- awesome-git (AwesomeWM) (aur)
+- i3lock-fancy-git (exit_screen module) (aur)
+- picom (compositor) (pacman)
+- rofi (launchers) (pacman)
+- pamixer (volume controls) (pacman)
+- lm_sensors (temperature dial in control center) (pacman)
+- feh (background) (pacman)
+- light (brightness) (pacman)
+- flameshot (screenshot) (pacman)
+
+### File structure
 
 - /config
   - Holds files that have to do with general window manager manipulation
